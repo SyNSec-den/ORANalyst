@@ -1,0 +1,22 @@
+{{/*
+# Copyright 2019-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+{{ if .Values.config.sriov.enabled }}
+---
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: sgi-net-cdn
+  annotations:
+    k8s.v1.cni.cncf.io/resourceName: intel.com/sriov_netdevice
+spec:
+  config: '{
+    "type": {{ .Values.networks.cniPlugin | quote }},
+    "ipam": {
+        "type": {{ .Values.networks.ipam | quote }}
+    }
+  }'
+{{ end }}

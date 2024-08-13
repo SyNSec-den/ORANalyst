@@ -1,0 +1,127 @@
+#!/usr/bin/env bash 
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# The IP address of the dev machine
+ip=$1
+
+[ -z $1 ] && echo "Missing IP address. Aborting!" && exit 1
+
+# Install Docker
+# https://docs.docker.com/engine/install/ubuntu/
+sudo apt-get update
+
+# Get Docker dependencies
+sudo apt-get --yes install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    make \
+    gcc \
+    gnupg-agent \
+    software-properties-common
+
+# Get the Docker key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo apt-key fingerprint 0EBFCD88
+
+# Add the Docker stable reposotory
+sudo add-apt-repository \
+    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+    $(lsb_release -cs) \
+    stable"
+
+# Install Docker CE
+sudo apt-get update
+sudo apt-get --yes install docker-ce docker-ce-cli containerd.io
+
+# Enable Docker access without sudo
+# https://docs.docker.com/engine/install/linux-postinstall/
+sudo groupadd docker
+sudo usermod -aG docker ran
+newgrp docker << NEWGRP
+
+# Add the IP as an insecure Docker registry
+sudo printf '{"insecure-registries":["%s:5000"]}' ${ip} > /etc/docker/daemon.json
+sudo service docker restart
+
+# Install Go
+# https://golang.org/doc/install
+curl -O https://storage.googleapis.com/golang/go1.14.10.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.14.10.linux-amd64.tar.gz
+echo 'export PATH="$PATH:/usr/local/go/bin"' >> ~/.bashrc
+rm go1.14.10.linux-amd64.tar.gz
+
+# Install KinD
+# https://kind.sigs.k8s.io/docs/user/quick-start/#installation
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.9.0/kind-linux-amd64
+chmod +x ./kind
+mv ./kind /usr/bin/
+
+# Install kubectl
+# https://kubernetes.io/docs/tasks/tools/install-kubectl/
+curl -LO "https://storage.googleapis.com/kubernetes-release/release/\$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl"
+chmod +x ./kubectl
+sudo mv ./kubectl /usr/bin
+
+# Install Helm
+# https://helm.sh/docs/intro/install/
+curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
+chmod 700 get_helm.sh
+./get_helm.sh
+rm ./get_helm.sh
+
+# Add Helm repositories
+# https://helm.sh/docs/intro/quickstart/
+helm repo add stable https://charts.helm.sh/stable
+helm repo add incubator http://storage.googleapis.com/kubernetes-charts-incubator
+helm repo add onos https://charts.onosproject.org
+helm repo add atomix https://charts.atomix.io
+helm repo add cord https://charts.opencord.org
+helm repo update
+
+# Add the kind-create-cluster script
+# https://kind.sigs.k8s.io/docs/user/local-registry/
+printf '
+#!/bin/sh
+set -o errexit
+
+# create registry container unless it already exists
+reg_name="kind-registry"
+reg_ip="${ip}"
+reg_port="5000"
+running="\$(docker inspect -f '"'"'{{.State.Running}}'"'"' "\${reg_name}" 2>/dev/null || true)"
+if [ "\${running}" != '"'"'true'"'"' ]; then
+  docker run \
+    -d --restart=always -p "\${reg_port}:5000" --name "\${reg_name}" \
+    registry:2
+fi
+
+# create a cluster with the local registry enabled in containerd
+cat <<EOF | kind create cluster --config=-
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+containerdConfigPatches:
+- |-
+  [plugins."io.containerd.grpc.v1.cri".registry.mirrors."\${reg_ip}:\${reg_port}"]
+    endpoint = ["http://\${reg_ip}:\${reg_port}"]
+EOF
+
+# connect the registry to the cluster network
+docker network connect "kind" "\${reg_name}"
+
+# tell https://tilt.dev to use the registry
+# https://docs.tilt.dev/choosing_clusters.html#discovering-the-registry
+for node in \$(kind get nodes); do
+  kubectl annotate node "\${node}" "kind.x-k8s.io/registry=\${reg_ip}:\${reg_port}";
+done' > kind-create-cluster
+
+chmod +x ./kind-create-cluster
+mv ./kind-create-cluster /usr/bin
+NEWGRP
+
+# Install helmit
+PATH=$PATH:/usr/local/go/bin
+GO111MODULE=on go get github.com/onosproject/helmit/cmd/helmit
+sudo cp $HOME/go/bin/helmit /usr/local/bin

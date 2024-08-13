@@ -1,0 +1,38 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tb-web-ui
+spec:
+  type: ClusterIP
+  selector:
+    app: tb-web-ui
+  ports:
+    - port: {{ .Values.config.webUi.port }}
+      name: http
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tb-web-ui-external
+spec:
+  type: NodePort
+  selector:
+    app: tb-web-ui
+  ports:
+    {{- if .Values.config.webUi.nodePort.enabled }}
+    - port: {{ .Values.config.webUi.port }}
+      name: http
+      protocol: TCP
+      nodePort: {{ .Values.config.webUi.nodePort.port }}
+  {{- end }}

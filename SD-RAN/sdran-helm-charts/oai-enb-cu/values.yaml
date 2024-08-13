@@ -1,0 +1,81 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+global:
+  image:
+    registry: ""
+    tag: ""
+
+replicaCount: 1
+
+images:
+  tags:
+    oaicucp: docker.io/onosproject/oai-enb-cu:v0.1.11
+  pullPolicy: IfNotPresent
+
+# Specify annotations (e.g., fluentbit/logging custom parser)
+# annotations:
+#   fluentbit.io/parser: oai
+
+# Specify nodeSelector to pin oai-enb-du to worker nodes oaienb only
+#
+# nodeSelector:
+#   node-role.test.org: oaienb
+
+# Override NoSchedule for oai-enb-du to be scheduled on oaienb worker nodes
+#
+# tolerations:
+#  - key: node-role.test.org
+#    value: oaienb
+#    effect: NoSchedule
+
+config:
+  oai-enb-cu:
+    log:
+      level: "info"
+      verbosity: "medium"
+    enbID: 0xe00
+    tac: 1
+    plmnID:
+      mcc: "208"
+      mnc: "01"
+      length: 2
+    networks:
+      common:
+        port: 22100
+      f1:
+        interface: eno1
+        address: 127.0.0.2/24
+        portc: 501
+        portd: 601
+      s1mme:
+        interface: eno1
+        address:
+        port: 36412
+      s1u:
+        interface: enb
+        address:
+        port: 2152
+      x2c:
+        port: 36422
+      if5-ori:
+        port: 50000
+      if5-ecpri:
+        port: 50001
+      tcp-bridge:
+        port: 4043
+  oai-enb-du:
+    networks:
+      f1:
+        address: 127.0.0.3/24
+        portc: 500
+        portd: 600
+  mme:
+    address: 127.0.0.1
+  onos-e2t:
+    enabled: yes
+    networks:
+      e2:
+        address: 127.0.0.1/24
+        port: 36402

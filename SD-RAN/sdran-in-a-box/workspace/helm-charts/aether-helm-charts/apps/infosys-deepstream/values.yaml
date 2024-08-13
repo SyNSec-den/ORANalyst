@@ -1,0 +1,37 @@
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+images:
+  tags:
+    deepstreamTx2: registry.central.aetherproject.net/infosys/deepstream-tx2:0.1
+  pullPolicy: "IfNotPresent"
+
+nodeSelectors:
+  enabled: true
+  deepstream:
+    label: deepstream
+    value: enabled
+
+resources:
+  enabled: false
+  deepstream:
+    requests:
+      cpu: 2
+      memory: 2048Mi
+    limits:
+      cpu: 2
+      memory: 2048Mi
+
+config:
+  deepstream:
+    source: rtsp://10.251.255.241:5554/test
+    # set display to 1 to enalbe and 0 to disable
+    display:
+      display: ":1"
+      enabled: 1
+    amqp:
+      host: 172.16.0.10
+      port: 5672
+      username: admin
+      password: A3ther

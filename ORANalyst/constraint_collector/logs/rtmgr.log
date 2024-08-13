@@ -1,0 +1,530 @@
+------------- processing path constraint -------------
+------------- processing pkg -------------
+processing new pkg gopkg.in/yaml.v2
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp
+processing new pkg routing-manager/pkg/restapi/operations/handle
+processing new pkg routing-manager/pkg/appmgr_client/operations
+processing new pkg routing-manager/pkg/appmgr_client/xapp
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/restapi/operations/xapp
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/restapi/operations/common
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/clientmodel
+processing new pkg routing-manager/pkg/nbi/restful
+processing new pkg routing-manager/pkg/models
+processing new pkg routing-manager/pkg/appmgr_model
+processing new pkg routing-manager/pkg/restapi
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/restapi/operations
+processing new pkg routing-manager/pkg/restapi/operations
+processing new pkg routing-manager/pkg/appmgr_client/health
+processing new pkg routing-manager/pkg/nbi
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/clientapi
+processing new pkg routing-manager/pkg/rpe
+processing new pkg routing-manager/pkg/restapi/operations/health
+processing new pkg routing-manager/pkg/appmgr_client
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/clientapi/common
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/restapi
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/models
+processing new pkg routing-manager/pkg/restapi/operations/debug
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/clientapi/xapp
+processing new pkg routing-manager/pkg/sbi
+processing new pkg routing-manager/pkg/sdl
+processing new pkg gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/rnib
+processing new pkg routing-manager/pkg/rtmgr
+Parsing functions of /home/tianchang/Desktop/proj/ric-plt-rtmgr/pkg
+input type: *routing-manager/pkg/models.RanE2tMap
+current: AssociateRanToE2THandlerImpl, exit: sendRoutesToAll
+current: WriteAssRANToE2TInstance, exit: sendRoutesToAll
+current: ReadAll, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: Error, exit: sendRoutesToAll
+current: Error, exit: sendRoutesToAll
+current: Info, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: NewFile, exit: sendRoutesToAll
+current: updateEp, exit: sendRoutesToAll
+current: getConfigData, exit: sendRoutesToAll
+current: ReadAll, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: Error, exit: sendRoutesToAll
+current: Error, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: GetString, exit: sendRoutesToAll
+current: Error, exit: sendRoutesToAll
+current: UpdateEndpoints, exit: sendRoutesToAll
+current: updateEndpoints, exit: sendRoutesToAll
+current: updatePlatformEndpoints, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: AddEndpoint, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: Openwh, exit: sendRoutesToAll
+current: Wh_open, exit: sendRoutesToAll
+current: _Cfunc_CString, exit: sendRoutesToAll
+current: _cgo_cmalloc, exit: sendRoutesToAll
+current: _cgo_runtime_cgocall, exit: sendRoutesToAll
+current: runtime_throw, exit: sendRoutesToAll
+current: Wh_open$1, exit: sendRoutesToAll
+current: _cgoCheckPointer, exit: sendRoutesToAll
+current: _Cfunc_rmr_wh_open, exit: sendRoutesToAll
+current: _cgo_runtime_cgocall, exit: sendRoutesToAll
+current: _Cgo_use, exit: sendRoutesToAll
+current: Error, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: updateE2TEndpoints, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: AddEndpoint, exit: sendRoutesToAll
+current: Openwh, exit: sendRoutesToAll
+current: Wh_open, exit: sendRoutesToAll
+current: _Cfunc_CString, exit: sendRoutesToAll
+current: _cgo_cmalloc, exit: sendRoutesToAll
+current: _cgo_runtime_cgocall, exit: sendRoutesToAll
+current: runtime_throw, exit: sendRoutesToAll
+current: Wh_open$1, exit: sendRoutesToAll
+current: _cgoCheckPointer, exit: sendRoutesToAll
+current: _Cfunc_rmr_wh_open, exit: sendRoutesToAll
+current: _cgo_runtime_cgocall, exit: sendRoutesToAll
+current: _Cgo_use, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: Error, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: pruneEndpointList, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: DeleteEndpoint, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: Closewh, exit: sendRoutesToAll
+current: Wh_close, exit: sendRoutesToAll
+current: Wh_close$1, exit: sendRoutesToAll
+current: _cgoCheckPointer, exit: sendRoutesToAll
+current: _Cfunc_rmr_wh_close, exit: sendRoutesToAll
+current: _cgo_runtime_cgocall, exit: sendRoutesToAll
+current: _Cgo_use, exit: sendRoutesToAll
+current: AddEndpoint, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: Openwh, exit: sendRoutesToAll
+current: Wh_open, exit: sendRoutesToAll
+current: _Cfunc_CString, exit: sendRoutesToAll
+current: _cgo_cmalloc, exit: sendRoutesToAll
+current: _cgo_runtime_cgocall, exit: sendRoutesToAll
+current: runtime_throw, exit: sendRoutesToAll
+current: Wh_open$1, exit: sendRoutesToAll
+current: _cgoCheckPointer, exit: sendRoutesToAll
+current: _Cfunc_rmr_wh_open, exit: sendRoutesToAll
+current: _cgo_runtime_cgocall, exit: sendRoutesToAll
+current: _Cgo_use, exit: sendRoutesToAll
+current: Error, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: sendRoutesToAll, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: validateE2TAddressRANListData, exit: sendRoutesToAll
+current: Debug, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: checkValidaE2TAddress, exit: sendRoutesToAll
+current: Error, exit: sendRoutesToAll
+current: Warn, exit: sendRoutesToAll
+current: SetMdc, exit: sendRoutesToAll
+current: timeFormat, exit: sendRoutesToAll
+current: GetString, exit: sendRoutesToAll
+-------------------- func path 0 --------------------
+AssociateRanToE2THandlerImpl -> sendRoutesToAll
+
+-------------------- path 0 --------------------
+cur: AssociateRanToE2THandlerImpl, target: sendRoutesToAll
+cur block: -1
+cur block: 3
+cur block: 0
+curInstr: t0 = *gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Logger
+curInstr: t1 = (*gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Log).Debug(t0, "Invoked associate...":string, nil:[]interface{}...)
+curInstr is call: t1 = (*gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Log).Debug(t0, "Invoked associate...":string, nil:[]interface{}...)
+call name: Debug, target name: sendRoutesToAll
+curInstr: t2 = validateE2TAddressRANListData(data)
+curInstr is call: t2 = validateE2TAddressRANListData(data)
+call name: validateE2TAddressRANListData, target name: sendRoutesToAll
+curInstr: t3 = t2 != nil:error
+curInstr: if t3 goto 1 else 2
+cur block: 1
+curInstr: t4 = *gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Logger
+curInstr: t5 = invoke t2.Error()
+curInstr is call: t5 = invoke t2.Error()
+call name: Error, target name: sendRoutesToAll
+curInstr: t6 = " Association of R...":string + t5
+curInstr: t7 = (*gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Log).Warn(t4, t6, nil:[]interface{}...)
+curInstr is call: t7 = (*gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Log).Warn(t4, t6, nil:[]interface{}...)
+call name: Warn, target name: sendRoutesToAll
+curInstr: return t2
+cur block: 2
+curInstr: t8 = *gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Logger
+curInstr: t9 = (*gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Log).Debug(t8, "Received associat...":string, nil:[]interface{}...)
+curInstr is call: t9 = (*gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Log).Debug(t8, "Received associat...":string, nil:[]interface{}...)
+call name: Debug, target name: sendRoutesToAll
+curInstr: t10 = (*sync.Mutex).Lock(m)
+curInstr is call: t10 = (*sync.Mutex).Lock(m)
+curInstr: t11 = *sdlEngine
+curInstr: t12 = (*gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Configurator).GetString(gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Config, "rtfile":string)
+curInstr is call: t12 = (*gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Configurator).GetString(gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Config, "rtfile":string)
+call name: GetString, target name: sendRoutesToAll
+curInstr: t13 = invoke t11.WriteAssRANToE2TInstance(t12, data)
+curInstr is call: t13 = invoke t11.WriteAssRANToE2TInstance(t12, data)
+call name: WriteAssRANToE2TInstance, target name: sendRoutesToAll
+curInstr: t14 = (*sync.Mutex).Unlock(m)
+curInstr is call: t14 = (*sync.Mutex).Unlock(m)
+curInstr: t15 = updateEp()
+curInstr is call: t15 = updateEp()
+call name: updateEp, target name: sendRoutesToAll
+curInstr: t16 = sendRoutesToAll()
+curInstr is call: t16 = sendRoutesToAll()
+call name: sendRoutesToAll, target name: sendRoutesToAll
+Processing sendRoutesToAll in block 2 for condition
+finding conditions to block: AssociateRanToE2THandlerImpl 2
+target block: 2
+controller: 0 
+findTarget func: AssociateRanToE2THandlerImpl, source: 0, target: 2
+findTarget TrueSuccessor: 1, FalseSuccessor: 2
+The CFG path from 2 to 2 is:
+2 -> 
+findTarget FalseSuccessor: 2, target: 2
+found condition: if t3 goto 1 else 2 false
+target block: 0
+
+condition: if t3 goto 1 else 2 false
+curInstr: return t16
+	conditions for func call AssociateRanToE2THandlerImpl -> sendRoutesToAll: 
+-------------------- conds --------------------
+		if t3 goto 1 else 2 false
+-------------------- path 0 --------------------
+ if t3 goto 1 else 2 false
+-------------------- path 0 --------------------
+solving condition: if t3 goto 1 else 2 - false
+solving condition: if t3 goto 1 else 2
+tainted because of assignTo: t3
+tainted: t3 = t2 != nil:error, type: BinOp
+tainted because of assignTo: t2
+tainted: t2 = validateE2TAddressRANListData(data), type: Call
+isTrackedType type: func(assRanE2tData routing-manager/pkg/models.RanE2tMap) error - Function type, is tracked: false
+isTrackedType type: routing-manager/pkg/models.RanE2tMap - Named type: RanE2tMap, is tracked: true
+generating constraint for tracked variable
+isTrackedType type: func(assRanE2tData routing-manager/pkg/models.RanE2tMap) error - Function type, is tracked: false
+isTrackedType type: routing-manager/pkg/models.RanE2tMap - Named type: RanE2tMap, is tracked: true
+retVar: t16
+error block: validateE2TAddressRANListData 4, last instruction: return t16
+call: fmt.Errorf("E2T Instance - E2...":string, nil:[]any...)
+retVar: t25
+error block: validateE2TAddressRANListData 6, last instruction: return t25
+call: fmt.Errorf("E2TAddress doesn'...":string, t24...)
+finding conditions to block: validateE2TAddressRANListData 3
+target block: 3
+controller: 1 controller: 2 controller: 5 
+findTarget func: validateE2TAddressRANListData, source: 5, target: 3
+findTarget TrueSuccessor: 1, FalseSuccessor: 6
+The CFG path from 1 to 3 is:
+1 -> 3 -> 
+found condition: if t20 goto 1 else 6 true
+target block: 5
+controller: 1 controller: 2 controller: 5 
+findTarget func: validateE2TAddressRANListData, source: 1, target: 3
+findTarget TrueSuccessor: 2, FalseSuccessor: 3
+The CFG path from 3 to 3 is:
+3 -> 
+findTarget FalseSuccessor: 3, target: 3
+found condition: if t9 goto 2 else 3 false
+target block: 1
+controller: 5 controller: 2 
+findTarget func: validateE2TAddressRANListData, source: 2, target: 3
+findTarget TrueSuccessor: 4, FalseSuccessor: 5
+The CFG path from 5 to 3 is:
+5 -> 1 -> 3 -> 
+findTarget FalseSuccessor: 5, target: 3
+found condition: if t15 goto 4 else 5 false
+target block: 2
+controller: 1 controller: 2 controller: 5 
+findTarget func: validateE2TAddressRANListData, source: 5, target: 3
+findTarget TrueSuccessor: 1, FalseSuccessor: 6
+The CFG path from 1 to 3 is:
+1 -> 3 -> 
+found condition: if t20 goto 1 else 6 true
+findTarget func: validateE2TAddressRANListData, source: 1, target: 3
+findTarget TrueSuccessor: 2, FalseSuccessor: 3
+The CFG path from 3 to 3 is:
+3 -> 
+findTarget FalseSuccessor: 3, target: 3
+found condition: if t9 goto 2 else 3 false
+findTarget func: validateE2TAddressRANListData, source: 5, target: 3
+findTarget TrueSuccessor: 1, FalseSuccessor: 6
+The CFG path from 1 to 3 is:
+1 -> 3 -> 
+found condition: if t20 goto 1 else 6 true
+findTarget func: validateE2TAddressRANListData, source: 2, target: 3
+findTarget TrueSuccessor: 4, FalseSuccessor: 5
+The CFG path from 5 to 3 is:
+5 -> 1 -> 3 -> 
+findTarget FalseSuccessor: 5, target: 3
+found condition: if t15 goto 4 else 5 false
+findTarget func: validateE2TAddressRANListData, source: 1, target: 3
+findTarget TrueSuccessor: 2, FalseSuccessor: 3
+The CFG path from 3 to 3 is:
+3 -> 
+findTarget FalseSuccessor: 3, target: 3
+found condition: if t9 goto 2 else 3 false
+findTarget func: validateE2TAddressRANListData, source: 2, target: 3
+findTarget TrueSuccessor: 4, FalseSuccessor: 5
+The CFG path from 5 to 3 is:
+5 -> 1 -> 3 -> 
+findTarget FalseSuccessor: 5, target: 3
+found condition: if t15 goto 4 else 5 false
+condition: if t15 goto 4 else 5 false
+condition: if t20 goto 1 else 6 true
+condition: if t9 goto 2 else 3 false
+solving condition: if t20 goto 1 else 6
+tainted because of assignTo: t20
+tainted: t20 = checkValidaE2TAddress(t19), type: Call
+isTrackedType type: func(e2taddress string) bool - Function type, is tracked: false
+isTrackedType type: string - Basic type: string, is tracked: false
+tainted because of assignTo: t19
+tainted: t19 = *t18, type: UnOp
+tainted because of assignTo: t18
+tainted: t18 = *t17, type: UnOp
+tainted because of assignTo: t17
+tainted: t17 = &t11.E2TAddress [#0], type: FieldAddr
+isTrackedType type: *routing-manager/pkg/models.RanE2tElement - Pointer type, points to: Named type: RanE2tElement, is tracked: true
+generating constraint for tracked variable
+isTrackedType type: *routing-manager/pkg/models.RanE2tElement - Pointer type, points to: Named type: RanE2tElement, is tracked: true
+the condition is: if t20 goto 1 else 6
+tainted because of assignTo: t20
+tainted: t20 = checkValidaE2TAddress(t19), type: Call
+isTrackedType type: func(e2taddress string) bool - Function type, is tracked: false
+isTrackedType type: string - Basic type: string, is tracked: false
+tainted because of assignTo: t19
+tainted: t19 = *t18, type: UnOp
+tainted because of assignTo: t18
+tainted: t18 = *t17, type: UnOp
+tainted because of assignTo: t17
+tainted: t17 = &t11.E2TAddress [#0], type: FieldAddr
+isTrackedType type: *routing-manager/pkg/models.RanE2tElement - Pointer type, points to: Named type: RanE2tElement, is tracked: true
+generating constraint for tracked variable
+isTrackedType type: *routing-manager/pkg/models.RanE2tElement - Pointer type, points to: Named type: RanE2tElement, is tracked: true
+the condition is: if t20 goto 1 else 6
+solving condition: if t9 goto 2 else 3
+tainted because of assignTo: t9
+tainted: t9 = t8 < t6, type: BinOp
+tainted because of assignTo: t8
+tainted: t8 = t7 + 1:int, type: BinOp
+tainted because of assignTo: t7
+tainted: t7 = phi [0: -1:int, 5: t8], type: Phi
+phi node edge is const: -1:int, skipping
+added phi block: 5
+previous blocks: 0
+previous blocks: 5
+phi pb lastInstr: if t20 goto 1 else 6, pb Id: 5
+previous blocks: 0
+previous blocks: 5
+ pb Id: 0
+tainted because of assignTo: t6
+tainted: t6 = len(assRanE2tData), type: Call
+isTrackedType type: func(routing-manager/pkg/models.RanE2tMap) int - Function type, is tracked: false
+isTrackedType type: routing-manager/pkg/models.RanE2tMap - Named type: RanE2tMap, is tracked: true
+generating constraint for tracked variable
+isTrackedType type: func(routing-manager/pkg/models.RanE2tMap) int - Function type, is tracked: false
+isTrackedType type: routing-manager/pkg/models.RanE2tMap - Named type: RanE2tMap, is tracked: true
+the condition is: if t9 goto 2 else 3
+tainted because of assignTo: t9
+tainted: t9 = t8 < t6, type: BinOp
+tainted because of assignTo: t8
+tainted: t8 = t7 + 1:int, type: BinOp
+tainted because of assignTo: t7
+tainted: t7 = phi [0: -1:int, 5: t8], type: Phi
+phi node edge is const: -1:int, skipping
+added phi block: 5
+previous blocks: 0
+previous blocks: 5
+phi pb lastInstr: if t20 goto 1 else 6, pb Id: 5
+previous blocks: 0
+previous blocks: 5
+ pb Id: 0
+tainted because of assignTo: t6
+tainted: t6 = len(assRanE2tData), type: Call
+isTrackedType type: func(routing-manager/pkg/models.RanE2tMap) int - Function type, is tracked: false
+isTrackedType type: routing-manager/pkg/models.RanE2tMap - Named type: RanE2tMap, is tracked: true
+generating constraint for tracked variable
+isTrackedType type: func(routing-manager/pkg/models.RanE2tMap) int - Function type, is tracked: false
+isTrackedType type: routing-manager/pkg/models.RanE2tMap - Named type: RanE2tMap, is tracked: true
+the condition is: if t9 goto 2 else 3
+solving condition: if t15 goto 4 else 5
+tainted because of assignTo: t15
+tainted: t15 = t14 == "":string, type: BinOp
+tainted because of assignTo: t14
+tainted: t14 = *t13, type: UnOp
+tainted because of assignTo: t13
+tainted: t13 = *t12, type: UnOp
+tainted because of assignTo: t12
+tainted: t12 = &t11.E2TAddress [#0], type: FieldAddr
+isTrackedType type: *routing-manager/pkg/models.RanE2tElement - Pointer type, points to: Named type: RanE2tElement, is tracked: true
+generating constraint for tracked variable
+isTrackedType type: *routing-manager/pkg/models.RanE2tElement - Pointer type, points to: Named type: RanE2tElement, is tracked: true
+the condition is: if t15 goto 4 else 5
+tainted because of assignTo: t15
+tainted: t15 = t14 == "":string, type: BinOp
+tainted because of assignTo: t14
+tainted: t14 = *t13, type: UnOp
+tainted because of assignTo: t13
+tainted: t13 = *t12, type: UnOp
+tainted because of assignTo: t12
+tainted: t12 = &t11.E2TAddress [#0], type: FieldAddr
+isTrackedType type: *routing-manager/pkg/models.RanE2tElement - Pointer type, points to: Named type: RanE2tElement, is tracked: true
+generating constraint for tracked variable
+isTrackedType type: *routing-manager/pkg/models.RanE2tElement - Pointer type, points to: Named type: RanE2tElement, is tracked: true
+the condition is: if t15 goto 4 else 5
+the condition is: if t3 goto 1 else 2
+tainted because of assignTo: t3
+tainted: t3 = t2 != nil:error, type: BinOp
+tainted because of assignTo: t2
+tainted: t2 = validateE2TAddressRANListData(data), type: Call
+isTrackedType type: func(assRanE2tData routing-manager/pkg/models.RanE2tMap) error - Function type, is tracked: false
+isTrackedType type: routing-manager/pkg/models.RanE2tMap - Named type: RanE2tMap, is tracked: true
+generating constraint for tracked variable
+isTrackedType type: func(assRanE2tData routing-manager/pkg/models.RanE2tMap) error - Function type, is tracked: false
+isTrackedType type: routing-manager/pkg/models.RanE2tMap - Named type: RanE2tMap, is tracked: true
+retVar: t25
+error block: validateE2TAddressRANListData 6, last instruction: return t25
+call: fmt.Errorf("E2TAddress doesn'...":string, t24...)
+retVar: t16
+error block: validateE2TAddressRANListData 4, last instruction: return t16
+call: fmt.Errorf("E2T Instance - E2...":string, nil:[]any...)
+finding conditions to block: validateE2TAddressRANListData 3
+target block: 3
+controller: 5 controller: 1 controller: 2 
+findTarget func: validateE2TAddressRANListData, source: 1, target: 3
+findTarget TrueSuccessor: 2, FalseSuccessor: 3
+The CFG path from 3 to 3 is:
+3 -> 
+findTarget FalseSuccessor: 3, target: 3
+found condition: if t9 goto 2 else 3 false
+target block: 1
+controller: 2 controller: 5 
+findTarget func: validateE2TAddressRANListData, source: 2, target: 3
+findTarget TrueSuccessor: 4, FalseSuccessor: 5
+The CFG path from 5 to 3 is:
+5 -> 1 -> 3 -> 
+findTarget FalseSuccessor: 5, target: 3
+found condition: if t15 goto 4 else 5 false
+target block: 2
+controller: 1 controller: 2 controller: 5 
+findTarget func: validateE2TAddressRANListData, source: 5, target: 3
+findTarget TrueSuccessor: 1, FalseSuccessor: 6
+The CFG path from 1 to 3 is:
+1 -> 3 -> 
+found condition: if t20 goto 1 else 6 true
+target block: 5
+controller: 1 controller: 2 controller: 5 
+findTarget func: validateE2TAddressRANListData, source: 2, target: 3
+findTarget TrueSuccessor: 4, FalseSuccessor: 5
+The CFG path from 5 to 3 is:
+5 -> 1 -> 3 -> 
+findTarget FalseSuccessor: 5, target: 3
+found condition: if t15 goto 4 else 5 false
+findTarget func: validateE2TAddressRANListData, source: 1, target: 3
+findTarget TrueSuccessor: 2, FalseSuccessor: 3
+The CFG path from 3 to 3 is:
+3 -> 
+findTarget FalseSuccessor: 3, target: 3
+found condition: if t9 goto 2 else 3 false
+findTarget func: validateE2TAddressRANListData, source: 1, target: 3
+findTarget TrueSuccessor: 2, FalseSuccessor: 3
+The CFG path from 3 to 3 is:
+3 -> 
+findTarget FalseSuccessor: 3, target: 3
+found condition: if t9 goto 2 else 3 false
+findTarget func: validateE2TAddressRANListData, source: 5, target: 3
+findTarget TrueSuccessor: 1, FalseSuccessor: 6
+The CFG path from 1 to 3 is:
+1 -> 3 -> 
+found condition: if t20 goto 1 else 6 true
+findTarget func: validateE2TAddressRANListData, source: 2, target: 3
+findTarget TrueSuccessor: 4, FalseSuccessor: 5
+The CFG path from 5 to 3 is:
+5 -> 1 -> 3 -> 
+findTarget FalseSuccessor: 5, target: 3
+found condition: if t15 goto 4 else 5 false
+findTarget func: validateE2TAddressRANListData, source: 5, target: 3
+findTarget TrueSuccessor: 1, FalseSuccessor: 6
+The CFG path from 1 to 3 is:
+1 -> 3 -> 
+found condition: if t20 goto 1 else 6 true
+condition: if t9 goto 2 else 3 false
+condition: if t15 goto 4 else 5 false
+condition: if t20 goto 1 else 6 true
+the condition is: if t3 goto 1 else 2
+t2 = validateE2TAddressRANListData(data)
+validateE2TAddressRANListData(routing-manager/pkg/models.RanE2tMap)
+t3 = t2 != nil:error
+if t3 goto 1 else 2 - false
+
+constraint can be expanded:
+	t6 = len(assRanE2tData)
+	len(routing-manager/pkg/models.RanE2tMap)
+	t9 = t8 < t6
+	if t9 goto 2 else 3 - false
+
+	t12 = &t11.E2TAddress [#0]
+	*routing-manager/pkg/models.RanE2tElement.RanE2tElement.E2TAddress
+	t15 = t14 == "":string
+	if t15 goto 4 else 5 - false
+
+	t17 = &t11.E2TAddress [#0]
+	*routing-manager/pkg/models.RanE2tElement.RanE2tElement.E2TAddress
+	t20 = checkValidaE2TAddress(t19)
+	if t20 goto 1 else 6 - true
+
+-------------------- end path 0 --------------------
+-------------------- path 0 --------------------
+AssociateRanToE2THandlerImpl -> sendRoutesToAll
+solving condition: if t3 goto 1 else 2 - false
+t2 = validateE2TAddressRANListData(data)
+validateE2TAddressRANListData(routing-manager/pkg/models.RanE2tMap)
+t3 = t2 != nil:error
+if t3 goto 1 else 2 - false
+
+constraint can be expanded:
+	t6 = len(assRanE2tData)
+	len(routing-manager/pkg/models.RanE2tMap)
+	t9 = t8 < t6
+	if t9 goto 2 else 3 - false
+
+	t12 = &t11.E2TAddress [#0]
+	*routing-manager/pkg/models.RanE2tElement.RanE2tElement.E2TAddress
+	t15 = t14 == "":string
+	if t15 goto 4 else 5 - false
+
+	t17 = &t11.E2TAddress [#0]
+	*routing-manager/pkg/models.RanE2tElement.RanE2tElement.E2TAddress
+	t20 = checkValidaE2TAddress(t19)
+	if t20 goto 1 else 6 - true
+
+-------------------- end path 0 --------------------
+

@@ -1,0 +1,18 @@
+{{/*
+# Copyright 2021-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: tost-telegraf
+spec:
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: telegraf
+  endpoints:
+  - port: prometheus-client
+    path: /metrics
+    scheme: HTTP

@@ -1,0 +1,5 @@
+/home/tianchang/Desktop/asn1c-v771/kpm/build_mutate/CMakeFiles/edit_cache.dir
+/home/tianchang/Desktop/asn1c-v771/kpm/build_mutate/CMakeFiles/mutator.dir
+/home/tianchang/Desktop/asn1c-v771/kpm/build_mutate/CMakeFiles/KPM.dir
+/home/tianchang/Desktop/asn1c-v771/kpm/build_mutate/CMakeFiles/rebuild_cache.dir
+/home/tianchang/Desktop/asn1c-v771/kpm/build_mutate/CMakeFiles/Mutator.dir

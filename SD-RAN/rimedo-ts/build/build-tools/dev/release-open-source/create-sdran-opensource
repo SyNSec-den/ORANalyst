@@ -1,0 +1,64 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+set -e -u -o pipefail
+
+declare -a components=(
+  "sdran-helm-charts" "sd-ran-1.2.1"
+  "onos-e2-sm" "servicemodels/e2sm_kpm/v0.7.53"
+  "onos-e2-sm" "servicemodels/e2sm_kpm_v2/v0.7.53"
+  "onos-e2-sm" "servicemodels/e2sm_rc_pre/v0.7.53"
+  "onos-e2-sm" "servicemodels/e2sm_mho/v0.7.53"
+  "onos-e2-sm" "servicemodels/e2sm_ni/v0.7.53"
+  "onos-e2t" "v0.8.1"
+  "ran-simulator" "v0.7.56"
+  "onos-kpimon" "v0.1.26"
+  "onos-pci" "v0.1.19"
+  "onos-uenib" "v0.1.0"
+  "onos-mlb" "v0.0.7"
+  "onos-exporter" "v0.1.7"
+)
+
+length=${#components[@]}
+length=$((length - 1))
+
+#GIT_USER=$1
+#GIT_TOKEN=$2
+
+build_tools=$PWD
+
+rm -rf sdran-upload
+mkdir sdran-upload
+cd sdran-upload
+
+for i in $(seq 0 2 $length); do
+  component=${components[$i]}
+  version=${components[$i+1]}
+  if [ ! -d "$component" ]
+  then
+    git clone git@github.com:onosproject/$component.git
+    cd $component
+    git checkout -b rel-1.2.0 $version
+
+    #curl -X POST -u$GIT_USER:$GIT_TOKEN https://api.github.com/orgs/sdran/repos -d "{\"name\":\"$component\",\"private\":\"true\"}"
+
+    $build_tools/dev/release-open-source/fix-sdran-opensource
+
+    git add .
+    git commit -m "Updates for open source release 1.2.0"
+    git push https://github.com/sdran/$component.git
+
+    $build_tools/dev/release-open-source/remove-proprietary-sdran-opensource
+
+    cd ..
+  fi
+
+  cd $component
+  git tag -d $version || true
+  git tag $version
+  git push https://github.com/sdran/$component.git $version || true
+  cd ..
+
+done

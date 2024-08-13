@@ -1,0 +1,94 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tb-http-transport
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tb-http-transport
+  template:
+    metadata:
+      labels:
+        app: tb-http-transport
+    spec:
+      serviceAccountName: thingsboard
+      volumes:
+        - name: tb-http-transport-config
+          configMap:
+            name: tb-http-transport-config
+            items:
+              - key: conf
+                path:  tb-http-transport.conf
+              - key: logback
+                path:  logback.xml
+      initContainers:
+        - name: tb-http-transport-dep-check
+          image: {{ .Values.images.tags.depCheck }}
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: PATH
+              value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
+            - name: COMMAND
+              value: "echo done"
+            - name: DEPENDENCY_POD_JSON
+              value: '[{"labels": {"app": "tb-kafka"}, "requireSameNode": false}]'
+          command:
+            - kubernetes-entrypoint
+          volumeMounts:
+            []
+      containers:
+        - name: server
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          image: {{ .Values.images.tags.httpTransport }}
+          ports:
+            - containerPort: {{ .Values.config.transports.http.port }}
+              name: http
+          env:
+            - name: TB_SERVICE_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: TB_QUEUE_TYPE
+              value: "kafka"
+            - name: HTTP_BIND_ADDRESS
+              value: {{ .Values.config.transports.http.bindAddr | quote }}
+            - name: HTTP_BIND_PORT
+              value: {{ .Values.config.transports.http.port | quote }}
+            - name: HTTP_REQUEST_TIMEOUT
+              value: {{ .Values.config.transports.http.timeout | quote }}
+            - name: TB_KAFKA_SERVERS
+              value: "tb-kafka:{{ .Values.config.kafka.ports.outPort }}"
+          volumeMounts:
+            - mountPath: /config
+              name: tb-http-transport-config
+          readinessProbe:
+            periodSeconds: 20
+            tcpSocket:
+              port: {{ .Values.config.transports.http.port }}
+          livenessProbe:
+            initialDelaySeconds: 120
+            periodSeconds: 20
+            tcpSocket:
+              port: {{ .Values.config.transports.http.port }}
+      restartPolicy: Always

@@ -1,0 +1,122 @@
+# There are currently two main sets of tests
+#   1. Running go-fuzz-build and go-fuzz on dvyukov/go-fuzz-corpus/png starting with an empty corpus,
+#      and it validates >1 entry appears in the corpus. This uses what was formerly the required
+#      arguments like -workdir and -bin.
+#   2. Running go-fuzz-build and go-fuzz on dvyukov/go-fuzz/test, which contains some regression tests, etc.
+#      This uses the newer ability to not supply any required arguments to go-fuzz-build and go-fuzz.
+
+language: go
+
+# Test Go 1.16 and 1.15 across linux, osx, windows.
+# Test Go tip on linux, osx (and explicitly set GO111MODULE=auto for tip, given default might change).
+# SET_GO111MODULE is used because (at least early on) setting GO111MODULE directly interfered with the setup performed by travis.
+matrix:
+  include:
+    - os: linux
+      go: "1.16.x"
+    - os: linux
+      go: "1.15.x"
+    - os: linux
+      go: tip
+    - os: linux
+      go: tip
+      env: SET_GO111MODULE=auto
+    - os: osx
+      go: "1.16.x"
+    - os: osx
+      go: "1.15.x"
+    - os: osx
+      go: tip
+    - os: osx
+      go: tip
+      env: SET_GO111MODULE=auto
+    - os: windows
+      go: "1.16.x"
+    - os: windows
+      go: "1.15.x"
+
+# Install coreutils for the 'timeout(1)' utility on windows and osx.
+before_install:
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then choco install gnuwin32-coreutils.install; fi
+  - go get -u github.com/rogpeppe/go-internal/cmd/testscript
+
+# Set the import path (including to help with forks).
+go_import_path: github.com/dvyukov/go-fuzz
+
+script:
+  # Sanity check 'timeout(1)'.
+  - which timeout
+  - "echo 'verify the timeout utility works, including that it exits with status 124 on timeout.'"
+  -  "(timeout 2 sleep 10; ret=$?; echo timeout ret=$ret; if [[ $ret -eq 124 ]]; then exit 0; fi; exit $ret)"
+
+  # Sanity check that the 'testscript' cmd seems to function at all.
+  # If all the testscripts fail, this is a good one to troubleshoot first.
+  - cd $GOPATH/src/github.com/dvyukov/go-fuzz
+  - testscript -v testscripts/fuzz_help.txt
+
+  # Run our tests for fuzzing modules.
+  # If multiple modules testcripts fail, probably makes sense to start by troubleshooting
+  # the earliest failing testscript.
+  # TODO: probably makes more sense to move this further down, but place here for now for faster iterations.
+  - testscript -v testscripts/mod_go_fuzz_dep.txt
+  - testscript -v testscripts/mod_outside_gopath.txt
+  - testscript -v testscripts/mod_inside_gopath.txt
+  - testscript -v testscripts/mod_v2.txt
+  - testscript -v testscripts/mod_vendor.txt
+
+  # Prepare to test the png example from dvyukov/go-fuzz-corpus.
+  - git clone --depth=1 https://github.com/dvyukov/go-fuzz-corpus $GOPATH/src/github.com/dvyukov/go-fuzz-corpus
+  - cd $GOPATH/src/github.com/dvyukov/go-fuzz-corpus/
+  - cd png
+  # Create a small module to test the png example.
+  - go mod init github.com/dvyukov/go-fuzz-corpus/png
+  - go mod tidy
+  - go get -d github.com/dvyukov/go-fuzz/go-fuzz-dep
+  - ls -l
+
+  # Reduce chances of future surprises due to any caching.
+  - rm -rf fuzz.zip ./freshworkdir
+
+  # Explicitly set GO111MODULE if requested.
+  # Travis and/or tip might change the default value of GO111MODULE at some point.
+  # As of 2019-08-31, travis sets GO111MODULE=auto, and tip defaults to 'auto' if
+  # GO111MODULE is unset.
+  - if [[ ! -z "$SET_GO111MODULE" ]]; then export GO111MODULE="$SET_GO111MODULE"; fi 
+  - echo "GO111MODULE=$GO111MODULE"
+
+  # Instrument using go-fuzz-build on the png example Fuzz function.
+  - which go-fuzz-build
+  - go-fuzz-build -o=./fuzz.zip github.com/dvyukov/go-fuzz-corpus/png
+
+  # Run go-fuzz on the result of instrumenting the png example Fuzz function.
+  # Stop after 20 sec of fuzzing.
+  - which go-fuzz
+  -  "(timeout 20 go-fuzz -bin=./fuzz.zip -workdir=./freshworkdir; ret=$?; echo timeout ret=$ret; if [[ $ret -eq 124 ]]; then exit 0; fi; exit $ret)"
+
+  # Lightly validate that we have more than 1 result in the corpus.
+  # Some chance this could fail if unlucky, but so far seems unlikely to have a false failure on this validation.
+  - ls -lrt ./freshworkdir/corpus | tail -30
+  - find ./freshworkdir/corpus/ -type f | wc -l
+  - "(if [[ $(find ./freshworkdir/corpus/ -type f | wc -l) -gt 1 ]]; then exit 0; fi; exit 1)"
+
+  # Instrument the test package from dvyukov/go-fuzz/test.
+  - cd $GOPATH/src/github.com/dvyukov/go-fuzz
+  - cd test
+  - ls -l
+  - rm -rf test-fuzz.zip
+  - go-fuzz-build
+
+  # End early for Windows. 'timeout' does not seem to kill this fuzzing session on Windows.
+  # Presumably we could solve that with an alternative timeout/kill mechanism, but for
+  # now workaround by skipping that last test on Windows.
+  - if [[ "$TRAVIS_OS_NAME" == "windows" ]]; then travis_terminate "${TRAVIS_TEST_RESULT}"; fi
+
+  # Run go-fuzz on the result. Stop after 20 sec of fuzzing.
+  - which go-fuzz
+  -  "(timeout 20 go-fuzz; ret=$?; echo timeout ret=$ret; if [[ $ret -eq 124 ]]; then exit 0; fi; exit $ret)"
+
+# Windows seems a bit flakey about capturing output on failure. This seems to help.
+after_failure: 
+  - "echo 'sleep 10 sec to help capture output. On Windows, failing output might be in wrong section, including this one.'"
+  - sleep 10
+

@@ -1,0 +1,78 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: ricplt-system-tiller
+rules:
+  - apiGroups: [""]
+    resources: ["deployments"]
+    verbs: ["get", "list", "create", "delete"]
+  - apiGroups: ["apiextensions.k8s.io"]
+    resources: ["customresourcedefinitions"]
+    verbs: ["get", "list", "create", "delete"]
+  - apiGroups: ["rbac.authorization.k8s.io"]
+    resources: ["clusterroles", "clusterrolebindings"]
+    verbs: ["get", "list", "create", "delete"]
+  - apiGroups: [""]
+    resources: ["events"]
+    verbs: ["create", "patch"]
+  - apiGroups: [""]
+    resources: ["nodes"]
+    verbs: ["list", "watch", "get"]
+  - apiGroups: [""]
+    resources: ["nodes/metrics"]
+    verbs: ["list", "watch", "get"]
+  - apiGroups: [""]
+    resources: ["nodes/proxy"]
+    verbs: ["list", "watch", "get"]
+  - apiGroups: ["configuration.konghq.com"]
+    resources: ["kongconsumers"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["configuration.konghq.com"]
+    resources: ["kongcredentials"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["configuration.konghq.com"]
+    resources: ["kongingresses"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["configuration.konghq.com"]
+    resources: ["kongplugins"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["networking.k8s.io"]
+    resources: ["ingresses"]
+    verbs: ["watch", "list", "get", "create", "delete", "update"]
+  - apiGroups: [""]
+    resources: ["ingresses"]
+    verbs: ["watch", "list", "get", "create", "delete", "update"]
+  - apiGroups: [""]
+    resources: ["persistentvolumes"]
+    verbs: ["watch", "list", "get", "create", "delete"]
+  - apiGroups: ["danm.k8s.io"]
+    resources: ["clusternetworks"]
+    verbs: ["watch", "list", "get", "create", "delete"]
+  - apiGroups: ["extensions"]
+    resources: ["ingresses/status"]
+    verbs: ["update", "get", "list", "watch"]
+  - apiGroups: ["networking.k8s.io"]
+    resources: ["ingresses/status"]
+    verbs: ["update", "get", "list", "watch"]
+  - apiGroups: ["certificates.k8s.io"]
+    resources: ["certificatesigningrequests"]
+    verbs: ["list", "watch"]
+  - apiGroups: ["storage.k8s.io"]
+    resources: ["storageclasses"]
+    verbs: ["list", "watch"]
+  - nonResourceURLs: ["/metrics"]
+    verbs: ["get"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: ricplt-system-tiller
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: ricplt-system-tiller
+subjects:
+  - kind: ServiceAccount
+    name: tiller
+    namespace: kube-system

@@ -1,0 +1,45 @@
+<E2AP-PDU>
+    <initiatingMessage>
+        <procedureCode>10</procedureCode>
+        <criticality><reject/></criticality>
+        <value>
+            <E2nodeConfigurationUpdate>
+                <protocolIEs>
+                    <E2nodeConfigurationUpdate-IEs>
+                        <id>49</id>
+                        <criticality><reject/></criticality>
+                        <value>
+                            <TransactionID>1</TransactionID>
+                        </value>
+                    </E2nodeConfigurationUpdate-IEs>
+                    <E2nodeConfigurationUpdate-IEs>
+                        <id>50</id>
+                        <criticality><reject/></criticality>
+                        <value>
+                            <E2nodeComponentConfigAddition-List>
+                                <ProtocolIE-SingleContainer>
+                                    <id>51</id>
+                                    <criticality><reject/></criticality>
+                                    <value>
+                                        <E2nodeComponentConfigAddition-Item>
+                                            <e2nodeComponentInterfaceType><ng/></e2nodeComponentInterfaceType>
+                                            <e2nodeComponentID>
+                                                <e2nodeComponentInterfaceTypeNG>
+                                                    <amf-name>nginterf</amf-name>
+                                                </e2nodeComponentInterfaceTypeNG>
+                                            </e2nodeComponentID>
+                                            <e2nodeComponentConfiguration>
+                                                <e2nodeComponentRequestPart>72 65 71 70 61 72 74</e2nodeComponentRequestPart>
+                                                <e2nodeComponentResponsePart>72 65 73 70 61 72 74</e2nodeComponentResponsePart>
+                                            </e2nodeComponentConfiguration>
+                                        </E2nodeComponentConfigAddition-Item>
+                                    </value>
+                                </ProtocolIE-SingleContainer>
+                            </E2nodeComponentConfigAddition-List>
+                        </value>
+                    </E2nodeConfigurationUpdate-IEs>
+                </protocolIEs>
+            </E2nodeConfigurationUpdate>
+        </value>
+    </initiatingMessage>
+</E2AP-PDU>

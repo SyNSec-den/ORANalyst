@@ -1,0 +1,70 @@
+{
+  "xapp_name": "kpimon-go",
+  "version": "2.0.1",
+  "containers": [
+    {
+      "name": "kpimon-go",
+      "image": {
+        "registry": "127.0.0.1:5001",
+        "name": "kpimon-go",
+        "tag": "latest",
+        "pullPolicy": "Always"
+      }
+    }
+  ],
+  "livenessProbe": {
+    "httpGet": {
+        "path": "ric/v1/health/alive",
+        "port": 8080
+    },
+    "initialDelaySeconds": 5,
+    "periodSeconds": 15
+  },
+  "readinessProbe": {
+      "httpGet": {
+          "path": "ric/v1/health/ready",
+          "port": 8080
+      },
+      "initialDelaySeconds": 5,
+      "periodSeconds": 15
+  },
+  "messaging": {
+    "ports": [
+      {
+        "name": "http",
+        "container": "kpimon-go",
+        "port": 8080,
+        "description": "http service"
+      },
+      {
+        "name": "rmr-data",
+        "container": "kpimon-go",
+        "port": 4560,
+        "rxMessages": ["RIC_SUB_RESP", "RIC_INDICATION"],
+        "txMessages": ["RIC_SUB_REQ"],
+        "policies": [],
+        "description": "rmr receive data port for xappkpimon"
+      },
+      {
+        "name": "rmr-route",
+        "container": "kpimon-go",
+        "port": 4561,
+        "description": "rmr route port for xappkpimon"
+      },
+      {
+        "name": "cover",
+        "container": "kpimon-go",
+        "port": 19999,
+        "description": "coverage information to be sent to fuzzer"
+      }
+    ]
+  },
+  "rmr": {
+    "protPort": "tcp:4560",
+    "maxSize": 2072,
+    "numWorkers": 1,
+    "rxMessages": ["RIC_SUB_RESP", "RIC_INDICATION"],
+    "txMessages": ["RIC_SUB_REQ"],
+    "policies": []
+  }
+}

@@ -1,0 +1,99 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# This script bumps up the versions of components and charts
+# in sd-ran. Intended to be run after a release to make dev
+# versions on the master branch
+
+set -e -u -o pipefail
+
+declare -a ignore_component_names=(
+  "nem-monitoring" "config-model-ric" "onos-gui"
+  "fb-kpimon-xapp" "fb-ah-xapp" "fb-ah-gui"
+  "ah-eson-test-server" "fluent-bit" "opendistro-es"
+  "kube-prometheus-stack"
+)
+
+chart_file="sdran-helm-charts/sd-ran/Chart.yaml"
+
+CDPATH=""
+
+entries=$(yq e '.dependencies | length' "$chart_file")
+length=$((entries - 1))
+
+for i in $(seq 0 $length)
+do
+  dep=$(yq e .dependencies[$i] "$chart_file")
+  attrs=(${dep//: / })
+  attr_count=(${#attrs[@]})
+
+  attr_count=$((attr_count / 2))
+  attr_count=$((attr_count - 1))
+  for j in $(seq 0 $attr_count)
+  do
+    attr_key_index=$((j * 2))
+    attr_value_index=$((attr_key_index + 1))
+    key="${attrs[attr_key_index]}"
+    if [ "$key" == "name" ]
+    then
+      component="${attrs[attr_value_index]}"
+    fi
+  done
+
+  if [[ " ${ignore_component_names[@]} " =~ " ${component} " ]]; then
+    echo "Skipping ignored component " $component
+    continue
+  fi
+
+  cd $component
+  git checkout master
+  git fetch upstream && git rebase upstream/master
+
+  # Read in the current version
+  old_version=$(< ./VERSION)
+  version=(${old_version//./ })
+
+  # set up the new version
+  new_minor=$((${version[1]} + 1))
+  new_version=${version[0]}.$new_minor.0-dev
+  echo Bumping component $component from $old_version to $new_version
+
+  # update the VERSION file
+  git branch -D bump-version-for-$component-$new_version && true
+  git checkout -b bump-version-for-$component-$new_version
+  echo $new_version > VERSION
+  git add .
+  git commit -m "Post release bump to version $new_version"
+  git push --force origin $(git symbolic-ref HEAD)
+  git checkout master
+  cd ..
+
+  # Update the chart version
+  if [ -d sdran-helm-charts/$component ]; then
+    cd sdran-helm-charts
+  else
+    cd onos-helm-charts
+  fi
+  git checkout master
+  git fetch upstream && git rebase upstream/master
+
+  old_chart_version=$(yq e .version $component/Chart.yaml)
+  chart_version=(${old_chart_version//./ })
+  new_chart_minor=$((${chart_version[1]} + 1))
+  new_chart_version=${chart_version[0]}.$new_chart_minor.0
+
+  # update the Chart file
+  git branch -D bump-version-for-$component-$new_chart_version && true
+  git checkout -b bump-version-for-$component-$new_chart_version
+  echo Bumping chart for $component from $old_chart_version to $new_chart_version
+  sed -i "" -e s/$old_chart_version/$new_chart_version/ $component/Chart.yaml
+  git add .
+  git commit -m "Post release bump to chart version $new_chart_version"
+  git push --force origin $(git symbolic-ref HEAD)
+  git checkout master
+
+
+  cd ..
+done

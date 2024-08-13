@@ -1,0 +1,73 @@
+-----------------
+State Name : s_1
+State Variable & Values : 
+-----------------
+
+-----------------
+State Name : s_10
+State Variable & Values : 
+greeter_client:main:t13 :-> 0:int
+greeter_client:main:t15 :-> 0:int
+-----------------
+
+-----------------
+State Name : s_2
+State Variable & Values : 
+greeter_client:main:t13 :-> 0:int
+-----------------
+
+-----------------
+State Name : s_3
+State Variable & Values : 
+greeter_client:main:t13 :-> 0:int
+greeter_client:main:t15 :-> 1:int
+-----------------
+
+-----------------
+State Name : s_4
+State Variable & Values : 
+greeter_client:main:t13 :-> 0:int
+greeter_client:main:t15 :-> 1:int
+greeter_client:main:t21 :-> 2:int
+-----------------
+
+-----------------
+State Name : s_5
+State Variable & Values : 
+greeter_client:main:t21 :-> 2:int
+greeter_client:main:t13 :-> 3:int
+greeter_client:main:t15 :-> 1:int
+-----------------
+
+-----------------
+State Name : s_6
+State Variable & Values : 
+greeter_client:main:t13 :-> 3:int
+greeter_client:main:t15 :-> 1:int
+greeter_client:main:t21 :-> 1:int
+-----------------
+
+-----------------
+State Name : s_7
+State Variable & Values : 
+greeter_client:main:t13 :-> 3:int
+greeter_client:main:t15 :-> 3:int
+greeter_client:main:t21 :-> 2:int
+-----------------
+
+-----------------
+State Name : s_8
+State Variable & Values : 
+greeter_client:main:t21 :-> 3:int
+greeter_client:main:t13 :-> 3:int
+greeter_client:main:t15 :-> 3:int
+-----------------
+
+-----------------
+State Name : s_9
+State Variable & Values : 
+greeter_client:main:t13 :-> 0:int
+greeter_client:main:t15 :-> 1:int
+greeter_client:main:t21 :-> 1:int
+-----------------
+

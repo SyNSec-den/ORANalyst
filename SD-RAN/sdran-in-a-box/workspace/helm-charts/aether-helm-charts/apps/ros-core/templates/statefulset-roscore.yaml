@@ -1,0 +1,72 @@
+# Copyright 2021-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+{{ tuple "ros-core" . | include "ros-core.service_account" }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ros-core
+  labels:
+{{ tuple "ros-core" . | include "ros-core.metadata_labels" | indent 4 }}
+spec:
+  replicas: 1
+  serviceName: ros-core
+  selector:
+    matchLabels:
+{{ tuple "ros-core" . | include "ros-core.metadata_labels" | indent 6 }}
+  template:
+    metadata:
+      labels:
+{{ tuple "ros-core" . | include "ros-core.metadata_labels" | indent 8 }}
+    spec:
+  {{- if .Values.nodeSelector.enabled }}
+      nodeSelector:
+        {{ .Values.nodeSelector.rosCore.label }}: {{ .Values.nodeSelector.rosCore.value }}
+  {{- end }}
+      serviceAccountName: ros-core
+  {{- if .Values.networks.hostNetwork }}
+      hostNetwork: true
+      dnsPolicy: None
+      dnsConfig:
+        nameservers:
+          - {{ .Values.coredns.service.clusterIP }}
+  {{- end }}
+      containers:
+      - name: ros-core
+        image: {{ .Values.images.tags.rosCore }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        securityContext:
+          privileged: true
+        stdin: true
+        tty: true
+        command:
+        - /root/run_roscore.sh
+        volumeMounts:
+        - name: ros-core
+          mountPath: /root/run_roscore.sh
+          subPath: run_roscore.sh
+        - name: ros-core-launch
+          mountPath: /root/TrajBridge-PX4/src/bridge_px4/launch
+      - name: drone-net-listener
+        image: {{ .Values.images.tags.droneNetListener }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        stdin: true
+        tty: true
+        command: ["bash", "-xc"]
+        args:
+        - python /opt/net_listener.py
+        volumeMounts:
+        - name: ros-core
+          mountPath: /opt/net_listener.py
+          subPath: net_listener.py
+      volumes:
+        - name: ros-core
+          configMap:
+            name: ros-core
+            defaultMode: 493
+        - name: ros-core-launch
+          configMap:
+            name: ros-core-launch
+            defaultMode: 420

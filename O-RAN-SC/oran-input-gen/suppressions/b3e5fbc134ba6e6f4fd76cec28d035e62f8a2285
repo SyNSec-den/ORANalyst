@@ -1,0 +1,63 @@
+connected to coverage server
+Processed data: [2 1 1 0 0 2 64 0 0 0 0 241 16 0 0 0 0 16 0 0 241 16 75 1 0 80 16 0 0 241 16]
+Received response: [2 1 1 0 0 2 64 0 0 0 0 241 16 0 0 0 0 16 0 0 241 16 75 1 0 80 16 0 0 241 16]
+Decoding successful
+<E2SM-KPM-IndicationMessage>
+    <ric-Style-Type>257</ric-Style-Type>
+    <indicationMessage>
+        <indicationMessage-Format1>
+            <pm-Containers>
+                <PM-Containers-List>
+                    <performanceContainer>
+                        <oDU>
+                            <cellResourceReportList>
+                                <CellResourceReportListItem>
+                                    <nRCGI>
+                                        <pLMN-Identity>00 F1 10</pLMN-Identity>
+                                        <nRCellIdentity>
+                                            000000000000000000000000000000000001
+                                        </nRCellIdentity>
+                                    </nRCGI>
+                                    <servedPlmnPerCellList>
+                                        <ServedPlmnPerCellListItem>
+                                            <pLMN-Identity>00 F1 10</pLMN-Identity>
+                                        </ServedPlmnPerCellListItem>
+                                    </servedPlmnPerCellList>
+                                </CellResourceReportListItem>
+                            </cellResourceReportList>
+                        </oDU>
+                    </performanceContainer>
+                </PM-Containers-List>
+                <PM-Containers-List>
+                    <performanceContainer>
+                        <oCU-CP>
+                            <cu-CP-Resource-Status>
+                                <numberOfActive-UEs>0</numberOfActive-UEs>
+                            </cu-CP-Resource-Status>
+                        </oCU-CP>
+                    </performanceContainer>
+                </PM-Containers-List>
+                <PM-Containers-List>
+                    <performanceContainer>
+                        <oCU-UP>
+                            <pf-ContainerList>
+                                <PF-ContainerListItem>
+                                    <interface-type><f1-u/></interface-type>
+                                    <o-CU-UP-PM-Container>
+                                        <plmnList>
+                                            <PlmnID-List>
+                                                <pLMN-Identity>00 F1 10</pLMN-Identity>
+                                            </PlmnID-List>
+                                        </plmnList>
+                                    </o-CU-UP-PM-Container>
+                                </PF-ContainerListItem>
+                            </pf-ContainerList>
+                        </oCU-UP>
+                    </performanceContainer>
+                </PM-Containers-List>
+            </pm-Containers>
+        </indicationMessage-Format1>
+    </indicationMessage>
+</E2SM-KPM-IndicationMessage>
+failed to read end signal from server: EOF
+exit status 1

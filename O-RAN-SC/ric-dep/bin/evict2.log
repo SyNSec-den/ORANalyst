@@ -1,0 +1,349 @@
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-dep/bin# ./install_common_templates_to_helm.sh 
+Installing servecm (Chart Manager) and common templates to helm3
+Error: plugin already exists
+/root/.cache/helm/repository
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 15.0M  100 15.0M    0     0  4076k      0  0:00:03  0:00:03 --:--:-- 4076k
+linux-386/
+linux-386/chartmuseum
+linux-386/LICENSE
+linux-386/README.md
+servecm not yet running. sleeping for 2 seconds
+nohup: appending output to 'nohup.out'
+servcm up and running
+/root/.cache/helm/repository
+Successfully packaged chart and saved it to: /tmp/ric-common-3.3.2.tgz
+"local" has been removed from your repositories
+"local" has been added to your repositories
+checking that ric-common templates were added
+NAME            	CHART VERSION	APP VERSION	DESCRIPTION                                   
+local/ric-common	3.3.2        	           	Common templates for inclusion in other charts
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-dep/bin# clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-dep/bin# ./install -f ../RECIPE_EXAMPLE/example_recipe_oran_i_release.yaml 
+namespace/ricplt created
+namespace/ricinfra created
+namespace/ricxapp created
+Deploying RIC infra components [infrastructure dbaas appmgr rtmgr e2mgr e2term a1mediator submgr vespamgr o1mediator alarmmanager ]
+Note that the following optional components are NOT being deployed: {influxdb jaegeradapter}. To deploy them add them with -c to the default component list of the install command
+configmap/ricplt-recipe created
+Add cluster roles
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "cord" chart repository
+...Successfully got an update from the "incubator" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 7 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-infrastructure
+LAST DEPLOYED: Wed Jan  3 11:07:04 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "cord" chart repository
+...Successfully got an update from the "incubator" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 1 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-dbaas
+LAST DEPLOYED: Wed Jan  3 11:07:16 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "cord" chart repository
+...Successfully got an update from the "incubator" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 1 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-appmgr
+LAST DEPLOYED: Wed Jan  3 11:07:27 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "incubator" chart repository
+...Successfully got an update from the "cord" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 1 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-rtmgr
+LAST DEPLOYED: Wed Jan  3 11:07:37 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "cord" chart repository
+...Successfully got an update from the "incubator" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 1 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-e2mgr
+LAST DEPLOYED: Wed Jan  3 11:07:48 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "cord" chart repository
+...Successfully got an update from the "incubator" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 1 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-e2term
+LAST DEPLOYED: Wed Jan  3 11:07:59 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "incubator" chart repository
+...Successfully got an update from the "cord" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 1 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-a1mediator
+LAST DEPLOYED: Wed Jan  3 11:08:10 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "cord" chart repository
+...Unable to get an update from the "incubator" chart repository (https://charts.helm.sh/incubator):
+	read tcp [2601:98a:4203:9040:f5c4:e16c:d619:373]:42882->[2606:50c0:8000::153]:443: read: connection reset by peer
+Update Complete. ⎈Happy Helming!⎈
+Saving 1 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-submgr
+LAST DEPLOYED: Wed Jan  3 11:08:21 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "cord" chart repository
+...Successfully got an update from the "incubator" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 1 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-vespamgr
+LAST DEPLOYED: Wed Jan  3 11:08:33 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "cord" chart repository
+...Successfully got an update from the "incubator" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 1 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-o1mediator
+LAST DEPLOYED: Wed Jan  3 11:08:44 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+Hang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "local" chart repository
+...Successfully got an update from the "atomix" chart repository
+...Successfully got an update from the "onos" chart repository
+...Successfully got an update from the "cord" chart repository
+...Successfully got an update from the "incubator" chart repository
+Update Complete. ⎈Happy Helming!⎈
+Saving 1 charts
+Downloading ric-common from repo http://127.0.0.1:8879/charts
+Deleting outdated charts
+NAME: r4-alarmmanager
+LAST DEPLOYED: Wed Jan  3 11:08:55 2024
+NAMESPACE: ricplt
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-dep/bin# kubectl get po -n ricplt
+NAME                                                         READY   STATUS              RESTARTS   AGE
+deployment-ricplt-a1mediator-7d5b85ff7d-mst5j                0/1     Running             0          89s
+deployment-ricplt-alarmmanager-6bd5fccfc8-lw5rg              0/1     ContainerCreating   0          45s
+deployment-ricplt-appmgr-77986c9cbb-7lh2t                    1/1     Running             0          2m13s
+deployment-ricplt-e2mgr-78c987559f-vcjd2                     1/1     Running             0          112s
+deployment-ricplt-e2term-alpha-5dc768bcb7-cn9p9              0/1     Running             0          101s
+deployment-ricplt-o1mediator-97fb6759b-trkdt                 0/1     ContainerCreating   0          56s
+deployment-ricplt-rtmgr-78f768474-sv6b6                      1/1     Running             1          2m3s
+deployment-ricplt-submgr-56bb776b68-fwzdm                    0/1     ContainerCreating   0          78s
+deployment-ricplt-vespamgr-84f7d87dfb-jxcms                  0/1     ContainerCreating   0          67s
+r4-infrastructure-kong-7995f4679b-n7dj9                      2/2     Running             2          2m35s
+r4-infrastructure-prometheus-alertmanager-5798b78f48-7p9mq   2/2     Running             0          2m35s
+r4-infrastructure-prometheus-server-c8ddcfdf5-ffkbn          1/1     Running             0          2m35s
+statefulset-ricplt-dbaas-server-0                            1/1     Running             0          2m24s
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-dep/bin# kubectl get po -n ricplt
+NAME                                                         READY   STATUS    RESTARTS   AGE
+deployment-ricplt-a1mediator-7d5b85ff7d-mst5j                1/1     Running   0          2m51s
+deployment-ricplt-alarmmanager-6bd5fccfc8-lw5rg              1/1     Running   0          2m7s
+deployment-ricplt-appmgr-77986c9cbb-7lh2t                    1/1     Running   0          3m35s
+deployment-ricplt-e2mgr-78c987559f-vcjd2                     1/1     Running   0          3m14s
+deployment-ricplt-e2term-alpha-5dc768bcb7-brsz6              0/1     Pending   0          8s
+deployment-ricplt-e2term-alpha-5dc768bcb7-cn9p9              0/1     Evicted   0          3m3s
+deployment-ricplt-o1mediator-97fb6759b-trkdt                 1/1     Running   0          2m18s
+deployment-ricplt-rtmgr-78f768474-sv6b6                      1/1     Running   2          3m25s
+deployment-ricplt-submgr-56bb776b68-fwzdm                    1/1     Running   0          2m40s
+deployment-ricplt-vespamgr-84f7d87dfb-jxcms                  1/1     Running   0          2m29s
+r4-infrastructure-kong-7995f4679b-kx9gj                      0/2     Pending   0          13s
+r4-infrastructure-kong-7995f4679b-n7dj9                      0/2     Evicted   0          3m57s
+r4-infrastructure-prometheus-alertmanager-5798b78f48-7p9mq   0/2     Evicted   0          3m57s
+r4-infrastructure-prometheus-alertmanager-5798b78f48-qz588   0/2     Pending   0          2s
+r4-infrastructure-prometheus-server-c8ddcfdf5-ffkbn          0/1     Evicted   0          3m57s
+r4-infrastructure-prometheus-server-c8ddcfdf5-k6t5n          0/1     Evicted   0          19s
+r4-infrastructure-prometheus-server-c8ddcfdf5-r674b          0/1     Evicted   0          19s
+r4-infrastructure-prometheus-server-c8ddcfdf5-vhbxz          0/1     Pending   0          17s
+r4-infrastructure-prometheus-server-c8ddcfdf5-w74sr          0/1     Evicted   0          19s
+r4-infrastructure-prometheus-server-c8ddcfdf5-xsb42          0/1     Evicted   0          18s
+statefulset-ricplt-dbaas-server-0                            1/1     Running   0          3m46s
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-dep/bin# kubectl describe pod -n ricplt deployment-ricplt-e2term-alpha-5dc768bcb7-cn9p9
+Name:           deployment-ricplt-e2term-alpha-5dc768bcb7-cn9p9
+Namespace:      ricplt
+Priority:       0
+Node:           tianchang-ubuntu/
+Start Time:     Wed, 03 Jan 2024 11:07:59 -0500
+Labels:         app=ricplt-e2term-alpha
+                pod-template-hash=5dc768bcb7
+                release=r4-e2term
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container container-ricplt-e2term was using 124Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/deployment-ricplt-e2term-alpha-5dc768bcb7
+Containers:
+  container-ricplt-e2term:
+    Image:       nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-e2:6.0.4
+    Ports:       4561/TCP, 38000/TCP, 36422/SCTP, 8088/TCP
+    Host Ports:  0/TCP, 0/TCP, 0/SCTP, 0/TCP
+    Liveness:    exec [/bin/sh -c ip=`hostname -i`;export RMR_SRC_ID=$ip;/opt/e2/rmr_probe -h $ip:38000] delay=10s timeout=1s period=10s #success=1 #failure=3
+    Readiness:   exec [/bin/sh -c ip=`hostname -i`;export RMR_SRC_ID=$ip;/opt/e2/rmr_probe -h $ip:38000] delay=120s timeout=1s period=60s #success=1 #failure=3
+    Environment Variables from:
+      configmap-ricplt-e2term-env-alpha  ConfigMap  Optional: false
+    Environment:
+      SYSTEM_NAME:      SEP
+      CONFIG_MAP_NAME:  /etc/config/log-level
+      HOST_NAME:         (v1:spec.nodeName)
+      SERVICE_NAME:     RIC_E2_TERM
+      CONTAINER_NAME:   container-ricplt-e2term
+      POD_NAME:         deployment-ricplt-e2term-alpha-5dc768bcb7-cn9p9 (v1:metadata.name)
+    Mounts:
+      /data/outgoing/ from vol-shared (rw)
+      /etc/config from local-loglevel-file (rw)
+      /opt/e2/router.txt from local-router-file (rw,path="router.txt")
+      /tmp/rmr_verbose from local-router-file (rw,path="rmr_verbose")
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-s87jw (ro)
+Volumes:
+  local-router-file:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      configmap-ricplt-e2term-router-configmap
+    Optional:  false
+  local-loglevel-file:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      configmap-ricplt-e2term-loglevel-configmap
+    Optional:  false
+  vol-shared:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  pvc-ricplt-e2term-alpha
+    ReadOnly:   false
+  default-token-s87jw:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-s87jw
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:
+  Type     Reason     Age        From                       Message
+  ----     ------     ----       ----                       -------
+  Normal   Scheduled  <unknown>  default-scheduler          Successfully assigned ricplt/deployment-ricplt-e2term-alpha-5dc768bcb7-cn9p9 to tianchang-ubuntu
+  Normal   Pulling    3m17s      kubelet, tianchang-ubuntu  Pulling image "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-e2:6.0.4"
+  Normal   Pulled     2m4s       kubelet, tianchang-ubuntu  Successfully pulled image "nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-e2:6.0.4"
+  Normal   Created    2m3s       kubelet, tianchang-ubuntu  Created container container-ricplt-e2term
+  Normal   Started    2m3s       kubelet, tianchang-ubuntu  Started container container-ricplt-e2term
+  Warning  Evicted    23s        kubelet, tianchang-ubuntu  The node was low on resource: ephemeral-storage. Container container-ricplt-e2term was using 124Ki, which exceeds its request of 0.
+  Normal   Killing    23s        kubelet, tianchang-ubuntu  Stopping container container-ricplt-e2term
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-dep/bin# 
+

@@ -1,0 +1,15 @@
++ umask 022
++ cd /home/tianchang/Desktop/proj/oran-sc/original/sim-e2-interface-master/e2sim/build/_CPack_Packages/Linux/RPM/BUILD
++ mv /home/tianchang/Desktop/proj/oran-sc/original/sim-e2-interface-master/e2sim/build/_CPack_Packages/Linux/RPM/e2sim-1.0.0-Linux /home/tianchang/Desktop/proj/oran-sc/original/sim-e2-interface-master/e2sim/build/_CPack_Packages/Linux/RPM/tmpBBroot
++ exit 0
++ umask 022
++ cd /home/tianchang/Desktop/proj/oran-sc/original/sim-e2-interface-master/e2sim/build/_CPack_Packages/Linux/RPM/BUILD
++ [ -e /home/tianchang/Desktop/proj/oran-sc/original/sim-e2-interface-master/e2sim/build/_CPack_Packages/Linux/RPM/e2sim-1.0.0-Linux ]
++ mv /home/tianchang/Desktop/proj/oran-sc/original/sim-e2-interface-master/e2sim/build/_CPack_Packages/Linux/RPM/tmpBBroot /home/tianchang/Desktop/proj/oran-sc/original/sim-e2-interface-master/e2sim/build/_CPack_Packages/Linux/RPM/e2sim-1.0.0-Linux
++ /usr/lib/rpm/brp-compress
++ /usr/lib/rpm/brp-strip /usr/bin/strip
++ /usr/lib/rpm/brp-strip-static-archive /usr/bin/strip
++ /usr/lib/rpm/brp-strip-comment-note /usr/bin/strip /usr/bin/objdump
++ umask 022
++ cd /home/tianchang/Desktop/proj/oran-sc/original/sim-e2-interface-master/e2sim/build/_CPack_Packages/Linux/RPM/BUILD
++ exit 0

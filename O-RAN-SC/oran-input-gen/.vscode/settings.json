@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "constr_type.h": "c",
+        "asn_internal.h": "c",
+        "mutator.h": "c"
+    }
+}

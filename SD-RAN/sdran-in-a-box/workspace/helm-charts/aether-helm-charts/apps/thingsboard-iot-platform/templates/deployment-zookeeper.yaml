@@ -1,0 +1,74 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zookeeper
+spec:
+  selector:
+    matchLabels:
+      app: zookeeper
+  template:
+    metadata:
+      labels:
+        app: zookeeper
+    spec:
+      serviceAccountName: thingsboard
+      initContainers:
+        - name: zookeeper-dep-check
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          image: {{ .Values.images.tags.depCheck }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: false
+            runAsUser: 0
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: PATH
+              value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
+            - name: COMMAND
+              value: "echo done"
+            - name: DEPENDENCY_JOBS
+              value: job-tb-db-setup
+          command:
+            - kubernetes-entrypoint
+          volumeMounts:
+            []
+      containers:
+        - name: server
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          image: {{ .Values.images.tags.zookeeper }}
+          ports:
+            - containerPort: {{ .Values.config.zookeeper.port }}
+          readinessProbe:
+            periodSeconds: 5
+            tcpSocket:
+              port: {{ .Values.config.zookeeper.port }}
+          livenessProbe:
+            initialDelaySeconds: 15
+            periodSeconds: 5
+            tcpSocket:
+              port: {{ .Values.config.zookeeper.port }}
+          env:
+            - name: ZOO_MY_ID
+              value: "1"
+            - name: ZOO_SERVERS
+              value: "server.1=0.0.0.0:2888:3888;0.0.0.0:2181"
+      restartPolicy: Always

@@ -1,0 +1,37 @@
+# Copyright 2019-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+images:
+  tags:
+    omecCni: docker.io/omecproject/omec-cni:1.0.2
+    sriovPlugin: docker.io/nfvpe/sriov-device-plugin:v3.2
+  pullPolicy: IfNotPresent
+  credentials: {}
+  # If specified, use this credential to access the image
+  #   registry:
+  #   username:
+  #   password:
+
+config:
+  sriov:
+    # Provide interface used as a SR-IOV PF
+    # If your cluster has multiple nodes with different interface names,
+    # simply provide the whole list
+    resourceList:
+      # Provide PF name with VF range or PCI address for access and core interfaces.
+      # PCI address has higher precedence when both provided.
+      vfio:
+        accessPfNames:
+          - eno1#0-3
+        corePfNames:
+          - eno1#4-7
+      # Provide PF name with its VFs bounded to PF's driver
+      # The driver name must be specified to prevent one interface is
+      # registered to both vfio and netdevice resource pools
+      #netDevice:
+      #  pfNames:
+      #    - eno1
+      #  drivers:
+      #    - i40evf
+      #    - ixgbevf

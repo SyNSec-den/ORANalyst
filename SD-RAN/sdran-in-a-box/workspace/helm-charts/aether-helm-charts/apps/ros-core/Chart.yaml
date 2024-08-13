@@ -1,0 +1,10 @@
+# Copyright 2021-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+apiVersion: v1
+description: ROS-Core chart for Drone use-case
+name: ros-core
+icon: https://www.ros.org/wp-content/uploads/2013/10/rosorg-logo1.png
+
+version: 0.1.3

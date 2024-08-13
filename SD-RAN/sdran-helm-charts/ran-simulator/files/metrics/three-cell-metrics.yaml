@@ -1,0 +1,31 @@
+# SPDX-FileCopyrightText: 2019-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+metrics:
+  rc:
+    pci:
+      cells:
+        343332707639553:
+          cellSize: FEMTO
+          earfcn: 43
+          pci: 207
+          pciPool:
+          - min: 166
+            max: 248
+        343332707639554:
+          cellSize: OUTDOOR_SMALL
+          earfcn: 44
+          pci: 419
+          pciPool:
+          - min: 332
+            max: 414
+        343332707639555:
+          cellSize: OUTDOOR_SMALL
+          earfcn: 42
+          pci: 419
+          pciPool:
+          - min: 415
+            max: 497
+          - min: 332
+            max: 414

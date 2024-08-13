@@ -1,0 +1,73 @@
+# Copyright 2019-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+images:
+  tags:
+    initCU: "registry.aetherproject.org/accelleran/pod-init:1.0.0"
+    nats: "registry.aetherproject.org/accelleran/accelleran-cu-nats:v1.0.0"
+    redis: "registry.aetherproject.org/accelleran/accelleran-cu-redis:v1.0.0"
+    redisClient: "docker.io/redis:5.0.6-alpine3.10"
+    ric: "registry.aetherproject.org/accelleran/accelleran-cu-ric:v1.0.0"
+    ricWeb: "registry.aetherproject.org/accelleran/accelleran-cu-ricweb:v1.0.0"
+    depCheck: "quay.io/stackanetes/kubernetes-entrypoint:v0.3.1"
+  pullPolicy: IfNotPresent
+  pullSecrets:
+    - name: aether.registry
+
+nodeSelectors:
+  enabled: false
+  accelleranCBRSCommon:
+    label: accelleran-cbrs-common
+    value: enabled
+
+resources:
+  enabled: true
+  accelleranCBRSCommon:
+    requests:
+      cpu: 3
+      memory: 1Gi
+    limits:
+      cpu: 3
+      memory: 1Gi
+
+config:
+  nats:
+    url: accelleran-cbrs-nats:4222
+    ip: 119.0.0.30 # Node IP address of nats -- for accessing through NodePort
+    ports:
+      natsPort:
+        port: 4222
+        nodePort: 31000
+        protocol: TCP
+      clusterPort:
+        port: 6222
+        nodePort: 31001
+        protocol: TCP
+      consolePort:
+        port: 8222
+        nodePort: 31002
+        protocol: TCP
+  redis:
+    hostName: accelleran-cbrs-redis
+    ports:
+      redisPort:
+        port: 6379
+        nodePort: 32000
+        protocol: TCP
+    persistence:
+      enabled: true
+      storageClass: "fast-disks"
+      accessMode: ReadWriteOnce
+      size: 1Gi
+  ric:
+    zlogConf:
+      bufferMin: 64K
+      bufferMax: 64K
+    instanceId: ONFRIC001
+  ricWeb:
+    ports:
+      ricWebPort:
+        port: 8080
+        nodePort: 30000
+        protocol: TCP

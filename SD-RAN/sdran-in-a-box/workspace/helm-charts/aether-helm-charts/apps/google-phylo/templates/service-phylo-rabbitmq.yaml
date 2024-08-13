@@ -1,0 +1,30 @@
+{{/*
+# Copyright 2019-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+{{- $context := . -}}
+{{ range .Values.config.phylo.sources }}
+{{- $name := printf "%s-%s" "phylo" .key -}}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rabbitmq-{{ .key }}
+  labels:
+{{ tuple $name $context | include "phylo.metadata_labels" | indent 4 }}
+spec:
+  selector:
+{{ tuple $name $context | include "phylo.metadata_labels" | indent 4 }}
+  ports:
+    - port: 15672
+      targetPort: 15672
+      protocol: TCP
+      name: tcp-15672
+    - port: 5672
+      targetPort: 5672
+      protocol: TCP
+      name: tcp-5672
+  type: NodePort
+{{ end }}

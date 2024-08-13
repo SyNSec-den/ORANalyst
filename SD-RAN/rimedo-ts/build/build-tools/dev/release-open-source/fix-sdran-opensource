@@ -1,0 +1,38 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+set -e -u -o pipefail
+
+declare -a asn1_files=(
+  "servicemodels/e2sm_kpm/v1beta1/e2sm-kpm-v01.00.asn1"
+  "servicemodels/e2sm_kpm_v2/v2/e2sm_kpm_v2.0.3-changed.asn"
+  "servicemodels/e2sm_kpm_v2/v2/e2sm_kpm_v2.0.3-rm.asn.original"
+  "servicemodels/e2sm_kpm_v2_go/v2/e2sm_kpm_v2.0.3-radisys.asn"
+  "api/e2ap/v1beta2/e2ap-v01.01.00.asn1"
+  "api/e2ap/v2beta1/e2ap_v2.0.1_Feb3_21.asn"
+)
+
+
+go_sources=( $(find . -name *.go -o -name *.proto | grep -v vendor) )
+
+# Fix license headers on go code
+for go_file in "${go_sources[@]}"
+do
+  sed -i"*.VERBACK" -e s/LicenseRef-ONF-Member.*-1.0/Apache-2.0/ "$go_file"
+  gofmt -w -s "$go_file" || true
+done
+
+find . -name "*.VERBACK" | xargs rm -f
+
+# remove proprietary ASN 1 files
+current_repo=${PWD##*/}
+
+for file in "${asn1_files[@]}"
+do
+  if [ -f $file ] ; then
+    rm $file
+    git add $file
+  fi
+done

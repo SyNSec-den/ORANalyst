@@ -1,0 +1,56 @@
+# Copyright 2020-present Open Networking Foundation
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+{{- if .Values.alerts.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: {{ include "edge-monitoring-server.fullname" . }}
+  labels:
+    {{- include "edge-monitoring-server.labels" . | nindent 4 }}
+spec:
+  groups:
+    - name: ace-e2e-tests-v2.rules
+      rules:
+      - alert: ScheduledDowntime
+        annotations:
+          message: The cluster {{`{{ .Labels.name }}`}} is undergoing scheduled maintenance.
+        expr: aetheredge_in_maintenance_window{endpoint="metrics80"} > 0
+        for: 1m
+        labels:
+          severity: info
+      - alert: SingleEdgeTestNotReporting
+        annotations:
+          message: |
+            The E2E test on cluster {{`{{ .Labels.name }}`}} has not reported results for at least 5 minutes.
+        expr: (time() - aetheredge_last_update{endpoint="metrics80"}) > 300
+        for: 1m
+        labels:
+          severity: critical
+      - alert: SingleEdgeConnectTestFailing
+        annotations:
+          message: |
+            The E2E test on cluster {{`{{ .Labels.name }}`}} is reporting UE connect failure for at least 10 minutes.
+        expr: aetheredge_connect_test_ok{endpoint="metrics80"} < 1
+        for: 10m
+        labels:
+          severity: critical
+      - alert: SingleEdgePingTestFailing
+        annotations:
+          message: |
+            The E2E test on cluster {{`{{ .Labels.name }}`}} is reporting that UE cannot ping the Internet for at least 10 minutes.
+        expr: aetheredge_ping_test_ok{endpoint="metrics80"} < 1
+        for: 11m
+        labels:
+          severity: critical
+{{- if .Values.alerts.manyEdgeConnectTestsFailing }}
+      - alert: ManyEdgeConnectTestsFailing
+        annotations:
+          message: |
+            Over half of the clusters are reporting UE connect failures.
+        expr: avg(clamp_max(aetheredge_connect_test_ok{endpoint="metrics80"} + aetheredge_in_maintenance_window{endpoint="metrics80"}, 1)) < 0.5
+        for: 5m
+        labels:
+          severity: critical
+{{- end }}
+{{- end }}

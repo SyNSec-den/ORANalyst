@@ -1,0 +1,3345 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 0,
+  "id": 27,
+  "iteration": 1620769034055,
+  "links": [],
+  "panels": [
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "id": 4,
+      "panels": [],
+      "repeat": "datasource",
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-cornell1-prd",
+          "value": "ace-cornell1-prd"
+        }
+      },
+      "title": "$datasource",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Edge Down": "red",
+        "Edge Maintenance": "super-light-blue",
+        "Ping DNS Avg": "green",
+        "Ping DNS Max": "orange",
+        "Ping DNS Min": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Ping DNS Avg: Pings to 8.8.8.8, min, average, and max latencies from 10 iterations",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 1
+      },
+      "hiddenSeries": false,
+      "id": 2,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-cornell1-prd",
+          "value": "ace-cornell1-prd"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_ping_dns_test_avg{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Ping DNS Avg",
+          "refId": "A"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1)",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ping DNS Latency Results Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 1,
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Downlink Speed": "rgb(48, 196, 210)",
+        "Edge Down": "red",
+        "Edge Maintenance": "light-blue",
+        "Max DL (115 Mbps)": "rgb(173, 173, 173)",
+        "Max UL (10 Mbps)": "rgb(158, 158, 158)",
+        "Uplink Speed": "rgb(197, 96, 251)",
+        "Value": "rgb(133, 132, 132)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Max Downlink Speed: 115 Mbps\n- Max Uplink Speed: 10 Mbps\n\nEach result is taken from the iperf json output, test runs for 10 seconds.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 9
+      },
+      "hiddenSeries": false,
+      "id": 6,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-cornell1-prd",
+          "value": "ace-cornell1-prd"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 2,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "/Max.*/",
+          "dashLength": 3,
+          "dashes": true,
+          "fill": 0,
+          "hideTooltip": true,
+          "legend": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_iperf_cluster_downlink_test{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Downlink Speed",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(aetheredge_iperf_cluster_uplink_test{endpoint=\"metrics80\",name=\"$datasource\"} > 0) and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Uplink Speed",
+          "refId": "B"
+        },
+        {
+          "expr": "10",
+          "interval": "",
+          "legendFormat": "Max UL (10 Mbps)",
+          "refId": "C"
+        },
+        {
+          "expr": "115",
+          "interval": "",
+          "legendFormat": "Max DL (115 Mbps)",
+          "refId": "D"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) - (sum(5*aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}))",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "E"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Iperf Downlink and Uplink Tests Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "Mbits",
+          "label": null,
+          "logBase": 1,
+          "max": "116",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 17
+      },
+      "id": 7,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 4,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-intel",
+          "value": "ace-intel"
+        }
+      },
+      "title": "$datasource",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Edge Down": "red",
+        "Edge Maintenance": "super-light-blue",
+        "Ping DNS Avg": "green",
+        "Ping DNS Max": "orange",
+        "Ping DNS Min": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Ping DNS Avg: Pings to 8.8.8.8, min, average, and max latencies from 10 iterations",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 18
+      },
+      "hiddenSeries": false,
+      "id": 8,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 2,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-intel",
+          "value": "ace-intel"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_ping_dns_test_avg{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Ping DNS Avg",
+          "refId": "A"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1)",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ping DNS Latency Results Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 1,
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Downlink Speed": "rgb(48, 196, 210)",
+        "Edge Down": "red",
+        "Edge Maintenance": "light-blue",
+        "Max DL (115 Mbps)": "rgb(173, 173, 173)",
+        "Max UL (10 Mbps)": "rgb(158, 158, 158)",
+        "Uplink Speed": "rgb(197, 96, 251)",
+        "Value": "rgb(133, 132, 132)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Max Downlink Speed: 115 Mbps\n- Max Uplink Speed: 10 Mbps\n\nEach result is taken from the iperf json output, test runs for 10 seconds.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 26
+      },
+      "hiddenSeries": false,
+      "id": 9,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 6,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-intel",
+          "value": "ace-intel"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 2,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "/Max.*/",
+          "dashLength": 3,
+          "dashes": true,
+          "fill": 0,
+          "hideTooltip": true,
+          "legend": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_iperf_cluster_downlink_test{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Downlink Speed",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(aetheredge_iperf_cluster_uplink_test{endpoint=\"metrics80\",name=\"$datasource\"} > 0) and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Uplink Speed",
+          "refId": "B"
+        },
+        {
+          "expr": "10",
+          "interval": "",
+          "legendFormat": "Max UL (10 Mbps)",
+          "refId": "C"
+        },
+        {
+          "expr": "115",
+          "interval": "",
+          "legendFormat": "Max DL (115 Mbps)",
+          "refId": "D"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) - (sum(5*aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}))",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "E"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Iperf Downlink and Uplink Tests Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "Mbits",
+          "label": null,
+          "logBase": 1,
+          "max": "116",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 34
+      },
+      "id": 10,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 4,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-menlo-rasp-pi",
+          "value": "ace-menlo-rasp-pi"
+        }
+      },
+      "title": "$datasource",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Edge Down": "red",
+        "Edge Maintenance": "super-light-blue",
+        "Ping DNS Avg": "green",
+        "Ping DNS Max": "orange",
+        "Ping DNS Min": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Ping DNS Avg: Pings to 8.8.8.8, min, average, and max latencies from 10 iterations",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 35
+      },
+      "hiddenSeries": false,
+      "id": 11,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 2,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-menlo-rasp-pi",
+          "value": "ace-menlo-rasp-pi"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_ping_dns_test_avg{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Ping DNS Avg",
+          "refId": "A"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1)",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ping DNS Latency Results Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 1,
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Downlink Speed": "rgb(48, 196, 210)",
+        "Edge Down": "red",
+        "Edge Maintenance": "light-blue",
+        "Max DL (115 Mbps)": "rgb(173, 173, 173)",
+        "Max UL (10 Mbps)": "rgb(158, 158, 158)",
+        "Uplink Speed": "rgb(197, 96, 251)",
+        "Value": "rgb(133, 132, 132)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Max Downlink Speed: 115 Mbps\n- Max Uplink Speed: 10 Mbps\n\nEach result is taken from the iperf json output, test runs for 10 seconds.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 43
+      },
+      "hiddenSeries": false,
+      "id": 12,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 6,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-menlo-rasp-pi",
+          "value": "ace-menlo-rasp-pi"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 2,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "/Max.*/",
+          "dashLength": 3,
+          "dashes": true,
+          "fill": 0,
+          "hideTooltip": true,
+          "legend": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_iperf_cluster_downlink_test{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Downlink Speed",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(aetheredge_iperf_cluster_uplink_test{endpoint=\"metrics80\",name=\"$datasource\"} > 0) and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Uplink Speed",
+          "refId": "B"
+        },
+        {
+          "expr": "10",
+          "interval": "",
+          "legendFormat": "Max UL (10 Mbps)",
+          "refId": "C"
+        },
+        {
+          "expr": "115",
+          "interval": "",
+          "legendFormat": "Max DL (115 Mbps)",
+          "refId": "D"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) - (sum(5*aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}))",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "E"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Iperf Downlink and Uplink Tests Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "Mbits",
+          "label": null,
+          "logBase": 1,
+          "max": "116",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 51
+      },
+      "id": 13,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 4,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-nctu",
+          "value": "ace-nctu"
+        }
+      },
+      "title": "$datasource",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Edge Down": "red",
+        "Edge Maintenance": "super-light-blue",
+        "Ping DNS Avg": "green",
+        "Ping DNS Max": "orange",
+        "Ping DNS Min": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Ping DNS Avg: Pings to 8.8.8.8, min, average, and max latencies from 10 iterations",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 52
+      },
+      "hiddenSeries": false,
+      "id": 14,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 2,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-nctu",
+          "value": "ace-nctu"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_ping_dns_test_avg{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Ping DNS Avg",
+          "refId": "A"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1)",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ping DNS Latency Results Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 1,
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Downlink Speed": "rgb(48, 196, 210)",
+        "Edge Down": "red",
+        "Edge Maintenance": "light-blue",
+        "Max DL (115 Mbps)": "rgb(173, 173, 173)",
+        "Max UL (10 Mbps)": "rgb(158, 158, 158)",
+        "Uplink Speed": "rgb(197, 96, 251)",
+        "Value": "rgb(133, 132, 132)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Max Downlink Speed: 115 Mbps\n- Max Uplink Speed: 10 Mbps\n\nEach result is taken from the iperf json output, test runs for 10 seconds.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 60
+      },
+      "hiddenSeries": false,
+      "id": 15,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 6,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-nctu",
+          "value": "ace-nctu"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 2,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "/Max.*/",
+          "dashLength": 3,
+          "dashes": true,
+          "fill": 0,
+          "hideTooltip": true,
+          "legend": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_iperf_cluster_downlink_test{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Downlink Speed",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(aetheredge_iperf_cluster_uplink_test{endpoint=\"metrics80\",name=\"$datasource\"} > 0) and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Uplink Speed",
+          "refId": "B"
+        },
+        {
+          "expr": "10",
+          "interval": "",
+          "legendFormat": "Max UL (10 Mbps)",
+          "refId": "C"
+        },
+        {
+          "expr": "115",
+          "interval": "",
+          "legendFormat": "Max DL (115 Mbps)",
+          "refId": "D"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) - (sum(5*aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}))",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "E"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Iperf Downlink and Uplink Tests Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "Mbits",
+          "label": null,
+          "logBase": 1,
+          "max": "116",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 68
+      },
+      "id": 16,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 4,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-princeton1-dev",
+          "value": "ace-princeton1-dev"
+        }
+      },
+      "title": "$datasource",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Edge Down": "red",
+        "Edge Maintenance": "super-light-blue",
+        "Ping DNS Avg": "green",
+        "Ping DNS Max": "orange",
+        "Ping DNS Min": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Ping DNS Avg: Pings to 8.8.8.8, min, average, and max latencies from 10 iterations",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 69
+      },
+      "hiddenSeries": false,
+      "id": 17,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 2,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-princeton1-dev",
+          "value": "ace-princeton1-dev"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_ping_dns_test_avg{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Ping DNS Avg",
+          "refId": "A"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1)",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ping DNS Latency Results Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 1,
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Downlink Speed": "rgb(48, 196, 210)",
+        "Edge Down": "red",
+        "Edge Maintenance": "light-blue",
+        "Max DL (115 Mbps)": "rgb(173, 173, 173)",
+        "Max UL (10 Mbps)": "rgb(158, 158, 158)",
+        "Uplink Speed": "rgb(197, 96, 251)",
+        "Value": "rgb(133, 132, 132)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Max Downlink Speed: 115 Mbps\n- Max Uplink Speed: 10 Mbps\n\nEach result is taken from the iperf json output, test runs for 10 seconds.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 77
+      },
+      "hiddenSeries": false,
+      "id": 18,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 6,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-princeton1-dev",
+          "value": "ace-princeton1-dev"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 2,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "/Max.*/",
+          "dashLength": 3,
+          "dashes": true,
+          "fill": 0,
+          "hideTooltip": true,
+          "legend": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_iperf_cluster_downlink_test{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Downlink Speed",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(aetheredge_iperf_cluster_uplink_test{endpoint=\"metrics80\",name=\"$datasource\"} > 0) and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Uplink Speed",
+          "refId": "B"
+        },
+        {
+          "expr": "10",
+          "interval": "",
+          "legendFormat": "Max UL (10 Mbps)",
+          "refId": "C"
+        },
+        {
+          "expr": "115",
+          "interval": "",
+          "legendFormat": "Max DL (115 Mbps)",
+          "refId": "D"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) - (sum(5*aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}))",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "E"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Iperf Downlink and Uplink Tests Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "Mbits",
+          "label": null,
+          "logBase": 1,
+          "max": "116",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 85
+      },
+      "id": 19,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 4,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-princeton1-prd",
+          "value": "ace-princeton1-prd"
+        }
+      },
+      "title": "$datasource",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Edge Down": "red",
+        "Edge Maintenance": "super-light-blue",
+        "Ping DNS Avg": "green",
+        "Ping DNS Max": "orange",
+        "Ping DNS Min": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Ping DNS Avg: Pings to 8.8.8.8, min, average, and max latencies from 10 iterations",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 86
+      },
+      "hiddenSeries": false,
+      "id": 20,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 2,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-princeton1-prd",
+          "value": "ace-princeton1-prd"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_ping_dns_test_avg{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Ping DNS Avg",
+          "refId": "A"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1)",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ping DNS Latency Results Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 1,
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Downlink Speed": "rgb(48, 196, 210)",
+        "Edge Down": "red",
+        "Edge Maintenance": "light-blue",
+        "Max DL (115 Mbps)": "rgb(173, 173, 173)",
+        "Max UL (10 Mbps)": "rgb(158, 158, 158)",
+        "Uplink Speed": "rgb(197, 96, 251)",
+        "Value": "rgb(133, 132, 132)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Max Downlink Speed: 115 Mbps\n- Max Uplink Speed: 10 Mbps\n\nEach result is taken from the iperf json output, test runs for 10 seconds.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 94
+      },
+      "hiddenSeries": false,
+      "id": 21,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 6,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-princeton1-prd",
+          "value": "ace-princeton1-prd"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 2,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "/Max.*/",
+          "dashLength": 3,
+          "dashes": true,
+          "fill": 0,
+          "hideTooltip": true,
+          "legend": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_iperf_cluster_downlink_test{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Downlink Speed",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(aetheredge_iperf_cluster_uplink_test{endpoint=\"metrics80\",name=\"$datasource\"} > 0) and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Uplink Speed",
+          "refId": "B"
+        },
+        {
+          "expr": "10",
+          "interval": "",
+          "legendFormat": "Max UL (10 Mbps)",
+          "refId": "C"
+        },
+        {
+          "expr": "115",
+          "interval": "",
+          "legendFormat": "Max DL (115 Mbps)",
+          "refId": "D"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) - (sum(5*aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}))",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "E"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Iperf Downlink and Uplink Tests Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "Mbits",
+          "label": null,
+          "logBase": 1,
+          "max": "116",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 102
+      },
+      "id": 22,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 4,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-stanford1-dev",
+          "value": "ace-stanford1-dev"
+        }
+      },
+      "title": "$datasource",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Edge Down": "red",
+        "Edge Maintenance": "super-light-blue",
+        "Ping DNS Avg": "green",
+        "Ping DNS Max": "orange",
+        "Ping DNS Min": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Ping DNS Avg: Pings to 8.8.8.8, min, average, and max latencies from 10 iterations",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 103
+      },
+      "hiddenSeries": false,
+      "id": 23,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 2,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-stanford1-dev",
+          "value": "ace-stanford1-dev"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_ping_dns_test_avg{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Ping DNS Avg",
+          "refId": "A"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1)",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ping DNS Latency Results Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 1,
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Downlink Speed": "rgb(48, 196, 210)",
+        "Edge Down": "red",
+        "Edge Maintenance": "light-blue",
+        "Max DL (115 Mbps)": "rgb(173, 173, 173)",
+        "Max UL (10 Mbps)": "rgb(158, 158, 158)",
+        "Uplink Speed": "rgb(197, 96, 251)",
+        "Value": "rgb(133, 132, 132)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Max Downlink Speed: 115 Mbps\n- Max Uplink Speed: 10 Mbps\n\nEach result is taken from the iperf json output, test runs for 10 seconds.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 111
+      },
+      "hiddenSeries": false,
+      "id": 24,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 6,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-stanford1-dev",
+          "value": "ace-stanford1-dev"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 2,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "/Max.*/",
+          "dashLength": 3,
+          "dashes": true,
+          "fill": 0,
+          "hideTooltip": true,
+          "legend": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_iperf_cluster_downlink_test{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Downlink Speed",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(aetheredge_iperf_cluster_uplink_test{endpoint=\"metrics80\",name=\"$datasource\"} > 0) and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Uplink Speed",
+          "refId": "B"
+        },
+        {
+          "expr": "10",
+          "interval": "",
+          "legendFormat": "Max UL (10 Mbps)",
+          "refId": "C"
+        },
+        {
+          "expr": "115",
+          "interval": "",
+          "legendFormat": "Max DL (115 Mbps)",
+          "refId": "D"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) - (sum(5*aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}))",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "E"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Iperf Downlink and Uplink Tests Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "Mbits",
+          "label": null,
+          "logBase": 1,
+          "max": "116",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 119
+      },
+      "id": 25,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 4,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-stanford1-prd",
+          "value": "ace-stanford1-prd"
+        }
+      },
+      "title": "$datasource",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Edge Down": "red",
+        "Edge Maintenance": "super-light-blue",
+        "Ping DNS Avg": "green",
+        "Ping DNS Max": "orange",
+        "Ping DNS Min": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Ping DNS Avg: Pings to 8.8.8.8, min, average, and max latencies from 10 iterations",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 120
+      },
+      "hiddenSeries": false,
+      "id": 26,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 2,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-stanford1-prd",
+          "value": "ace-stanford1-prd"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_ping_dns_test_avg{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Ping DNS Avg",
+          "refId": "A"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1)",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ping DNS Latency Results Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 1,
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Downlink Speed": "rgb(48, 196, 210)",
+        "Edge Down": "red",
+        "Edge Maintenance": "light-blue",
+        "Max DL (115 Mbps)": "rgb(173, 173, 173)",
+        "Max UL (10 Mbps)": "rgb(158, 158, 158)",
+        "Uplink Speed": "rgb(197, 96, 251)",
+        "Value": "rgb(133, 132, 132)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Max Downlink Speed: 115 Mbps\n- Max Uplink Speed: 10 Mbps\n\nEach result is taken from the iperf json output, test runs for 10 seconds.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 128
+      },
+      "hiddenSeries": false,
+      "id": 27,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 6,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-stanford1-prd",
+          "value": "ace-stanford1-prd"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 2,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "/Max.*/",
+          "dashLength": 3,
+          "dashes": true,
+          "fill": 0,
+          "hideTooltip": true,
+          "legend": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_iperf_cluster_downlink_test{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Downlink Speed",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(aetheredge_iperf_cluster_uplink_test{endpoint=\"metrics80\",name=\"$datasource\"} > 0) and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Uplink Speed",
+          "refId": "B"
+        },
+        {
+          "expr": "10",
+          "interval": "",
+          "legendFormat": "Max UL (10 Mbps)",
+          "refId": "C"
+        },
+        {
+          "expr": "115",
+          "interval": "",
+          "legendFormat": "Max DL (115 Mbps)",
+          "refId": "D"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) - (sum(5*aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}))",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "E"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Iperf Downlink and Uplink Tests Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "Mbits",
+          "label": null,
+          "logBase": 1,
+          "max": "116",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 136
+      },
+      "id": 28,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 4,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-stanford2-prd",
+          "value": "ace-stanford2-prd"
+        }
+      },
+      "title": "$datasource",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Edge Down": "red",
+        "Edge Maintenance": "super-light-blue",
+        "Ping DNS Avg": "green",
+        "Ping DNS Max": "orange",
+        "Ping DNS Min": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Ping DNS Avg: Pings to 8.8.8.8, min, average, and max latencies from 10 iterations",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 137
+      },
+      "hiddenSeries": false,
+      "id": 29,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 2,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-stanford2-prd",
+          "value": "ace-stanford2-prd"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_ping_dns_test_avg{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Ping DNS Avg",
+          "refId": "A"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1)",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ping DNS Latency Results Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 1,
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Downlink Speed": "rgb(48, 196, 210)",
+        "Edge Down": "red",
+        "Edge Maintenance": "light-blue",
+        "Max DL (115 Mbps)": "rgb(173, 173, 173)",
+        "Max UL (10 Mbps)": "rgb(158, 158, 158)",
+        "Uplink Speed": "rgb(197, 96, 251)",
+        "Value": "rgb(133, 132, 132)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Max Downlink Speed: 115 Mbps\n- Max Uplink Speed: 10 Mbps\n\nEach result is taken from the iperf json output, test runs for 10 seconds.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 145
+      },
+      "hiddenSeries": false,
+      "id": 30,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 6,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-stanford2-prd",
+          "value": "ace-stanford2-prd"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 2,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "/Max.*/",
+          "dashLength": 3,
+          "dashes": true,
+          "fill": 0,
+          "hideTooltip": true,
+          "legend": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_iperf_cluster_downlink_test{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Downlink Speed",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(aetheredge_iperf_cluster_uplink_test{endpoint=\"metrics80\",name=\"$datasource\"} > 0) and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Uplink Speed",
+          "refId": "B"
+        },
+        {
+          "expr": "10",
+          "interval": "",
+          "legendFormat": "Max UL (10 Mbps)",
+          "refId": "C"
+        },
+        {
+          "expr": "115",
+          "interval": "",
+          "legendFormat": "Max DL (115 Mbps)",
+          "refId": "D"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) - (sum(5*aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}))",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "E"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Iperf Downlink and Uplink Tests Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "Mbits",
+          "label": null,
+          "logBase": 1,
+          "max": "116",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "collapsed": false,
+      "datasource": null,
+      "gridPos": {
+        "h": 1,
+        "w": 24,
+        "x": 0,
+        "y": 153
+      },
+      "id": 31,
+      "panels": [],
+      "repeat": null,
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 4,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-tucson",
+          "value": "ace-tucson"
+        }
+      },
+      "title": "$datasource",
+      "type": "row"
+    },
+    {
+      "aliasColors": {
+        "Edge Down": "red",
+        "Edge Maintenance": "super-light-blue",
+        "Ping DNS Avg": "green",
+        "Ping DNS Max": "orange",
+        "Ping DNS Min": "purple"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Ping DNS Avg: Pings to 8.8.8.8, min, average, and max latencies from 10 iterations",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 154
+      },
+      "hiddenSeries": false,
+      "id": 32,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 2,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-tucson",
+          "value": "ace-tucson"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_ping_dns_test_avg{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Ping DNS Avg",
+          "refId": "A"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1)",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "B"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "C"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Ping DNS Latency Results Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 1,
+          "format": "ms",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "aliasColors": {
+        "Downlink Speed": "rgb(48, 196, 210)",
+        "Edge Down": "red",
+        "Edge Maintenance": "light-blue",
+        "Max DL (115 Mbps)": "rgb(173, 173, 173)",
+        "Max UL (10 Mbps)": "rgb(158, 158, 158)",
+        "Uplink Speed": "rgb(197, 96, 251)",
+        "Value": "rgb(133, 132, 132)"
+      },
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": null,
+      "description": "- Max Downlink Speed: 115 Mbps\n- Max Uplink Speed: 10 Mbps\n\nEach result is taken from the iperf json output, test runs for 10 seconds.",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "fill": 0,
+      "fillGradient": 0,
+      "gridPos": {
+        "h": 8,
+        "w": 24,
+        "x": 0,
+        "y": 162
+      },
+      "hiddenSeries": false,
+      "id": 33,
+      "legend": {
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "rightSide": false,
+        "show": true,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "percentage": false,
+      "pluginVersion": "7.1.5",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "repeatIteration": 1620769034055,
+      "repeatPanelId": 6,
+      "repeatedByRow": true,
+      "scopedVars": {
+        "datasource": {
+          "selected": false,
+          "text": "ace-tucson",
+          "value": "ace-tucson"
+        }
+      },
+      "seriesOverrides": [
+        {
+          "alias": "Edge Down",
+          "fill": 5,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "Edge Maintenance",
+          "fill": 2,
+          "hideTooltip": true,
+          "linewidth": 0,
+          "yaxis": 2
+        },
+        {
+          "alias": "/Max.*/",
+          "dashLength": 3,
+          "dashes": true,
+          "fill": 0,
+          "hideTooltip": true,
+          "legend": false
+        }
+      ],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "expr": "sum(aetheredge_iperf_cluster_downlink_test{endpoint=\"metrics80\",name=\"$datasource\"}) > 0 and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Downlink Speed",
+          "refId": "A"
+        },
+        {
+          "expr": "sum(aetheredge_iperf_cluster_uplink_test{endpoint=\"metrics80\",name=\"$datasource\"} > 0) and (sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"} * -1 + 1)) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) <= 0",
+          "interval": "",
+          "legendFormat": "Uplink Speed",
+          "refId": "B"
+        },
+        {
+          "expr": "10",
+          "interval": "",
+          "legendFormat": "Max UL (10 Mbps)",
+          "refId": "C"
+        },
+        {
+          "expr": "115",
+          "interval": "",
+          "legendFormat": "Max DL (115 Mbps)",
+          "refId": "D"
+        },
+        {
+          "expr": "(sum(aetheredge_status_control_plane{endpoint=\"metrics80\",name=\"$datasource\"}) * -1 + 1) - sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}) - (sum(5*aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"}))",
+          "interval": "",
+          "legendFormat": "Edge Down",
+          "refId": "E"
+        },
+        {
+          "expr": "sum(aetheredge_in_maintenance_window{endpoint=\"metrics80\",name=\"$datasource\"})",
+          "interval": "",
+          "legendFormat": "Edge Maintenance",
+          "refId": "F"
+        }
+      ],
+      "thresholds": [],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Iperf Downlink and Uplink Tests Over Time - $datasource",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": 0,
+          "format": "Mbits",
+          "label": null,
+          "logBase": 1,
+          "max": "116",
+          "min": "0",
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": "0.011",
+          "min": "0.01",
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    }
+  ],
+  "schemaVersion": 26,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": [
+      {
+        "allValue": null,
+        "current": {
+          "selected": true,
+          "tags": [],
+          "text": [
+            "All"
+          ],
+          "value": [
+            "$__all"
+          ]
+        },
+        "datasource": "RANCHER_MONITORING_GLOBAL",
+        "definition": "label_values(aetheredge_e2e_tests_ok, name)",
+        "hide": 0,
+        "includeAll": true,
+        "label": "Edge",
+        "multi": true,
+        "name": "datasource",
+        "options": [],
+        "query": "label_values(aetheredge_e2e_tests_ok, name)",
+        "refresh": 2,
+        "regex": "",
+        "skipUrlSync": false,
+        "sort": 0,
+        "tagValuesQuery": "",
+        "tags": [],
+        "tagsQuery": "",
+        "type": "query",
+        "useTags": false
+      }
+    ]
+  },
+  "time": {
+    "from": "now-12h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "Edge Latency and Bandwidth Monitoring",
+  "uid": "xM1_uT9Mz",
+  "version": 2
+}

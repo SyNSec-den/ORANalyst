@@ -1,0 +1,87 @@
+// Protocol Buffers for Go with Gadgets
+//
+// Copyright (c) 2013, The GoGo Authors. All rights reserved.
+// http://github.com/gogo/protobuf
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//     * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//     * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:29
+package proto
+
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:29
+import (
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:29
+	_go_fuzz_dep_ "go-fuzz-dep"
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:29
+)
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:29
+import (
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:29
+	_atomic_ "sync/atomic"
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:29
+)
+
+import (
+	"encoding/json"
+	"strconv"
+)
+
+type Sizer interface {
+	Size() int
+}
+
+type ProtoSizer interface {
+	ProtoSize() int
+}
+
+func MarshalJSONEnum(m map[int32]string, value int32) ([]byte, error) {
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:44
+	_go_fuzz_dep_.CoverTab[108802]++
+											s, ok := m[value]
+											if !ok {
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:46
+		_go_fuzz_dep_.CoverTab[108804]++
+												s = strconv.Itoa(int(value))
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:47
+		// _ = "end of CoverTab[108804]"
+	} else {
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:48
+		_go_fuzz_dep_.CoverTab[108805]++
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:48
+		// _ = "end of CoverTab[108805]"
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:48
+	}
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:48
+	// _ = "end of CoverTab[108802]"
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:48
+	_go_fuzz_dep_.CoverTab[108803]++
+											return json.Marshal(s)
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:49
+	// _ = "end of CoverTab[108803]"
+}
+
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:50
+var _ = _atomic_.LoadUint32(&_go_fuzz_dep_.NoUse)
+//line /home/tianchang/go/pkg/mod/github.com/gogo/protobuf@v1.3.2/proto/lib_gogo.go:50
+var _ = _go_fuzz_dep_.CoverTab

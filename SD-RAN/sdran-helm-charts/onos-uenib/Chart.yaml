@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2023-present Intel Corporation
+# SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+apiVersion: v2
+name: onos-uenib
+description: ONOS UE-NIB Subsystem
+kubeVersion: ">=1.17.0"
+type: application
+version: 1.4.0
+appVersion: v0.3.2
+keywords:
+  - onos
+  - sdn
+  - ric
+home: https://onosproject.org
+maintainers:
+  - name: ONOS Support
+    email: support@opennetworking.org

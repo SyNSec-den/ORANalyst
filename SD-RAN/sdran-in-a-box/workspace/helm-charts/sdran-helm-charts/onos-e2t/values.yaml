@@ -1,0 +1,212 @@
+# SPDX-FileCopyrightText: 2022-present Intel Corporation
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Default values for onos-e2t.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+global:
+  image:
+    registry: ""
+    tag: ""
+  nameOverride: ""
+  atomix:
+    store:
+      consensus:
+        enabled: false
+
+replicaCount: 1
+
+image:
+  registry: ""
+  repository: onosproject/onos-e2t
+  tag: '{{ .Chart.AppVersion }}'
+  pullPolicy: IfNotPresent
+  pullSecrets: []
+
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: "onos-e2t"
+
+atomix:
+  sidecar:
+    image:
+      repository: atomix/sidecar
+      tag: ""
+      pullPolicy: ""
+    config:
+      logging:
+        # The default log level for all loggers. Only messages logged at this level or higher severity will be
+        # output to the logger sinks. Log levels in order of severity (least to greatest):
+        # - debug
+        # - info
+        # - warn
+        # - error
+        # - fatal
+        level: info
+
+  store:
+    consensus:
+      enabled: true
+      name: ""
+      image:
+        registry: ""
+        repository: atomix/raft-node
+        tag: ""
+        pullPolicy: ""
+        pullSecrets: []
+      replicas: 3
+      partitions: 10
+      # An array of routing rules for the consensus store route.
+      # Examples:
+      #
+      #     # Route only primitives named "foo" or "bar" to this store
+      #     - names:
+      #         - foo
+      #         - bar
+      #
+      #     # Route only primitives tagged "persistent" to this store
+      #     - tags:
+      #         - persistent
+      #
+      #     # Route only LeaderElection primitives to this store
+      #     - kind: LeaderElection
+      #       apiVersion: v1
+      #
+      #     # Route all primitives to this store and enable caching for all maps in the store
+      #     - names:
+      #         - '*'
+      #     - kind: Map
+      #       apiVersion: v1
+      #       config:
+      #         cache:
+      #           enabled: true
+      rules:
+        - names:
+            - '*'
+        - kind: Map
+          apiVersion: v1
+          config:
+            cache:
+              enabled: true
+
+      server: {}
+      config:
+        # The estimated round trip time for a heartbeat from the Raft leader to a follower.
+        # This should approximate the round trip time of an RPC from one pod to another in the Kubernetes cluster.
+        heartbeatRTT:
+        # The number of heartbeatRTTs to wait after last hearing from the current leader before electing a new leader.
+        electionRTT:
+        # The number of entries after which Raft nodes should take a snapshot and compact their logs.
+        snapshotEntries:
+        # The number of entries to retain following log compaction to avoid snapshot replication to slow followers.
+        compactionOverhead:
+        # The maximum size of the in-memory write-ahead Raft log, (e.g. 1Gi, 500Mi, etc).
+        maxInMemLogSize:
+      logging:
+        # The encoding is the format of the logging output:
+        # console: standard formatted text logging
+        # json: JSON encoded structured logging
+        encoding: console
+        # The default log level for all loggers. Only messages logged at this level or higher severity will be
+        # output to the logger sinks. Log levels in order of severity (least to greatest):
+        # - debug
+        # - info
+        # - warn
+        # - error
+        # - fatal
+        level: info
+        loggers:
+          github.com/atomix/atomix/runtime/pkg/utils/grpc/interceptors: error
+      persistence:
+        # enabled: false
+        # storageClass: ""
+        accessModes:
+          - ReadWriteOnce
+        size: 8Gi
+      securityContext:
+        runAsUser: 0
+
+servicemodels:
+  - name: e2sm_rc_pre_go
+    version: 1.0.0
+    image:
+      repository: onosproject/service-model-docker-e2sm_rc_pre_go-1.0.0
+      tag: v0.8.43
+      pullPolicy: IfNotPresent
+  - name: e2sm_kpm_v2_go
+    version: 1.0.0
+    image:
+      repository: onosproject/service-model-docker-e2sm_kpm_v2_go-1.0.0
+      tag: v0.8.43
+      pullPolicy: IfNotPresent
+  - name: e2sm_mho_go
+    version: 1.0.0
+    image:
+      repository: onosproject/service-model-docker-e2sm_mho_go-1.0.0
+      tag: v0.8.43
+      pullPolicy: IfNotPresent
+  - name: e2sm_rsm
+    version: 1.0.0
+    image:
+      repository: onosproject/service-model-docker-e2sm_rsm-1.0.0
+      tag: v0.8.43
+      pullPolicy: IfNotPresent
+  - name: e2sm_rc
+    version: 1.0.0
+    image:
+      repository: onosproject/service-model-docker-e2sm_rc-1.0.0
+      tag: v0.8.43
+      pullPolicy: IfNotPresent
+#  - name: e2sm_ni
+#    version: 1.0.0
+#    image:
+#      repository: onosproject/service-model-docker-e2sm_ni-1.0.0
+#      tag: v0.6.6
+#      pullPolicy: IfNotPresent
+
+service:
+  # TODO: External NodePort service should be disabled by default
+  external:
+    enabled: false
+  e2:
+    port: 36421
+    nodePort: 30421
+    protocol: SCTP
+  grpc:
+    port: 5150
+    protocol: TCP
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+logging:
+  loggers:
+    root:
+      level: info
+      output:
+        stdout:
+          sink: stdout
+    atomix:
+      level: error
+  sinks:
+    stdout:
+      type: stdout
+      stdout: {}

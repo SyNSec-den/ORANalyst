@@ -1,0 +1,76 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+{{ tuple "thingsboard" . | include "thingsboard-iot-platform.service_account" }}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  labels:
+    app: postgres
+spec:
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      serviceAccountName: thingsboard
+      volumes:
+        - name: postgres-conf
+          configMap:
+            name: postgres-conf
+            items:
+              - key: config
+                path: config/postgresql.conf.sample
+      containers:
+        - name: postgres
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          image: {{ .Values.images.tags.postgres }}
+          ports:
+            - containerPort: {{ .Values.config.postgres.port }}
+              name: postgres
+          env:
+            - name: POSTGRES_DB
+              value: "thingsboard"
+            - name: POSTGRES_PASSWORD
+              value: "postgres"
+            - name: PGDATA
+              value: /var/lib/postgresql/data/pgdata
+          volumeMounts:
+            - mountPath: /usr/share/postgresql/postgresql.conf.sample
+              subPath: config/postgresql.conf.sample
+              name: postgres-conf
+#          volumeMounts:
+#            - mountPath: /var/lib/postgresql/data
+#              name: postgres-data
+          livenessProbe:
+            exec:
+              command:
+                - pg_isready
+                - -h
+                - localhost
+                - -U
+                - postgres
+            initialDelaySeconds: 60
+            timeoutSeconds: 30
+          readinessProbe:
+            exec:
+              command:
+                - pg_isready
+                - -h
+                - localhost
+                - -U
+                - postgres
+            initialDelaySeconds: 5
+            timeoutSeconds: 1
+      restartPolicy: Always

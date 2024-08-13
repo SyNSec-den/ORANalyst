@@ -1,0 +1,10 @@
+Building target platforms: x86_64
+Building for target x86_64
+Executing(%prep): /bin/sh -e /var/tmp/rpm-tmp.nIr49C
+Executing(%install): /bin/sh -e /var/tmp/rpm-tmp.6761XE
+Processing files: e2sim-devel-1.0.0-1.x86_64
+Provides: e2sim-devel = 1.0.0-1 e2sim-devel(x86-64) = 1.0.0-1
+Requires(rpmlib): rpmlib(CompressedFileNames) <= 3.0.4-1 rpmlib(FileDigests) <= 4.6.0-1 rpmlib(PayloadFilesHavePrefix) <= 4.0-1
+Checking for unpackaged file(s): /usr/lib/rpm/check-files /home/tianchang/Desktop/proj/oran-sc/original/sim-e2-interface-master/e2sim/build/_CPack_Packages/Linux/RPM/e2sim-1.0.0-Linux
+Wrote: /home/tianchang/Desktop/proj/oran-sc/original/sim-e2-interface-master/e2sim/build/_CPack_Packages/Linux/RPM/RPMS/e2sim-devel-1.0.0-x86_64.rpm
+Executing(%clean): /bin/sh -e /var/tmp/rpm-tmp.RhZNwL

@@ -1,0 +1,3 @@
+greeter_client:sendMessage1
+greeter_client:sendMessage2
+greeter_client:sendMessage3

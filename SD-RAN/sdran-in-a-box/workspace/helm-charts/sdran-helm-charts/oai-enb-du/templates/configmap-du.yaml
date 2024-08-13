@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+{{- $duMode := index .Values "config" "oai-enb-du" "mode" -}}
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: oai-enb-du
+  labels:
+{{ tuple "oai-enb-du" . | include "oai-enb-du.metadata_labels" | indent 4 }}
+data:
+  du.conf: |
+{{- if index .Values "config" "oai-enb-du" "enableUSRP" }}
+{{ tuple "_du_conf_usrp.tpl" . | include "oai-enb-du.template" | indent 4 }}
+{{- else }}
+{{ tuple "_du_conf.tpl" . | include "oai-enb-du.template" | indent 4 }}
+{{- end }}     
+  run_enb_du.sh: |
+{{- if index .Values "config" "oai-enb-du" "enableUSRP" }}
+{{ tuple "bin/_run_enb_du_usrp.sh.tpl" . | include "oai-enb-du.template" | indent 4 }}
+{{- else }}
+{{ tuple "bin/_run_enb_du.sh.tpl" . | include "oai-enb-du.template" | indent 4 }}
+{{- end }}     
+  init_enb_du.sh: |
+{{ tuple "bin/_init_enb_du.sh.tpl" . | include "oai-enb-du.template" | indent 4 }}

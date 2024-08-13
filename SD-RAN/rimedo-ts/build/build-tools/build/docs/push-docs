@@ -1,0 +1,43 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Script to build and push the micro ONOS docs
+
+set -eu -o pipefail
+
+BASEDIR=${BASEDIR:-MANUAL}
+
+# make a directory to hold the docs tree
+mkdir docs-temp
+pushd docs-temp
+
+# pull the docs tree
+git clone "git@github.com:onosproject/onos-docs.git"
+
+cd onos-docs
+
+# capture the content and format it
+make clean docs
+
+# capture the generated web site in a staging area
+# this is needed to get around docker image permissions problems
+mkdir site-staging
+cp -R docs/site/* site-staging
+
+# go to the generated web site
+pushd site-staging
+
+# set up the site directory as a git repo
+git init
+
+# commit the newly generated site
+git add .
+git commit -m "Docs published on `date` by $BASEDIR"
+
+# push the generated site to the gh-pages branch of the docs repo
+git push --force "git@github.com:onosproject/onos-docs.git" master:gh-pages
+
+popd
+

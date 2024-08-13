@@ -1,0 +1,96 @@
+# Copyright 2021-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+{{ tuple "gcs" . | include "ros-core.service_account" }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: gcs
+  labels:
+{{ tuple "gcs" . | include "ros-core.metadata_labels" | indent 4 }}
+spec:
+  replicas: 1
+  serviceName: gcs
+  selector:
+    matchLabels:
+{{ tuple "gcs" . | include "ros-core.metadata_labels" | indent 6 }}
+  template:
+    metadata:
+      labels:
+{{ tuple "gcs" . | include "ros-core.metadata_labels" | indent 8 }}
+    spec:
+  {{- if .Values.nodeSelector.enabled }}
+      nodeSelector:
+        {{ .Values.nodeSelector.gcs.label }}: {{ .Values.nodeSelector.gcs.value }}
+  {{- end }}
+      serviceAccountName: gcs
+  {{- if .Values.networks.hostNetwork }}
+      hostNetwork: true
+      dnsPolicy: None
+      dnsConfig:
+        nameservers:
+          - {{ .Values.coredns.service.clusterIP }}
+  {{- end }}
+      initContainers:
+      - name: gcs-dep-check
+        image: {{ .Values.images.tags.depCheck }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: false
+          runAsUser: 0
+        env:
+          - name: POD_NAME
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.name
+          - name: NAMESPACE
+            valueFrom:
+              fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+          - name: PATH
+            value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
+          - name: COMMAND
+            value: "echo done"
+          - name: DEPENDENCY_POD_JSON
+            value: '[{"labels": {"app": "ros-core"}, "requireSameNode": false}]'
+          # add dependency job for make_certs.sh
+        command:
+          - kubernetes-entrypoint
+        volumeMounts:
+          []
+      containers:
+      - name: gcs
+        image: {{ .Values.images.tags.rosCore }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        securityContext:
+          privileged: true
+        stdin: true
+        tty: true
+        command:
+        - /root/run_gcs.sh
+        volumeMounts:
+        - name: gcs
+          mountPath: /root/run_gcs.sh
+          subPath: run_gcs.sh
+        - name: gcs-launch
+          mountPath: /root/TrajBridge-PX4/src/bridge_px4/launch
+        - name: gcs-trajectory
+          mountPath: /root/TrajBridge-PX4/src/bridge_px4/trajectories
+      volumes:
+        - name: gcs
+          configMap:
+            name: gcs
+            defaultMode: 493
+        - name: gcs-launch
+          configMap:
+            name: gcs-launch
+            defaultMode: 420
+        - name: gcs-trajectory
+          configMap:
+            name: gcs-trajectory
+            defaultMode: 420

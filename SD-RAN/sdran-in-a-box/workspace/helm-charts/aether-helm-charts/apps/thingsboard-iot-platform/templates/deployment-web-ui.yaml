@@ -1,0 +1,79 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tb-web-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tb-web-ui
+  template:
+    metadata:
+      labels:
+        app: tb-web-ui
+    spec:
+      serviceAccountName: thingsboard
+      initContainers:
+        - name: tb-web-ui-dep-check
+          image: {{ .Values.images.tags.depCheck }}
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: PATH
+              value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
+            - name: COMMAND
+              value: "echo done"
+            - name: DEPENDENCY_POD_JSON
+              value: '[{"labels": {"app": "tb-kafka"}, "requireSameNode": false}]'
+          command:
+            - kubernetes-entrypoint
+          volumeMounts:
+            []
+      containers:
+        - name: server
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          image: {{.Values.images.tags.webUi }}
+          ports:
+            - containerPort: {{ .Values.config.webUi.port }}
+              name: http
+          env:
+            - name: HTTP_BIND_ADDRESS
+              value: {{ .Values.config.webUi.bindAddr | quote }}
+            - name: HTTP_BIND_PORT
+              value: {{ .Values.config.webUi.port | quote }}
+            - name: TB_ENABLE_PROXY
+              value: {{ .Values.config.webUi.proxy.enabled | quote }}
+            - name: LOGGER_LEVEL
+              value: {{ .Values.config.webUi.logger.level | quote}}
+            - name: LOG_FOLDER
+              value: {{ .Values.config.webUi.logger.dir | quote }}
+            - name: LOGGER_FILENAME
+              value: {{ .Values.config.webUi.logger.fileName }}
+            - name: DOCKER_MODE
+              value: "true"
+          livenessProbe:
+            httpGet:
+              path: /index.html
+              port: http
+            initialDelaySeconds: 120
+            timeoutSeconds: 10
+      restartPolicy: Always

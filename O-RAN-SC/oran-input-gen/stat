@@ -1,0 +1,16 @@
+kpm - system
+bbCover: 1820, edgeCover: 896
+total: 7939, decoded: 4417
+corpus: 29
+
+bbCover: 1824, edgeCover: 899
+totalReq= 26378, decodedReq= 4420
+corpus: 4
+
+
+e2t - no grammar
+edge cover: 5080
+total requests = 119179, xApp requests = 1355, decoded requests = 1899, other requests = 1355
+corpus: 1413
+
+total requests = 304486, xApp requests = 38, decoded requests = 1174, other requests = 1028

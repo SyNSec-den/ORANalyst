@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# make-unit
+# Runs Go unit tests for a repo and converts the results to JUnit format
+# for jenkins
+
+set -eu -o pipefail
+
+ONOS_REPO=${ONOS_REPO:-${PWD##*/}}
+TEST_PACKAGES=${TEST_PACKAGES:-github.com/onosproject/${ONOS_REPO}/...}
+RACE_CHECK=${RACE_CHECK:-"on"}
+GO_TEST_OUTPUT=go-test-output.out
+GO_COVERAGE_OUTPUT=go-coverage-output.out
+JENKINS_TEST_REPORT=report.xml
+JENKINS_COVERAGE_REPORT=coverage.xml
+
+result=0
+
+race=""
+
+if [[ "$RACE_CHECK" = "on" ]]
+then
+  race="-race"
+fi
+
+if [[ "$TEST_PACKAGES" != "NONE" ]]
+then
+  if ! go test -v $race "-coverprofile=${GO_COVERAGE_OUTPUT}" ${TEST_PACKAGES} >"${GO_TEST_OUTPUT}" 2>&1
+  then
+      result=1
+  fi
+else
+  touch go-coverage-output.out
+  touch go-test-output.out
+  result=0
+fi
+go-junit-report < "${GO_TEST_OUTPUT}" >"$JENKINS_TEST_REPORT"
+gocover-cobertura <"${GO_COVERAGE_OUTPUT}" >"${JENKINS_COVERAGE_REPORT}"
+cat "${GO_TEST_OUTPUT}"
+exit $result

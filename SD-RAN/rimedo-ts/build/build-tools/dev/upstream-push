@@ -1,0 +1,17 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Simple tool to enable or disable push to upstream repo.
+
+case "${1:-off}" in
+"on")
+  url=$(git remote -v | grep upstream | cut -f2 | grep https | cut -d\  -f1 | sed 's|https://github.com/|git@github.com:|')
+  [ -n "$url" ] && git remote set-url --push upstream $url;;
+"off")
+  git remote set-url --push upstream no_push;;
+default)
+  echo "usage: $(basename $0) [on|off]" >&2 && exit 1;;
+esac
+

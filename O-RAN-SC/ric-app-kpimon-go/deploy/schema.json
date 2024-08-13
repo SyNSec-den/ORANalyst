@@ -1,0 +1,166 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "title": "The root schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "examples": [
+        {
+            "rmr": {
+                "protPort": "tcp:4560",
+                "maxSize": 2072,
+                "numWorkers": 1,
+                "rxMessages": [
+                    "RIC_SUB_RESP",
+                    "RIC_INDICATION"
+                ],
+                "txMessages": [
+                    "RIC_SUB_REQ"
+                ],
+                "policies": []
+            }
+        }
+    ],
+    "required": [
+        "rmr"
+    ],
+    "properties": {
+        "rmr": {
+            "$id": "#/properties/rmr",
+            "type": "object",
+            "title": "The rmr schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "protPort": "tcp:4560",
+                    "maxSize": 2072,
+                    "numWorkers": 1,
+                    "rxMessages": [
+                        "RIC_SUB_RESP",
+                        "RIC_INDICATION"
+                    ],
+                    "txMessages": [
+                        "RIC_SUB_REQ"
+                    ],
+                    "policies": []
+                }
+            ],
+            "required": [
+                "protPort",
+                "maxSize",
+                "numWorkers",
+                "rxMessages",
+                "txMessages",
+                "policies"
+            ],
+            "properties": {
+                "protPort": {
+                    "$id": "#/properties/rmr/properties/protPort",
+                    "type": "string",
+                    "title": "The protPort schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "tcp:4560"
+                    ]
+                },
+                "maxSize": {
+                    "$id": "#/properties/rmr/properties/maxSize",
+                    "type": "integer",
+                    "title": "The maxSize schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        2072
+                    ]
+                },
+                "numWorkers": {
+                    "$id": "#/properties/rmr/properties/numWorkers",
+                    "type": "integer",
+                    "title": "The numWorkers schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": 0,
+                    "examples": [
+                        1
+                    ]
+                },
+                "rxMessages": {
+                    "$id": "#/properties/rmr/properties/rxMessages",
+                    "type": "array",
+                    "title": "The rxMessages schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            "RIC_SUB_RESP",
+                            "RIC_INDICATION"
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/rmr/properties/rxMessages/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/rmr/properties/rxMessages/items/anyOf/0",
+                                "type": "string",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "RIC_SUB_RESP",
+                                    "RIC_INDICATION"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "txMessages": {
+                    "$id": "#/properties/rmr/properties/txMessages",
+                    "type": "array",
+                    "title": "The txMessages schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        [
+                            "RIC_SUB_REQ"
+                        ]
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/rmr/properties/txMessages/items",
+                        "anyOf": [
+                            {
+                                "$id": "#/properties/rmr/properties/txMessages/items/anyOf/0",
+                                "type": "string",
+                                "title": "The first anyOf schema",
+                                "description": "An explanation about the purpose of this instance.",
+                                "default": "",
+                                "examples": [
+                                    "RIC_SUB_REQ"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                "policies": {
+                    "$id": "#/properties/rmr/properties/policies",
+                    "type": "array",
+                    "title": "The policies schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": [],
+                    "examples": [
+                        []
+                    ],
+                    "additionalItems": true,
+                    "items": {
+                        "$id": "#/properties/rmr/properties/policies/items"
+                    }
+                }
+            },
+            "additionalProperties": true
+        }
+    },
+    "additionalProperties": true
+}

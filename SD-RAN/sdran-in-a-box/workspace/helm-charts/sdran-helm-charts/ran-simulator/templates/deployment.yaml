@@ -1,0 +1,134 @@
+# SPDX-FileCopyrightText: 2019-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "ran-simulator.fullname" . }}
+  namespace: {{ .Release.Namespace }}
+  labels:
+    {{- include "ran-simulator.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "ran-simulator.fullname" . }}
+      app: onos
+      type: sim
+      resource: {{ template "ran-simulator.fullname" . }}
+      {{- include "ran-simulator.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "ran-simulator.fullname" . }}
+        app: onos
+        type: sim
+        resource: {{ template "ran-simulator.fullname" . }}
+        {{- include "ran-simulator.selectorLabels" . | nindent 8 }}
+    spec:
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      initContainers:
+        # Run service model plugins as init containers to load plugins onto the shared volume
+        {{ $registry := include "ran-simulator.registryname" . }}
+        {{- range $key, $servicemodel := .Values.servicemodels }}
+        - name: {{ printf "service-model-%s-%s" $servicemodel.name $servicemodel.version | replace "." "-" | replace "_" "-" }}
+          image: {{ printf "%s%s:%s" $registry $servicemodel.image.repository $servicemodel.image.tag }}
+          imagePullPolicy: {{ $servicemodel.image.pullPolicy }}
+          command:
+            - "/bin/cp"
+          args:
+            - {{ printf "%s.so.%s" $servicemodel.name $servicemodel.version }}
+            - {{ printf "/usr/local/lib/%s.so.%s" $servicemodel.name $servicemodel.version }}
+          volumeMounts:
+            - name: shared-data
+              mountPath: /usr/local/lib
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ include "ran-simulator.imagename" . | quote }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: GODEBUG
+              value: cgocheck=0
+          args:
+            - "-caPath=/etc/ran-simulator/certs/tls.cacrt"
+            - "-keyPath=/etc/ran-simulator/certs/tls.key"
+            - "-certPath=/etc/ran-simulator/certs/tls.crt"
+            - "-modelName={{ .Values.pci.modelName }}"
+            - "-metricName={{ .Values.pci.metricName }}"
+            - "-hoLogic={{ .Values.mobility.hoLogic }}"
+            {{- range $key, $smplugin := .Values.servicemodels }}
+            - {{ printf "-serviceModel=/usr/local/lib/shared/%s.so.%s" $smplugin.name $smplugin.version }}
+              {{- end }}
+          ports:
+            - name: grpc
+              containerPort: 5150
+            {{- if .Values.debug }}
+            - name: debug
+              containerPort: 40000
+              protocol: TCP
+            {{- end }}
+          startupProbe:
+            tcpSocket:
+              port: 5150
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          volumeMounts:
+            - name: secret
+              mountPath: /etc/ran-simulator/certs
+              readOnly: true
+            - name: config
+              mountPath: /etc/onos/config
+              readOnly: true
+            - name: shared-data
+              mountPath: /usr/local/lib/shared
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          # Enable ptrace for debugging
+          securityContext:
+            {{- if .Values.debug }}
+            capabilities:
+              add:
+                - SYS_PTRACE
+            {{- end }}
+      volumes:
+        - name: secret
+          secret:
+            secretName: {{ template "ran-simulator.fullname" . }}-secret
+        - name: config
+          configMap:
+            name: {{ template "ran-simulator.fullname" . }}-config
+        - name: shared-data
+          emptyDir: {}
+      {{- with .Values.nodeSelector }}
+    nodeSelector:
+      {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.affinity }}
+    affinity:
+      {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+    tolerations:
+      {{- toYaml . | nindent 8 }}
+    {{- end }}

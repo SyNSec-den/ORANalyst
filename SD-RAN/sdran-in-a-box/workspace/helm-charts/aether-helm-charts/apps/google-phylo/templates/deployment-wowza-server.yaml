@@ -1,0 +1,53 @@
+{{- /*
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/ -}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: wowza
+  labels:
+{{ tuple "wowza" . | include "phylo.metadata_labels" | indent 4 }}
+spec:
+  replicas: {{ .Values.config.wowza.replica }}
+  selector:
+    matchLabels:
+{{ tuple "wowza" . | include "phylo.metadata_labels" | indent 6 }}
+  template:
+    metadata:
+      labels:
+{{ tuple "wowza" . | include "phylo.metadata_labels" | indent 8 }}
+    {{- if .Values.config.userPlane.enabled }}
+      annotations:
+        danm.k8s.io/interfaces: |
+          [
+            {"clusterNetwork": "default"},
+            {"clusterNetwork": {{ .Values.config.userPlane.name | quote }}, "ip": "dynamic"}
+          ]
+    {{- end }}
+    spec:
+    {{- if .Values.nodeSelectors.enabled }}
+      nodeSelector:
+        {{ .Values.nodeSelectors.wowza.label }}: {{ .Values.nodeSelectors.wowza.value }}
+    {{- end }}
+    {{- if .Values.images.credentials }}
+      imagePullSecrets:
+        - name: {{ .Release.Name }}.registry
+    {{- end }}
+      containers:
+      - name: wowza
+        image: {{ .Values.images.tags.wowza }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+      {{- if .Values.resources.enabled }}
+        resources:
+{{ toYaml .Values.resources.wowza | indent 10 }}
+      {{- end }}
+        volumeMounts:
+        - mountPath: /usr/local/WowzaStreamingEngine/data
+          name: wowza
+      volumes:
+        - name: wowza
+          emptyDir: {}

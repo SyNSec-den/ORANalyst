@@ -1,0 +1,46 @@
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+images:
+  tags:
+    init: docker.io/omecproject/pod-init:1.0.0
+    pfcpiface: registry.aetherproject.org/proxy/omecproject/upf-epc-pfcpiface:master-635b4d4
+  pullPolicy: Always
+  # Secrets must be manually created in the namespace.
+  pullSecrets:
+    - name: aether.registry
+
+nodeSelectors:
+  enabled: false
+  pfcp:
+    label: omec-upf
+    value: enabled
+
+resources:
+  enabled: true
+  pfcpiface:
+    requests:
+      cpu: 256m
+      memory: 128Mi
+    limits:
+      cpu: 256m
+      memory: 128Mi
+
+config:
+  coreDump:
+    enabled: false
+    path: /tmp/coredump
+  pfcp:
+    cfgFiles:
+      upf.json:
+        measure: true
+        enable_p4rt: true
+        p4rtciface:
+          access_ip: "172.17.0.1/32"
+          p4rtc_server: "onos-tost-onos-classic-hs.tost"
+          p4rtc_port: "51001"
+service:
+  type: ClusterIP
+  #externalIp:
+  #annotations:

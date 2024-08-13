@@ -1,0 +1,101 @@
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+images:
+  tags:
+    init: docker.io/omecproject/pod-init:1.0.0
+    bess: registry.aetherproject.org/proxy/omecproject/upf-epc-bess:master-635b4d4
+    pfcpiface: registry.aetherproject.org/proxy/omecproject/upf-epc-pfcpiface:master-635b4d4
+  pullPolicy: IfNotPresent
+  # Secrets must be manually created in the namespace.
+  pullSecrets:
+    - name: aether.registry
+
+nodeSelectors:
+  enabled: false
+  upf:
+    label: node-role.aetherproject.org
+    value: omec-upf
+
+resources:
+  enabled: true
+  bess:
+    requests:
+      cpu: 2
+      memory: 512Mi
+    limits:
+      cpu: 2
+      memory: 512Mi
+  routectl:
+    requests:
+      cpu: 256m
+      memory: 128Mi
+    limits:
+      cpu: 256m
+      memory: 128Mi
+  web:
+    requests:
+      cpu: 256m
+      memory: 128Mi
+    limits:
+      cpu: 256m
+      memory: 128Mi
+  cpiface:
+    requests:
+      cpu: 256m
+      memory: 128Mi
+    limits:
+      cpu: 256m
+      memory: 128Mi
+
+config:
+  coreDump:
+    enabled: false
+    path: /tmp/coredump
+  upf:
+    # Enable privileged when run from VM with sriov support
+    privileged: false
+    hugepage:
+      enabled: true
+    sriov:
+      enabled: true
+    # Dynamic IP allocation is not supported yet
+    ipam: static
+    cniPlugin: vfioveth
+    enb:
+      subnet: 192.168.251.0/24
+    access:
+      # Provide sriov resource name when sriov is enabled
+      resourceName: "intel.com/intel_sriov_vfio"
+      gateway: 192.168.252.1
+      ip: 192.168.252.3/24
+      #mac:
+      #vlan:
+      #iface:
+    core:
+      # Provide sriov resource name when sriov is enabled
+      resourceName: "intel.com/intel_sriov_vfio"
+      gateway: 192.168.250.1
+      ip: 192.168.250.3/24
+      #mac:
+      #vlan:
+      #iface:
+    cfgFiles:
+      upf.json:
+        mode: dpdk
+        workers: 1
+        max_sessions: 50000
+        access:
+          ifname: access
+        core:
+          ifname: core
+        measure: true
+
+service:
+  type: ClusterIP
+  #externalIp:
+  #annotations:
+
+servicemonitor:
+  enabled: false

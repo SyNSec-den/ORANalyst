@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2018-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# release-merge-commit
+# publishes artifacts for merge commits that bump the version
+
+set -eu -o pipefail
+
+project=${1:-onosproject}
+GIT_BRANCH=${GIT_BRANCH:-origin/master}
+BASE_BRANCH=${BASE_BRANCH:-"$(basename -- $GIT_BRANCH)"}
+VERSIONFILE=${VERSIONFILE:-VERSION}
+export VERSIONFILE
+MAKEFILE=${MAKEFILE:-"Makefile"}
+MAKEFILE_ROOT=${MAKEFILE_ROOT:-"."}
+export MAKEFILE
+echo Building branch "$BASE_BRANCH"
+
+if [ ! -d "../build-tools" ]; then wd=${PWD} && cd .. && git clone https://github.com/onosproject/build-tools.git && cd $wd; fi
+
+# Set up the git environment to allow making commits
+repo="${PWD##*/}".git
+git remote remove upstream || true
+git remote add upstream https://github.com/${project}/${repo}
+git remote set-url origin git@github.com:${project}/${repo}
+git remote set-url --push upstream git@github.com:${project}/${repo}
+
+export SEMVER_STRICT=1
+export DRY_RUN=0
+
+# Read in the desired version
+export VERSION=$(< ./$VERSIONFILE)
+vers=(${VERSION//./ })
+
+# go likes 'v' to lead off a version string
+export VERSION=v${VERSION}
+
+if ../build-tools/tag-collision-reject; then
+  # Do a release build
+
+  # Log in to Docker
+  echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USER" --password-stdin
+
+  # The go build can pollute the tree
+  git checkout .
+  git clean -fx
+
+  # publish artifacts
+  make -C $MAKEFILE_ROOT -f $MAKEFILE publish
+
+  # return to base branch in case we are on a detached hed
+  git checkout "${BASE_BRANCH}"
+
+  # Update the VERSION file to the next dev version
+  new_version=${vers[0]}.${vers[1]}.`expr ${vers[2]} + 1`-dev
+  echo ${new_version} >./$VERSIONFILE
+
+  # commit the new VERSION
+  git add .
+  git commit --author "ONOS CI <onos-builder@opennetworking.org>" -m "Bumping to new development version ${new_version}"
+  git push origin ${BASE_BRANCH}
+fi

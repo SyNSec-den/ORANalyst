@@ -1,0 +1,35 @@
+{{/*
+# Copyright 2019-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+{{- $context := . -}}
+{{ range .Values.config.phylo.sources }}
+{{- $name := printf "%s-%s" "phylo" .key -}}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rtsp-server-{{ .key }}
+  labels:
+{{ tuple $name $context | include "phylo.metadata_labels" | indent 4 }}
+{{- if $context.Values.config.userPlane.enabled }}
+  annotations:
+    danm.k8s.io/clusterNetwork: {{ $context.Values.config.userPlane.name }}
+    danm.k8s.io/selector: '{"app": {{ $name | quote }}}'
+{{- end }}
+spec:
+{{- if $context.Values.config.userPlane.enabled }}
+  clusterIP: None
+{{- else }}
+  selector:
+{{ tuple $name $context | include "phylo.metadata_labels" | indent 4 }}
+  type: NodePort
+  ports:
+    - port: 8554
+      targetPort: 8554
+      protocol: TCP
+      name: tcp-8554
+{{- end }}
+{{ end }}

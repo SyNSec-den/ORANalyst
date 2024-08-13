@@ -1,0 +1,44 @@
+{{/*
+# Copyright 2019-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ant-media
+  labels:
+{{ tuple "ant-media" . | include "cdn-remote.metadata_labels" | indent 4 }}
+spec:
+  selector:
+{{ tuple "ant-media" . | include "cdn-remote.metadata_labels" | indent 4 }}
+  ports:
+  - name: httpui
+    port: {{ .Values.config.antMedia.ports.httpui }}
+    protocol: TCP
+  - name: rtmp
+    port: {{ .Values.config.antMedia.ports.rtmp }}
+    protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ant-media-external
+  labels:
+{{ tuple "ant-media" . | include "cdn-remote.metadata_labels" | indent 4 }}
+spec:
+  selector:
+{{ tuple "ant-media" . | include "cdn-remote.metadata_labels" | indent 4 }}
+  type: NodePort
+  ports:
+  - name: httpui
+    port: {{ .Values.config.antMedia.ports.httpui }}
+    protocol: TCP
+    nodePort: {{ .Values.config.antMedia.ports.nodePorts.httpui }}
+  - name: rtmp
+    port: {{ .Values.config.antMedia.ports.rtmp }}
+    protocol: TCP
+    nodePort: {{ .Values.config.antMedia.ports.nodePorts.rtmp }}

@@ -1,0 +1,34 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+{{- $mcc := index .Values "config" "oai-enb-cu" "plmnID" "mcc" -}}
+{{- $mnc := index .Values "config" "oai-enb-cu" "plmnID" "mnc" -}}
+{{- $plmnid := tuple $mcc $mnc | include "oai-ue.plmnid" | quote -}}
+{{- $numUEs := index .Values "config" "oai-ue" "numDevices" | int -}}
+{{- $startIMEI := index .Values "config" "oai-ue" "device" "imei" }}
+{{- $startMSIN := index .Values "config" "oai-ue" "sim" "msinStart" }}
+{{- $startMSISDN := index .Values "config" "oai-ue" "sim" "msisdnStart" }}
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: oai-ue
+  labels:
+{{ tuple "oai-ue" . | include "oai-ue.metadata_labels" | indent 4 }}
+data:
+  ue_sim.conf: |
+{{ tuple "_ue_sim_conf.tpl" . | include "oai-ue.template" | indent 4 }}
+  ue.conf: |
+{{ tuple "_ue_conf.tpl" . | include "oai-ue.template" | indent 4 }}
+  gen_ue_sim.sh: |
+{{ tuple "bin/_gen_ue_sim.sh.tpl" . | include "oai-ue.template" | indent 4 }}
+  init_ue.sh: |
+{{ tuple "bin/_init_ue.sh.tpl" . | include "oai-ue.template" | indent 4 }}
+  run_ue.sh: |
+{{- if index .Values "config" "oai-ue" "enableUSRP" }}
+{{ tuple "bin/_run_ue_usrp.sh.tpl" . | include "oai-ue.template" | indent 4 }}
+{{- else }}
+{{ tuple "bin/_run_ue.sh.tpl" . | include "oai-ue.template" | indent 4 }}
+{{- end }}     

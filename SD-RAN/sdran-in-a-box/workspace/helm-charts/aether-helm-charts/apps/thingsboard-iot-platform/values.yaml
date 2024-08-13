@@ -1,0 +1,85 @@
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+images:
+  tags:
+    depCheck: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
+    nginxController: quay.io/kubernetes-ingress-controller/nginx-ingress-controller:0.10.2
+    nginxControllerBase: docker.io/alpine:3.6
+    nginxBackendService: gcr.io/google_containers/defaultbackend:1.4
+    postgres: docker.io/postgres:12
+    tbDbSetup: docker.io/thingsboard/tb-node:latest
+    zookeeper: docker.io/zookeeper:3.5
+    kafka: docker.io/wurstmeister/kafka:2.12-2.2.1
+    redis: docker.io/redis:4.0
+    jsExecutor: docker.io/thingsboard/tb-js-executor:latest
+    mqttTransport: docker.io/thingsboard/tb-mqtt-transport:latest
+    httpTransport: docker.io/thingsboard/tb-http-transport:latest
+    coapTransport: docker.io/thingsboard/tb-coap-transport:latest
+    webUi: docker.io/thingsboard/tb-web-ui:latest
+    tbNode: docker.io/thingsboard/tb-node:latest
+  pullPolicy: IfNotPresent
+
+config:
+  postgres:
+    port: 5432
+  zookeeper:
+    enabled: true
+    port: 2181
+  kafka:
+    ports:
+      outPort: 9092
+      inPort: 9093
+  redis:
+    port: 6379
+  transports:
+    mqtt:
+      port: 1883
+      nodePort:
+        enabled: true
+        port: 33801
+      bindAddr: 0.0.0.0
+      timeout: 10000
+    http:
+      port: 8080
+      nodePort:
+        enabled: true
+        port: 33802
+      bindAddr: 0.0.0.0
+      timeout: 60000
+    coap:
+      port: 5683
+      nodePort:
+        enabled: true
+        port: 30803
+      bindAddr: 0.0.0.0
+      timeout: 10000
+  webUi:
+    port: 8080
+    nodePort:
+      enabled: true
+      port: 33805
+    bindAddr: 0.0.0.0
+    proxy:
+      enabled: false
+    logger:
+      level: info
+      dir: logs
+      fileName: "tb-web-ui-%DATE%.log"
+  tbNode:
+    ports:
+      http: 8080
+      rpc: 9001
+    nodePort:
+      http:
+        enabled: true
+        port: 33806
+      rpc:
+        enabled: false
+        port: 33807
+    serviceType: monolith
+    jsEvaluator: remote
+    transportType: remote
+    httpLogCtrlErrStackTrace: false

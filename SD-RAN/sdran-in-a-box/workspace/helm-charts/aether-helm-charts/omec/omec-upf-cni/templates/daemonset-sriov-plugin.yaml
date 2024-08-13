@@ -1,0 +1,72 @@
+{{/*
+# Copyright 2018-present Open Networking Foundation
+# Copyright 2018 Intel Corporation
+
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+---
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: sriov-plugin
+  labels:
+{{ tuple "sriov-plugin" . | include "omec-upf-cni.metadata_labels" | indent 4 }}
+spec:
+  selector:
+    matchLabels:
+{{ tuple "sriov-plugin" . | include "omec-upf-cni.metadata_labels" | indent 6 }}
+  template:
+    metadata:
+      labels:
+{{ tuple "sriov-plugin" . | include "omec-upf-cni.metadata_labels" | indent 8 }}
+    spec:
+      hostNetwork: true
+      hostPID: true
+      nodeSelector:
+        beta.kubernetes.io/arch: amd64
+    {{- if .Values.images.credentials }}
+      imagePullSecrets:
+        - name: {{ .Release.Name }}.registry
+    {{- end }}
+      initContainers:
+      - name: init-sriov-plugin
+        image: {{ .Values.images.tags.omecCni }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        command: [ "bash", "-c" ]
+        args:
+        - cp /tmp/cni/bin/{sriov,vfioveth,jq,static} /host/opt/cni/bin/
+        volumeMounts:
+        - name: cni-bin
+          mountPath: /host/opt/cni/bin
+      containers:
+      - name: sriov-device-plugin
+        image: {{ .Values.images.tags.sriovPlugin }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        command: [ "/bin/sh", "-c", "--" ]
+        args: [ "sriovdp --logtostderr 10;" ]
+        securityContext:
+          privileged: true
+        volumeMounts:
+        - mountPath: /var/lib/kubelet/
+          name: devicesock
+          readOnly: false
+        - mountPath: /sys
+          name: net
+          readOnly: true
+        - name: sriov-config
+          mountPath: /etc/pcidp
+      volumes:
+      - name: devicesock
+        hostPath:
+          path: /var/lib/kubelet/
+      - name: net
+        hostPath:
+          path: /sys
+      - name: sriov-config
+        configMap:
+          name: sriov-config
+      - name: cni-bin
+        hostPath:
+          path: /opt/cni/bin

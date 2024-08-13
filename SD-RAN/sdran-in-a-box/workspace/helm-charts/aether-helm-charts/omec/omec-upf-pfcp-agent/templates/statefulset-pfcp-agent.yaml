@@ -1,0 +1,71 @@
+{{/*
+# Copyright 2020-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+{{- $upfConfig := index .Values.config.pfcp.cfgFiles "upf.json" }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: pfcp
+  labels:
+{{ tuple "pfcp" . | include "omec-upf-pfcp-agent.metadata_labels" | indent 4 }}
+spec:
+  replicas: 1
+  serviceName: pfcp-headless
+  selector:
+    matchLabels:
+{{ tuple "pfcp" . | include "omec-upf-pfcp-agent.metadata_labels" | indent 6 }}
+  template:
+    metadata:
+      labels:
+{{ tuple "pfcp" . | include "omec-upf-pfcp-agent.metadata_labels" | indent 8 }}
+    spec:
+      shareProcessNamespace: true
+    {{- if .Values.nodeSelectors.enabled }}
+      nodeSelector:
+        {{ .Values.nodeSelectors.pfcp.label }}: {{ .Values.nodeSelectors.pfcp.value }}
+    {{- end }}
+    {{- if hasKey .Values.images "pullSecrets" }}
+      imagePullSecrets:
+{{ toYaml .Values.images.pullSecrets | indent 8 }}
+    {{- end }}
+    {{- if .Values.config.coreDump.enabled }}
+      initContainers:
+{{ tuple "pfcp" . | include "omec-upf-pfcp-agent.coredump_init" | indent 8 }}
+    {{- end }}
+      containers:
+      - name: pfcp-agent
+        image: {{ .Values.images.tags.pfcpiface | quote }}
+        imagePullPolicy: {{ .Values.images.pullPolicy | quote }}
+        env:
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        command: ["pfcpiface"]
+        args:
+          - -config
+          - /tmp/conf/upf.json
+      {{- if .Values.resources.enabled }}
+        resources:
+{{ toYaml .Values.resources.pfcpiface | indent 10 }}
+      {{- end }}
+        volumeMounts:
+          - name: configs
+            mountPath: /tmp/conf
+      volumes:
+      - name: configs
+        configMap:
+          name: pfcp
+          defaultMode: 493
+    {{- if .Values.config.coreDump.enabled }}
+      - name: host-rootfs
+        hostPath:
+          path: /
+      - name: coredump
+        hostPath:
+          path: {{ .Values.config.coreDump.path }}
+    {{- end }}

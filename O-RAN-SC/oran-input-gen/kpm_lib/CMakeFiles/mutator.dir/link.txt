@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wno-error -DASN_DISABLE_OER_SUPPORT=1   CMakeFiles/mutator.dir/home/tianchang/Desktop/asn1c-v771/kpm/cpp/mutator.c.o  -o mutator libKPM.a 

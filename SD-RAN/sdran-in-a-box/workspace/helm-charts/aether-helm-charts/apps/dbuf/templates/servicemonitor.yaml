@@ -1,0 +1,23 @@
+{{- if eq .Values.prometheus_enable true }}
+
+{{/*
+# Copyright 2021-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: dbuf
+  labels:
+    {{- include "dbuf.labels" . | nindent 4 }}
+spec:
+  selector:
+    matchLabels:
+      {{- include "dbuf.selectorLabels" . | nindent 6 }}
+  endpoints:
+  - port: exporter
+    path: /metrics
+    scheme: HTTP
+{{ end }}

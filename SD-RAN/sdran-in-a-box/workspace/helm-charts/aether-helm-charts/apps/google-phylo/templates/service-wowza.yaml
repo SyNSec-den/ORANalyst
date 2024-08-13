@@ -1,0 +1,36 @@
+{{- /*
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/ -}}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: wowza
+  labels:
+{{ tuple "wowza" . | include "phylo.metadata_labels" | indent 4 }}
+{{- if .Values.config.userPlane.enabled }}
+  annotations:
+    danm.k8s.io/clusterNetwork: {{ .Values.config.userPlane.name }}
+    danm.k8s.io/selector: '{"app": "wowza"}'
+{{- end }}
+spec:
+{{- if .Values.config.userPlane.enabled }}
+  clusterIP: None
+{{- else }}
+  selector:
+{{ tuple "wowza" . | include "phylo.metadata_labels" | indent 4 }}
+  type: NodePort
+  ports:
+    - name: management
+      port: 8088
+      protocol: TCP
+      nodePort: 30088
+    - name: rtmp
+      port: 1935 # RTMP/RTMPT/RTMPE/RTSP(interleaved)
+      targetPort: 1935
+      protocol: TCP
+      nodePort: 31935
+{{- end }}

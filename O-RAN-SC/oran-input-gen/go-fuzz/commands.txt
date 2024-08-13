@@ -1,0 +1,4 @@
+# has to be relative path
+GO111MODULE=off ./go-fuzz-build ../../../../../../Downloads/fuzz/goroutine_fuzz/routine/
+
+go-fuzz --bin routine-fuzz.zip --procs 1 --timeout 20

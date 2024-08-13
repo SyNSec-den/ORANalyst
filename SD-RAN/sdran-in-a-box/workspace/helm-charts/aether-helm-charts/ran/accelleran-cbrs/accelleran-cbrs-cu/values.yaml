@@ -1,0 +1,54 @@
+# Copyright 2019-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+images:
+  tags:
+    initCU: "registry.aetherproject.org/accelleran/pod-init:1.0.0"
+    vranL3: "registry.aetherproject.org/accelleran/accelleran-cu-l3-tdd:v1.0.2"
+    depCheck: "quay.io/stackanetes/kubernetes-entrypoint:v0.3.1"
+  pullPolicy: IfNotPresent
+  pullSecrets:
+    - name: aether.registry
+
+nodeSelectors:
+  enabled: false
+  accelleranCBRSCU:
+    label: accelleran-cbrs-cu
+    value: enabled
+
+resources:
+  enabled: true
+  accelleranCBRSCU:
+    requests:
+      cpu: 3
+      memory: 1Gi
+    limits:
+      cpu: 3
+      memory: 1Gi
+
+config:
+  vranL3:
+    zlogConf:
+      bufferMin: 64K
+      bufferMax: 64K
+    instanceId: onfcell202 # Cell ID -- Unique value for each L2/DU-L3/CU pair, no capital and special character
+    tac: 202
+    enbId: 1
+    freqBand: 48
+    earfcnDl: 55990
+    earfcnUl: 55990
+    plmnId: "371211" # 130501 for aether If not, 315010 oldone: 371211
+    ports:
+      s1ap:
+        port: 36412
+        nodePort: 31412
+        protocol: SCTP
+  redis:
+    hostName: accelleran-cbrs-redis
+    ports:
+      redisPort:
+        port: 6379
+  mme:
+    ip: 10.90.0.151
+    s1apPort: 36412

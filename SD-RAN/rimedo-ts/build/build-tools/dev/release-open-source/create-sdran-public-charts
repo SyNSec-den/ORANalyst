@@ -1,0 +1,48 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+set -e -u -o pipefail
+
+WEBSITE_USER=$1
+WEBSITE_PASSWORD=$2
+UPLOAD_USER=$3
+
+declare -a charts=(
+  "sd-ran/sd-ran-1.2.1.tgz"
+  "onos-e2t/onos-e2t-1.0.47.tgz"
+  "ran-simulator/ran-simulator-1.0.74.tgz"
+  "onos-kpimon/onos-kpimon-0.6.19.tgz"
+  "onos-pci/onos-pci-0.6.18.tgz"
+  "fb-ah-gui/fb-ah-gui-0.0.4.tgz"
+  "fb-ah-xapp/fb-ah-xapp-0.0.5.tgz"
+  "ah-eson-test-server/ah-eson-test-server-0.0.2.tgz"
+)
+
+source_base_url="https://sdrancharts.onosproject.org/onos-helm-charts/"
+
+rm -rf staging
+mkdir -p staging/onos-helm-charts
+cd staging
+
+# get the existing charts
+scp -r $UPLOAD_USER@static.opennetworking.org:/srv/sites/publicsdrancharts.onosproject.org/onos-helm-charts/ .
+
+for chart in "${charts[@]}" ; do
+  curl -u ${WEBSITE_USER}:${WEBSITE_PASSWORD} -L --silent --create-dirs -o onos-helm-charts/$chart $source_base_url/$chart
+done
+
+helm repo index onos-helm-charts/ --url https://publicsdrancharts.onosproject.org/onos-helm-charts
+
+cd onos-helm-charts
+/Users/ray/go/src/github.com/onosproject/build-tools/build/_output/index2md -file index >index.html
+/Users/ray/go/src/github.com/onosproject/build-tools/build/_output/index2md -file index -html >README.md
+
+cd ..
+mv onos-helm-charts/index.yaml onos-helm-charts/index.html onos-helm-charts/README.md .
+chmod -R a+r .
+chmod +x onos-helm-charts/*
+
+cd ..
+rsync -rvzh staging/ $UPLOAD_USER@static.opennetworking.org:/srv/sites/publicsdrancharts.onosproject.org/

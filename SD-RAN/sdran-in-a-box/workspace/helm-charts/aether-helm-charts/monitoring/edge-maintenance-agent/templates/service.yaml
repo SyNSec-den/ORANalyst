@@ -1,0 +1,18 @@
+# Copyright 2020-present Open Networking Foundation
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "edge-maintenance-agent.fullname" . }}
+  labels:
+    {{- include "edge-maintenance-agent.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: 8080
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "edge-maintenance-agent.selectorLabels" . | nindent 4 }}

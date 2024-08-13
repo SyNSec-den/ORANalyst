@@ -1,0 +1,165 @@
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2018-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# tag-collision-reject
+# checks that there isn't an existing tag in the repo that has this tag
+# adapted from opencord/ci-management/blob/master/jjb/shell/versiontag.sh for use in the ONOS project
+
+set -eu -o pipefail
+
+VERSIONFILE=${VERSIONFILE:-VERSION} # file path to file containing version number
+NEW_VERSION=${NEW_VERSION:-""} # if not set version number found in $VERSIONFILE, otherwise custom version number (if used it is always checked agains git_tag)
+TAG_VERSION="" # version file that might have a leading v to work around go mod funkyness
+
+SEMVER_STRICT=${SEMVER_STRICT:-0} # require semver versions
+
+releaseversion=0
+fail_validation=0
+
+# when not running under Jenkins, use current dir as workspace
+WORKSPACE=${WORKSPACE:-.}
+
+# find the version string in the repo, read into NEW_VERSION
+# Add additional places NEW_VERSION could be found to this function
+function read_version {
+  if [[ $NEW_VERSION != "" ]]
+  then
+    # this means the script is used to check a custom version,
+    # do not read in any files but always check against git tags
+    releaseversion=1
+    TAG_VERSION=${NEW_VERSION}
+  elif [ -f "$VERSIONFILE" ]
+  then
+    NEW_VERSION=$(head -n1 "$VERSIONFILE")
+
+    # If this is a golang project, use funky v-prefixed versions
+    if [ -f "Gopkg.toml" ] || [ -f "go.mod" ]
+    then
+      echo "go-based project found, using v-prefixed version for git tags: v${NEW_VERSION}"
+      TAG_VERSION=v${NEW_VERSION}
+    else
+      TAG_VERSION=${NEW_VERSION}
+    fi
+
+  elif [ -f "package.json" ]
+  then
+    NEW_VERSION=$(python -c 'import json,sys;obj=json.load(sys.stdin); print obj["version"]' < package.json)
+    TAG_VERSION=$NEW_VERSION
+    VERSIONFILE="package.json"
+  elif [ -f "pom.xml" ]
+  then
+    NEW_VERSION=$(xmllint --xpath '/*[local-name()="project"]/*[local-name()="version"]/text()' pom.xml)
+    TAG_VERSION=$NEW_VERSION
+    VERSIONFILE="pom.xml"
+  else
+    echo "ERROR: No versioning file found! At ${VERSIONFILE}"
+    exit 1
+  fi
+}
+
+# check if the version is a released version
+function check_if_releaseversion {
+  if [[ "$NEW_VERSION" =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]
+  then
+    echo "Version string '$NEW_VERSION' found in '$VERSIONFILE' is a SemVer released version!"
+    releaseversion=1
+  else
+    if [ "$SEMVER_STRICT" -eq "1" ]
+    then
+      echo "Version string '$NEW_VERSION' in '$VERSIONFILE' is not a SemVer released version, SEMVER_STRICT enabled, failing!"
+      fail_validation=1
+    else
+      echo "Version string '$NEW_VERSION' in '$VERSIONFILE' is not a SemVer released version, skipping."
+    fi
+  fi
+}
+
+# check if the version is already a tag in git
+function is_git_tag_duplicated {
+  for existing_tag in $(git tag | cat)
+  do
+    if [ "$TAG_VERSION" = "$existing_tag" ]
+    then
+      echo "ERROR: Duplicate tag: $existing_tag"
+      exit 2
+    fi
+  done
+}
+
+# check if Dockerfiles have a released version as their parent
+function dockerfile_parentcheck {
+  while IFS= read -r -d '' dockerfile
+  do
+    echo "Checking dockerfile: '$dockerfile'"
+
+    # split on newlines
+    IFS=$'\n'
+    df_parents=($(grep "^FROM" "$dockerfile"))
+
+    # check all parents in the Dockerfile
+    for df_parent in "${df_parents[@]}"
+    do
+
+      df_pattern="FROM ([^:]*):(.*)"
+      if [[ "$df_parent" =~ $df_pattern ]]
+      then
+
+        p_image="${BASH_REMATCH[1]}"
+        p_version="${BASH_REMATCH[2]}"
+
+        if [[ "${p_version}" =~ ^([0-9]+)\.([0-9]+)\.([0-9]+)$ ]]
+        then
+          echo "  OK: Parent '$p_image:$p_version' is a released SemVer version"
+        elif [[ "${p_version}" =~ ^.*@sha256:[0-9a-f]{64}.*$ ]]
+        then
+          # allow sha256 hashes to be used as version specifiers
+          echo "  OK: Parent '$p_image:$p_version' is using a specific sha256 hash as a version"
+        elif [[ "${p_version}" =~ ^.*([0-9]+)\.([0-9]+).*$ ]]
+        then
+          # handle non-SemVer versions that have a Major.Minor version specifier in the name
+          #  'ubuntu:16.04'
+          #  'postgres:10.3-alpine'
+          #  'openjdk:8-jre-alpine3.8'
+          echo "  OK: Parent '$p_image:$p_version' is using a non-SemVer, but sufficient, version"
+        else
+          echo "  ERROR: Parent '$p_image:$p_version' is NOT using an specific version"
+          fail_validation=1
+        fi
+
+      elif [[ "$df_parent" =~ ^FROM\ scratch$ ]]
+      then
+        # Handle the parent-less `FROM scratch` case:
+        #  https://docs.docker.com/develop/develop-images/baseimages/
+        echo "  OK: Using the versionless 'scratch' parent: '$df_parent'"
+      else
+        echo "  ERROR: Couldn't find a parent image in $df_parent"
+      fi
+
+    done
+
+  done  < <( find "${WORKSPACE}" -name 'Dockerfile*' ! -path "*/vendor/*" ! -name "*dockerignore" -print0 )
+}
+
+echo "Checking git repo with remotes:"
+git remote -v
+
+echo "Branches:"
+git branch -v
+
+echo "Existing git tags:"
+git tag -n | cat
+
+read_version
+check_if_releaseversion
+
+# perform checks if a released version
+if [ "$releaseversion" -eq "1" ]
+then
+  is_git_tag_duplicated
+  # Leaving this out for now - may not be required for ONOS
+  # dockerfile_parentcheck
+fi
+
+exit $fail_validation

@@ -1,0 +1,74 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tb-redis
+spec:
+  selector:
+    matchLabels:
+      app: tb-redis
+  template:
+    metadata:
+      labels:
+        app: tb-redis
+    spec:
+      serviceAccountName: thingsboard
+      initContainers:
+        - name: redis-dep-check
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          image: {{ .Values.images.tags.depCheck }}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: false
+            runAsUser: 0
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: PATH
+              value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
+            - name: COMMAND
+              value: "echo done"
+            - name: DEPENDENCY_JOBS
+              value: job-tb-db-setup
+          command:
+            - kubernetes-entrypoint
+          volumeMounts:
+            []
+      containers:
+        - name: server
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          image: {{ .Values.images.tags.redis }}
+          ports:
+            - containerPort: {{ .Values.config.redis.port }}
+          readinessProbe:
+            periodSeconds: 5
+            tcpSocket:
+              port: {{ .Values.config.redis.port }}
+          livenessProbe:
+            periodSeconds: 5
+            tcpSocket:
+              port: {{ .Values.config.redis.port }}
+          volumeMounts:
+            - mountPath: /data
+              name: redis-data
+      volumes:
+        - name: redis-data
+          emptyDir: {}
+      restartPolicy: Always

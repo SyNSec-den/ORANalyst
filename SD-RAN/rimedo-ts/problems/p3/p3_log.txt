@@ -1,0 +1,974 @@
+start cover server
+start sonar
+InstrumentMain
+2023-07-19T22:15:56.727Z	INFO	rimedo-ts	rimedo-ts/rimedo-ts.go:26	Starting RIMEDO Labs Traffic Steering xAPP
+2023-07-19T22:15:56.739Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:18	A1EI service created
+2023-07-19T22:15:56.742Z	INFO	northbound	northbound/server.go:138	Loading default CA onfca
+2023-07-19T22:15:56.742Z	INFO	northbound	northbound/server.go:165	Starting RPC server on address: [::]:5150
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-19T22:15:56.742Z	INFO	a1/manager	connection/manager.go:46	Start (or restart) A1 connection manager
+2023-07-19T22:15:56.789Z	WARN	onos/grpc/retry	retry/retry.go:70	SendMsg id:"a1:rimedo-ts-7bf45bc9b7-84k6t" : error%!(EXTRA *status.Error=rpc error: code = NotFound desc = key a1:rimedo-ts-7bf45bc9b7-84k6t not found)
+2023-07-19T22:15:56.844Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:62	EIJobStatusQuery stream established
+2023-07-19T22:15:56.845Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:34	EIQuery stream established
+2023-07-19T22:15:56.845Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:41	EIJobSetup stream established
+2023-07-19T22:15:56.845Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:48	EIJobUpdate stream established
+2023-07-19T22:15:56.845Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:55	EIJobDelete stream established
+2023-07-19T22:16:01.743Z	INFO	rimedo-ts/ts-manager	manager/manager.go:123	
+
+
+
+
+
+
+
+
+
+
+2023-07-19T22:16:02.744Z	INFO	rimedo-ts/ts-manager	manager/manager.go:321	POLICY MESSAGE: Default policy applied
+
+2023-07-19T22:25:07.798Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 1 for subscription channel 'rimedo-ts:rimedo-ts-7bf45bc9b7-84k6t:e2:1/5154:rimedo-ts-subscription-MHO_TRIGGER_TYPE_PERIODIC'
+2023-07-19T22:25:07.856Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 2 for subscription channel 'rimedo-ts:rimedo-ts-7bf45bc9b7-84k6t:e2:1/5154:rimedo-ts-subscription-MHO_TRIGGER_TYPE_UPON_CHANGE_RRC_STATUS'
+2023-07-19T22:25:07.875Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 3 for subscription channel 'rimedo-ts:rimedo-ts-7bf45bc9b7-84k6t:e2:1/5154:rimedo-ts-subscription-MHO_TRIGGER_TYPE_UPON_RCV_MEAS_REPORT'
+accept cover server
+2023-07-19T22:25:36.691Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+2023-07-19T22:25:36.695Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+2023-07-19T22:25:37.214Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-19T22:25:37.214Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	 CELLS -
+2023-07-19T22:25:37.214Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-19T22:25:37.214Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-19T22:25:37.214Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-19T22:25:37.214Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-07-19T22:25:37.215Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-19T22:25:37.215Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-19T22:25:37.215Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-19T22:25:37.215Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	 UES -
+2023-07-19T22:25:37.215Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-07-19T22:25:37.215Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-19T22:25:40.299Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-07-19T22:25:40.300Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 584948561668, sonar: 1048571
+resetting finished
+LoopPos
+write to cover
+2023-07-19T22:25:41.704Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 13219672, sonar: 12428
+resetting finished
+LoopPos
+2023-07-19T22:25:41.704Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-19T22:25:41.877Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+res: 0, ns: 172922129, sonar: 11242
+write to cover
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+2023-07-19T22:25:41.879Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+resetting finished
+LoopPos
+2023-07-19T22:25:41.896Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294971393} guami:{p_lmnidentity:{value:"\x00P\x01"} a_mfregion_id:{value:{value:"\x00" len:8}} a_mfset_id:{value:{value:"\x00\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} ran_ueid:{value:"\x00\x10\x01\x00\n\x10\x01\x00"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x01\x00\n"} n_rcell_identity:{value:{value:"P\x01\x00\x00\x00" len:36}}}} rsrp:{value:-65536}} meas_report:{cgi:{e_utra_cgi:{p_lmnidentity:{value:"\x01\x00\n"} e_utracell_identity:{value:{value:"\x10\x01\x00\x00" len:28}}}} rsrp:{value:-65520}}}, e2NodeID: e2:1/5154
+LoopFunc
+panic: runtime error: index out of range [2] with length 0
+
+goroutine 250 [running]:
+github.com/onosproject/rimedo-ts/pkg/mho.PlmnIDBytesToInt(...)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/reader.go:18
+github.com/onosproject/rimedo-ts/pkg/mho.GetCGIFromMeasReportItem(0xc00044e940)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/reader.go:61 +0x1b4
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).GetRsrpFromMeasReport(0xc0003273b0, {0x16eb7c0, 0xc00004a060}, 0xc00063a300?, {0xc000614e70, 0x2, 0xc00044e4c0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:374 +0x5b5
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleMeasReport(0xc0003273b0, {0x16eb7c0, 0xc00004a060}, 0xc00037ec00, 0xc0003a9450, {0xc000629750, 0x9}, 0xc000350398)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:171 +0x7c5
+created by github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).listenIndChan
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:80 +0x70f
+
+goroutine 1 [chan receive, 9 minutes]:
+main.main()
+	/go/src/github.com/rimedo-labs/rimedo-ts/rimedo-ts.go:57 +0x34e
+
+goroutine 6 [select, 9 minutes]:
+google.golang.org/grpc.(*ccBalancerWrapper).watcher(0xc00032ec80)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:77 +0x12c
+created by google.golang.org/grpc.newCCBalancerWrapper
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:67 +0x2ca
+
+goroutine 21 [select, 9 minutes]:
+google.golang.org/grpc.newClientStreamWithParams.func8()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:333 +0x10b
+created by google.golang.org/grpc.newClientStreamWithParams
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:332 +0x112c
+
+goroutine 52 [IO wait, 9 minutes]:
+internal/poll.runtime_pollWait(0x7f8cd1f4f860, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc0004a0080?, 0xc00050c000?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc0004a0080, {0xc00050c000, 0x700, 0x700})
+	internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc0004a0080, {0xc00050c000?, 0x13a7840?, 0xc0000cf6b0?})
+	/usr/local/go/src/net/fd_posix.go:55 +0x45
+net.(*conn).Read(0xc000498010, {0xc00050c000?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:183 +0xbe
+crypto/tls.(*atLeastReader).Read(0xc00061c750, {0xc00050c000, 0x700, 0x700})
+	/usr/local/go/src/crypto/tls/conn.go:788 +0xf2
+bytes.(*Buffer).ReadFrom(0xc0004ae290, {0x16ddc20, 0xc00061c750})
+	/usr/local/go/src/bytes/buffer.go:202 +0xf2
+crypto/tls.(*Conn).readFromUntil(0xc0004ae000, {0x16e15e0?, 0xc000498010}, 0x5)
+	/usr/local/go/src/crypto/tls/conn.go:810 +0x12f
+crypto/tls.(*Conn).readRecordOrCCS(0xc0004ae000, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:617 +0x187
+crypto/tls.(*Conn).readRecord(...)
+	/usr/local/go/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc0004ae000, {0xc000596000, 0x8000, 0x8000})
+	/usr/local/go/src/crypto/tls/conn.go:1316 +0x28c
+bufio.(*Reader).Read(0xc000590180, {0xc000162ba0, 0x9, 0x9})
+	/usr/local/go/src/bufio/bufio.go:237 +0x567
+io.ReadAtLeast({0x16dda60, 0xc000590180}, {0xc000162ba0, 0x9, 0x9}, 0x9)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc000162ba0?, 0x9?, 0x620?}, {0x16dda60?, 0xc000590180?})
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:237 +0x85
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc000162b60)
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:498 +0x106
+google.golang.org/grpc/internal/transport.(*http2Client).reader(0xc00014e1e0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:1491 +0x4f7
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:355 +0x232a
+
+goroutine 22 [select]:
+google.golang.org/grpc/internal/transport.(*recvBufferReader).readClient(0xc0003a8140, {0xc0003ae1c0, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:190 +0xda
+google.golang.org/grpc/internal/transport.(*recvBufferReader).Read(0xc0003a8140, {0xc0003ae1c0?, 0x0?, 0xc000517810?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:170 +0xe5
+google.golang.org/grpc/internal/transport.(*transportReader).Read(0xc0003a21b0, {0xc0003ae1c0?, 0xc000517838?, 0xa37685?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:484 +0x4b
+io.ReadAtLeast({0x16e0b60, 0xc0003a21b0}, {0xc0003ae1c0, 0x5, 0x5}, 0x5)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+google.golang.org/grpc/internal/transport.(*Stream).Read(0xc0000d6240, {0xc0003ae1c0, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:468 +0x114
+google.golang.org/grpc.(*parser).recvMsg(0xc0003ae1b0, 0x400000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:559 +0x6e
+google.golang.org/grpc.recvAndDecompress(0x13a82c0?, 0xc0000d6240, {0x0, 0x0}, 0x400000, 0x0, {0x0, 0x0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:690 +0x7f
+google.golang.org/grpc.recv(0x16daa50?, {0x7f8cd1dbd408, 0x20db350}, 0x0?, {0x0?, 0x0?}, {0x14f4440, 0xc0003e27e0}, 0x0?, 0x0, ...)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:758 +0x89
+google.golang.org/grpc.(*csAttempt).recvMsg(0xc0002e6370, {0x14f4440?, 0xc0003e27e0}, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:975 +0x485
+google.golang.org/grpc.(*clientStream).RecvMsg.func2(0x4180f0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:826 +0x3d
+google.golang.org/grpc.(*clientStream).withRetry(0xc000160300, 0xc000517ce8, 0xc000517cb8)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:680 +0x492
+google.golang.org/grpc.(*clientStream).RecvMsg(0xc000160300, {0x14f4440?, 0xc0003e27e0?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:825 +0x1fc
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).tryRecvMsg(0xc0000512c0, {0x14f4440?, 0xc0003e27e0})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:299 +0x6c
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg.func1()
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:292 +0x3d
+github.com/cenkalti/backoff.RetryNotify(0xc000517e98, {0x16e5030, 0xc0003e2900}, 0x15a7690)
+	/go/pkg/mod/github.com/cenkalti/backoff@v2.2.1+incompatible/retry.go:37 +0xdb
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg(0xc0000512c0, {0x14f4440, 0xc0003e27e0})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:291 +0x96
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).RecvMsg(0xc000045b60?, {0x14f4440?, 0xc0003e27e0?})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:287 +0x3c
+github.com/onosproject/onos-api/go/onos/topo.(*topoWatchClient).Recv(0xc000344110)
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/topo/topo.pb.go:1697 +0x6c
+github.com/onosproject/onos-ric-sdk-go/pkg/topo.(*topo).Watch.func1()
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/topo/topo.go:168 +0xfd
+created by github.com/onosproject/onos-ric-sdk-go/pkg/topo.(*topo).Watch
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/topo/topo.go:165 +0x28e
+
+goroutine 8 [select, 9 minutes]:
+google.golang.org/grpc.(*ccBalancerWrapper).watcher(0xc00032eeb0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:77 +0x12c
+created by google.golang.org/grpc.newCCBalancerWrapper
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:67 +0x2ca
+
+goroutine 188 [select]:
+google.golang.org/grpc.(*ccBalancerWrapper).watcher(0xc0002dab90)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:77 +0x12c
+created by google.golang.org/grpc.newCCBalancerWrapper
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:67 +0x2ca
+
+goroutine 10 [IO wait]:
+internal/poll.runtime_pollWait(0x7f8cd1f4f950, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc0000f5d00?, 0xc00015ae40?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Accept(0xc0000f5d00)
+	internal/poll/fd_unix.go:614 +0x2bd
+net.(*netFD).accept(0xc0000f5d00)
+	/usr/local/go/src/net/fd_unix.go:172 +0x4d
+net.(*TCPListener).accept(0xc00032cab0)
+	/usr/local/go/src/net/tcpsock_posix.go:148 +0x45
+net.(*TCPListener).Accept(0xc00032cab0)
+	/usr/local/go/src/net/tcpsock.go:297 +0xb1
+google.golang.org/grpc.(*Server).Serve(0xc0002ec380, {0x16eaca0, 0xc00032cab0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:779 +0x434
+github.com/onosproject/onos-lib-go/pkg/northbound.(*Server).Serve(0xc000340ed0, 0xc00015bfb8)
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/northbound/server.go:166 +0x1086
+github.com/onosproject/rimedo-ts/pkg/sdran.(*Manager).startNorthboundServer.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/sdran/manager.go:129 +0xa5
+created by github.com/onosproject/rimedo-ts/pkg/sdran.(*Manager).startNorthboundServer
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/sdran/manager.go:128 +0x44a
+
+goroutine 11 [chan receive]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections(0xc0003481a0, {0x16eb788?, 0xc00032f220?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:107 +0x1de
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).Start.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:90 +0xbf
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).Start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:87 +0xa5
+
+goroutine 54 [IO wait]:
+internal/poll.runtime_pollWait(0x7f8cd1f4f770, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc00036e000?, 0xc000675500?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc00036e000, {0xc000675500, 0x2a80, 0x2a80})
+	internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc00036e000, {0xc000675500?, 0x13a7840?, 0xc00051b6b0?})
+	/usr/local/go/src/net/fd_posix.go:55 +0x45
+net.(*conn).Read(0xc000015240, {0xc000675500?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:183 +0xbe
+crypto/tls.(*atLeastReader).Read(0xc00061c810, {0xc000675500, 0x2a80, 0x2a80})
+	/usr/local/go/src/crypto/tls/conn.go:788 +0xf2
+bytes.(*Buffer).ReadFrom(0xc000354610, {0x16ddc20, 0xc00061c810})
+	/usr/local/go/src/bytes/buffer.go:202 +0xf2
+crypto/tls.(*Conn).readFromUntil(0xc000354380, {0x16e15e0?, 0xc000015240}, 0x5)
+	/usr/local/go/src/crypto/tls/conn.go:810 +0x12f
+crypto/tls.(*Conn).readRecordOrCCS(0xc000354380, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:617 +0x187
+crypto/tls.(*Conn).readRecord(...)
+	/usr/local/go/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc000354380, {0xc0005b0000, 0x8000, 0x8000})
+	/usr/local/go/src/crypto/tls/conn.go:1316 +0x28c
+bufio.(*Reader).Read(0xc00062ce40, {0xc000162120, 0x9, 0x9})
+	/usr/local/go/src/bufio/bufio.go:237 +0x567
+io.ReadAtLeast({0x16dda60, 0xc00062ce40}, {0xc000162120, 0x9, 0x9}, 0x9)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc000162120?, 0x9?, 0x620?}, {0x16dda60?, 0xc00062ce40?})
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:237 +0x85
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc0001620e0)
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:498 +0x106
+google.golang.org/grpc/internal/transport.(*http2Client).reader(0xc0003f21e0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:1491 +0x4f7
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:355 +0x232a
+
+goroutine 14 [chan receive, 9 minutes]:
+github.com/onosproject/rimedo-ts/pkg/manager.(*Manager).start.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/manager/manager.go:105 +0x138
+created by github.com/onosproject/rimedo-ts/pkg/manager.(*Manager).start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/manager/manager.go:104 +0x48a
+
+goroutine 15 [runnable]:
+go-fuzz-dep.(*GoroutineInfo).WaitTillAllNewlyCreatedTerminates(0xc00032c4b0, 0xc000014018?, 0x12a05f200)
+	go-fuzz-dep/cover.go:94 +0x177
+go-fuzz-dep.LoopFunc()
+	go-fuzz-dep/main.go:41 +0x9f
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).listenIndChan(0xc0003273b0, {0x16eb7c0?, 0xc00004a060}, 0xc000350398)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:64 +0x87
+created by github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).Run
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:59 +0xec
+
+goroutine 53 [select, 9 minutes]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0xc00032fa40, 0x1)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:406 +0x227
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0xc0005901e0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:533 +0xe8
+google.golang.org/grpc/internal/transport.newHTTP2Client.func14()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:405 +0xca
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:403 +0x2c52
+
+goroutine 55 [select]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0xc000638140, 0x1)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:406 +0x227
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0xc00062cf00)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:533 +0xe8
+google.golang.org/grpc/internal/transport.newHTTP2Client.func14()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:405 +0xca
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:403 +0x2c52
+
+goroutine 88 [select, 9 minutes]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0xc000493040, 0x1)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:406 +0x227
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0xc00002fa40)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:533 +0xe8
+google.golang.org/grpc/internal/transport.NewServerTransport.func18()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:321 +0x125
+created by google.golang.org/grpc/internal/transport.NewServerTransport
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:318 +0x24fb
+
+goroutine 218 [chan receive]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchMHOChanges(0xc0003481a0, {0x16eb788?, 0xc00032f220}, {0xc000629750, 0x9})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:134 +0x96
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:125 +0x55b
+
+goroutine 91 [select, 9 minutes]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0xc0004932c0, 0x1)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:406 +0x227
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0xc0000c6120)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:533 +0xe8
+google.golang.org/grpc/internal/transport.NewServerTransport.func18()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:321 +0x125
+created by google.golang.org/grpc/internal/transport.NewServerTransport
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:318 +0x24fb
+
+goroutine 85 [chan receive, 9 minutes]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchMHOChanges(0xc0003481a0, {0x16eb788?, 0xc00032f220}, {0xc0003de060, 0x1d})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:134 +0x96
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:125 +0x55b
+
+goroutine 217 [select]:
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start(0xc000270ab0, {0x16eb788?, 0xc00032f220})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:56 +0x19f
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription(0xc0003481a0, {0x16eb788, 0xc00032f220}, {0xc000629750, 0x9}, 0x0)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:184 +0x768
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections.func3(0x32001c?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:121 +0x97
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:120 +0x731
+
+goroutine 215 [select]:
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start(0xc000270f90, {0x16eb788?, 0xc00032f220})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:56 +0x19f
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription(0xc0003481a0, {0x16eb788, 0xc00032f220}, {0xc000629750, 0x9}, 0x1)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:184 +0x768
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections.func3(0x606fa8?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:121 +0x97
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:120 +0x731
+
+goroutine 74 [chan receive, 9 minutes]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchMHOChanges(0xc0003481a0, {0x16eb788?, 0xc00032f220}, {0xc000342040, 0x1d})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:134 +0x96
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:125 +0x55b
+
+goroutine 89 [select, 9 minutes]:
+google.golang.org/grpc/internal/transport.(*http2Server).keepalive(0xc00046e480)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:1078 +0x285
+created by google.golang.org/grpc/internal/transport.NewServerTransport
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:330 +0x2574
+
+goroutine 90 [IO wait, 9 minutes]:
+internal/poll.runtime_pollWait(0x7f8cd1f4f680, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc0004a0980?, 0xc000032000?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc0004a0980, {0xc000032000, 0x600, 0x600})
+	internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc0004a0980, {0xc000032000?, 0x13a7840?, 0xc0000cd6b8?})
+	/usr/local/go/src/net/fd_posix.go:55 +0x45
+net.(*conn).Read(0xc000014330, {0xc000032000?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:183 +0xbe
+crypto/tls.(*atLeastReader).Read(0xc0003ae528, {0xc000032000, 0x600, 0x600})
+	/usr/local/go/src/crypto/tls/conn.go:788 +0xf2
+bytes.(*Buffer).ReadFrom(0xc000354d10, {0x16ddc20, 0xc0003ae528})
+	/usr/local/go/src/bytes/buffer.go:202 +0xf2
+crypto/tls.(*Conn).readFromUntil(0xc000354a80, {0x16e15e0?, 0xc000014330}, 0x5)
+	/usr/local/go/src/crypto/tls/conn.go:810 +0x12f
+crypto/tls.(*Conn).readRecordOrCCS(0xc000354a80, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:617 +0x187
+crypto/tls.(*Conn).readRecord(...)
+	/usr/local/go/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc000354a80, {0xc0000bc000, 0x8000, 0x8000})
+	/usr/local/go/src/crypto/tls/conn.go:1316 +0x28c
+bufio.(*Reader).Read(0xc00002f9e0, {0xc0000c4040, 0x9, 0x9})
+	/usr/local/go/src/bufio/bufio.go:237 +0x567
+io.ReadAtLeast({0x16dda60, 0xc00002f9e0}, {0xc0000c4040, 0x9, 0x9}, 0x9)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc0000c4040?, 0x9?, 0x13d0620?}, {0x16dda60?, 0xc00002f9e0?})
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:237 +0x85
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc0000c4000)
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:498 +0x106
+google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams(0xc00046e480, 0x0?, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:558 +0xe5
+google.golang.org/grpc.(*Server).serveStreams(0xc0002ec380, {0x16f0cc0?, 0xc00046e480})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:907 +0x15b
+google.golang.org/grpc.(*Server).handleRawConn.func1()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:847 +0xa9
+created by google.golang.org/grpc.(*Server).handleRawConn
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:846 +0x256
+
+goroutine 23 [chan receive, 9 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1EIServer).EIQuery(0xc0003447a0?, {0xc0003447a0?, 0x0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1ei-service.go:36 +0x8c
+github.com/onosproject/onos-api/go/onos/a1t/a1._EIService_EIQuery_Handler({0x14957c0?, 0x20db350}, {0x16ee830?, 0xc000000fc0})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/ei.pb.go:527 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc0002ec380, {0x16f0cc0, 0xc00046e480}, 0xc0000d6480, 0xc000341890, 0x2098860, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc0002ec380, {0x16f0cc0, 0xc00046e480}, 0xc0000d6480, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 24 [chan receive, 9 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1EIServer).EIJobSetup(0xc000344810?, {0xc000344810?, 0x0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1ei-service.go:43 +0x8c
+github.com/onosproject/onos-api/go/onos/a1t/a1._EIService_EIJobSetup_Handler({0x14957c0?, 0x20db350}, {0x16ee830?, 0xc000001140})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/ei.pb.go:553 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc0002ec380, {0x16f0cc0, 0xc00046e480}, 0xc0000d65a0, 0xc000341890, 0x2098880, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc0002ec380, {0x16f0cc0, 0xc00046e480}, 0xc0000d65a0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 25 [chan receive, 9 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1EIServer).EIJobUpdate(0xc000344880?, {0xc000344880?, 0x0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1ei-service.go:50 +0x8c
+github.com/onosproject/onos-api/go/onos/a1t/a1._EIService_EIJobUpdate_Handler({0x14957c0?, 0x20db350}, {0x16ee830?, 0xc0000012c0})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/ei.pb.go:579 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc0002ec380, {0x16f0cc0, 0xc00046e480}, 0xc0000d6900, 0xc000341890, 0x20988a0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc0002ec380, {0x16f0cc0, 0xc00046e480}, 0xc0000d6900, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 26 [chan receive, 9 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1EIServer).EIJobDelete(0xc0003448f0?, {0xc0003448f0?, 0x0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1ei-service.go:57 +0x8c
+github.com/onosproject/onos-api/go/onos/a1t/a1._EIService_EIJobDelete_Handler({0x14957c0?, 0x20db350}, {0x16ee830?, 0xc000001440})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/ei.pb.go:605 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc0002ec380, {0x16f0cc0, 0xc00046e480}, 0xc0000d6ea0, 0xc000341890, 0x20988c0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc0002ec380, {0x16f0cc0, 0xc00046e480}, 0xc0000d6ea0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 27 [chan receive, 9 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1EIServer).EIJobStatusQuery(0xc0003446d0?, {0xc0003446d0?, 0x0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1ei-service.go:64 +0x8c
+github.com/onosproject/onos-api/go/onos/a1t/a1._EIService_EIJobStatusQuery_Handler({0x14957c0?, 0x20db350}, {0x16ee830?, 0xc000000300})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/ei.pb.go:631 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc0002ec380, {0x16f0cc0, 0xc00046e480}, 0xc0000d6fc0, 0xc000341890, 0x20988e0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc0002ec380, {0x16f0cc0, 0xc00046e480}, 0xc0000d6fc0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 92 [select, 9 minutes]:
+google.golang.org/grpc/internal/transport.(*http2Server).keepalive(0xc00046e600)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:1078 +0x285
+created by google.golang.org/grpc/internal/transport.NewServerTransport
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:330 +0x2574
+
+goroutine 93 [IO wait, 9 minutes]:
+internal/poll.runtime_pollWait(0x7f8cd1f4f590, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc0004a0a00?, 0xc000032600?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc0004a0a00, {0xc000032600, 0x600, 0x600})
+	internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc0004a0a00, {0xc000032600?, 0x13a7840?, 0xc0005536b8?})
+	/usr/local/go/src/net/fd_posix.go:55 +0x45
+net.(*conn).Read(0xc000014340, {0xc000032600?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:183 +0xbe
+crypto/tls.(*atLeastReader).Read(0xc0003ae630, {0xc000032600, 0x600, 0x600})
+	/usr/local/go/src/crypto/tls/conn.go:788 +0xf2
+bytes.(*Buffer).ReadFrom(0xc000176990, {0x16ddc20, 0xc0003ae630})
+	/usr/local/go/src/bytes/buffer.go:202 +0xf2
+crypto/tls.(*Conn).readFromUntil(0xc000176700, {0x16e15e0?, 0xc000014340}, 0x5)
+	/usr/local/go/src/crypto/tls/conn.go:810 +0x12f
+crypto/tls.(*Conn).readRecordOrCCS(0xc000176700, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:617 +0x187
+crypto/tls.(*Conn).readRecord(...)
+	/usr/local/go/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc000176700, {0xc0001c6000, 0x8000, 0x8000})
+	/usr/local/go/src/crypto/tls/conn.go:1316 +0x28c
+bufio.(*Reader).Read(0xc0000c60c0, {0xc0000c4120, 0x9, 0x9})
+	/usr/local/go/src/bufio/bufio.go:237 +0x567
+io.ReadAtLeast({0x16dda60, 0xc0000c60c0}, {0xc0000c4120, 0x9, 0x9}, 0x9)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc0000c4120?, 0x9?, 0x13d0620?}, {0x16dda60?, 0xc0000c60c0?})
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:237 +0x85
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc0000c40e0)
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:498 +0x106
+google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams(0xc00046e600, 0x0?, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:558 +0xe5
+google.golang.org/grpc.(*Server).serveStreams(0xc0002ec380, {0x16f0cc0?, 0xc00046e600})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:907 +0x15b
+google.golang.org/grpc.(*Server).handleRawConn.func1()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:847 +0xa9
+created by google.golang.org/grpc.(*Server).handleRawConn
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:846 +0x256
+
+goroutine 28 [chan receive, 9 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1PServer).PolicyStatus(0xc0003418c0, {0x16f0848?, 0xc000344a20})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1p-service.go:515 +0x1e5
+github.com/onosproject/onos-api/go/onos/a1t/a1._PolicyService_PolicyStatus_Handler({0x14582e0?, 0xc0003418c0}, {0x16ee830?, 0xc0000015c0})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/policy.pb.go:613 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc0002ec380, {0x16f0cc0, 0xc00046e600}, 0xc0000d70e0, 0xc000341950, 0x208ed20, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc0002ec380, {0x16f0cc0, 0xc00046e600}, 0xc0000d70e0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 29 [select, 9 minutes]:
+google.golang.org/grpc/internal/transport.(*recvBufferReader).read(0xc0003a8d20, {0xc0003ae658, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:178 +0xc6
+google.golang.org/grpc/internal/transport.(*recvBufferReader).Read(0xc0003a8d20, {0xc0003ae658?, 0x0?, 0xc000087af8?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:172 +0x12f
+google.golang.org/grpc/internal/transport.(*transportReader).Read(0xc0003a3620, {0xc0003ae658?, 0xc000087b20?, 0xa4c005?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:484 +0x4b
+io.ReadAtLeast({0x16e0b60, 0xc0003a3620}, {0xc0003ae658, 0x5, 0x5}, 0x5)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+google.golang.org/grpc/internal/transport.(*Stream).Read(0xc0000d70e0, {0xc0003ae658, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:468 +0x114
+google.golang.org/grpc.(*parser).recvMsg(0xc0003ae648, 0x400000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:559 +0x6e
+google.golang.org/grpc.recvAndDecompress(0x0?, 0xc0000d70e0, {0x0, 0x0}, 0x400000, 0x0, {0x0, 0x0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:690 +0x7f
+google.golang.org/grpc.recv(0x16d5898?, {0x7f8cd1dbd408, 0x20db350}, 0x0?, {0x0?, 0x0?}, {0x15052e0, 0xc0003a3740}, 0x13a7780?, 0x0, ...)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:758 +0x89
+google.golang.org/grpc.(*serverStream).RecvMsg(0xc0000015c0, {0x15052e0?, 0xc0003a3740})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:1563 +0x21f
+github.com/onosproject/onos-api/go/onos/a1t/a1.(*policyServicePolicyStatusServer).Recv(0xc000344a20)
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/policy.pb.go:632 +0x6c
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1PServer).PolicyStatus.func1(0xc000445f88?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1p-service.go:498 +0x109
+created by github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1PServer).PolicyStatus
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1p-service.go:496 +0x185
+
+goroutine 30 [sleep]:
+time.Sleep(0x3b9aca00)
+	runtime/time.go:195 +0x135
+github.com/onosproject/rimedo-ts/pkg/manager.(*Manager).start.func2()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/manager/manager.go:127 +0x197
+created by github.com/onosproject/rimedo-ts/pkg/manager.(*Manager).start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/manager/manager.go:125 +0x66b
+
+goroutine 32 [syscall, 9 minutes]:
+os/signal.signal_recv()
+	runtime/sigqueue.go:152 +0x2f
+os/signal.loop()
+	/usr/local/go/src/os/signal/signal_unix.go:23 +0x49
+os/signal.Notify.func1.3.1()
+	/usr/local/go/src/os/signal/signal.go:151 +0x82
+created by os/signal.Notify.func1.3
+	/usr/local/go/src/os/signal/signal.go:151 +0xb0
+
+goroutine 232 [select]:
+google.golang.org/grpc/internal/transport.(*recvBufferReader).readClient(0xc0002da000, {0xc0002fa0e8, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:190 +0xda
+google.golang.org/grpc/internal/transport.(*recvBufferReader).Read(0xc0002da000, {0xc0002fa0e8?, 0x0?, 0xc0000d37d8?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:170 +0xe5
+google.golang.org/grpc/internal/transport.(*transportReader).Read(0xc0003a23c0, {0xc0002fa0e8?, 0xc0000d3800?, 0xa37685?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:484 +0x4b
+io.ReadAtLeast({0x16e0b60, 0xc0003a23c0}, {0xc0002fa0e8, 0x5, 0x5}, 0x5)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+google.golang.org/grpc/internal/transport.(*Stream).Read(0xc0001f8120, {0xc0002fa0e8, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:468 +0x114
+google.golang.org/grpc.(*parser).recvMsg(0xc0002fa0d8, 0x400000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:559 +0x6e
+google.golang.org/grpc.recvAndDecompress(0x13a82c0?, 0xc0001f8120, {0x0, 0x0}, 0x400000, 0x0, {0x0, 0x0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:690 +0x7f
+google.golang.org/grpc.recv(0x16daa50?, {0x7f8cd1dbd408, 0x20db350}, 0x0?, {0x0?, 0x0?}, {0x150b8c0, 0xc000546438}, 0x0?, 0x0, ...)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:758 +0x89
+google.golang.org/grpc.(*csAttempt).recvMsg(0xc0002e73f0, {0x150b8c0?, 0xc000546438}, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:975 +0x485
+google.golang.org/grpc.(*clientStream).RecvMsg.func2(0x4180f0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:826 +0x3d
+google.golang.org/grpc.(*clientStream).withRetry(0xc000383100, 0xc0000d3cb0, 0xc0000d3c80)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:680 +0x492
+google.golang.org/grpc.(*clientStream).RecvMsg(0xc000383100, {0x150b8c0?, 0xc000546438?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:825 +0x1fc
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).tryRecvMsg(0xc00054a2a0, {0x150b8c0?, 0xc000546438})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:299 +0x6c
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg.func1()
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:292 +0x3d
+github.com/cenkalti/backoff.RetryNotify(0xc0000d3e60, {0x16e5030, 0xc00072a0c0}, 0x15a7690)
+	/go/pkg/mod/github.com/cenkalti/backoff@v2.2.1+incompatible/retry.go:37 +0xdb
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg(0xc00054a2a0, {0x150b8c0, 0xc000546438})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:291 +0x96
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).RecvMsg(0xc0005aea20?, {0x150b8c0?, 0xc000546438?})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:287 +0x3c
+github.com/onosproject/onos-api/go/onos/e2t/e2/v1beta1.(*subscriptionServiceSubscribeClient).Recv(0xc000582100)
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/e2t/e2/v1beta1/subscription.pb.go:2332 +0x6c
+github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe.func1()
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:214 +0x119
+created by github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:209 +0x54a
+
+goroutine 259 [runnable]:
+github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send.func1()
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:38
+created by github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:38 +0x117
+
+goroutine 216 [select]:
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start(0xc000270c30, {0x16eb788?, 0xc00032f220})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:56 +0x19f
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription(0xc0003481a0, {0x16eb788, 0xc00032f220}, {0xc000629750, 0x9}, 0x2)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:184 +0x768
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections.func3(0x6077a8?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:121 +0x97
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:120 +0x731
+
+goroutine 229 [IO wait]:
+internal/poll.runtime_pollWait(0x7f8cd1f4f4a0, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc0000f4500?, 0xc0001ec000?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc0000f4500, {0xc0001ec000, 0x700, 0x700})
+	internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc0000f4500, {0xc0001ec000?, 0x13a7840?, 0xc0000d16b0?})
+	/usr/local/go/src/net/fd_posix.go:55 +0x45
+net.(*conn).Read(0xc000015738, {0xc0001ec000?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:183 +0xbe
+crypto/tls.(*atLeastReader).Read(0xc00061c8a0, {0xc0001ec000, 0x700, 0x700})
+	/usr/local/go/src/crypto/tls/conn.go:788 +0xf2
+bytes.(*Buffer).ReadFrom(0xc0004ae610, {0x16ddc20, 0xc00061c8a0})
+	/usr/local/go/src/bytes/buffer.go:202 +0xf2
+crypto/tls.(*Conn).readFromUntil(0xc0004ae380, {0x16e15e0?, 0xc000015738}, 0x5)
+	/usr/local/go/src/crypto/tls/conn.go:810 +0x12f
+crypto/tls.(*Conn).readRecordOrCCS(0xc0004ae380, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:617 +0x187
+crypto/tls.(*Conn).readRecord(...)
+	/usr/local/go/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc0004ae380, {0xc000414000, 0x8000, 0x8000})
+	/usr/local/go/src/crypto/tls/conn.go:1316 +0x28c
+bufio.(*Reader).Read(0xc0002cf260, {0xc0001fe040, 0x9, 0x9})
+	/usr/local/go/src/bufio/bufio.go:237 +0x567
+io.ReadAtLeast({0x16dda60, 0xc0002cf260}, {0xc0001fe040, 0x9, 0x9}, 0x9)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc0001fe040?, 0x9?, 0x620?}, {0x16dda60?, 0xc0002cf260?})
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:237 +0x85
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc0001fe000)
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:498 +0x106
+google.golang.org/grpc/internal/transport.(*http2Client).reader(0xc0003f23c0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:1491 +0x4f7
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:355 +0x232a
+
+goroutine 230 [select]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0xc00053bb30, 0x1)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:406 +0x227
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0xc0002cf2c0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:533 +0xe8
+google.golang.org/grpc/internal/transport.newHTTP2Client.func14()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:405 +0xca
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:403 +0x2c52
+
+goroutine 231 [select]:
+google.golang.org/grpc.newClientStreamWithParams.func8()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:333 +0x10b
+created by google.golang.org/grpc.newClientStreamWithParams
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:332 +0x112c
+
+goroutine 233 [select]:
+google.golang.org/grpc.newClientStreamWithParams.func8()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:333 +0x10b
+created by google.golang.org/grpc.newClientStreamWithParams
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:332 +0x112c
+
+goroutine 187 [chan receive]:
+github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Client).Node.func1()
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/client.go:53 +0xb2
+created by github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Client).Node
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/client.go:52 +0x34a
+
+goroutine 234 [select]:
+google.golang.org/grpc/internal/transport.(*recvBufferReader).readClient(0xc0002da3c0, {0xc0002faaf0, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:190 +0xda
+google.golang.org/grpc/internal/transport.(*recvBufferReader).Read(0xc0002da3c0, {0xc0002faaf0?, 0x0?, 0xc0001577d8?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:170 +0xe5
+google.golang.org/grpc/internal/transport.(*transportReader).Read(0xc0003a3920, {0xc0002faaf0?, 0xc000157800?, 0xa37685?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:484 +0x4b
+io.ReadAtLeast({0x16e0b60, 0xc0003a3920}, {0xc0002faaf0, 0x5, 0x5}, 0x5)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+google.golang.org/grpc/internal/transport.(*Stream).Read(0xc0001f85a0, {0xc0002faaf0, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:468 +0x114
+google.golang.org/grpc.(*parser).recvMsg(0xc0002faae0, 0x400000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:559 +0x6e
+google.golang.org/grpc.recvAndDecompress(0x13a82c0?, 0xc0001f85a0, {0x0, 0x0}, 0x400000, 0x0, {0x0, 0x0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:690 +0x7f
+google.golang.org/grpc.recv(0x16daa50?, {0x7f8cd1dbd408, 0x20db350}, 0x0?, {0x0?, 0x0?}, {0x150b8c0, 0xc0002fb1d0}, 0x0?, 0x0, ...)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:758 +0x89
+google.golang.org/grpc.(*csAttempt).recvMsg(0xc000100e70, {0x150b8c0?, 0xc0002fb1d0}, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:975 +0x485
+google.golang.org/grpc.(*clientStream).RecvMsg.func2(0x4180f0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:826 +0x3d
+google.golang.org/grpc.(*clientStream).withRetry(0xc000540200, 0xc000157cb0, 0xc000157c80)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:680 +0x492
+google.golang.org/grpc.(*clientStream).RecvMsg(0xc000540200, {0x150b8c0?, 0xc0002fb1d0?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:825 +0x1fc
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).tryRecvMsg(0xc000051380, {0x150b8c0?, 0xc0002fb1d0})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:299 +0x6c
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg.func1()
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:292 +0x3d
+github.com/cenkalti/backoff.RetryNotify(0xc00060fe60, {0x16e5030, 0xc00054bec0}, 0x15a7690)
+	/go/pkg/mod/github.com/cenkalti/backoff@v2.2.1+incompatible/retry.go:37 +0xdb
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg(0xc000051380, {0x150b8c0, 0xc0002fb1d0})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:291 +0x96
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).RecvMsg(0x0?, {0x150b8c0?, 0xc0002fb1d0?})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:287 +0x3c
+github.com/onosproject/onos-api/go/onos/e2t/e2/v1beta1.(*subscriptionServiceSubscribeClient).Recv(0xc000582c60)
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/e2t/e2/v1beta1/subscription.pb.go:2332 +0x6c
+github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe.func1()
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:214 +0x119
+created by github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:209 +0x54a
+
+goroutine 235 [select]:
+google.golang.org/grpc.newClientStreamWithParams.func8()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:333 +0x10b
+created by google.golang.org/grpc.newClientStreamWithParams
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:332 +0x112c
+
+goroutine 236 [select]:
+google.golang.org/grpc/internal/transport.(*recvBufferReader).readClient(0xc0002da500, {0xc0002fabc8, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:190 +0xda
+google.golang.org/grpc/internal/transport.(*recvBufferReader).Read(0xc0002da500, {0xc0002fabc8?, 0x0?, 0xc0004e37d8?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:170 +0xe5
+google.golang.org/grpc/internal/transport.(*transportReader).Read(0xc0003a39e0, {0xc0002fabc8?, 0xc0004e3800?, 0xa37685?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:484 +0x4b
+io.ReadAtLeast({0x16e0b60, 0xc0003a39e0}, {0xc0002fabc8, 0x5, 0x5}, 0x5)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+google.golang.org/grpc/internal/transport.(*Stream).Read(0xc0001f87e0, {0xc0002fabc8, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:468 +0x114
+google.golang.org/grpc.(*parser).recvMsg(0xc0002fabb8, 0x400000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:559 +0x6e
+google.golang.org/grpc.recvAndDecompress(0x13a82c0?, 0xc0001f87e0, {0x0, 0x0}, 0x400000, 0x0, {0x0, 0x0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:690 +0x7f
+google.golang.org/grpc.recv(0x16daa50?, {0x7f8cd1dbd408, 0x20db350}, 0x70d419?, {0x0?, 0x0?}, {0x150b8c0, 0xc0002fb218}, 0x180?, 0x0, ...)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:758 +0x89
+google.golang.org/grpc.(*csAttempt).recvMsg(0xc00043ce70, {0x150b8c0?, 0xc0002fb218}, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:975 +0x485
+google.golang.org/grpc.(*clientStream).RecvMsg.func2(0x4180f0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:826 +0x3d
+google.golang.org/grpc.(*clientStream).withRetry(0xc000473600, 0xc0004e3cb0, 0xc0004e3c80)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:680 +0x492
+google.golang.org/grpc.(*clientStream).RecvMsg(0xc000473600, {0x150b8c0?, 0xc0002fb218?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:825 +0x1fc
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).tryRecvMsg(0xc0003e3200, {0x150b8c0?, 0xc0002fb218})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:299 +0x6c
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg.func1()
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:292 +0x3d
+github.com/cenkalti/backoff.RetryNotify(0xc0004e3e60, {0x16e5030, 0xc000051860}, 0x15a7690)
+	/go/pkg/mod/github.com/cenkalti/backoff@v2.2.1+incompatible/retry.go:37 +0xdb
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg(0xc0003e3200, {0x150b8c0, 0xc0002fb218})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:291 +0x96
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).RecvMsg(0x0?, {0x150b8c0?, 0xc0002fb218?})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:287 +0x3c
+github.com/onosproject/onos-api/go/onos/e2t/e2/v1beta1.(*subscriptionServiceSubscribeClient).Recv(0xc000582cf0)
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/e2t/e2/v1beta1/subscription.pb.go:2332 +0x6c
+github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe.func1()
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:214 +0x119
+created by github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:209 +0x54a
+
+goroutine 237 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc0003adc50, 0x0)
+	runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc0003e3200?)
+	sync/cond.go:70 +0x8c
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).next(0xc0004b2780)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:178 +0x10a
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).drain(0xc0004b2780)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:161 +0xa5
+created by github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).open
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:155 +0x96
+
+goroutine 238 [chan receive]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).sendIndicationOnStream(0xc0002ec380?, 0xc000015388?, 0xc000607fa8?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:260 +0x16e
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:180 +0x68a
+
+goroutine 239 [select]:
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedReader).Recv(0x0?, {0x16eb788, 0xc00032f220})
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:125 +0xd6
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:43 +0x129
+created by github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:41 +0x12b
+
+goroutine 240 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc0003add10, 0x0)
+	runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0x0?)
+	sync/cond.go:70 +0x8c
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).next(0xc0004b2860)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:178 +0x10a
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).drain(0xc0004b2860)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:161 +0xa5
+created by github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).open
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:155 +0x96
+
+goroutine 241 [chan receive]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).sendIndicationOnStream(0xc00060bfd0?, 0xa36ae6?, 0xc0003f23c0?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:260 +0x16e
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:180 +0x68a
+
+goroutine 242 [select]:
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedReader).Recv(0x0?, {0x16eb788, 0xc00032f220})
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:125 +0xd6
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:43 +0x129
+created by github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:41 +0x12b
+
+goroutine 243 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc0003add90, 0x4)
+	runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc000270e10?)
+	sync/cond.go:70 +0x8c
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).next(0xc0004b2960)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:178 +0x10a
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).drain(0xc0004b2960)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:161 +0xa5
+created by github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).open
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:155 +0x96
+
+goroutine 244 [chan receive]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).sendIndicationOnStream(0x0?, 0x0?, 0x0?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:260 +0x16e
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:180 +0x68a
+
+goroutine 245 [select]:
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedReader).Recv(0x0?, {0x16eb788, 0xc00032f220})
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:125 +0xd6
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:43 +0x129
+created by github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:41 +0x12b
+
+goroutine 251 [runnable]:
+sync.runtime_SemacquireMutex(0x16e5aa8?, 0xa0?, 0xc00004cc20?)
+	runtime/sema.go:77 +0x26
+sync.(*Mutex).lockSlow(0xc00032c4c0)
+	sync/mutex.go:171 +0x165
+sync.(*Mutex).Lock(...)
+	sync/mutex.go:90
+go-fuzz-dep.(*GoroutineInfo).AddTerminatedRoutineNum(0x9?, 0xd1f56378?)
+	go-fuzz-dep/cover.go:63 +0x57
+github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send.func1.1()
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:38 +0x3b
+github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send.func1()
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:42 +0x139
+created by github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:38 +0x117
+
+goroutine 252 [sync.Mutex.Lock]:
+sync.runtime_SemacquireMutex(0xc000443688?, 0xd5?, 0xc0002f75f0?)
+	runtime/sema.go:77 +0x26
+sync.(*Mutex).lockSlow(0xc00032c4c0)
+	sync/mutex.go:171 +0x165
+sync.(*Mutex).Lock(...)
+	sync/mutex.go:90
+go-fuzz-dep.(*GoroutineInfo).AddTerminatedRoutineNum(0x0?, 0x0?)
+	go-fuzz-dep/cover.go:63 +0x57
+github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send.func1.1()
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:38 +0x3b
+github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send.func1()
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:42 +0x139
+created by github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:38 +0x117
+
+goroutine 253 [runnable]:
+sync.runtime_SemacquireMutex(0xc00032c4c4?, 0x1?, 0x1?)
+	runtime/sema.go:76 +0x45
+sync.(*Mutex).lockSlow(0xc00032c4c0)
+	sync/mutex.go:171 +0x165
+sync.(*Mutex).Lock(...)
+	sync/mutex.go:90
+go-fuzz-dep.(*GoroutineInfo).AddTerminatedRoutineNum(0x0?, 0x0?)
+	go-fuzz-dep/cover.go:63 +0x57
+github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send.func1.1()
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:38 +0x3b
+github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send.func1()
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:42 +0x139
+created by github.com/onosproject/onos-mho/pkg/store.(*Watchers).Send
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/store/watcher.go:38 +0x117
+2023/07/19 22:25:41 failed to read from pipe: EOF
+res: 0, ns: 172922129, sonar: 11242

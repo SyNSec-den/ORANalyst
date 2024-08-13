@@ -1,0 +1,47 @@
+{{/*
+# Copyright 2019-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: accelleran-cu
+  labels:
+{{ tuple "accelleran-cu" . | include "accelleran-cu.metadata_labels" | indent 4 }}
+spec:
+  selector:
+{{ tuple "accelleran-cu" . | include "accelleran-cu.metadata_labels" | indent 4 }}
+  ports:
+  - name: s1ap
+    port: {{ .Values.config.vran.ports.s1ap.port }}
+    protocol: SCTP
+  - name: nats
+    port: {{ .Values.config.vran.ports.nats.port }}
+    protocol: TCP
+  - name: redis
+    port: {{ .Values.config.vran.ports.redis.port }}
+    protocol: TCP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: acceleran-cu-external
+  labels:
+{{ tuple "accelleran-cu" . | include "accelleran-cu.metadata_labels" | indent 4 }}
+spec:
+  selector:
+{{ tuple "accelleran-cu" . | include "accelleran-cu.metadata_labels" | indent 4 }}
+  type: NodePort
+  ports:
+  - name: nats
+    port: {{ .Values.config.vran.ports.nats.port }}
+    protocol: TCP
+    nodePort: {{ .Values.config.vran.ports.nats.nodePort }}
+  - name: redis
+    port: {{ .Values.config.vran.ports.redis.port }}
+    protocol: TCP
+    nodePort: {{ .Values.config.vran.ports.redis.nodePort }}

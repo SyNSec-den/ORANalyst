@@ -1,0 +1,502 @@
+2023-07-20T23:13:19.889Z	INFO	main	ransim/ransim.go:45	Starting Ran simulator
+2023-07-20T23:13:19.889Z	INFO	github.com/onosproject/ran-simulator/pkg/manager	manager/manager.go:46	Creating Manager
+2023-07-20T23:13:19.890Z	INFO	github.com/onosproject/ran-simulator/pkg/manager	manager/manager.go:74	Running Manager
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/store/nodes	nodes/nodes.go:75	Creating registry from model with 2 nodes
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/store/nodes	nodes/nodes.go:85	Created registry primed with 2 nodes
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/store/cells	cells/cells.go:85	Creating registry from model with 6 cells
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/store/cells	cells/cells.go:96	Created registry primed with 6 cells
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/store/ues	ues/ues.go:110	Creating registry from model with 10 UEs
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/store/ues	ues/ues.go:122	Created registry primed with 10 UEs
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/store/routes	routes/routes.go:68	Creating route registry
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/store/routes	routes/routes.go:75	Created route registry
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/store/metrics	metrics/metrics.go:58	Creating metrics store
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent	e2agent/agent.go:69	Creating New E2 Agent for node with e2 Node ID:20819
+2023-07-20T23:13:19.896Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent	e2agent/agent.go:121	Registering RC service model for e2 node ID:20819
+2023-07-20T23:13:19.903Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/rc/v1	v1/rc.go:351	Start fuzzing service model rc pre
+2023-07-20T23:13:19.903Z	INFO	registry	registry/registry.go:69	Register Service Model:ORAN-E2SM-RC:6
+2023-07-20T23:13:19.903Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent	e2agent/agent.go:108	Registering MHO service model for node with e2 Node ID: 20819
+2023-07-20T23:13:19.904Z	INFO	sm/mho	mho/mho.go:136	Start fuzzing service model mho
+2023-07-20T23:13:19.905Z	INFO	registry	registry/registry.go:69	Register Service Model:ORAN-E2SM-MHO:5
+2023-07-20T23:13:19.905Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent	e2agent/agent.go:82	Registering RC PRE service model for node with e2 Node ID: 20819
+2023-07-20T23:13:19.905Z	INFO	sm/mho	mho/fuzz_mho.go:146	fuzzSendRicIndication: Listening on localhost:19960
+2023-07-20T23:13:19.905Z	INFO	sm/mho	mho/fuzz_mho.go:147	Starting fuzzing process for MHO Indication
+2023-07-20T23:13:19.905Z	INFO	sm/mho	mho/fuzz_mho.go:25	Sending MHO fuzzing indications
+2023-07-20T23:13:19.905Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/rc/v1	v1/fuzz_rc.go:23	fuzzSendRicIndication: Listening on localhost:19961
+2023-07-20T23:13:19.905Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/rc/v1	v1/fuzz_rc.go:24	Starting fuzzing process for RC Indication
+2023-07-20T23:13:19.905Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/rc/v1	v1/fuzz_rc.go:32	Sending RC fuzzing indications
+2023-07-20T23:13:19.905Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/rc	rc/rc.go:234	Start fuzzing service model rc pre
+2023-07-20T23:13:19.905Z	INFO	registry	registry/registry.go:69	Register Service Model:ORAN-E2SM-RC-PRE:3
+2023-07-20T23:13:19.905Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent	e2agent/agent.go:95	Registering KPM2 service model for node with e2 Node ID: 20819
+2023-07-20T23:13:19.906Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/rc	rc/fuzz_rc_pre.go:24	fuzzSendRicIndication: Listening on localhost:19962
+2023-07-20T23:13:19.906Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/rc	rc/fuzz_rc_pre.go:25	Starting fuzzing process for MHO Indication
+2023-07-20T23:13:19.906Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/rc	rc/fuzz_rc_pre.go:33	Sending RC pre fuzzing indications
+2023-07-20T23:13:19.909Z	INFO	registry	registry/registry.go:69	Register Service Model:ORAN-E2SM-KPM:4
+2023-07-20T23:13:19.909Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/agents	agents/agents.go:157	Starting E2 Agents
+2023-07-20T23:13:19.910Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:103	Creating a new E2 Connection
+2023-07-20T23:13:19.910Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:616	E2 node 20819 is starting; attempting to connect
+2023-07-20T23:13:19.910Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:681	Connecting to E2T with IP address:192.168.85.113:36421
+2023-07-20T23:13:19.910Z	INFO	controller	controller/controller.go:148	Activating controller E2Connections
+2023-07-20T23:13:19.910Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/watcher.go:26	Starting Connection Watcher
+2023-07-20T23:13:19.910Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:630	E2 node 20819 connected; attempting setup
+2023-07-20T23:13:19.953Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:850	RanFunctions: map[3:{Description:[32 240 79 82 65 78 45 69 50 83 77 45 82 67 45 80 82 69 0 0 26 49 46 51 46 54 46 49 46 52 46 49 46 53 51 49 52 56 46 49 46 50 46 50 46 49 48 48 2 128 82 67 32 80 82 69 0 3 96 0 1 14 0 80 101 114 105 111 100 105 99 32 97 110 100 32 79 110 32 67 104 97 110 103 101 32 82 101 112 111 114 116 0 1 0 1 12 128 80 67 73 32 97 110 100 32 78 82 84 32 117 112 100 97 116 101 32 102 111 114 32 101 78 66 0 1 0 1] Revision:1 OID:1.3.6.1.4.1.53148.1.2.2.100} 4:{Description:[116 24 79 82 65 78 45 69 50 83 77 45 75 80 77 0 0 24 49 46 51 46 54 46 49 46 52 46 49 46 53 51 49 52 56 46 49 46 50 46 50 46 50 7 0 75 80 77 32 50 46 48 32 77 111 110 105 116 111 114 0 1 0 0 67 0 38 132 19 0 1 69 76 0 0 0 0 0 2 0 0 15 49 51 56 52 50 54 48 49 52 53 52 99 48 48 49 0 38 132 19 1 69 76 0 16 0 15 49 51 56 52 50 54 48 49 52 53 52 99 48 48 50 0 38 132 19 1 69 76 0 32 0 15 49 51 56 52 50 54 48 49 52 53 52 99 48 48 51 0 38 132 19 1 69 76 0 48 0 1 7 0 80 101 114 105 111 100 105 99 32 82 101 112 111 114 116 0 1 0 1 7 0 80 101 114 105 111 100 105 99 32 82 101 112 111 114 116 0 1 0 16 66 32 80 68 85 83 101 115 115 105 111 110 83 101 116 117 112 82 101 113 0 0 0 66 64 80 68 85 83 101 115 115 105 111 110 83 101 116 117 112 83 117 99 99 0 0 1 66 64 80 68 85 83 101 115 115 105 111 110 83 101 116 117 112 70 97 105 108 0 0 2 65 0 80 114 98 85 115 101 100 68 76 0 0 3 65 0 80 114 98 85 115 101 100 85 76 0 0 4 65 192 80 100 99 112 80 100 117 86 111 108 117 109 101 68 76 0 0 5 65 192 80 100 99 112 80 100 117 86 111 108 117 109 101 85 76 0 0 6 65 224 80 100 99 112 82 97 116 101 80 101 114 80 82 66 68 76 0 0 7 65 224 80 100 99 112 82 97 116 101 80 101 114 80 82 66 85 76 0 0 8 66 96 82 82 67 46 67 111 110 110 69 115 116 97 98 65 116 116 46 83 117 109 0 0 9 66 128 82 82 67 46 67 111 110 110 69 115 116 97 98 83 117 99 99 46 83 117 109 0 0 10 66 160 82 82 67 46 67 111 110 110 82 101 69 115 116 97 98 65 116 116 46 83 117 109 0 0 11 67 192 82 82 67 46 67 111 110 110 82 101 69 115 116 97 98 65 116 116 46 114 101 99 111 110 102 105 103 70 97 105 108 0 0 12 67 0 82 82 67 46 67 111 110 110 82 101 69 115 116 97 98 65 116 116 46 72 79 70 97 105 108 0 0 13 66 224 82 82 67 46 67 111 110 110 82 101 69 115 116 97 98 65 116 116 46 79 116 104 101 114 0 0 14 65 96 82 82 67 46 67 111 110 110 46 65 118 103 0 0 15 65 96 82 82 67 46 67 111 110 110 46 77 97 120 0 0 16 0 1 0 1] Revision:1 OID:1.3.6.1.4.1.53148.1.2.2.2} 5:{Description:[32 192 79 82 65 78 45 69 50 83 77 45 77 72 79 0 0 26 49 46 51 46 54 46 49 46 52 46 49 46 53 51 49 52 56 46 49 46 50 46 50 46 49 48 49 1 0 77 72 79 1 3 96 0 1 1 14 0 80 101 114 105 111 100 105 99 32 97 110 100 32 79 110 32 67 104 97 110 103 101 32 82 101 112 111 114 116 1 1 0 1 1 12 128 80 67 73 32 97 110 100 32 78 82 84 32 117 112 100 97 116 101 32 102 111 114 32 101 78 66 1 1 1 1] Revision:1 OID:1.3.6.1.4.1.53148.1.2.2.101} 6:{Description:[124 5 128 79 82 65 78 45 69 50 83 77 45 82 67 0 0 24 49 46 51 46 54 46 49 46 52 46 49 46 53 51 49 52 56 46 49 46 49 46 50 46 51 5 0 82 65 78 32 67 111 110 116 114 111 108 0 64 0 1 6 0 77 101 115 115 97 103 101 32 69 118 101 110 116 0 1 0 0 2 11 0 67 97 108 108 32 80 114 111 99 101 115 115 32 66 114 101 97 107 112 111 105 110 116 0 2 0 0 3 9 0 69 50 32 78 111 100 101 32 73 110 102 111 114 109 97 116 105 111 110 0 3 2 128 0 2 9 128 67 97 108 108 32 80 114 111 99 101 115 115 32 79 117 116 99 111 109 101 0 2 0 1 0 1 0 2 0 10 0 0 6 0 67 117 114 114 101 110 116 32 85 69 32 73 68 16 82 8 3 0 83 45 78 83 83 65 73 16 82 9 1 0 83 83 84 16 82 10 0 128 83 68 16 105 227 10 0 66 101 115 116 32 78 101 105 103 104 98 111 114 105 110 103 32 67 101 108 108 16 84 23 10 128 76 105 115 116 32 111 102 32 78 101 105 103 104 98 111 114 32 99 101 108 108 115 16 39 117 5 128 67 101 108 108 32 82 101 115 117 108 116 115 16 39 118 5 0 83 83 66 32 82 101 115 117 108 116 115 16 48 212 1 128 82 83 82 80 16 48 213 1 128 82 83 82 81 16 48 214 1 128 83 73 78 82 0 0 3 9 0 69 50 32 78 111 100 101 32 105 110 102 111 114 109 97 116 105 111 110 0 3 0 1 0 1 0 3 0 128 0 3 19 0 67 111 110 110 101 99 116 101 100 32 77 111 100 101 32 77 111 98 105 108 105 116 121 32 67 111 110 116 114 111 108 32 82 101 113 117 101 115 116 0 1 0 3 0 0 64 0 0 11 128 72 97 110 100 111 118 101 114 32 67 111 110 116 114 111 108 32 82 101 113 117 101 115 116 0 5 0 0 10 128 84 97 114 103 101 116 32 80 114 105 109 97 114 121 32 67 101 108 108 32 73 68 0 1 5 0 84 97 114 103 101 116 32 67 101 108 108 0 2 3 0 78 82 32 67 101 108 108 0 3 2 128 78 82 32 67 71 73 0 6 16 0 76 105 115 116 32 111 102 32 80 68 85 32 115 101 115 115 105 111 110 115 32 102 111 114 32 104 97 110 100 111 118 101 114 0 12 12 0 76 105 115 116 32 111 102 32 68 82 66 115 32 102 111 114 32 104 97 110 100 111 118 101 114 0 2 0 5 0 1 2 128 0 200 5 0 80 67 73 32 67 111 110 116 114 111 108 0 0 64 0 0 5 0 80 67 73 32 67 111 110 116 114 111 108 0 1 0 0 9 0 83 101 114 118 105 110 103 32 67 101 108 108 32 78 82 32 80 67 73 0 1 7 128 83 101 114 118 105 110 103 32 67 101 108 108 32 67 71 73 0 1 0 1 0 1 64 0 3 11 0 67 111 110 110 101 99 116 101 100 32 77 111 100 101 32 77 111 98 105 108 105 116 121 0 0 64 0 0 7 128 72 97 110 100 111 118 101 114 32 67 111 110 116 114 111 108 0 0 0 0 10 128 84 97 114 103 101 116 32 80 114 105 109 97 114 121 32 67 101 108 108 32 73 68 0 1 0 1 0 1 0 128 0 3 15 0 67 111 110 110 101 99 116 101 100 32 77 111 100 101 32 77 111 98 105 108 105 116 121 32 67 111 110 116 114 111 108 0 1 0 0 96 0 0 13 0 80 111 108 105 99 121 32 102 111 114 32 72 97 110 100 111 118 101 114 32 67 111 110 116 114 111 108 0 2 0 1 0 0 10 128 84 97 114 103 101 116 32 80 114 105 109 97 114 121 32 67 101 108 108 32 73 68 16 39 216 9 128 67 101 108 108 32 83 112 101 99 105 102 105 99 32 79 102 102 115 101 116 0 1 0 0 10 128 84 97 114 103 101 116 32 80 114 105 109 97 114 121 32 67 101 108 108 32 73 68 16 39 216 9 128 67 101 108 108 32 83 112 101 99 105 102 105 99 32 79 102 102 115 101 116] Revision:1 OID:1.3.6.1.4.1.53148.1.1.2.3}]
+2023-07-20T23:13:19.953Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:859	setupRequest: &{ranFunctions:map[3:{Description:[32 240 79 82 65 78 45 69 50 83 77 45 82 67 45 80 82 69 0 0 26 49 46 51 46 54 46 49 46 52 46 49 46 53 51 49 52 56 46 49 46 50 46 50 46 49 48 48 2 128 82 67 32 80 82 69 0 3 96 0 1 14 0 80 101 114 105 111 100 105 99 32 97 110 100 32 79 110 32 67 104 97 110 103 101 32 82 101 112 111 114 116 0 1 0 1 12 128 80 67 73 32 97 110 100 32 78 82 84 32 117 112 100 97 116 101 32 102 111 114 32 101 78 66 0 1 0 1] Revision:1 OID:1.3.6.1.4.1.53148.1.2.2.100} 4:{Description:[116 24 79 82 65 78 45 69 50 83 77 45 75 80 77 0 0 24 49 46 51 46 54 46 49 46 52 46 49 46 53 51 49 52 56 46 49 46 50 46 50 46 50 7 0 75 80 77 32 50 46 48 32 77 111 110 105 116 111 114 0 1 0 0 67 0 38 132 19 0 1 69 76 0 0 0 0 0 2 0 0 15 49 51 56 52 50 54 48 49 52 53 52 99 48 48 49 0 38 132 19 1 69 76 0 16 0 15 49 51 56 52 50 54 48 49 52 53 52 99 48 48 50 0 38 132 19 1 69 76 0 32 0 15 49 51 56 52 50 54 48 49 52 53 52 99 48 48 51 0 38 132 19 1 69 76 0 48 0 1 7 0 80 101 114 105 111 100 105 99 32 82 101 112 111 114 116 0 1 0 1 7 0 80 101 114 105 111 100 105 99 32 82 101 112 111 114 116 0 1 0 16 66 32 80 68 85 83 101 115 115 105 111 110 83 101 116 117 112 82 101 113 0 0 0 66 64 80 68 85 83 101 115 115 105 111 110 83 101 116 117 112 83 117 99 99 0 0 1 66 64 80 68 85 83 101 115 115 105 111 110 83 101 116 117 112 70 97 105 108 0 0 2 65 0 80 114 98 85 115 101 100 68 76 0 0 3 65 0 80 114 98 85 115 101 100 85 76 0 0 4 65 192 80 100 99 112 80 100 117 86 111 108 117 109 101 68 76 0 0 5 65 192 80 100 99 112 80 100 117 86 111 108 117 109 101 85 76 0 0 6 65 224 80 100 99 112 82 97 116 101 80 101 114 80 82 66 68 76 0 0 7 65 224 80 100 99 112 82 97 116 101 80 101 114 80 82 66 85 76 0 0 8 66 96 82 82 67 46 67 111 110 110 69 115 116 97 98 65 116 116 46 83 117 109 0 0 9 66 128 82 82 67 46 67 111 110 110 69 115 116 97 98 83 117 99 99 46 83 117 109 0 0 10 66 160 82 82 67 46 67 111 110 110 82 101 69 115 116 97 98 65 116 116 46 83 117 109 0 0 11 67 192 82 82 67 46 67 111 110 110 82 101 69 115 116 97 98 65 116 116 46 114 101 99 111 110 102 105 103 70 97 105 108 0 0 12 67 0 82 82 67 46 67 111 110 110 82 101 69 115 116 97 98 65 116 116 46 72 79 70 97 105 108 0 0 13 66 224 82 82 67 46 67 111 110 110 82 101 69 115 116 97 98 65 116 116 46 79 116 104 101 114 0 0 14 65 96 82 82 67 46 67 111 110 110 46 65 118 103 0 0 15 65 96 82 82 67 46 67 111 110 110 46 77 97 120 0 0 16 0 1 0 1] Revision:1 OID:1.3.6.1.4.1.53148.1.2.2.2} 5:{Description:[32 192 79 82 65 78 45 69 50 83 77 45 77 72 79 0 0 26 49 46 51 46 54 46 49 46 52 46 49 46 53 51 49 52 56 46 49 46 50 46 50 46 49 48 49 1 0 77 72 79 1 3 96 0 1 1 14 0 80 101 114 105 111 100 105 99 32 97 110 100 32 79 110 32 67 104 97 110 103 101 32 82 101 112 111 114 116 1 1 0 1 1 12 128 80 67 73 32 97 110 100 32 78 82 84 32 117 112 100 97 116 101 32 102 111 114 32 101 78 66 1 1 1 1] Revision:1 OID:1.3.6.1.4.1.53148.1.2.2.101} 6:{Description:[124 5 128 79 82 65 78 45 69 50 83 77 45 82 67 0 0 24 49 46 51 46 54 46 49 46 52 46 49 46 53 51 49 52 56 46 49 46 49 46 50 46 51 5 0 82 65 78 32 67 111 110 116 114 111 108 0 64 0 1 6 0 77 101 115 115 97 103 101 32 69 118 101 110 116 0 1 0 0 2 11 0 67 97 108 108 32 80 114 111 99 101 115 115 32 66 114 101 97 107 112 111 105 110 116 0 2 0 0 3 9 0 69 50 32 78 111 100 101 32 73 110 102 111 114 109 97 116 105 111 110 0 3 2 128 0 2 9 128 67 97 108 108 32 80 114 111 99 101 115 115 32 79 117 116 99 111 109 101 0 2 0 1 0 1 0 2 0 10 0 0 6 0 67 117 114 114 101 110 116 32 85 69 32 73 68 16 82 8 3 0 83 45 78 83 83 65 73 16 82 9 1 0 83 83 84 16 82 10 0 128 83 68 16 105 227 10 0 66 101 115 116 32 78 101 105 103 104 98 111 114 105 110 103 32 67 101 108 108 16 84 23 10 128 76 105 115 116 32 111 102 32 78 101 105 103 104 98 111 114 32 99 101 108 108 115 16 39 117 5 128 67 101 108 108 32 82 101 115 117 108 116 115 16 39 118 5 0 83 83 66 32 82 101 115 117 108 116 115 16 48 212 1 128 82 83 82 80 16 48 213 1 128 82 83 82 81 16 48 214 1 128 83 73 78 82 0 0 3 9 0 69 50 32 78 111 100 101 32 105 110 102 111 114 109 97 116 105 111 110 0 3 0 1 0 1 0 3 0 128 0 3 19 0 67 111 110 110 101 99 116 101 100 32 77 111 100 101 32 77 111 98 105 108 105 116 121 32 67 111 110 116 114 111 108 32 82 101 113 117 101 115 116 0 1 0 3 0 0 64 0 0 11 128 72 97 110 100 111 118 101 114 32 67 111 110 116 114 111 108 32 82 101 113 117 101 115 116 0 5 0 0 10 128 84 97 114 103 101 116 32 80 114 105 109 97 114 121 32 67 101 108 108 32 73 68 0 1 5 0 84 97 114 103 101 116 32 67 101 108 108 0 2 3 0 78 82 32 67 101 108 108 0 3 2 128 78 82 32 67 71 73 0 6 16 0 76 105 115 116 32 111 102 32 80 68 85 32 115 101 115 115 105 111 110 115 32 102 111 114 32 104 97 110 100 111 118 101 114 0 12 12 0 76 105 115 116 32 111 102 32 68 82 66 115 32 102 111 114 32 104 97 110 100 111 118 101 114 0 2 0 5 0 1 2 128 0 200 5 0 80 67 73 32 67 111 110 116 114 111 108 0 0 64 0 0 5 0 80 67 73 32 67 111 110 116 114 111 108 0 1 0 0 9 0 83 101 114 118 105 110 103 32 67 101 108 108 32 78 82 32 80 67 73 0 1 7 128 83 101 114 118 105 110 103 32 67 101 108 108 32 67 71 73 0 1 0 1 0 1 64 0 3 11 0 67 111 110 110 101 99 116 101 100 32 77 111 100 101 32 77 111 98 105 108 105 116 121 0 0 64 0 0 7 128 72 97 110 100 111 118 101 114 32 67 111 110 116 114 111 108 0 0 0 0 10 128 84 97 114 103 101 116 32 80 114 105 109 97 114 121 32 67 101 108 108 32 73 68 0 1 0 1 0 1 0 128 0 3 15 0 67 111 110 110 101 99 116 101 100 32 77 111 100 101 32 77 111 98 105 108 105 116 121 32 67 111 110 116 114 111 108 0 1 0 0 96 0 0 13 0 80 111 108 105 99 121 32 102 111 114 32 72 97 110 100 111 118 101 114 32 67 111 110 116 114 111 108 0 2 0 1 0 0 10 128 84 97 114 103 101 116 32 80 114 105 109 97 114 121 32 67 101 108 108 32 73 68 16 39 216 9 128 67 101 108 108 32 83 112 101 99 105 102 105 99 32 79 102 102 115 101 116 0 1 0 0 10 128 84 97 114 103 101 116 32 80 114 105 109 97 114 121 32 67 101 108 108 32 73 68 16 39 216 9 128 67 101 108 108 32 83 112 101 99 105 102 105 99 32 79 102 102 115 101 116] Revision:1 OID:1.3.6.1.4.1.53148.1.1.2.3}] plmnID:[38 132 19] e2NodeID:20819 componentConfigAdditionList:0xc00056c200 transactionID:1}
+2023-07-20T23:13:19.956Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:863	E2 Setup Request is built: protocol_ies:{id:3 value:{global_e2node_id:{g_nb:{global_g_nb_id:{plmn_id:{value:"&\x84\x13"} gnb_id:{gnb_id:{value:"\x00\x05\x150" len:28}}}}}}} protocol_ies:{id:10 value:{ranfunctions_added:{value:{id:8 criticality:1 value:{ranfunction_item:{ran_function_id:{value:6} ran_function_definition:{value:"|\x05\x80ORAN-E2SM-RC\x00\x00\x181.3.6.1.4.1.53148.1.1.2.3\x05\x00RAN Control\x00@\x00\x01\x06\x00Message Event\x00\x01\x00\x00\x02\x0b\x00Call Process Breakpoint\x00\x02\x00\x00\x03\t\x00E2 Node Information\x00\x03\x02\x80\x00\x02\t\x80Call Process Outcome\x00\x02\x00\x01\x00\x01\x00\x02\x00\n\x00\x00\x06\x00Current UE ID\x10R\x08\x03\x00S-NSSAI\x10R\t\x01\x00SST\x10R\n\x00\x80SD\x10i\xe3\n\x00Best Neighboring Cell\x10T\x17\n\x80List of Neighbor cells\x10'u\x05\x80Cell Results\x10'v\x05\x00SSB Results\x100\xd4\x01\x80RSRP\x100\xd5\x01\x80RSRQ\x100\xd6\x01\x80SINR\x00\x00\x03\t\x00E2 Node information\x00\x03\x00\x01\x00\x01\x00\x03\x00\x80\x00\x03\x13\x00Connected Mode Mobility Control Request\x00\x01\x00\x03\x00\x00@\x00\x00\x0b\x80Handover Control Request\x00\x05\x00\x00\n\x80Target Primary Cell ID\x00\x01\x05\x00Target Cell\x00\x02\x03\x00NR Cell\x00\x03\x02\x80NR CGI\x00\x06\x10\x00List of PDU sessions for handover\x00\x0c\x0c\x00List of DRBs for handover\x00\x02\x00\x05\x00\x01\x02\x80\x00\xc8\x05\x00PCI Control\x00\x00@\x00\x00\x05\x00PCI Control\x00\x01\x00\x00\t\x00Serving Cell NR PCI\x00\x01\x07\x80Serving Cell CGI\x00\x01\x00\x01\x00\x01@\x00\x03\x0b\x00Connected Mode Mobility\x00\x00@\x00\x00\x07\x80Handover Control\x00\x00\x00\x00\n\x80Target Primary Cell ID\x00\x01\x00\x01\x00\x01\x00\x80\x00\x03\x0f\x00Connected Mode Mobility Control\x00\x01\x00\x00`\x00\x00\r\x00Policy for Handover Control\x00\x02\x00\x01\x00\x00\n\x80Target Primary Cell ID\x10'\xd8\t\x80Cell Specific Offset\x00\x01\x00\x00\n\x80Target Primary Cell ID\x10'\xd8\t\x80Cell Specific Offset"} ran_function_revision:{value:1} ran_function_oid:{value:"1.3.6.1.4.1.53148.1.1.2.3"}}}} value:{id:8 criticality:1 value:{ranfunction_item:{ran_function_id:{value:5} ran_function_definition:{value:" \xc0ORAN-E2SM-MHO\x00\x00\x1a1.3.6.1.4.1.53148.1.2.2.101\x01\x00MHO\x01\x03`\x00\x01\x01\x0e\x00Periodic and On Change Report\x01\x01\x00\x01\x01\x0c\x80PCI and NRT update for eNB\x01\x01\x01\x01"} ran_function_revision:{value:1} ran_function_oid:{value:"1.3.6.1.4.1.53148.1.2.2.101"}}}} value:{id:8 criticality:1 value:{ranfunction_item:{ran_function_id:{value:3} ran_function_definition:{value:" \xf0ORAN-E2SM-RC-PRE\x00\x00\x1a1.3.6.1.4.1.53148.1.2.2.100\x02\x80RC PRE\x00\x03`\x00\x01\x0e\x00Periodic and On Change Report\x00\x01\x00\x01\x0c\x80PCI and NRT update for eNB\x00\x01\x00\x01"} ran_function_revision:{value:1} ran_function_oid:{value:"1.3.6.1.4.1.53148.1.2.2.100"}}}} value:{id:8 criticality:1 value:{ranfunction_item:{ran_function_id:{value:4} ran_function_definition:{value:"t\x18ORAN-E2SM-KPM\x00\x00\x181.3.6.1.4.1.53148.1.2.2.2\x07\x00KPM 2.0 Monitor\x00\x01\x00\x00C\x00&\x84\x13\x00\x01EL\x00\x00\x00\x00\x00\x02\x00\x00\x0f13842601454c001\x00&\x84\x13\x01EL\x00\x10\x00\x0f13842601454c002\x00&\x84\x13\x01EL\x00 \x00\x0f13842601454c003\x00&\x84\x13\x01EL\x000\x00\x01\x07\x00Periodic Report\x00\x01\x00\x01\x07\x00Periodic Report\x00\x01\x00\x10B PDUSessionSetupReq\x00\x00\x00B@PDUSessionSetupSucc\x00\x00\x01B@PDUSessionSetupFail\x00\x00\x02A\x00PrbUsedDL\x00\x00\x03A\x00PrbUsedUL\x00\x00\x04A\xc0PdcpPduVolumeDL\x00\x00\x05A\xc0PdcpPduVolumeUL\x00\x00\x06A\xe0PdcpRatePerPRBDL\x00\x00\x07A\xe0PdcpRatePerPRBUL\x00\x00\x08B`RRC.ConnEstabAtt.Sum\x00\x00\tB\x80RRC.ConnEstabSucc.Sum\x00\x00\nB\xa0RRC.ConnReEstabAtt.Sum\x00\x00\x0bC\xc0RRC.ConnReEstabAtt.reconfigFail\x00\x00\x0cC\x00RRC.ConnReEstabAtt.HOFail\x00\x00\rB\xe0RRC.ConnReEstabAtt.Other\x00\x00\x0eA`RRC.Conn.Avg\x00\x00\x0fA`RRC.Conn.Max\x00\x00\x10\x00\x01\x00\x01"} ran_function_revision:{value:1} ran_function_oid:{value:"1.3.6.1.4.1.53148.1.2.2.2"}}}}}}} protocol_ies:{id:49 value:{transaction_id:{value:1}}} protocol_ies:{id:50 value:{e2node_component_config_addition:{value:{id:51 value:{e2node_component_config_addition_item:{e2node_component_interface_type:E2NODE_COMPONENT_INTERFACE_TYPE_F1 e2node_component_id:{e2node_component_interface_type_f1:{g_nb_du_id:{value:21}}} e2node_component_configuration:{e2node_component_request_part:"\x00\x01\x00\x80\xb3\x00\x00\x04\x00N\x00\x02\x00\x01\x00*\x00\x02\x00\x15\x00\xab\x00\x01p,\x00\x80\x9b\x00\x02\x00+\x01\x00.\x00&\x84\x13\x01\xc0T\x14\x00\x00\xda\x01\x00&\x84\x13\x00*\x00\x00\x00\x04\x00\x1f\x00*\x00\x00\x00\x04\x00\x1f\x00\x01\x03\x01\x00\x00\x01\x03\x01\x00\x03\xf1\xf1\xf1\x00+\x01\x00.\x00&\x84\x13\x02\xc0T\x14\x00\x00\x94\x01\x00&\x84\x13\x00*\x00\x00\x00\x04\x00\x1f\x00*\x00\x00\x00\x04\x00\x1f\x00\x01\x03\x01\x00\x00\x01\x03\x01\x00\x03\xf1\xf1\xf1\x00+\x01\x00.\x00&\x84\x13\x03\xc0T\x14\x00\x01\xe0\x01\x00&\x84\x13\x00*\x00\x00\x00\x04\x00\x1f\x00*\x00\x00\x00\x04\x00\x1f\x00\x01\x03\x01\x00\x00\x01\x03\x01\x00\x03\xf1\xf1\xf1" e2node_component_response_part:"\x04\x05\x06"}}}} value:{id:51 value:{e2node_component_config_addition_item:{e2node_component_interface_type:E2NODE_COMPONENT_INTERFACE_TYPE_XN e2node_component_id:{e2node_component_interface_type_xn:{global_ng_ran_node_id:{g_nb:{plmn_id:{value:"&\x84\x13"} gnb_id:{gnb_id:{value:"\x01EL" len:22}}}}}} e2node_component_configuration:{e2node_component_request_part:"\x00\x11\x00\x82)\x00\x04\x0e\x00\x08\x00&\x84\x13\x00\x01ELK\x00\x10\x00\x00\x01\x01\x01\x00&\x84\x13\x00\x00@ \x01#E\x04\x00\x05\x00&\x84\x13\xdd\x13\x00\x81\xfd\x00\x02D\x00\xda\x00&\x84\x13\x01\xc0T\x14\x00\x01\x01\x01\xff\x00&\x84\x13\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x18C\x08\x03\xf1\xf1\xf1\x10\x00\x02@\x00\x94\x00&\x84\x13\x02\xc0T\x14\x00\x01\x01\x01\xff\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x10\x03\xf1\xf1\xf1@\x01\xe0\x00&\x84\x13\x03\xc0T\x14\x00\x01\x01\x01\xff\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x10\x03\xf1\xf1\xf1@\x00s\x00&\x84\x13\x01\x00U\x14\x00\x01\x01\x01\xff\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x10\x03\xf1\xf1\xf1D\x00\x94\x00&\x84\x13\x02\xc0T\x14\x00\x01\x01\x01\xff\x00&\x84\x13\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x18C\x08\x03\xf1\xf1\xf1\x10\x00\x02@\x00\xda\x00&\x84\x13\x01\xc0T\x14\x00\x01\x01\x01\xff\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x10\x03\xf1\xf1\xf1@\x01\xe0\x00&\x84\x13\x03\xc0T\x14\x00\x01\x01\x01\xff\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x10\x03\xf1\xf1\xf1@\x01\xe0\x00&\x84\x13\x02\x00U\x14\x00\x01\x01\x01\xff\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x10\x03\xf1\xf1\xf1D\x01\xe0\x00&\x84\x13\x03\xc0T\x14\x00\x01\x01\x01\xff\x00&\x84\x13\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x18C\x08\x03\xf1\xf1\xf1\x10\x00\x02@\x00\xda\x00&\x84\x13\x01\xc0T\x14\x00\x01\x01\x01\xff\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x10\x03\xf1\xf1\xf1@\x00\x94\x00&\x84\x13\x02\xc0T\x14\x00\x01\x01\x01\xff\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x10\x03\xf1\xf1\xf1@\x00\x94\x00&\x84\x13\x03\x00U\x14\x00\x01\x01\x01\xff\x00\x00*\x02\x00\x00\x00\x00\x00\x1f\x00*\x02\x00\x00\x00\x00\x00\x1f\x10\x03\xf1\xf1\xf1" e2node_component_response_part:"\x04\x05\x06"}}}}}}}
+2023-07-20T23:13:19.988Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:880	E2 Setup Ack is received:protocol_ies:{id:49 value:{transaction_id:{value:1}}} protocol_ies:{id:4 value:{global_ric_id:{p_lmn_identity:{value:"&\x84\x13"} ric_id:{value:"޼\xa0" len:20}}}} protocol_ies:{id:52 value:{e2node_component_config_addition_ack:{value:{id:53 value:{e2node_component_config_addition_ack_item:{e2node_component_interface_type:E2NODE_COMPONENT_INTERFACE_TYPE_S1 e2node_component_id:{e2node_component_interface_type_s1:{mme_name:{value:"S1-component"}}} e2node_component_configuration_ack:{}}}}}}} protocol_ies:{id:9 value:{ranfunctions_accepted:{value:{id:6 criticality:1 value:{ranfunction_id_item:{ran_function_id:{value:6} ran_function_revision:{value:1}}}} value:{id:6 criticality:1 value:{ranfunction_id_item:{ran_function_id:{value:3} ran_function_revision:{value:1}}}} value:{id:6 criticality:1 value:{ranfunction_id_item:{ran_function_id:{value:4} ran_function_revision:{value:1}}}} value:{id:6 criticality:1 value:{ranfunction_id_item:{ran_function_id:{value:5} ran_function_revision:{value:1}}}}}}}
+2023-07-20T23:13:19.988Z	INFO	github.com/onosproject/ran-simulator/pkg/store/connections	connections/connections.go:67	Adding a connection with connection ID: {192.168.85.113 36421}
+2023-07-20T23:13:19.988Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:640	E2 node 20819 completed connection setup: <nil>
+2023-07-20T23:13:19.988Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:75	Reconciling Connection:{192.168.85.113 36421}
+2023-07-20T23:13:19.988Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:90	Reconcile opening connection: {192.168.85.113 %!s(uint64=36421)}
+2023-07-20T23:13:19.988Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:145	Connection &{ID:{ricIPAddress:192.168.85.113 ricPort:36421} Client:0xc00056c1c0 Status:{Phase:Open State:Configured}} is configured
+2023-07-20T23:13:20.003Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:123	Received Connection Update request %vprotocol_ies:{id:49 value:{transaction_id:{value:13}}} protocol_ies:{id:44 value:{e2connection_update_add:{value:{id:43 criticality:1 value:{e2connection_update_item:{tnl_information:{tnl_address:{value:"\xc0\xa8T\x1a" len:32} tnl_port:{value:"\x8eE" len:16}} tnl_usage:TNLUSAGE_BOTH}}}}}}
+2023-07-20T23:13:20.003Z	INFO	github.com/onosproject/ran-simulator/pkg/store/connections	connections/connections.go:67	Adding a connection with connection ID: {192.168.84.26 36421}
+2023-07-20T23:13:20.004Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:305	Sending Connection Update Ack: protocol_ies:{id:49 value:{transaction_id:{value:13}}} protocol_ies:{id:39 value:{e2connection_setup:{value:{id:43 criticality:1 value:{e2connection_update_item:{tnl_information:{tnl_address:{value:"\xc0\xa8T\x1a" len:32} tnl_port:{value:"\x8eE" len:16}} tnl_usage:TNLUSAGE_BOTH}}} value:{id:43 criticality:1 value:{e2connection_update_item:{tnl_information:{tnl_address:{value:"\xc0\xa8T\x1a" len:32} tnl_port:{value:"\x8eE" len:16}} tnl_usage:TNLUSAGE_BOTH}}}}}}
+2023-07-20T23:13:20.006Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:75	Reconciling Connection:{192.168.84.26 36421}
+2023-07-20T23:13:20.006Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:90	Reconcile opening connection: {192.168.84.26 %!s(uint64=36421)}
+2023-07-20T23:13:20.006Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:161	Reconcile Connecting connection &{ID:{ricIPAddress:192.168.84.26 ricPort:36421} Client:<nil> Status:{Phase:Open State:Connecting}}
+2023-07-20T23:13:20.006Z	INFO	github.com/onosproject/ran-simulator/pkg/e2agent/connection	connection/connection.go:103	Creating a new E2 Connection
+2023-07-20T23:13:20.007Z	INFO	github.com/onosproject/ran-simulator/pkg/store/connections	connections/connections.go:126	Updating connection with ID {192.168.84.26 36421}:
+2023-07-20T23:13:20.007Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:193	Reconcile Connected connection &{ID:{ricIPAddress:192.168.84.26 ricPort:36421} Client:0xc000da4180 Status:{Phase:Open State:Connected}}
+2023-07-20T23:13:20.007Z	INFO	github.com/onosproject/ran-simulator/pkg/store/connections	connections/connections.go:126	Updating connection with ID {192.168.84.26 36421}:
+2023-07-20T23:13:20.007Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:75	Reconciling Connection:{192.168.84.26 36421}
+2023-07-20T23:13:20.007Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:90	Reconcile opening connection: {192.168.84.26 %!s(uint64=36421)}
+2023-07-20T23:13:20.007Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:153	Reconcile Configuring connection: &{ID:{ricIPAddress:192.168.84.26 ricPort:36421} Client:0xc000da4180 Status:{Phase:Open State:Configuring}}
+2023-07-20T23:13:20.007Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:101	Configuring data connection {192.168.84.26 %!s(uint64=36421)}
+2023-07-20T23:13:20.007Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:114	Sending Configuration update request:protocol_ies:{id:49 value:{transaction_id:{value:1}}} protocol_ies:{id:3 value:{global_e2node_id:{g_nb:{global_g_nb_id:{plmn_id:{value:"&\x84\x13"} gnb_id:{gnb_id:{value:"\x00\x05\x150" len:28}}}}}}}
+2023-07-20T23:13:20.011Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:128	Config update ack is received:protocol_ies:{id:49 value:{transaction_id:{value:1}}}
+2023-07-20T23:13:20.011Z	INFO	github.com/onosproject/ran-simulator/pkg/store/connections	connections/connections.go:126	Updating connection with ID {192.168.84.26 36421}:
+2023-07-20T23:13:20.011Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:75	Reconciling Connection:{192.168.84.26 36421}
+2023-07-20T23:13:20.011Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:90	Reconcile opening connection: {192.168.84.26 %!s(uint64=36421)}
+2023-07-20T23:13:20.011Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:145	Connection &{ID:{ricIPAddress:192.168.84.26 ricPort:36421} Client:0xc000da4180 Status:{Phase:Open State:Configured}} is configured
+2023-07-20T23:13:20.011Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:75	Reconciling Connection:{192.168.84.26 36421}
+2023-07-20T23:13:20.011Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:90	Reconcile opening connection: {192.168.84.26 %!s(uint64=36421)}
+2023-07-20T23:13:20.011Z	INFO	github.com/onosproject/ran-simulator/pkg/controller/connection	connection/controller.go:145	Connection &{ID:{ricIPAddress:192.168.84.26 ricPort:36421} Client:0xc000da4180 Status:{Phase:Open State:Configured}} is configured
+2023-07-20T23:13:20.084Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:527	RIC Subscription request received for e2 node 20819 and service model ORAN-E2SM-KPM:
+2023-07-20T23:13:21.089Z	ERROR	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:259	strconv.ParseFloat: parsing "utilization": invalid syntax
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).collect
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:259
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).createIndicationMsgFormat1
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:339
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).sendRicIndicationFormat1
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:425
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).reportIndication
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:501
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).RICSubscription.func1
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:656
+2023-07-20T23:13:21.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:21.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:21.089Z	ERROR	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:273	strconv.ParseFloat: parsing "volume": invalid syntax
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).collect
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:273
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).createIndicationMsgFormat1
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:339
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).sendRicIndicationFormat1
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:425
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).reportIndication
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:501
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).RICSubscription.func1
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:656
+2023-07-20T23:13:21.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:21.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:21.089Z	ERROR	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:287	strconv.ParseFloat: parsing "pdcp_rate": invalid syntax
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).collect
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:287
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).createIndicationMsgFormat1
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:339
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).sendRicIndicationFormat1
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:425
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).reportIndication
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:501
+github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2.(*Client).RICSubscription.func1
+	/go/src/github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2/kpm.go:656
+2023-07-20T23:13:21.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:21.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:23.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:23.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:23.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:23.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:23.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:23.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:25.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:25.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:25.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:25.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:25.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:25.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:27.091Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:27.091Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:27.091Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:27.091Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:27.091Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:27.091Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:28.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:28.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:28.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.6
+2023-07-20T23:13:28.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070386381
+2023-07-20T23:13:28.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:28.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:29.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:29.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:29.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.32
+2023-07-20T23:13:29.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050924810
+2023-07-20T23:13:29.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:29.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:30.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:30.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:30.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:30.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:30.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:30.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:31.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:31.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:31.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:31.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:31.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:31.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:32.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:32.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:32.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:32.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:32.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:32.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:33.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:33.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:33.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:33.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:33.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:33.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:34.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:34.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:34.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.6
+2023-07-20T23:13:34.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070386381
+2023-07-20T23:13:34.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:34.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:35.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:35.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:35.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.32
+2023-07-20T23:13:35.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050924810
+2023-07-20T23:13:35.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:35.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:36.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:36.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:36.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:36.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:36.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:36.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:37.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:37.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:37.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:37.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:37.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:37.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:38.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:38.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:38.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:38.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:38.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:38.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:39.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:39.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:39.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:39.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:39.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:39.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:40.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.03663004
+2023-07-20T23:13:40.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1024854369
+2023-07-20T23:13:40.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:40.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:40.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 487159
+2023-07-20T23:13:40.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1223548640
+2023-07-20T23:13:41.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.03663004
+2023-07-20T23:13:41.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1024854369
+2023-07-20T23:13:41.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:41.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:41.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 285083
+2023-07-20T23:13:41.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1217082208
+2023-07-20T23:13:42.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.0952381
+2023-07-20T23:13:42.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1036192817
+2023-07-20T23:13:42.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.6
+2023-07-20T23:13:42.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070386381
+2023-07-20T23:13:42.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 712040
+2023-07-20T23:13:42.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1227740800
+2023-07-20T23:13:43.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.07692308
+2023-07-20T23:13:43.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1033734617
+2023-07-20T23:13:43.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.32
+2023-07-20T23:13:43.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050924810
+2023-07-20T23:13:43.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 288103
+2023-07-20T23:13:43.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1217178848
+2023-07-20T23:13:44.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.0989011
+2023-07-20T23:13:44.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1036684457
+2023-07-20T23:13:44.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:44.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:44.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 705680
+2023-07-20T23:13:44.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1227639040
+2023-07-20T23:13:45.088Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.07326008
+2023-07-20T23:13:45.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1033242977
+2023-07-20T23:13:45.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:45.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:45.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 94950
+2023-07-20T23:13:45.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1203335936
+2023-07-20T23:13:46.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.08791209
+2023-07-20T23:13:46.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1035209537
+2023-07-20T23:13:46.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:46.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:46.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 464020
+2023-07-20T23:13:46.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1222808192
+2023-07-20T23:13:47.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.10622711
+2023-07-20T23:13:47.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1037667737
+2023-07-20T23:13:47.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:47.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:47.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 65379
+2023-07-20T23:13:47.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1199530752
+2023-07-20T23:13:48.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.11721612
+2023-07-20T23:13:48.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1039142657
+2023-07-20T23:13:48.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:48.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:48.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 316784
+2023-07-20T23:13:48.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1218096640
+2023-07-20T23:13:49.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.2014652
+2023-07-20T23:13:49.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1045318885
+2023-07-20T23:13:49.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:49.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:49.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 34472
+2023-07-20T23:13:49.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1191618560
+2023-07-20T23:13:50.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.124542125
+2023-07-20T23:13:50.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1040125937
+2023-07-20T23:13:50.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.6
+2023-07-20T23:13:50.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070386381
+2023-07-20T23:13:50.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 421078
+2023-07-20T23:13:50.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1221434048
+2023-07-20T23:13:51.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.0952381
+2023-07-20T23:13:51.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1036192817
+2023-07-20T23:13:51.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.32
+2023-07-20T23:13:51.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050924810
+2023-07-20T23:13:51.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 73846
+2023-07-20T23:13:51.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1200634624
+2023-07-20T23:13:52.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.07692308
+2023-07-20T23:13:52.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1033734617
+2023-07-20T23:13:52.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:52.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:52.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 452929
+2023-07-20T23:13:52.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1222453280
+2023-07-20T23:13:53.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.054945055
+2023-07-20T23:13:53.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1029770769
+2023-07-20T23:13:53.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:53.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:53.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 126400
+2023-07-20T23:13:53.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1207361536
+2023-07-20T23:13:54.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.07326008
+2023-07-20T23:13:54.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1033242977
+2023-07-20T23:13:54.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.58
+2023-07-20T23:13:54.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1070218609
+2023-07-20T23:13:54.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 474010
+2023-07-20T23:13:54.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1223127872
+2023-07-20T23:13:55.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.054945055
+2023-07-20T23:13:55.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1029770769
+2023-07-20T23:13:55.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.316
+2023-07-20T23:13:55.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050790593
+2023-07-20T23:13:55.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 126400
+2023-07-20T23:13:55.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1207361536
+2023-07-20T23:13:56.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.06959707
+2023-07-20T23:13:56.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1032751337
+2023-07-20T23:13:56.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.5
+2023-07-20T23:13:56.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1069547520
+2023-07-20T23:13:56.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 473684
+2023-07-20T23:13:56.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1223117440
+2023-07-20T23:13:57.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:13:57.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:13:57.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.3
+2023-07-20T23:13:57.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1050253722
+2023-07-20T23:13:57.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 128571
+2023-07-20T23:13:57.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1207639424
+2023-07-20T23:13:58.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:58.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:58.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:58.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:58.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:58.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:59.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:59.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:59.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:59.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:13:59.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0
+2023-07-20T23:13:59.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 0
+2023-07-20T23:14:00.088Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.04029304
+2023-07-20T23:14:00.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1025837649
+2023-07-20T23:14:00.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.2
+2023-07-20T23:14:00.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1045220557
+2023-07-20T23:14:00.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 96767
+2023-07-20T23:14:00.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1203568512
+2023-07-20T23:14:01.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.02930403
+2023-07-20T23:14:01.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1022365441
+2023-07-20T23:14:01.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.04
+2023-07-20T23:14:01.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1025758986
+2023-07-20T23:14:01.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 30000
+2023-07-20T23:14:01.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1189765120
+2023-07-20T23:14:02.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.07326008
+2023-07-20T23:14:02.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1033242977
+2023-07-20T23:14:02.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.7
+2023-07-20T23:14:02.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071225242
+2023-07-20T23:14:02.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 510778
+2023-07-20T23:14:02.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1224304448
+2023-07-20T23:14:03.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.03663004
+2023-07-20T23:14:03.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1024854369
+2023-07-20T23:14:03.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.34
+2023-07-20T23:14:03.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051595899
+2023-07-20T23:14:03.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 201600
+2023-07-20T23:14:03.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1212473344
+2023-07-20T23:14:04.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.08058608
+2023-07-20T23:14:04.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1034226257
+2023-07-20T23:14:04.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:04.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:04.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 459954
+2023-07-20T23:14:04.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1222678080
+2023-07-20T23:14:05.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:14:05.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:14:05.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:05.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:05.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 145703
+2023-07-20T23:14:05.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1208895936
+2023-07-20T23:14:06.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.06959707
+2023-07-20T23:14:06.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1032751337
+2023-07-20T23:14:06.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:06.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:06.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 532224
+2023-07-20T23:14:06.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1224863744
+2023-07-20T23:14:07.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:14:07.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:14:07.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:07.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:07.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 144010
+2023-07-20T23:14:07.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1208787584
+2023-07-20T23:14:08.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.06593407
+2023-07-20T23:14:08.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1032259697
+2023-07-20T23:14:08.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:08.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:08.091Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 559935
+2023-07-20T23:14:08.091Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1225307120
+2023-07-20T23:14:09.088Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:14:09.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:14:09.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:09.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:09.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 144000
+2023-07-20T23:14:09.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1208786944
+2023-07-20T23:14:10.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.062271062
+2023-07-20T23:14:10.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1031737329
+2023-07-20T23:14:10.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:10.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:10.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 593811
+2023-07-20T23:14:10.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1225849136
+2023-07-20T23:14:11.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:14:11.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:14:11.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:11.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:11.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 144000
+2023-07-20T23:14:11.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1208786944
+2023-07-20T23:14:12.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.062271062
+2023-07-20T23:14:12.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1031737329
+2023-07-20T23:14:12.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:12.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:12.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 592328
+2023-07-20T23:14:12.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1225825408
+2023-07-20T23:14:13.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:14:13.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:14:13.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:13.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:13.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 144000
+2023-07-20T23:14:13.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1208786944
+2023-07-20T23:14:14.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.05860806
+2023-07-20T23:14:14.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1030754049
+2023-07-20T23:14:14.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:14.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:14.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 630402
+2023-07-20T23:14:14.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1226434592
+2023-07-20T23:14:15.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:14:15.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:14:15.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:15.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:15.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 144000
+2023-07-20T23:14:15.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1208786944
+2023-07-20T23:14:16.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.062271062
+2023-07-20T23:14:16.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1031737329
+2023-07-20T23:14:16.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:16.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:16.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 594401
+2023-07-20T23:14:16.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1225858576
+2023-07-20T23:14:17.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.04761905
+2023-07-20T23:14:17.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1027804209
+2023-07-20T23:14:17.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:17.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:17.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 155076
+2023-07-20T23:14:17.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1209495808
+2023-07-20T23:14:18.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.062271062
+2023-07-20T23:14:18.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1031737329
+2023-07-20T23:14:18.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:18.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:18.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 592748
+2023-07-20T23:14:18.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1225832128
+2023-07-20T23:14:19.092Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:14:19.092Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:14:19.092Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:19.092Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:19.092Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 144000
+2023-07-20T23:14:19.092Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1208786944
+2023-07-20T23:14:20.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.062271062
+2023-07-20T23:14:20.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1031737329
+2023-07-20T23:14:20.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:20.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:20.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 593514
+2023-07-20T23:14:20.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1225844384
+2023-07-20T23:14:21.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:14:21.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:14:21.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:21.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:21.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 144000
+2023-07-20T23:14:21.090Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1208786944
+2023-07-20T23:14:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.062271062
+2023-07-20T23:14:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1031737329
+2023-07-20T23:14:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 593386
+2023-07-20T23:14:22.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1225842336
+2023-07-20T23:14:23.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:14:23.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:14:23.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:23.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:23.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 144000
+2023-07-20T23:14:23.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1208786944
+2023-07-20T23:14:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.062271062
+2023-07-20T23:14:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1031737329
+2023-07-20T23:14:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 592947
+2023-07-20T23:14:24.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1225835312
+2023-07-20T23:14:25.093Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.051282052
+2023-07-20T23:14:25.093Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1028787489
+2023-07-20T23:14:25.093Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.336
+2023-07-20T23:14:25.093Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1051461681
+2023-07-20T23:14:25.093Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 144000
+2023-07-20T23:14:25.093Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1208786944
+2023-07-20T23:14:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 0.062271062
+2023-07-20T23:14:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1031737329
+2023-07-20T23:14:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 1.68
+2023-07-20T23:14:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1071057469
+2023-07-20T23:14:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:232	data : 592943
+2023-07-20T23:14:26.089Z	INFO	github.com/onosproject/ran-simulator/pkg/servicemodel/kpm2	kpm2/kpm.go:233	int_data : 1225835248

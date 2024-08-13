@@ -1,0 +1,63 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: tb-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/default-backend: "default-http-backend:33800"
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /api/v1/.*
+            backend:
+              serviceName: tb-http-transport
+              servicePort: {{ .Values.config.transports.http.port }}
+          - path: /api/.*
+            backend:
+              serviceName: tb-node
+              servicePort: {{ .Values.config.tbNode.ports.http }}
+          - path: /swagger.*
+            backend:
+              serviceName: tb-node
+              servicePort: {{ .Values.config.tbNode.ports.http }}
+          - path: /webjars.*
+            backend:
+              serviceName: tb-node
+              servicePort: {{ .Values.config.tbNode.ports.http }}
+          - path: /v2/.*
+            backend:
+              serviceName: tb-node
+              servicePort: {{ .Values.config.tbNode.ports.http }}
+          - path: /static/rulenode/.*
+            backend:
+              serviceName: tb-node
+              servicePort: {{ .Values.config.tbNode.ports.http }}
+          - path: /oauth2/.*
+            backend:
+              serviceName: tb-node
+              servicePort: {{ .Values.config.tbNode.ports.http }}
+          - path: /login/oauth2/.*
+            backend:
+              serviceName: tb-node
+              servicePort: {{ .Values.config.tbNode.ports.http }}
+          - path: /
+            backend:
+              serviceName: tb-web-ui
+              servicePort: {{ .Values.config.webUi.port }}
+          - path: /.*
+            backend:
+              serviceName: tb-web-ui
+              servicePort: {{ .Values.config.webUi.port }}

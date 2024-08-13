@@ -1,0 +1,65 @@
+{{/*
+# Copyright 2020-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+{{- if .Values.config.amf.deploy }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: amf
+  labels:
+{{ tuple "amf" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+{{ tuple "amf" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+  ports:
+  - name: prometheus-exporter
+    port: {{ .Values.config.amf.prometheus.port }}
+    protocol: TCP
+  - name: sbi
+    port: {{ .Values.config.amf.sbi.port }}
+    protocol: TCP
+  - name: ngapp
+    port: {{ .Values.config.amf.ngapp.port }}
+    protocol: SCTP
+{{- if or .Values.config.amf.prometheus.nodePort.enabled .Values.config.amf.sbi.nodePort.enabled .Values.config.amf.ngapp.nodePort.enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: amf-external
+  labels:
+{{ tuple "amf" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+spec:
+  type: NodePort
+{{- if .Values.config.amf.ngapp.externalIp }}
+  externalIPs:
+    - {{ .Values.config.amf.ngapp.externalIp }}
+{{- end }}
+  selector:
+{{ tuple "amf" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+  ports:
+{{- if .Values.config.amf.prometheus.nodePort.enabled }}
+  - name: prometheus-exporter
+    port: {{ .Values.config.amf.prometheus.port }}
+    protocol: TCP
+    nodePort: {{ .Values.config.amf.prometheus.nodePort.port }}
+{{- end }}
+{{- if .Values.config.amf.sbi.nodePort.enabled }}
+  - name: sbi
+    port: {{ .Values.config.amf.sbi.port }}
+    protocol: TCP
+    nodePort: {{ .Values.config.amf.sbi.nodePort.port }}
+{{- end }}
+{{- if .Values.config.amf.ngapp.nodePort.enabled }}
+  - name: ngapp
+    port: {{ .Values.config.amf.ngapp.port }}
+    protocol: SCTP
+    nodePort: {{ .Values.config.amf.ngapp.nodePort.port }}
+{{- end }}
+{{- end }}
+{{- end }}

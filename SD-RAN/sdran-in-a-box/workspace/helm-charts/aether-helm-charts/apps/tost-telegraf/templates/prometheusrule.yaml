@@ -1,0 +1,32 @@
+# Copyright 2020-present Open Networking Foundation
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: tost-telegraf
+spec:
+  groups:
+    - name: tost.rules
+      rules:
+      - alert: "Topology: Device change"
+        annotations:
+          message: "Number of devices were changed"
+        expr: (onos_telegraf_ready == 1) and (changes(onos_telegraf_devices[5m]) != 0)
+        for: 5m
+        labels:
+          severity: warning
+      - alert: "Topology: Active Links change"
+        annotations:
+          message: "Number of active links were changed"
+        expr: (onos_telegraf_ready == 1) and (changes(onos_telegraf_active_links[5m]) != 0)
+        for: 5m
+        labels:
+          severity: warning
+      - alert: "Topology: Enable Device Ports change"
+        annotations:
+          message: "Number of enable device ports were changed"
+        expr: (onos_telegraf_ready == 1) and (changes(onos_telegraf_enable_device_ports[5m]) != 0)
+        for: 5m
+        labels:
+          severity: warning

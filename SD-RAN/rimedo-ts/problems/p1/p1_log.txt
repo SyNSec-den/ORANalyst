@@ -1,0 +1,2061 @@
+start cover server
+start sonar
+InstrumentMain
+2023-07-17T22:22:29.411Z	INFO	rimedo-ts	rimedo-ts/rimedo-ts.go:26	Starting RIMEDO Labs Traffic Steering xAPP
+2023-07-17T22:22:29.417Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:18	A1EI service created
+2023-07-17T22:22:29.419Z	INFO	northbound	northbound/server.go:138	Loading default CA onfca
+2023-07-17T22:22:29.419Z	INFO	northbound	northbound/server.go:165	Starting RPC server on address: [::]:5150
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:22:29.419Z	INFO	a1/manager	connection/manager.go:46	Start (or restart) A1 connection manager
+2023-07-17T22:22:29.434Z	WARN	onos/grpc/retry	retry/retry.go:70	SendMsg id:"a1:rimedo-ts-7bf45bc9b7-s659k" : error%!(EXTRA *status.Error=rpc error: code = NotFound desc = key a1:rimedo-ts-7bf45bc9b7-s659k not found)
+2023-07-17T22:22:29.469Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:48	EIJobUpdate stream established
+2023-07-17T22:22:29.469Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:34	EIQuery stream established
+2023-07-17T22:22:29.469Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:62	EIJobStatusQuery stream established
+2023-07-17T22:22:29.469Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:41	EIJobSetup stream established
+2023-07-17T22:22:29.469Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:55	EIJobDelete stream established
+2023-07-17T22:22:34.419Z	INFO	rimedo-ts/ts-manager	manager/manager.go:123	
+
+
+
+
+
+
+
+
+
+
+2023-07-17T22:22:35.419Z	INFO	rimedo-ts/ts-manager	manager/manager.go:321	POLICY MESSAGE: Default policy applied
+
+2023-07-17T22:22:55.700Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 1 for subscription channel 'rimedo-ts:rimedo-ts-7bf45bc9b7-s659k:e2:1/5154:rimedo-ts-subscription-MHO_TRIGGER_TYPE_PERIODIC'
+2023-07-17T22:22:55.801Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 2 for subscription channel 'rimedo-ts:rimedo-ts-7bf45bc9b7-s659k:e2:1/5154:rimedo-ts-subscription-MHO_TRIGGER_TYPE_UPON_CHANGE_RRC_STATUS'
+2023-07-17T22:22:56.005Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 3 for subscription channel 'rimedo-ts:rimedo-ts-7bf45bc9b7-s659k:e2:1/5154:rimedo-ts-subscription-MHO_TRIGGER_TYPE_UPON_RCV_MEAS_REPORT'
+accept cover server
+2023-07-17T22:23:18.089Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294971393} guami:{p_lmnidentity:{value:"\x00\x10\x01"} a_mfregion_id:{value:{value:"\x00" len:8}} a_mfset_id:{value:{value:"\x00\x00" len:10}} a_mfpointer:{value:{value:"@" len:6}}} ran_ueid:{value:"\x01\x00\x00\x10\x01\x00\x00\x10"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x00\x10\x01"} n_rcell_identity:{value:{value:"\x00\x00\x10\x01\x00" len:36}}}} rsrp:{value:-65536}}}, e2NodeID: e2:1/5154
+LoopFunc
+2023-07-17T22:23:19.111Z	INFO	rimedo-ts/sdran/manager	sdran/manager.go:315	CONTROL MESSAGE: UE [ID:0000004294971393, 5QI:0] switched between CELLs [CGI:138426010055140 -> CGI:11000000010010]
+
+2023-07-17T22:23:20.169Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:20.170Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:23.236Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:23.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:26.292Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:29.348Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:32.403Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 63670266338, sonar: 1048574
+resetting finished
+LoopPos
+write to cover
+2023-07-17T22:23:33.320Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294971393} guami:{p_lmnidentity:{value:"\x00\x10\x01"} a_mfregion_id:{value:{value:"\x00" len:8}} a_mfset_id:{value:{value:"\x00\x00" len:10}} a_mfpointer:{value:{value:"@" len:6}}} ran_ueid:{value:"\x01\x00\x00\x10\x01\x00\x00\x10"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x00\x10\x01"} n_rcell_identity:{value:{value:"\x00\x00\x10\x01\x00" len:36}}}} rsrp:{value:-65536}}}, e2NodeID: e2:1/5154
+LoopFunc
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:35.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:38.549Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:41.595Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:41.595Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:41.595Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:41.596Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:41.596Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:41.596Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:41.596Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:41.596Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:41.596Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:41.596Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:41.596Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:41.596Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:44.650Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:47.705Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:47.705Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:47.705Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:47.705Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:47.705Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:47.705Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:47.705Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:47.705Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:47.705Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:47.706Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:47.706Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:47.706Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+resetting coverage
+resetting sonar
+resetting time
+res: 0, ns: 15230638806, sonar: 1048576
+resetting routines
+resetting finished
+LoopPos
+write to cover
+2023-07-17T22:23:48.351Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294971393} guami:{p_lmnidentity:{value:"\x00\x10\x01"} a_mfregion_id:{value:{value:"\x00" len:8}} a_mfset_id:{value:{value:"\x00\x00" len:10}} a_mfpointer:{value:{value:"@" len:6}}} ran_ueid:{value:"\x01\x00\x00\x10\x01\x00\x00\x10"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x00\x10\x01"} n_rcell_identity:{value:{value:"\x00\x00\x10\x01\x00" len:36}}}} rsrp:{value:-65536}}}, e2NodeID: e2:1/5154
+LoopFunc
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:50.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:50.791Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:53.854Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:53.854Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:53.854Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:53.854Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:53.854Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:53.854Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:53.855Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:53.855Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:53.855Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:53.855Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:53.855Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:53.855Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:56.915Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:56.915Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:56.915Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:56.915Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:56.915Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:56.915Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:56.915Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:56.915Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:56.915Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:56.916Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:56.916Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:56.916Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:23:59.964Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:24:03.009Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 15031296498, sonar: 1048576
+resetting finished
+LoopPos
+write to cover
+2023-07-17T22:24:03.365Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:03.365Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 13903017, sonar: 23285
+write to cover
+2023-07-17T22:24:03.570Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 205134847, sonar: 14665
+resetting finished
+LoopPos
+2023-07-17T22:24:03.570Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:03.778Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 208147571, sonar: 12057
+2023-07-17T22:24:03.779Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+resetting finished
+LoopPos
+write to cover
+2023-07-17T22:24:03.990Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:03.990Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 211808137, sonar: 13575
+write to cover
+2023-07-17T22:24:04.187Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 196720879, sonar: 1048575
+2023-07-17T22:24:04.187Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:04.394Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 207238539, sonar: 12057
+2023-07-17T22:24:04.394Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:04.602Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+res: 0, ns: 207628977, sonar: 14917
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:04.602Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:04.824Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 221997644, sonar: 12057
+2023-07-17T22:24:04.824Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:05.012Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:05.012Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 188115418, sonar: 12584
+write to cover
+2023-07-17T22:24:05.219Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 206953652, sonar: 1048576
+2023-07-17T22:24:05.219Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:05.422Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:05.422Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 202975773, sonar: 15820
+write to cover
+2023-07-17T22:24:05.626Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:05.626Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203895279, sonar: 11154
+write to cover
+2023-07-17T22:24:05.834Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 208080200, sonar: 15820
+2023-07-17T22:24:05.834Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:06.042Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:06.043Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 208247599, sonar: 13575
+write to cover
+2023-07-17T22:24:06.086Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:24:06.087Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:24:06.249Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:06.249Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 206456396, sonar: 1048576
+write to cover
+2023-07-17T22:24:06.454Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:06.454Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 205250763, sonar: 13487
+write to cover
+2023-07-17T22:24:06.662Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:06.662Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 207995343, sonar: 18562
+write to cover
+2023-07-17T22:24:06.871Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:06.871Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 208897972, sonar: 11154
+write to cover
+2023-07-17T22:24:07.074Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:07.074Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 202981377, sonar: 15908
+write to cover
+2023-07-17T22:24:07.279Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 205274546, sonar: 1048575
+2023-07-17T22:24:07.280Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:07.482Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:07.482Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 202842046, sonar: 13487
+write to cover
+2023-07-17T22:24:07.686Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203815935, sonar: 13487
+2023-07-17T22:24:07.686Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:07.890Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:07.890Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203974749, sonar: 15820
+write to cover
+2023-07-17T22:24:08.094Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:08.094Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203647341, sonar: 11242
+write to cover
+2023-07-17T22:24:08.298Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:08.298Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204400027, sonar: 1048576
+write to cover
+2023-07-17T22:24:08.506Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207782999, sonar: 14390
+resetting finished
+LoopPos
+2023-07-17T22:24:08.506Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:08.710Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203940291, sonar: 14917
+resetting finished
+LoopPos
+2023-07-17T22:24:08.710Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:08.918Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:08.918Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 208179165, sonar: 11154
+write to cover
+2023-07-17T22:24:09.122Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203624971, sonar: 13487
+resetting finished
+LoopPos
+2023-07-17T22:24:09.122Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:24:09.166Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:24:09.326Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:09.326Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204311670, sonar: 1048571
+write to cover
+2023-07-17T22:24:09.530Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}} rrc_status:805306367}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:09.530Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203919726, sonar: 14104
+write to cover
+2023-07-17T22:24:09.734Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}} rrc_status:805306367}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204049626, sonar: 14705
+2023-07-17T22:24:09.734Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:09.938Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}} rrc_status:805306367}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203984286, sonar: 13753
+resetting finished
+LoopPos
+2023-07-17T22:24:09.938Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:10.149Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 211306404, sonar: 12343
+2023-07-17T22:24:10.150Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:10.350Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:10.350Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 200562772, sonar: 1048576
+write to cover
+2023-07-17T22:24:10.554Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+2023-07-17T22:24:10.555Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+resetting finished
+LoopPos
+res: 0, ns: 204430854, sonar: 14390
+write to cover
+2023-07-17T22:24:10.758Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:10.759Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203842366, sonar: 19439
+write to cover
+2023-07-17T22:24:10.964Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:10.965Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 206409873, sonar: 12057
+write to cover
+2023-07-17T22:24:11.166Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:11.166Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 201287476, sonar: 12584
+write to cover
+2023-07-17T22:24:11.370Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:11.370Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204120104, sonar: 1048571
+write to cover
+2023-07-17T22:24:11.574Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:11.574Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203807741, sonar: 13487
+write to cover
+2023-07-17T22:24:11.779Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204711833, sonar: 14390
+2023-07-17T22:24:11.779Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:11.982Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203270143, sonar: 14917
+2023-07-17T22:24:11.982Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:12.187Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:12.187Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204958379, sonar: 12057
+write to cover
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:24:12.237Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:24:12.390Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203046725, sonar: 1048573
+2023-07-17T22:24:12.390Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:12.598Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 207937232, sonar: 14917
+2023-07-17T22:24:12.598Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:12.805Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:12.805Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 206936021, sonar: 12057
+write to cover
+2023-07-17T22:24:13.011Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+2023-07-17T22:24:13.011Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+resetting finished
+LoopPos
+res: 0, ns: 205960940, sonar: 13487
+write to cover
+2023-07-17T22:24:13.216Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:13.216Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204593037, sonar: 13144
+write to cover
+2023-07-17T22:24:13.418Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:13.418Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 202430192, sonar: 1048573
+write to cover
+2023-07-17T22:24:13.622Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:13.622Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203967357, sonar: 13487
+write to cover
+2023-07-17T22:24:13.826Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:13.826Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204164884, sonar: 13487
+write to cover
+2023-07-17T22:24:14.034Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 207564036, sonar: 13487
+2023-07-17T22:24:14.034Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:14.241Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207432804, sonar: 13487
+resetting finished
+LoopPos
+2023-07-17T22:24:14.242Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:14.450Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:14.450Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 208763590, sonar: 1048576
+write to cover
+2023-07-17T22:24:14.658Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207807722, sonar: 15820
+resetting finished
+LoopPos
+2023-07-17T22:24:14.658Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:14.867Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:14.867Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 208660026, sonar: 11154
+write to cover
+2023-07-17T22:24:15.071Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:15.071Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204065680, sonar: 15820
+write to cover
+2023-07-17T22:24:15.274Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 202757891, sonar: 13487
+resetting finished
+LoopPos
+2023-07-17T22:24:15.274Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------------------------- CELLS --------------------------------------------
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------------- UES ---------------------------------------------
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294971393 STATUS:CONNECTED 5QI: 0 CGI:11000000010010 CGIs(RSRP): [11000000010010 (-65536)]
+2023-07-17T22:24:15.326Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-17T22:24:15.478Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203964012, sonar: 1048572
+resetting finished
+LoopPos
+2023-07-17T22:24:15.478Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:15.682Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:15.683Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204829801, sonar: 12057
+write to cover
+2023-07-17T22:24:15.890Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:15.890Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 207727131, sonar: 14917
+write to cover
+2023-07-17T22:24:16.098Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+2023-07-17T22:24:16.098Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 207724872, sonar: 12057
+write to cover
+resetting finished
+LoopPos
+2023-07-17T22:24:16.307Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 208640762, sonar: 14917
+2023-07-17T22:24:16.307Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:16.511Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:16.511Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204445491, sonar: 1048572
+write to cover
+2023-07-17T22:24:16.718Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207012923, sonar: 16705
+resetting finished
+LoopPos
+2023-07-17T22:24:16.718Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:16.927Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:16.927Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 208796714, sonar: 11154
+write to cover
+2023-07-17T22:24:17.158Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 231401287, sonar: 15820
+resetting finished
+LoopPos
+2023-07-17T22:24:17.158Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:17.343Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 184616022, sonar: 11154
+resetting finished
+LoopPos
+2023-07-17T22:24:17.343Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:17.547Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203720664, sonar: 1048575
+2023-07-17T22:24:17.547Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:17.750Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203701910, sonar: 13487
+resetting finished
+LoopPos
+2023-07-17T22:24:17.751Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-17T22:24:17.958Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5154
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-17T22:24:17.958Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 207739069, sonar: 15820
+write to cover
+2023-07-17T22:24:18.166Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\x00U\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"\x10" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} g_nb_cu_ue_f1_ap_id_list:{value:{g_nb_cu_ue_f1_ap_id:{value:80}}} ran_ueid:{value:"\x01\x00\x00\x00\x00\x10\x01\x00"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x01\x00\x00"} n_rcell_identity:{value:{value:"\x10\x01\x00\x00\x10" len:36}}}} rsrp:{value:-65535}}}, e2NodeID: e2:1/5154
+LoopFunc
+panic: runtime error: slice bounds out of range [:3] with length 1
+
+goroutine 98 [running]:
+github.com/onosproject/rimedo-ts/pkg/mho.GetMccMncFromPlmnID(...)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/reader.go:36
+github.com/onosproject/rimedo-ts/pkg/manager.(*Manager).deployPolicies(0xc0003bee40, {0x16eb7c0, 0xc00004a060})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/manager/manager.go:273 +0xb85
+github.com/onosproject/rimedo-ts/pkg/manager.(*Manager).checkPolicies(0xc0003bee40, {0x16eb7c0, 0xc00004a060}, 0x0, 0x1, 0x1)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/manager/manager.go:406 +0x4a8
+github.com/onosproject/rimedo-ts/pkg/manager.(*Manager).start.func2()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/manager/manager.go:139 +0x139
+created by github.com/onosproject/rimedo-ts/pkg/manager.(*Manager).start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/manager/manager.go:125 +0x66b
+
+goroutine 1 [chan receive, 1 minutes]:
+main.main()
+	/go/src/github.com/rimedo-labs/rimedo-ts/rimedo-ts.go:57 +0x34e
+
+goroutine 6 [select, 1 minutes]:
+google.golang.org/grpc.(*ccBalancerWrapper).watcher(0xc0003aec80)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:77 +0x12c
+created by google.golang.org/grpc.newCCBalancerWrapper
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:67 +0x2ca
+
+goroutine 39 [select, 1 minutes]:
+google.golang.org/grpc.newClientStreamWithParams.func8()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:333 +0x10b
+created by google.golang.org/grpc.newClientStreamWithParams
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:332 +0x112c
+
+goroutine 73 [IO wait]:
+internal/poll.runtime_pollWait(0x7f6489bc4860, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc000492080?, 0xc0001ab800?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc000492080, {0xc0001ab800, 0x1800, 0x1800})
+	internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc000492080, {0xc0001ab800?, 0x13a7840?, 0xc0000cd6b0?})
+	/usr/local/go/src/net/fd_posix.go:55 +0x45
+net.(*conn).Read(0xc00048e010, {0xc0001ab800?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:183 +0xbe
+crypto/tls.(*atLeastReader).Read(0xc00043fdb8, {0xc0001ab800, 0x1800, 0x1800})
+	/usr/local/go/src/crypto/tls/conn.go:788 +0xf2
+bytes.(*Buffer).ReadFrom(0xc00049c290, {0x16ddc20, 0xc00043fdb8})
+	/usr/local/go/src/bytes/buffer.go:202 +0xf2
+crypto/tls.(*Conn).readFromUntil(0xc00049c000, {0x16e15e0?, 0xc00048e010}, 0x5)
+	/usr/local/go/src/crypto/tls/conn.go:810 +0x12f
+crypto/tls.(*Conn).readRecordOrCCS(0xc00049c000, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:617 +0x187
+crypto/tls.(*Conn).readRecord(...)
+	/usr/local/go/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc00049c000, {0xc000028000, 0x8000, 0x8000})
+	/usr/local/go/src/crypto/tls/conn.go:1316 +0x28c
+bufio.(*Reader).Read(0xc00010f980, {0xc0001e2120, 0x9, 0x9})
+	/usr/local/go/src/bufio/bufio.go:237 +0x567
+io.ReadAtLeast({0x16dda60, 0xc00010f980}, {0xc0001e2120, 0x9, 0x9}, 0x9)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc0001e2120?, 0x9?, 0x620?}, {0x16dda60?, 0xc00010f980?})
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:237 +0x85
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc0001e20e0)
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:498 +0x106
+google.golang.org/grpc/internal/transport.(*http2Client).reader(0xc0004761e0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:1491 +0x4f7
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:355 +0x232a
+
+goroutine 114 [IO wait]:
+internal/poll.runtime_pollWait(0x7f6489bc44a0, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc000444480?, 0xc0005ba700?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc000444480, {0xc0005ba700, 0x700, 0x700})
+	internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc000444480, {0xc0005ba700?, 0x13a7840?, 0xc0005e36b0?})
+	/usr/local/go/src/net/fd_posix.go:55 +0x45
+net.(*conn).Read(0xc00048e028, {0xc0005ba700?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:183 +0xbe
+crypto/tls.(*atLeastReader).Read(0xc000496900, {0xc0005ba700, 0x700, 0x700})
+	/usr/local/go/src/crypto/tls/conn.go:788 +0xf2
+bytes.(*Buffer).ReadFrom(0xc0003d0990, {0x16ddc20, 0xc000496900})
+	/usr/local/go/src/bytes/buffer.go:202 +0xf2
+crypto/tls.(*Conn).readFromUntil(0xc0003d0700, {0x16e15e0?, 0xc00048e028}, 0x5)
+	/usr/local/go/src/crypto/tls/conn.go:810 +0x12f
+crypto/tls.(*Conn).readRecordOrCCS(0xc0003d0700, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:617 +0x187
+crypto/tls.(*Conn).readRecord(...)
+	/usr/local/go/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc0003d0700, {0xc0002d0000, 0x8000, 0x8000})
+	/usr/local/go/src/crypto/tls/conn.go:1316 +0x28c
+bufio.(*Reader).Read(0xc00010e360, {0xc0005724a0, 0x9, 0x9})
+	/usr/local/go/src/bufio/bufio.go:237 +0x567
+io.ReadAtLeast({0x16dda60, 0xc00010e360}, {0xc0005724a0, 0x9, 0x9}, 0x9)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc0005724a0?, 0x9?, 0x620?}, {0x16dda60?, 0xc00010e360?})
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:237 +0x85
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc000572460)
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:498 +0x106
+google.golang.org/grpc/internal/transport.(*http2Client).reader(0xc000476780)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:1491 +0x4f7
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:355 +0x232a
+
+goroutine 26 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7f6489bc4680, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc000492180?, 0xc000546000?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc000492180, {0xc000546000, 0x700, 0x700})
+	internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc000492180, {0xc000546000?, 0x13a7840?, 0xc0000cf6b0?})
+	/usr/local/go/src/net/fd_posix.go:55 +0x45
+net.(*conn).Read(0xc00048e020, {0xc000546000?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:183 +0xbe
+crypto/tls.(*atLeastReader).Read(0xc00043e7f8, {0xc000546000, 0x700, 0x700})
+	/usr/local/go/src/crypto/tls/conn.go:788 +0xf2
+bytes.(*Buffer).ReadFrom(0xc00049c610, {0x16ddc20, 0xc00043e7f8})
+	/usr/local/go/src/bytes/buffer.go:202 +0xf2
+crypto/tls.(*Conn).readFromUntil(0xc00049c380, {0x16e15e0?, 0xc00048e020}, 0x5)
+	/usr/local/go/src/crypto/tls/conn.go:810 +0x12f
+crypto/tls.(*Conn).readRecordOrCCS(0xc00049c380, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:617 +0x187
+crypto/tls.(*Conn).readRecord(...)
+	/usr/local/go/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc00049c380, {0xc00055a000, 0x8000, 0x8000})
+	/usr/local/go/src/crypto/tls/conn.go:1316 +0x28c
+bufio.(*Reader).Read(0xc0006143c0, {0xc000572040, 0x9, 0x9})
+	/usr/local/go/src/bufio/bufio.go:237 +0x567
+io.ReadAtLeast({0x16dda60, 0xc0006143c0}, {0xc000572040, 0x9, 0x9}, 0x9)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc000572040?, 0x9?, 0x620?}, {0x16dda60?, 0xc0006143c0?})
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:237 +0x85
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc000572000)
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:498 +0x106
+google.golang.org/grpc/internal/transport.(*http2Client).reader(0xc000574000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:1491 +0x4f7
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:355 +0x232a
+
+goroutine 8 [select, 1 minutes]:
+google.golang.org/grpc.(*ccBalancerWrapper).watcher(0xc0003aeeb0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:77 +0x12c
+created by google.golang.org/grpc.newCCBalancerWrapper
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:67 +0x2ca
+
+goroutine 28 [select, 1 minutes]:
+google.golang.org/grpc/internal/transport.(*recvBufferReader).readClient(0xc0000a6050, {0xc0000122b0, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:190 +0xda
+google.golang.org/grpc/internal/transport.(*recvBufferReader).Read(0xc0000a6050, {0xc0000122b0?, 0x0?, 0xc0000d3810?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:170 +0xe5
+google.golang.org/grpc/internal/transport.(*transportReader).Read(0xc0003900f0, {0xc0000122b0?, 0xc0000d3838?, 0xa37685?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:484 +0x4b
+io.ReadAtLeast({0x16e0b60, 0xc0003900f0}, {0xc0000122b0, 0x5, 0x5}, 0x5)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+google.golang.org/grpc/internal/transport.(*Stream).Read(0xc000364360, {0xc0000122b0, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:468 +0x114
+google.golang.org/grpc.(*parser).recvMsg(0xc0000122a0, 0x400000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:559 +0x6e
+google.golang.org/grpc.recvAndDecompress(0x13a82c0?, 0xc000364360, {0x0, 0x0}, 0x400000, 0x0, {0x0, 0x0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:690 +0x7f
+google.golang.org/grpc.recv(0x16daa50?, {0x7f6489a32e08, 0x20db350}, 0x0?, {0x0?, 0x0?}, {0x14f4440, 0xc000406c00}, 0x0?, 0x0, ...)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:758 +0x89
+google.golang.org/grpc.(*csAttempt).recvMsg(0xc0003680b0, {0x14f4440?, 0xc000406c00}, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:975 +0x485
+google.golang.org/grpc.(*clientStream).RecvMsg.func2(0x4180f0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:826 +0x3d
+google.golang.org/grpc.(*clientStream).withRetry(0xc0001e0300, 0xc0000d3ce8, 0xc0000d3cb8)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:680 +0x492
+google.golang.org/grpc.(*clientStream).RecvMsg(0xc0001e0300, {0x14f4440?, 0xc000406c00?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:825 +0x1fc
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).tryRecvMsg(0xc000051260, {0x14f4440?, 0xc000406c00})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:299 +0x6c
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg.func1()
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:292 +0x3d
+github.com/cenkalti/backoff.RetryNotify(0xc0000d3e98, {0x16e5030, 0xc000406c60}, 0x15a7690)
+	/go/pkg/mod/github.com/cenkalti/backoff@v2.2.1+incompatible/retry.go:37 +0xdb
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg(0xc000051260, {0x14f4440, 0xc000406c00})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:291 +0x96
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).RecvMsg(0xc000045b60?, {0x14f4440?, 0xc000406c00?})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:287 +0x3c
+github.com/onosproject/onos-api/go/onos/topo.(*topoWatchClient).Recv(0xc000040de0)
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/topo/topo.pb.go:1697 +0x6c
+github.com/onosproject/onos-ric-sdk-go/pkg/topo.(*topo).Watch.func1()
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/topo/topo.go:168 +0xfd
+created by github.com/onosproject/onos-ric-sdk-go/pkg/topo.(*topo).Watch
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/topo/topo.go:165 +0x29a
+
+goroutine 10 [IO wait]:
+internal/poll.runtime_pollWait(0x7f6489bc4950, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc0000f5d00?, 0xc0001dae40?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Accept(0xc0000f5d00)
+	internal/poll/fd_unix.go:614 +0x2bd
+net.(*netFD).accept(0xc0000f5d00)
+	/usr/local/go/src/net/fd_unix.go:172 +0x4d
+net.(*TCPListener).accept(0xc0003acab0)
+	/usr/local/go/src/net/tcpsock_posix.go:148 +0x45
+net.(*TCPListener).Accept(0xc0003acab0)
+	/usr/local/go/src/net/tcpsock.go:297 +0xb1
+google.golang.org/grpc.(*Server).Serve(0xc00036c380, {0x16eaca0, 0xc0003acab0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:779 +0x434
+github.com/onosproject/onos-lib-go/pkg/northbound.(*Server).Serve(0xc0003beed0, 0xc0001dbfb8)
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/northbound/server.go:166 +0x1086
+github.com/onosproject/rimedo-ts/pkg/sdran.(*Manager).startNorthboundServer.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/sdran/manager.go:129 +0xa5
+created by github.com/onosproject/rimedo-ts/pkg/sdran.(*Manager).startNorthboundServer
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/sdran/manager.go:128 +0x44a
+
+goroutine 38 [runnable]:
+go-fuzz-dep.(*GoroutineInfo).WaitTillAllNewlyCreatedTerminates(0xc0003ac4b0, 0xc000014018?, 0x37e11d600)
+	go-fuzz-dep/cover.go:94 +0x177
+go-fuzz-dep.LoopFunc()
+	go-fuzz-dep/main.go:41 +0x9f
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).listenIndChan(0xc0003a72d0, {0x16eb7c0?, 0xc00004a060}, 0xc0003cc398)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:64 +0x87
+created by github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).Run
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:59 +0xec
+
+goroutine 45 [select, 1 minutes]:
+google.golang.org/grpc.newClientStreamWithParams.func8()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:333 +0x10b
+created by google.golang.org/grpc.newClientStreamWithParams
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:332 +0x112c
+
+goroutine 11 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections(0xc0002f1e10, {0x16eb788?, 0xc0003af220?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:107 +0x1de
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).Start.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:90 +0xbf
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).Start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:87 +0xa5
+
+goroutine 40 [select, 1 minutes]:
+google.golang.org/grpc.(*ccBalancerWrapper).watcher(0xc000340050)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:77 +0x12c
+created by google.golang.org/grpc.newCCBalancerWrapper
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/balancer_conn_wrappers.go:67 +0x2ca
+
+goroutine 14 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/manager.(*Manager).start.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/manager/manager.go:105 +0x138
+created by github.com/onosproject/rimedo-ts/pkg/manager.(*Manager).start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/manager/manager.go:104 +0x48a
+
+goroutine 74 [select]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0xc0003ae230, 0x1)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:406 +0x227
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0xc00010fa40)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:533 +0xe8
+google.golang.org/grpc/internal/transport.newHTTP2Client.func14()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:405 +0xca
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:403 +0x2c52
+
+goroutine 27 [select, 1 minutes]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0xc00048c230, 0x1)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:406 +0x227
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0xc000614480)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:533 +0xe8
+google.golang.org/grpc/internal/transport.newHTTP2Client.func14()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:405 +0xca
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:403 +0x2c52
+
+goroutine 54 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchMHOChanges(0xc0002f1e10, {0x16eb788?, 0xc0003af220}, {0xc000580060, 0x1d})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:134 +0x96
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:125 +0x55b
+
+goroutine 58 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchMHOChanges(0xc0002f1e10, {0x16eb788?, 0xc0003af220}, {0xc0005800a0, 0x1d})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:134 +0x96
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:125 +0x55b
+
+goroutine 32 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchMHOChanges(0xc0002f1e10, {0x16eb788?, 0xc0003af220}, {0xc000396b40, 0x1d})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:134 +0x96
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:125 +0x55b
+
+goroutine 75 [select, 1 minutes]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0xc000438190, 0x1)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:406 +0x227
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0xc000614c60)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:533 +0xe8
+google.golang.org/grpc/internal/transport.NewServerTransport.func18()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:321 +0x125
+created by google.golang.org/grpc/internal/transport.NewServerTransport
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:318 +0x24fb
+
+goroutine 85 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchMHOChanges(0xc0002f1e10, {0x16eb788?, 0xc0003af220}, {0xc000472280, 0x1d})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:134 +0x96
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:125 +0x55b
+
+goroutine 115 [select]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0xc00062a690, 0x1)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:406 +0x227
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0xc00010e3c0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:533 +0xe8
+google.golang.org/grpc/internal/transport.newHTTP2Client.func14()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:405 +0xca
+created by google.golang.org/grpc/internal/transport.newHTTP2Client
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_client.go:403 +0x2c52
+
+goroutine 91 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1PServer).PolicyStatus(0xc0003bf8c0, {0x16f0848?, 0xc0004842e0})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1p-service.go:515 +0x1e5
+github.com/onosproject/onos-api/go/onos/a1t/a1._PolicyService_PolicyStatus_Handler({0x14582e0?, 0xc0003bf8c0}, {0x16ee830?, 0xc000374780})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/policy.pb.go:613 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc00036c380, {0x16f0cc0, 0xc000002600}, 0xc0000d6120, 0xc0003bf950, 0x208ed20, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc00036c380, {0x16f0cc0, 0xc000002600}, 0xc0000d6120, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 88 [select, 1 minutes]:
+google.golang.org/grpc/internal/transport.(*controlBuffer).get(0xc00048c140, 0x1)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:406 +0x227
+google.golang.org/grpc/internal/transport.(*loopyWriter).run(0xc000614720)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/controlbuf.go:533 +0xe8
+google.golang.org/grpc/internal/transport.NewServerTransport.func18()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:321 +0x125
+created by google.golang.org/grpc/internal/transport.NewServerTransport
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:318 +0x24fb
+
+goroutine 89 [select, 1 minutes]:
+google.golang.org/grpc/internal/transport.(*http2Server).keepalive(0xc000002600)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:1078 +0x285
+created by google.golang.org/grpc/internal/transport.NewServerTransport
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:330 +0x2574
+
+goroutine 90 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7f6489bc4590, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc000444400?, 0xc000174000?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc000444400, {0xc000174000, 0x600, 0x600})
+	internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc000444400, {0xc000174000?, 0x13a7840?, 0xc0001676b8?})
+	/usr/local/go/src/net/fd_posix.go:55 +0x45
+net.(*conn).Read(0xc0004401c8, {0xc000174000?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:183 +0xbe
+crypto/tls.(*atLeastReader).Read(0xc0004961f8, {0xc000174000, 0x600, 0x600})
+	/usr/local/go/src/crypto/tls/conn.go:788 +0xf2
+bytes.(*Buffer).ReadFrom(0xc000290610, {0x16ddc20, 0xc0004961f8})
+	/usr/local/go/src/bytes/buffer.go:202 +0xf2
+crypto/tls.(*Conn).readFromUntil(0xc000290380, {0x16e15e0?, 0xc0004401c8}, 0x5)
+	/usr/local/go/src/crypto/tls/conn.go:810 +0x12f
+crypto/tls.(*Conn).readRecordOrCCS(0xc000290380, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:617 +0x187
+crypto/tls.(*Conn).readRecord(...)
+	/usr/local/go/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc000290380, {0xc000122000, 0x8000, 0x8000})
+	/usr/local/go/src/crypto/tls/conn.go:1316 +0x28c
+bufio.(*Reader).Read(0xc0006146c0, {0xc000572120, 0x9, 0x9})
+	/usr/local/go/src/bufio/bufio.go:237 +0x567
+io.ReadAtLeast({0x16dda60, 0xc0006146c0}, {0xc000572120, 0x9, 0x9}, 0x9)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc000572120?, 0x9?, 0x13d0620?}, {0x16dda60?, 0xc0006146c0?})
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:237 +0x85
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc0005720e0)
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:498 +0x106
+google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams(0xc000002600, 0x0?, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:558 +0xe5
+google.golang.org/grpc.(*Server).serveStreams(0xc00036c380, {0x16f0cc0?, 0xc000002600})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:907 +0x15b
+google.golang.org/grpc.(*Server).handleRawConn.func1()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:847 +0xa9
+created by google.golang.org/grpc.(*Server).handleRawConn
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:846 +0x256
+
+goroutine 92 [select, 1 minutes]:
+google.golang.org/grpc/internal/transport.(*recvBufferReader).read(0xc00048c5a0, {0xc000496220, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:178 +0xc6
+google.golang.org/grpc/internal/transport.(*recvBufferReader).Read(0xc00048c5a0, {0xc000496220?, 0x0?, 0xc000087af8?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:172 +0x12f
+google.golang.org/grpc/internal/transport.(*transportReader).Read(0xc0003bef90, {0xc000496220?, 0xc000087b20?, 0xa4c005?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:484 +0x4b
+io.ReadAtLeast({0x16e0b60, 0xc0003bef90}, {0xc000496220, 0x5, 0x5}, 0x5)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+google.golang.org/grpc/internal/transport.(*Stream).Read(0xc0000d6120, {0xc000496220, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:468 +0x114
+google.golang.org/grpc.(*parser).recvMsg(0xc000496210, 0x400000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:559 +0x6e
+google.golang.org/grpc.recvAndDecompress(0x0?, 0xc0000d6120, {0x0, 0x0}, 0x400000, 0x0, {0x0, 0x0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:690 +0x7f
+google.golang.org/grpc.recv(0x13a7780?, {0x7f6489a32e08, 0x20db350}, 0xc0003f7d88?, {0x0?, 0x0?}, {0x15052e0, 0xc0003bf0b0}, 0xc0003f7e08?, 0x0, ...)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:758 +0x89
+google.golang.org/grpc.(*serverStream).RecvMsg(0xc000374780, {0x15052e0?, 0xc0003bf0b0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:1563 +0x21f
+github.com/onosproject/onos-api/go/onos/a1t/a1.(*policyServicePolicyStatusServer).Recv(0xc0004842e0)
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/policy.pb.go:632 +0x6c
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1PServer).PolicyStatus.func1(0xc0003f7fa8?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1p-service.go:498 +0x107
+created by github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1PServer).PolicyStatus
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1p-service.go:496 +0x185
+
+goroutine 76 [select, 1 minutes]:
+google.golang.org/grpc/internal/transport.(*http2Server).keepalive(0xc0005dc480)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:1078 +0x285
+created by google.golang.org/grpc/internal/transport.NewServerTransport
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:330 +0x2574
+
+goroutine 77 [IO wait, 1 minutes]:
+internal/poll.runtime_pollWait(0x7f6489bc4770, 0x72)
+	runtime/netpoll.go:306 +0x89
+internal/poll.(*pollDesc).wait(0xc000444380?, 0xc000174600?, 0x0)
+	internal/poll/fd_poll_runtime.go:84 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+	internal/poll/fd_poll_runtime.go:89
+internal/poll.(*FD).Read(0xc000444380, {0xc000174600, 0x600, 0x600})
+	internal/poll/fd_unix.go:167 +0x299
+net.(*netFD).Read(0xc000444380, {0xc000174600?, 0x13a7840?, 0xc0000d16b8?})
+	/usr/local/go/src/net/fd_posix.go:55 +0x45
+net.(*conn).Read(0xc0004401c0, {0xc000174600?, 0x0?, 0x0?})
+	/usr/local/go/src/net/net.go:183 +0xbe
+crypto/tls.(*atLeastReader).Read(0xc000496480, {0xc000174600, 0x600, 0x600})
+	/usr/local/go/src/crypto/tls/conn.go:788 +0xf2
+bytes.(*Buffer).ReadFrom(0xc000291b10, {0x16ddc20, 0xc000496480})
+	/usr/local/go/src/bytes/buffer.go:202 +0xf2
+crypto/tls.(*Conn).readFromUntil(0xc000291880, {0x16e15e0?, 0xc0004401c0}, 0x5)
+	/usr/local/go/src/crypto/tls/conn.go:810 +0x12f
+crypto/tls.(*Conn).readRecordOrCCS(0xc000291880, 0x0)
+	/usr/local/go/src/crypto/tls/conn.go:617 +0x187
+crypto/tls.(*Conn).readRecord(...)
+	/usr/local/go/src/crypto/tls/conn.go:583
+crypto/tls.(*Conn).Read(0xc000291880, {0xc000304000, 0x8000, 0x8000})
+	/usr/local/go/src/crypto/tls/conn.go:1316 +0x28c
+bufio.(*Reader).Read(0xc00010ef00, {0xc0001e2200, 0x9, 0x9})
+	/usr/local/go/src/bufio/bufio.go:237 +0x567
+io.ReadAtLeast({0x16dda60, 0xc00010ef00}, {0xc0001e2200, 0x9, 0x9}, 0x9)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+golang.org/x/net/http2.readFrameHeader({0xc0001e2200?, 0x9?, 0x13d0620?}, {0x16dda60?, 0xc00010ef00?})
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:237 +0x85
+golang.org/x/net/http2.(*Framer).ReadFrame(0xc0001e21c0)
+	/go/pkg/mod/golang.org/x/net@v0.0.0-20220127200216-cd36cc0744dd/http2/frame.go:498 +0x106
+google.golang.org/grpc/internal/transport.(*http2Server).HandleStreams(0xc0005dc480, 0x0?, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/http2_server.go:558 +0xe5
+google.golang.org/grpc.(*Server).serveStreams(0xc00036c380, {0x16f0cc0?, 0xc0005dc480})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:907 +0x15b
+google.golang.org/grpc.(*Server).handleRawConn.func1()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:847 +0xa9
+created by google.golang.org/grpc.(*Server).handleRawConn
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:846 +0x256
+
+goroutine 93 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1EIServer).EIQuery(0xc000040030?, {0xc000040030?, 0x0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1ei-service.go:36 +0x8c
+github.com/onosproject/onos-api/go/onos/a1t/a1._EIService_EIQuery_Handler({0x14957c0?, 0x20db350}, {0x16ee830?, 0xc000000000})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/ei.pb.go:527 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc00036c380, {0x16f0cc0, 0xc0005dc480}, 0xc0000d6240, 0xc0003bf890, 0x2098860, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc00036c380, {0x16f0cc0, 0xc0005dc480}, 0xc0000d6240, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 94 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1EIServer).EIJobSetup(0xc00042c020?, {0xc00042c020?, 0x0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1ei-service.go:43 +0x8c
+github.com/onosproject/onos-api/go/onos/a1t/a1._EIService_EIJobSetup_Handler({0x14957c0?, 0x20db350}, {0x16ee830?, 0xc000268000})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/ei.pb.go:553 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc00036c380, {0x16f0cc0, 0xc0005dc480}, 0xc0000d6480, 0xc0003bf890, 0x2098880, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc00036c380, {0x16f0cc0, 0xc0005dc480}, 0xc0000d6480, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 95 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1EIServer).EIJobUpdate(0xc0003c2460?, {0xc0003c2460?, 0x0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1ei-service.go:50 +0x8c
+github.com/onosproject/onos-api/go/onos/a1t/a1._EIService_EIJobUpdate_Handler({0x14957c0?, 0x20db350}, {0x16ee830?, 0xc00047e240})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/ei.pb.go:579 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc00036c380, {0x16f0cc0, 0xc0005dc480}, 0xc0000d65a0, 0xc0003bf890, 0x20988a0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc00036c380, {0x16f0cc0, 0xc0005dc480}, 0xc0000d65a0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 96 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1EIServer).EIJobDelete(0xc00028e000?, {0xc00028e000?, 0x0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1ei-service.go:57 +0x8c
+github.com/onosproject/onos-api/go/onos/a1t/a1._EIService_EIJobDelete_Handler({0x14957c0?, 0x20db350}, {0x16ee830?, 0xc000356240})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/ei.pb.go:605 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc00036c380, {0x16f0cc0, 0xc0005dc480}, 0xc0000d6d80, 0xc0003bf890, 0x20988c0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc00036c380, {0x16f0cc0, 0xc0005dc480}, 0xc0000d6d80, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 97 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/northbound/a1.(*A1EIServer).EIJobStatusQuery(0xc000484740?, {0xc000484740?, 0x0?})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/northbound/a1/a1ei-service.go:64 +0x8c
+github.com/onosproject/onos-api/go/onos/a1t/a1._EIService_EIJobStatusQuery_Handler({0x14957c0?, 0x20db350}, {0x16ee830?, 0xc000374900})
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/a1t/a1/ei.pb.go:631 +0xb1
+google.golang.org/grpc.(*Server).processStreamingRPC(0xc00036c380, {0x16f0cc0, 0xc0005dc480}, 0xc0000d6ea0, 0xc0003bf890, 0x20988e0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1532 +0x1354
+google.golang.org/grpc.(*Server).handleStream(0xc00036c380, {0x16f0cc0, 0xc0005dc480}, 0xc0000d6ea0, 0x0)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:1612 +0xf8b
+google.golang.org/grpc.(*Server).serveStreams.func1.3()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:923 +0xee
+created by google.golang.org/grpc.(*Server).serveStreams.func1
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/server.go:921 +0x35a
+
+goroutine 100 [syscall, 1 minutes]:
+os/signal.signal_recv()
+	runtime/sigqueue.go:152 +0x2f
+os/signal.loop()
+	/usr/local/go/src/os/signal/signal_unix.go:23 +0x49
+os/signal.Notify.func1.3.1()
+	/usr/local/go/src/os/signal/signal.go:151 +0x82
+created by os/signal.Notify.func1.3
+	/usr/local/go/src/os/signal/signal.go:151 +0xae
+
+goroutine 101 [select, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start(0xc000111500, {0x16eb788?, 0xc0003af220})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:56 +0x19f
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription(0xc0002f1e10, {0x16eb788, 0xc0003af220}, {0xc00040c2c0, 0x9}, 0x1)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:184 +0x768
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections.func3(0x3f6fa8?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:121 +0x97
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:120 +0x731
+
+goroutine 102 [select, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start(0xc0003777d0, {0x16eb788?, 0xc0003af220})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:56 +0x19f
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription(0xc0002f1e10, {0x16eb788, 0xc0003af220}, {0xc00040c2c0, 0x9}, 0x2)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:184 +0x768
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections.func3(0x3fafa8?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:121 +0x97
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:120 +0x731
+
+goroutine 103 [select, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start(0xc000432a20, {0x16eb788?, 0xc0003af220})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:56 +0x19f
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription(0xc0002f1e10, {0x16eb788, 0xc0003af220}, {0xc00040c2c0, 0x9}, 0x0)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:184 +0x768
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections.func3(0x0?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:121 +0x97
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:120 +0x731
+
+goroutine 104 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchMHOChanges(0xc0002f1e10, {0x16eb788?, 0xc0003af220}, {0xc00040c2c0, 0x9})
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:134 +0x96
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).watchE2Connections
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:125 +0x55b
+
+goroutine 59 [chan receive, 1 minutes]:
+github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Client).Node.func1()
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/client.go:53 +0xb2
+created by github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Client).Node
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/client.go:52 +0x34a
+
+goroutine 106 [sync.Cond.Wait, 1 minutes]:
+sync.runtime_notifyListWait(0xc000618410, 0x0)
+	runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc0003807e0?)
+	sync/cond.go:70 +0x8c
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).next(0xc0004883e0)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:178 +0x10a
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).drain(0xc0004883e0)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:161 +0xa5
+created by github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).open
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:155 +0x96
+
+goroutine 116 [select, 1 minutes]:
+google.golang.org/grpc.newClientStreamWithParams.func8()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:333 +0x10b
+created by google.golang.org/grpc.newClientStreamWithParams
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:332 +0x112c
+
+goroutine 117 [select, 1 minutes]:
+google.golang.org/grpc.newClientStreamWithParams.func8()
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:333 +0x10b
+created by google.golang.org/grpc.newClientStreamWithParams
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:332 +0x112c
+
+goroutine 46 [select, 1 minutes]:
+google.golang.org/grpc/internal/transport.(*recvBufferReader).readClient(0xc0003405f0, {0xc00040e148, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:190 +0xda
+google.golang.org/grpc/internal/transport.(*recvBufferReader).Read(0xc0003405f0, {0xc00040e148?, 0x0?, 0xc0001617d8?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:170 +0xe5
+google.golang.org/grpc/internal/transport.(*transportReader).Read(0xc0003be2d0, {0xc00040e148?, 0xc000161800?, 0xa37685?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:484 +0x4b
+io.ReadAtLeast({0x16e0b60, 0xc0003be2d0}, {0xc00040e148, 0x5, 0x5}, 0x5)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+google.golang.org/grpc/internal/transport.(*Stream).Read(0xc0000d7200, {0xc00040e148, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:468 +0x114
+google.golang.org/grpc.(*parser).recvMsg(0xc00040e138, 0x400000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:559 +0x6e
+google.golang.org/grpc.recvAndDecompress(0x13a82c0?, 0xc0000d7200, {0x0, 0x0}, 0x400000, 0x0, {0x0, 0x0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:690 +0x7f
+google.golang.org/grpc.recv(0x16daa50?, {0x7f6489a32e08, 0x20db350}, 0xc0003d0870?, {0x0?, 0x0?}, {0x150b8c0, 0xc00034ca38}, 0x0?, 0x0, ...)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:758 +0x89
+google.golang.org/grpc.(*csAttempt).recvMsg(0xc0001ce370, {0x150b8c0?, 0xc00034ca38}, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:975 +0x485
+google.golang.org/grpc.(*clientStream).RecvMsg.func2(0x4180f0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:826 +0x3d
+google.golang.org/grpc.(*clientStream).withRetry(0xc000442000, 0xc000161cb0, 0xc000161c80)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:680 +0x492
+google.golang.org/grpc.(*clientStream).RecvMsg(0xc000442000, {0x150b8c0?, 0xc00034ca38?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:825 +0x1fc
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).tryRecvMsg(0xc0003500c0, {0x150b8c0?, 0xc00034ca38})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:299 +0x6c
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg.func1()
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:292 +0x3d
+github.com/cenkalti/backoff.RetryNotify(0xc000161e60, {0x16e5030, 0xc00010e7e0}, 0x15a7690)
+	/go/pkg/mod/github.com/cenkalti/backoff@v2.2.1+incompatible/retry.go:37 +0xdb
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg(0xc0003500c0, {0x150b8c0, 0xc00034ca38})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:291 +0x96
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).RecvMsg(0x0?, {0x150b8c0?, 0xc00034ca38?})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:287 +0x3c
+github.com/onosproject/onos-api/go/onos/e2t/e2/v1beta1.(*subscriptionServiceSubscribeClient).Recv(0xc000326490)
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/e2t/e2/v1beta1/subscription.pb.go:2332 +0x6c
+github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe.func1()
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:214 +0x119
+created by github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:209 +0x54a
+
+goroutine 47 [select, 1 minutes]:
+google.golang.org/grpc/internal/transport.(*recvBufferReader).readClient(0xc00062a780, {0xc00034c8c8, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:190 +0xda
+google.golang.org/grpc/internal/transport.(*recvBufferReader).Read(0xc00062a780, {0xc00034c8c8?, 0x0?, 0xc0001657d8?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:170 +0xe5
+google.golang.org/grpc/internal/transport.(*transportReader).Read(0xc000111260, {0xc00034c8c8?, 0xc000165800?, 0xa37685?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:484 +0x4b
+io.ReadAtLeast({0x16e0b60, 0xc000111260}, {0xc00034c8c8, 0x5, 0x5}, 0x5)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+google.golang.org/grpc/internal/transport.(*Stream).Read(0xc0002f4120, {0xc00034c8c8, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:468 +0x114
+google.golang.org/grpc.(*parser).recvMsg(0xc00034c8b8, 0x400000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:559 +0x6e
+google.golang.org/grpc.recvAndDecompress(0x13a82c0?, 0xc0002f4120, {0x0, 0x0}, 0x400000, 0x0, {0x0, 0x0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:690 +0x7f
+google.golang.org/grpc.recv(0x16daa50?, {0x7f6489a32e08, 0x20db350}, 0xc000085b00?, {0x0?, 0x0?}, {0x150b8c0, 0xc000542d08}, 0xc00042e448?, 0x0, ...)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:758 +0x89
+google.golang.org/grpc.(*csAttempt).recvMsg(0xc000640000, {0x150b8c0?, 0xc000542d08}, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:975 +0x485
+google.golang.org/grpc.(*clientStream).RecvMsg.func2(0x4180f0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:826 +0x3d
+google.golang.org/grpc.(*clientStream).withRetry(0xc00041e400, 0xc000165cb0, 0xc000165c80)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:680 +0x492
+google.golang.org/grpc.(*clientStream).RecvMsg(0xc00041e400, {0x150b8c0?, 0xc000542d08?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:825 +0x1fc
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).tryRecvMsg(0xc0003807e0, {0x150b8c0?, 0xc000542d08})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:299 +0x6c
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg.func1()
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:292 +0x3d
+github.com/cenkalti/backoff.RetryNotify(0xc000165e60, {0x16e5030, 0xc0000511a0}, 0x15a7690)
+	/go/pkg/mod/github.com/cenkalti/backoff@v2.2.1+incompatible/retry.go:37 +0xdb
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg(0xc0003807e0, {0x150b8c0, 0xc000542d08})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:291 +0x96
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).RecvMsg(0x0?, {0x150b8c0?, 0xc000542d08?})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:287 +0x3c
+github.com/onosproject/onos-api/go/onos/e2t/e2/v1beta1.(*subscriptionServiceSubscribeClient).Recv(0xc0006686b0)
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/e2t/e2/v1beta1/subscription.pb.go:2332 +0x6c
+github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe.func1()
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:214 +0x119
+created by github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:209 +0x54a
+
+goroutine 48 [select]:
+google.golang.org/grpc/internal/transport.(*recvBufferReader).readClient(0xc00062a820, {0xc00034c988, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:190 +0xda
+google.golang.org/grpc/internal/transport.(*recvBufferReader).Read(0xc00062a820, {0xc00034c988?, 0x0?, 0xc0005cd7d8?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:170 +0xe5
+google.golang.org/grpc/internal/transport.(*transportReader).Read(0xc000111320, {0xc00034c988?, 0xc0005cd800?, 0xa37685?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:484 +0x4b
+io.ReadAtLeast({0x16e0b60, 0xc000111320}, {0xc00034c988, 0x5, 0x5}, 0x5)
+	io/io.go:332 +0x9a
+io.ReadFull(...)
+	io/io.go:351
+google.golang.org/grpc/internal/transport.(*Stream).Read(0xc0002f4360, {0xc00034c988, 0x5, 0x5})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/internal/transport/transport.go:468 +0x114
+google.golang.org/grpc.(*parser).recvMsg(0xc00034c978, 0x400000)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:559 +0x6e
+google.golang.org/grpc.recvAndDecompress(0x13a82c0?, 0xc0002f4360, {0x0, 0x0}, 0x400000, 0x0, {0x0, 0x0})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:690 +0x7f
+google.golang.org/grpc.recv(0x16daa50?, {0x7f6489a32e08, 0x20db350}, 0xc000083b00?, {0x0?, 0x0?}, {0x150b8c0, 0xc0005422d0}, 0xc00042e270?, 0x0, ...)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/rpc_util.go:758 +0x89
+google.golang.org/grpc.(*csAttempt).recvMsg(0xc0005aa4d0, {0x150b8c0?, 0xc0005422d0}, 0x0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:975 +0x485
+google.golang.org/grpc.(*clientStream).RecvMsg.func2(0x4180f0?)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:826 +0x3d
+google.golang.org/grpc.(*clientStream).withRetry(0xc0004a9d00, 0xc0005cdcb0, 0xc0005cdc80)
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:680 +0x492
+google.golang.org/grpc.(*clientStream).RecvMsg(0xc0004a9d00, {0x150b8c0?, 0xc0005422d0?})
+	/go/pkg/mod/google.golang.org/grpc@v1.41.0/stream.go:825 +0x1fc
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).tryRecvMsg(0xc0004d23c0, {0x150b8c0?, 0xc0005422d0})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:299 +0x6c
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg.func1()
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:292 +0x3d
+github.com/cenkalti/backoff.RetryNotify(0xc0005cde60, {0x16e5030, 0xc000625680}, 0x15a7690)
+	/go/pkg/mod/github.com/cenkalti/backoff@v2.2.1+incompatible/retry.go:37 +0xdb
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).retryRecvMsg(0xc0004d23c0, {0x150b8c0, 0xc0005422d0})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:291 +0x96
+github.com/onosproject/onos-lib-go/pkg/grpc/retry.(*retryingClientStream).RecvMsg(0xc000112300?, {0x150b8c0?, 0xc0005422d0?})
+	/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.8.13/pkg/grpc/retry/retry.go:287 +0x3c
+github.com/onosproject/onos-api/go/onos/e2t/e2/v1beta1.(*subscriptionServiceSubscribeClient).Recv(0xc000668730)
+	/go/pkg/mod/github.com/onosproject/onos-api/go@v0.9.11/onos/e2t/e2/v1beta1/subscription.pb.go:2332 +0x6c
+github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe.func1()
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:214 +0x119
+created by github.com/onosproject/onos-ric-sdk-go/pkg/e2/v1beta1.(*e2Node).Subscribe
+	/go/pkg/mod/github.com/onosproject/onos-ric-sdk-go@v0.8.9/pkg/e2/v1beta1/node.go:209 +0x54a
+
+goroutine 49 [sync.Cond.Wait]:
+sync.runtime_notifyListWait(0xc000611590, 0x4c)
+	runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0xc000432930?)
+	sync/cond.go:70 +0x8c
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).next(0xc000430820)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:178 +0x10a
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).drain(0xc000430820)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:161 +0xa5
+created by github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).open
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:155 +0x96
+
+goroutine 130 [chan receive]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).sendIndicationOnStream(0x0?, 0x0?, 0x0?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:260 +0x16e
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:180 +0x68a
+
+goroutine 131 [select]:
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedReader).Recv(0x0?, {0x16eb788, 0xc0003af220})
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:125 +0xd6
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:43 +0x129
+created by github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:41 +0x12b
+
+goroutine 107 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).sendIndicationOnStream(0xc000559080?, 0x0?, 0xc0003d6f70?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:260 +0x16e
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:180 +0x68a
+
+goroutine 108 [select, 1 minutes]:
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedReader).Recv(0x0?, {0x16eb788, 0xc0003af220})
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:125 +0xd6
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:43 +0x129
+created by github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:41 +0x12b
+
+goroutine 118 [sync.Cond.Wait, 1 minutes]:
+sync.runtime_notifyListWait(0xc0002fcfd0, 0x0)
+	runtime/sema.go:527 +0x14c
+sync.(*Cond).Wait(0x0?)
+	sync/cond.go:70 +0x8c
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).next(0xc000616940)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:178 +0x10a
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).drain(0xc000616940)
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:161 +0xa5
+created by github.com/onosproject/onos-mho/pkg/broker.(*bufferedWriter).open
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:155 +0x96
+
+goroutine 119 [chan receive, 1 minutes]:
+github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).sendIndicationOnStream(0x0?, 0x0?, 0x0?)
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:260 +0x16e
+created by github.com/onosproject/rimedo-ts/pkg/southbound/e2.(*Manager).createSubscription
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/southbound/e2/manager.go:180 +0x68a
+
+goroutine 120 [select, 1 minutes]:
+github.com/onosproject/onos-mho/pkg/broker.(*bufferedReader).Recv(0x0?, {0x16eb788, 0xc0003af220})
+	/go/pkg/mod/github.com/onosproject/onos-mho@v0.3.1/pkg/broker/stream.go:125 +0xd6
+github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start.func1()
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:43 +0x129
+created by github.com/onosproject/rimedo-ts/pkg/monitoring.(*Monitor).Start
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/monitoring/monitor.go:41 +0x12b
+res: 0, ns: 207739069, sonar: 15820
+2023/07/17 22:24:18 failed to read from pipe: EOF

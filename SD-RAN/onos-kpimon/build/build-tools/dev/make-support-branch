@@ -1,0 +1,28 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+set -e -u -o pipefail
+
+version=${1:-""}
+hash=${2:-""}
+
+[ -z "$version" ] && echo "Usage: make-support-branch version hash" && exit 1
+[ -z "$hash" ] && echo "Usage: make-support-branch version hash" && exit 1
+
+branch="rel-$version"
+repo=${PWD##*/}
+
+echo "Creating support branch $branch for onosproject/$repo"
+
+# make sure the repo is up to date
+git fetch upstream && git rebase upstream/master
+
+# Make the new support branch
+git checkout -b "$branch" "$hash"
+
+# Push the support branch to github
+git push upstream "$branch"
+
+echo "Successfully created $branch on github"

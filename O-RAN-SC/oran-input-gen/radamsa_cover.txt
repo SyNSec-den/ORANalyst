@@ -1,0 +1,860 @@
+Time: 2024-02-07 21:25:43
+edge cover: 0
+edge cover: 0
+
+Time: 2024-02-07 21:25:44
+
+Time: 2024-02-07 21:26:44
+edge cover: 3200
+edge cover: 3200
+edge cover: 3200
+edge cover: 3200
+edge cover: 3200
+
+Time: 2024-02-07 21:26:44
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+
+Time: 2024-02-07 21:27:45
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+
+Time: 2024-02-07 21:27:45
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+
+Time: 2024-02-07 21:28:46
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+
+Time: 2024-02-07 21:28:46
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+ MSG RC_WMORE bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+
+Time: 2024-02-07 21:29:47
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+
+Time: 2024-02-07 21:29:47
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+bbCover: 1798, edgeCover: 881
+
+Time: 2024-02-07 21:30:48
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+
+Time: 2024-02-07 21:30:49
+ MSG RC_WMORE bbCover: 1815, edgeCover: 892
+bbCover: 1815, edgeCover: 892
+bbCover: 1815, edgeCover: 892
+bbCover: 1815, edgeCover: 892
+bbCover: 1815, edgeCover: 892
+
+Time: 2024-02-07 21:31:50
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+
+Time: 2024-02-07 21:31:51
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:32:52
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+edge cover: 3202
+
+Time: 2024-02-07 21:32:53
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:33:55
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:33:56
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:34:58
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:34:59
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:36:01
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:36:02
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:37:04
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:37:06
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:38:08
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:38:09
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:39:12
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:39:14
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:40:16
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:40:18
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:41:21
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:41:23
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:42:26
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:42:28
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:43:31
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:43:33
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:44:37
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:44:38
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:45:42
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:45:44
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:46:48
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:46:51
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:47:55
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:47:57
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:49:02
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:49:04
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:50:09
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:50:11
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:51:16
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:51:19
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:52:24
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:52:27
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:53:32
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:53:35
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:54:41
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+edge cover: 3204
+
+Time: 2024-02-07 21:54:44
+header RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:55:50
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 21:55:53
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:56:59
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 21:57:02
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:58:08
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 21:58:12
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 21:59:18
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 21:59:22
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:00:28
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:00:32
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:01:39
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:01:42
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:02:43
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:02:46
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:03:47
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:03:51
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:04:51
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:04:55
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:05:56
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:06:00
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:07:01
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:07:05
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:08:06
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:08:10
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:09:12
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:09:16
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:10:18
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:10:22
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:11:24
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:11:29
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:12:31
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:12:35
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:13:38
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:13:42
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:14:45
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:14:50
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:15:53
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:15:58
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:17:01
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:17:06
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:18:09
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:18:14
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:19:17
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:19:23
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:20:26
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:20:32
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:21:36
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:21:41
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:22:45
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:22:51
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:23:55
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:24:01
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:25:06
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:25:11
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:26:39
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:26:46
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:36:53
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+edge cover: 3205
+
+Time: 2024-02-07 22:37:00
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:47:02
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+
+Time: 2024-02-07 22:47:10
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+ MSG RC_WMORE bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 22:57:14
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+
+Time: 2024-02-07 22:57:23
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 23:07:29
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+
+Time: 2024-02-07 23:07:39
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 23:17:40
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+edge cover: 3206
+
+Time: 2024-02-07 23:17:52
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+
+Time: 2024-02-07 23:27:55
+edge cover: 3208
+edge cover: 3208
+edge cover: 3208
+edge cover: 3208
+edge cover: 3208
+
+Time: 2024-02-07 23:28:07
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+bbCover: 1820, edgeCover: 896
+

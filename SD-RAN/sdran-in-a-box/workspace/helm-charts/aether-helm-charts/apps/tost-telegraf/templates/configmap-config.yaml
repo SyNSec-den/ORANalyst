@@ -1,0 +1,41 @@
+{{/*
+# Copyright 2021-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "tost-telegraf-config-script"
+  labels:
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    app: tost-telegraf
+data:
+  tost_telegraf.sh: |
+    #!/bin/bash
+    set -x
+    #Locale setting for json_pp
+    export LC_CTYPE="POSIX"
+    export LC_NUMERIC="POSIX"
+
+    #Install kubectl
+    curl -sLO https://dl.k8s.io/release/v1.21.0/bin/linux/amd64/kubectl
+    install -m 755 kubectl  /usr/local/bin/kubectl
+
+    while IFS= read -r LINE; do
+        ACTIVE_LINKS=$(curl --fail -sSL --user {{ .Values.onos.username }}:{{ .Values.onos.password }} --noproxy {{ .Values.onos.server }} -X GET -H 'Accept: application/json' \
+        http://{{ .Values.onos.server }}:{{ .Values.onos.port }}/onos/v1/links | json_pp | grep "\"state\" : \"ACTIVE\"" | wc -l)
+
+        ENABLE_DEVICE_PORTS=$(curl --fail -sSL --user {{ .Values.onos.username }}:{{ .Values.onos.password }} --noproxy {{ .Values.onos.server }} -X GET -H 'Accept: application/json' \
+        http://{{ .Values.onos.server }}:{{ .Values.onos.port }}/onos/v1/devices/ports | json_pp | grep "\"isEnabled\" : true" | wc -l)
+
+        DEVICES=$(curl --fail -sSL --user {{ .Values.onos.username }}:{{ .Values.onos.password }} --noproxy {{ .Values.onos.server }} -X GET -H 'Accept: application/json' \
+        http://{{ .Values.onos.server }}:{{ .Values.onos.port }}/onos/v1/devices | json_pp | grep "\"type\" : \"SWITCH\"" | wc -l)
+
+        # Config Pod's ready status indicate the status of ONOS cluster
+        # Assumption: Config Pod has only one instance
+        ONOS_READY=$(kubectl -n {{ .Values.onos.namespace }} get pods -lcomponent={{ .Values.onos.component_label }} --no-headers -o custom-columns=':.status.containerStatuses[*].ready' | grep true | wc -l)
+        echo "onos_telegraf active_links=${ACTIVE_LINKS},enable_device_ports=${ENABLE_DEVICE_PORTS},devices=${DEVICES},ready=${ONOS_READY}"
+    done

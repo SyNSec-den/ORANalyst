@@ -1,0 +1,326 @@
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-app-kpimon-go# kubectl logs -n ricxapp ricxapp-kpimon-go-9d79df95b-k6t9z -f
+{"ts":1704224450296,"crit":"INFO","id":"kpimon","mdc":{"time":"2024-01-02T19:40:50"},"msg":"Using config file: /opt/config-file.yaml"}
+{"ts":1704224450297,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:40:50"},"msg":"Serving metrics on: url=/ric/v1/metrics namespace="}
+redis: got 7 elements in COMMAND reply, wanted 6
+{"ts":1704224450299,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:40:50"},"msg":"Register new counter with opts: { SDL Stored The total number of stored SDL transactions map[]}"}
+{"ts":1704224450299,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:40:50"},"msg":"Register new counter with opts: { SDL StoreError The total number of SDL store errors map[]}"}
+redis: got 7 elements in COMMAND reply, wanted 6
+{"ts":1704224465312,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"In new control\n"}
+{"ts":1704224465312,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"In create_db\n"}
+{"ts":1704224465430,"crit":"ERROR","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Create database failed!"}
+{"ts":1704224465431,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"exiting create_db\n"}
+{"ts":1704224465431,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"returning control\n"}
+c.Run(){"ts":1704224465431,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"In Run() ..."}
+1704224465431 8/RMR [INFO] ric message routing library on SI95 p=4560 mv=3 flg=00 id=a (a1be12a 4.9.0 built: Feb 14 2023)
+{"ts":1704224465431,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"new rmrClient with parameters: ProtPort=4560 MaxSize=2072 ThreadType=0 StatDesc=RMR LowLatency=false FastAck=false Policies=[]"}
+{"ts":1704224465431,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Register new counter with opts: { RMR Transmitted The total number of transmited RMR messages map[]}"}
+{"ts":1704224465432,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Register new counter with opts: { RMR TransmitError The total number of RMR transmission errors map[]}"}
+{"ts":1704224465432,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Register new counter with opts: { RMR TransmitRetry The total number of transmit retries on failure map[]}"}
+{"ts":1704224465432,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Register new counter with opts: { RMR Received The total number of received RMR messages map[]}"}
+{"ts":1704224465432,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Register new counter with opts: { RMR ReceiveError The total number of RMR receive errors map[]}"}
+{"ts":1704224465432,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Register new counter with opts: { RMR SendWithRetryRetry SendWithRetry service retries map[]}"}
+{"ts":1704224465432,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Register new gauge with opts: { RMR Enqueued The total number of enqueued in RMR library map[]}"}
+{"ts":1704224465432,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Register new gauge with opts: { RMR Dropped The total number of dropped in RMR library map[]}"}
+{"ts":1704224465432,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"IP address is not able to resolve Interface () route ip+net: invalid network interface name"}
+{"ts":1704224465432,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Xapp started, listening on: :8080"}
+{"ts":1704224465433,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"Connection to database established!"}
+{"ts":1704224465433,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:05"},"msg":"rmrClient: Waiting for RMR to be ready ..."}
+1704224466434 8/RMR [INFO] sends: ts=1704224466 src=service-ricxapp-kpimon-go-rmr.ricxapp:4560 target=service-ricplt-e2term-rmr-alpha.ricplt:38000 open=0 succ=0 fail=0 (hard=0 soft=0)
+1704224466434 8/RMR [INFO] sends: ts=1704224466 src=service-ricxapp-kpimon-go-rmr.ricxapp:4560 target=service-ricplt-a1mediator-rmr.ricplt:4562 open=0 succ=0 fail=0 (hard=0 soft=0)
+{"ts":1704224466434,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:06"},"msg":"rmrClient: RMR is ready after 1 seconds waiting..."}
+{"ts":1704224466434,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:06"},"msg":"In callback KPI monitor xApp ..."}
+{"ts":1704224466435,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:06"},"msg":"List for connected eNBs :"}
+{"ts":1704224466435,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:06"},"msg":"List of connected gNBs :"}
+{"ts":1704224466435,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:06"},"msg":"1. gnbid : gnb_734_373_1698cef1"}
+{"ts":1704224466435,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:06"},"msg":"2. gnbid : gnb_734_373_16b8cef1"}
+{"ts":1704224466435,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:06"},"msg":"Building ranCellKp for gnb_734_373_1698cef1"}
+server =  72657170617274
+f1apSever Response: {Cellids:[] PlmnIds:[]}
+RMR is ready now ...
+{"ts":1704224470434,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:10"},"msg":"Application='kpimon-go' is not ready yet, waiting ..."}
+{"ts":1704224471646,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:11"},"msg":"App registration is not done yet, sleep 5s and check again"}
+{"ts":1704224471863,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:11"},"msg":"restapi: method=GET url=/ric/v1/health/ready"}
+{"ts":1704224475435,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:15"},"msg":"Application='kpimon-go' is now up and ready, continue with registration ..."}
+{"ts":1704224475435,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:15"},"msg":"getService: SERVICE_RICXAPP_KPIMON-GO_HTTP_PORT [tcp: 10.96.141.253:8080]"}
+{"ts":1704224475435,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:15"},"msg":"getService: SERVICE_RICXAPP_KPIMON-GO_RMR_PORT [tcp: 10.103.133.1:4560]"}
+{"ts":1704224475441,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:15"},"msg":"restapi: method=GET url=/ric/v1/config"}
+{"ts":1704224475441,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:15"},"msg":"Inside appconfigHandler"}
+{"ts":1704224475447,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:15"},"msg":"Post to 'http://service-ricplt-appmgr-http.ricplt:8080/ric/v1/register' done, status:201 Created"}
+{"ts":1704224475447,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:15"},"msg":"Registration done, proceeding with startup ..."}
+{"ts":1704224475580,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:15"},"msg":"restapi: method=GET url=/ric/v1/config"}
+{"ts":1704224475580,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:15"},"msg":"Inside appconfigHandler"}
+{"ts":1704224476609,"crit":"DEBUG","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:16"},"msg":"restapi: method=GET url=/ric/v1/health/alive"}
+{"ts":1704224476647,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:16"},"msg":"App registration is done, ready to send subscription request."}
+{"ts":1704224476647,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:16"},"msg":"Before send subscription request to gnb_734_373_1698cef1"}
+{"ts":1704224476647,"crit":"INFO","id":"kpimon","mdc":{"CONTAINER_NAME":"","HOST_NAME":"","PID":"8","POD_NAME":"","SERVICE_NAME":"","SYSTEM_NAME":"","time":"2024-01-02T19:41:16"},"msg":"Sending subscription request for MEID: gnb_734_373_1698cef1"}
+RanFunctionDefinition = 20C04F52414E2D4532534D2D4B504D0000054F494431323305004B504D206D6F6E69746F720899347D0A475B1D00600001010700506572696F646963207265706F727401051401011D004F2D4455204D6561737572656D656E7420436F6E7461696E657220666F72207468652035474320636F6E6E6563746564206465706C6F796D656E74010101010001021D004F2D4455204D6561737572656D656E7420436F6E7461696E657220666F72207468652045504320636F6E6E6563746564206465706C6F796D656E74010101010001031E804F2D43552D4350204D6561737572656D656E7420436F6E7461696E657220666F72207468652035474320636F6E6E6563746564206465706C6F796D656E74010101010001041E804F2D43552D4350204D6561737572656D656E7420436F6E7461696E657220666F72207468652045504320636F6E6E6563746564206465706C6F796D656E74010101010001051E804F2D43552D5550204D6561737572656D656E7420436F6E7461696E657220666F72207468652035474320636F6E6E6563746564206465706C6F796D656E74010101010001061E804F2D43552D5550204D6561737572656D656E7420436F6E7461696E657220666F72207468652045504320636F6E6E6563746564206465706C6F796D656E7401010101
+asn_encode_to_buffer: 10240
+Cannot encode MeasurementCondList: Bad file descriptor
+asn_encode_to_buffer: 10240
+Cannot encode MeasurementInfoList: Bad file descriptor
+Cannot encode MeasurementInfoList: Bad file descriptor
+asn_encode_to_buffer: 10240
+Cannot encode MeasurementCondList: Bad file descriptor
+munmap_chunk(): invalid pointer
+SIGABRT: abort
+PC=0x7f62e08f800b m=7 sigcode=18446744073709551610
+signal arrived during cgo execution
+
+goroutine 103 [syscall]:
+runtime.cgocall(0xba8220, 0xc0002138e0)
+        /opt/go/1.18/src/runtime/cgocall.go:157 +0x5c fp=0xc0002138b8 sp=0xc000213880 pc=0x40819c
+example.com/kpimon/control._Cfunc_encode_action_Definition(0x7f6298000b60, 0x4)
+        _cgo_gotypes.go:784 +0x4e fp=0xc0002138e0 sp=0xc0002138b8 pc=0xba210e
+example.com/kpimon/control.encode_action_format3({0xc000036240?, 0xc0001342d0?})
+        /opt/control/control.go:253 +0x3aa fp=0xc0002139f0 sp=0xc0002138e0 pc=0xba39aa
+example.com/kpimon/control.encode_actionsToBeSetup({0xc000036240, 0x14})
+        /opt/control/control.go:382 +0x325 fp=0xc000213b18 sp=0xc0002139f0 pc=0xba3f65
+example.com/kpimon/control.Control.sendSubscription({0xc000010048?, {0xda4641?, 0x26?}}, {0xc000036240, 0x14})
+        /opt/control/control.go:436 +0x105 fp=0xc000213c78 sp=0xc000213b18 pc=0xba42c5
+example.com/kpimon/control.Control.xAppStartCB({0xc0000b2960, {0xec35a0, 0xc00036e5a0}}, {0x9?, 0xc000044ae0?})
+        /opt/control/control.go:1112 +0x8a6 fp=0xc000213f48 sp=0xc000213c78 pc=0xba6726
+example.com/kpimon/control.Control.xAppStartCB-fm({0xc168a0?, 0x13fe848?})
+        <autogenerated>:1 +0x45 fp=0xc000213f80 sp=0xc000213f48 pc=0xba7a45
+gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.XappReadyCb({0x0?, 0x0?})
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/xapp.go:99 +0xb1 fp=0xc000213fc0 sp=0xc000213f80 pc=0xa6ffd1
+gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.(*RMRClient).Start.func4()
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/rmr.go:222 +0x2e fp=0xc000213fe0 sp=0xc000213fc0 pc=0xa740ae
+runtime.goexit()
+        /opt/go/1.18/src/runtime/asm_amd64.s:1571 +0x1 fp=0xc000213fe8 sp=0xc000213fe0 pc=0x46ba21
+created by gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.(*RMRClient).Start
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/rmr.go:222 +0x299
+
+goroutine 1 [semacquire]:
+sync.runtime_Semacquire(0xc000575ef0?)
+        /opt/go/1.18/src/runtime/sema.go:56 +0x25
+sync.(*WaitGroup).Wait(0xc000010048?)
+        /opt/go/1.18/src/sync/waitgroup.go:136 +0x52
+gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.(*RMRClient).Start(0xc00032de80, {0xeb9c20?, 0xc000412528?})
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/rmr.go:261 +0x358
+gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.RunWithRunParams({0xeb9c20, 0xc000412528}, {0xc?, 0x0?})
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/xapp.go:365 +0x410
+gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.RunWithParams(...)
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/xapp.go:369
+gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.Run(...)
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/xapp.go:373
+example.com/kpimon/control.Control.Run({0xc0000b2960?, {0xec35a0?, 0xc00036e5a0?}})
+        /opt/control/control.go:1140 +0x16d
+main.main()
+        /opt/kpimon.go:11 +0x79
+
+goroutine 21 [semacquire]:
+sync.runtime_Semacquire(0x822f20?)
+        /opt/go/1.18/src/runtime/sema.go:56 +0x25
+sync.(*WaitGroup).Wait(0xc00044a000?)
+        /opt/go/1.18/src/sync/waitgroup.go:136 +0x52
+github.com/spf13/viper.(*Viper).WatchConfig.func1()
+        /root/go/pkg/mod/github.com/spf13/viper@v1.15.0/viper.go:498 +0x305
+created by github.com/spf13/viper.(*Viper).WatchConfig
+        /root/go/pkg/mod/github.com/spf13/viper@v1.15.0/viper.go:439 +0x8d
+
+goroutine 8 [IO wait]:
+internal/poll.runtime_pollWait(0x7f62b8415598, 0x72)
+        /opt/go/1.18/src/runtime/netpoll.go:302 +0x89
+internal/poll.(*pollDesc).wait(0xc000400060?, 0xc00030ff78?, 0x1)
+        /opt/go/1.18/src/internal/poll/fd_poll_runtime.go:83 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+        /opt/go/1.18/src/internal/poll/fd_poll_runtime.go:88
+internal/poll.(*FD).Read(0xc000400060, {0xc00030ff78, 0x10000, 0x10000})
+        /opt/go/1.18/src/internal/poll/fd_unix.go:167 +0x25a
+os.(*File).read(...)
+        /opt/go/1.18/src/os/file_posix.go:31
+os.(*File).Read(0xc00012c018, {0xc00030ff78?, 0xeb4590?, 0xeb434c?})
+        /opt/go/1.18/src/os/file.go:119 +0x5e
+github.com/fsnotify/fsnotify.(*Watcher).readEvents(0xc00044a000)
+        /root/go/pkg/mod/github.com/fsnotify/fsnotify@v1.6.0/backend_inotify.go:356 +0xcc
+created by github.com/fsnotify/fsnotify.NewWatcher
+        /root/go/pkg/mod/github.com/fsnotify/fsnotify@v1.6.0/backend_inotify.go:150 +0x1b0
+
+goroutine 9 [select]:
+github.com/spf13/viper.(*Viper).WatchConfig.func1.1()
+        /root/go/pkg/mod/github.com/spf13/viper@v1.15.0/viper.go:461 +0x105
+created by github.com/spf13/viper.(*Viper).WatchConfig.func1
+        /root/go/pkg/mod/github.com/spf13/viper@v1.15.0/viper.go:459 +0x2d1
+
+goroutine 43 [chan receive]:
+github.com/go-redis/redis/internal/pool.(*ConnPool).reaper(0xc00037efd0, 0xc0000441e0?)
+        /root/go/pkg/mod/github.com/go-redis/redis@v6.15.9+incompatible/internal/pool/pool.go:449 +0x87
+created by github.com/go-redis/redis/internal/pool.NewConnPool
+        /root/go/pkg/mod/github.com/go-redis/redis@v6.15.9+incompatible/internal/pool/pool.go:99 +0x1b9
+
+goroutine 24 [chan receive]:
+github.com/go-redis/redis/internal/pool.(*ConnPool).reaper(0xc0004302c0, 0xc0000443c0?)
+        /root/go/pkg/mod/github.com/go-redis/redis@v6.15.9+incompatible/internal/pool/pool.go:449 +0x87
+created by github.com/go-redis/redis/internal/pool.NewConnPool
+        /root/go/pkg/mod/github.com/go-redis/redis@v6.15.9+incompatible/internal/pool/pool.go:99 +0x1b9
+
+goroutine 51 [syscall]:
+os/signal.signal_recv()
+        /opt/go/1.18/src/runtime/sigqueue.go:151 +0x2f
+os/signal.loop()
+        /opt/go/1.18/src/os/signal/signal_unix.go:23 +0x19
+created by os/signal.Notify.func1.1
+        /opt/go/1.18/src/os/signal/signal.go:151 +0x2a
+
+goroutine 79 [IO wait]:
+internal/poll.runtime_pollWait(0x7f62b84152c8, 0x72)
+        /opt/go/1.18/src/runtime/netpoll.go:302 +0x89
+internal/poll.(*pollDesc).wait(0xc000429300?, 0xc00004cf00?, 0x0)
+        /opt/go/1.18/src/internal/poll/fd_poll_runtime.go:83 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+        /opt/go/1.18/src/internal/poll/fd_poll_runtime.go:88
+internal/poll.(*FD).Accept(0xc000429300)
+        /opt/go/1.18/src/internal/poll/fd_unix.go:614 +0x22c
+net.(*netFD).accept(0xc000429300)
+        /opt/go/1.18/src/net/fd_unix.go:172 +0x35
+net.(*TCPListener).accept(0xc00000e780)
+        /opt/go/1.18/src/net/tcpsock_posix.go:139 +0x28
+net.(*TCPListener).Accept(0xc00000e780)
+        /opt/go/1.18/src/net/tcpsock.go:288 +0x3d
+net/http.(*Server).Serve(0xc000196540, {0xebcff0, 0xc00000e780})
+        /opt/go/1.18/src/net/http/server.go:3039 +0x385
+net/http.(*Server).ListenAndServe(0xc000196540)
+        /opt/go/1.18/src/net/http/server.go:2968 +0x7d
+net/http.ListenAndServe({0xc00041cc78, 0x5}, {0xeb8560?, 0xc00037c600})
+        /opt/go/1.18/src/net/http/server.go:3222 +0x96
+created by gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.RunWithRunParams
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/xapp.go:357 +0x33d
+
+goroutine 31 [chan receive]:
+gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.InstallSignalHandler.func1()
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/xapp.go:249 +0x38
+created by gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.InstallSignalHandler
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/xapp.go:248 +0xb6
+
+goroutine 104 [syscall]:
+gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp._Cfunc_wait_epoll(0x10, 0x7)
+        _cgo_gotypes.go:557 +0x4c
+gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.(*RMRClient).Start.func2()
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/rmr.go:235 +0xe5
+created by gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.(*RMRClient).Start
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/rmr.go:226 +0x2fc
+
+goroutine 105 [sleep]:
+time.Sleep(0x3b9aca00)
+        /opt/go/1.18/src/runtime/time.go:194 +0x12e
+gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.(*RMRClient).Start.func3()
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/rmr.go:257 +0x69
+created by gerrit.o-ran-sc.org/r/ric-plt/xapp-frame/pkg/xapp.(*RMRClient).Start
+        /root/go/pkg/mod/gerrit.o-ran-sc.org/r/ric-plt/xapp-frame.git@v0.9.21/pkg/xapp/rmr.go:253 +0x34e
+
+goroutine 53 [IO wait]:
+internal/poll.runtime_pollWait(0x7f62b84153b8, 0x72)
+        /opt/go/1.18/src/runtime/netpoll.go:302 +0x89
+internal/poll.(*pollDesc).wait(0xc000590480?, 0xc0005ae000?, 0x0)
+        /opt/go/1.18/src/internal/poll/fd_poll_runtime.go:83 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+        /opt/go/1.18/src/internal/poll/fd_poll_runtime.go:88
+internal/poll.(*FD).Read(0xc000590480, {0xc0005ae000, 0x1000, 0x1000})
+        /opt/go/1.18/src/internal/poll/fd_unix.go:167 +0x25a
+net.(*netFD).Read(0xc000590480, {0xc0005ae000?, 0x40a729?, 0x4?})
+        /opt/go/1.18/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc000592028, {0xc0005ae000?, 0x0?, 0x0?})
+        /opt/go/1.18/src/net/net.go:183 +0x45
+net/http.(*persistConn).Read(0xc0000a7680, {0xc0005ae000?, 0xc00010ec00?, 0xc0000c3d30?})
+        /opt/go/1.18/src/net/http/transport.go:1929 +0x4e
+bufio.(*Reader).fill(0xc0006e81e0)
+        /opt/go/1.18/src/bufio/bufio.go:106 +0x103
+bufio.(*Reader).Peek(0xc0006e81e0, 0x1)
+        /opt/go/1.18/src/bufio/bufio.go:144 +0x5d
+net/http.(*persistConn).readLoop(0xc0000a7680)
+        /opt/go/1.18/src/net/http/transport.go:2093 +0x1ac
+created by net/http.(*Transport).dialConn
+        /opt/go/1.18/src/net/http/transport.go:1750 +0x173e
+
+goroutine 54 [select]:
+net/http.(*persistConn).writeLoop(0xc0000a7680)
+        /opt/go/1.18/src/net/http/transport.go:2392 +0xf5
+created by net/http.(*Transport).dialConn
+        /opt/go/1.18/src/net/http/transport.go:1751 +0x1791
+
+goroutine 110 [IO wait]:
+internal/poll.runtime_pollWait(0x7f62b84151d8, 0x72)
+        /opt/go/1.18/src/runtime/netpoll.go:302 +0x89
+internal/poll.(*pollDesc).wait(0xc0000ee680?, 0xc00021b000?, 0x0)
+        /opt/go/1.18/src/internal/poll/fd_poll_runtime.go:83 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+        /opt/go/1.18/src/internal/poll/fd_poll_runtime.go:88
+internal/poll.(*FD).Read(0xc0000ee680, {0xc00021b000, 0x1000, 0x1000})
+        /opt/go/1.18/src/internal/poll/fd_unix.go:167 +0x25a
+net.(*netFD).Read(0xc0000ee680, {0xc00021b000?, 0x40a729?, 0x4?})
+        /opt/go/1.18/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc00012c8a0, {0xc00021b000?, 0xc00012c838?, 0x1?})
+        /opt/go/1.18/src/net/net.go:183 +0x45
+net/http.(*persistConn).Read(0xc00036efc0, {0xc00021b000?, 0xc0000b3320?, 0xc0000c5d30?})
+        /opt/go/1.18/src/net/http/transport.go:1929 +0x4e
+bufio.(*Reader).fill(0xc000401740)
+        /opt/go/1.18/src/bufio/bufio.go:106 +0x103
+bufio.(*Reader).Peek(0xc000401740, 0x1)
+        /opt/go/1.18/src/bufio/bufio.go:144 +0x5d
+net/http.(*persistConn).readLoop(0xc00036efc0)
+        /opt/go/1.18/src/net/http/transport.go:2093 +0x1ac
+created by net/http.(*Transport).dialConn
+        /opt/go/1.18/src/net/http/transport.go:1750 +0x173e
+
+goroutine 111 [select]:
+net/http.(*persistConn).writeLoop(0xc00036efc0)
+        /opt/go/1.18/src/net/http/transport.go:2392 +0xf5
+created by net/http.(*Transport).dialConn
+        /opt/go/1.18/src/net/http/transport.go:1751 +0x1791
+
+goroutine 95 [IO wait]:
+internal/poll.runtime_pollWait(0x7f62b84150e8, 0x72)
+        /opt/go/1.18/src/runtime/netpoll.go:302 +0x89
+internal/poll.(*pollDesc).wait(0xc0002b0180?, 0xc0002a0000?, 0x0)
+        /opt/go/1.18/src/internal/poll/fd_poll_runtime.go:83 +0x32
+internal/poll.(*pollDesc).waitRead(...)
+        /opt/go/1.18/src/internal/poll/fd_poll_runtime.go:88
+internal/poll.(*FD).Read(0xc0002b0180, {0xc0002a0000, 0x1000, 0x1000})
+        /opt/go/1.18/src/internal/poll/fd_unix.go:167 +0x25a
+net.(*netFD).Read(0xc0002b0180, {0xc0002a0000?, 0xc0005b06e0?, 0x481f3e?})
+        /opt/go/1.18/src/net/fd_posix.go:55 +0x29
+net.(*conn).Read(0xc000010230, {0xc0002a0000?, 0x6b5d2c?, 0xc0001f8500?})
+        /opt/go/1.18/src/net/net.go:183 +0x45
+net/http.(*connReader).Read(0xc0001f5170, {0xc0002a0000, 0x1000, 0x1000})
+        /opt/go/1.18/src/net/http/server.go:780 +0x16d
+bufio.(*Reader).fill(0xc000045620)
+        /opt/go/1.18/src/bufio/bufio.go:106 +0x103
+bufio.(*Reader).ReadSlice(0xc000045620, 0x0?)
+        /opt/go/1.18/src/bufio/bufio.go:371 +0x2f
+bufio.(*Reader).ReadLine(0xc000045620)
+        /opt/go/1.18/src/bufio/bufio.go:400 +0x27
+net/textproto.(*Reader).readLineSlice(0xc0001f4c60)
+        /opt/go/1.18/src/net/textproto/reader.go:57 +0x99
+net/textproto.(*Reader).ReadLine(...)
+        /opt/go/1.18/src/net/textproto/reader.go:38
+net/http.readRequest(0xc000010230?)
+        /opt/go/1.18/src/net/http/request.go:1029 +0x79
+net/http.(*conn).readRequest(0xc000137540, {0xebd7d8, 0xc0001f8780})
+        /opt/go/1.18/src/net/http/server.go:988 +0x24a
+net/http.(*conn).serve(0xc000137540, {0xebd880, 0xc0001e5fb0})
+        /opt/go/1.18/src/net/http/server.go:1891 +0x32b
+created by net/http.(*Server).Serve
+        /opt/go/1.18/src/net/http/server.go:3071 +0x4db
+
+rax    0x0
+rbx    0x7f62b2ffd700
+rcx    0x7f62e08f800b
+rdx    0x0
+rdi    0x2
+rsi    0x7f62b2ff27c0
+rbp    0x7f62b2ff2b10
+rsp    0x7f62b2ff27c0
+r8     0x0
+r9     0x7f62b2ff27c0
+r10    0x8
+r11    0x246
+r12    0x7f62b2ff2a30
+r13    0x10
+r14    0x7f62e15e4000
+r15    0x1
+rip    0x7f62e08f800b
+rflags 0x246
+cs     0x33
+fs     0x0
+gs     0x0
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-app-kpimon-go# 

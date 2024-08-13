@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2022-present Intel Corporation
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+apiVersion: v2
+name: ran-simulator
+description: ONOS RAN Simulator
+kubeVersion: ">=1.15.0"
+type: application
+version: 1.4.15
+appVersion: v0.10.12
+keywords:
+  - onos
+  - sdn
+  - ran
+home: https://onosproject.org
+maintainers:
+  - name: ONOS Support
+    email: support@opennetworking.org

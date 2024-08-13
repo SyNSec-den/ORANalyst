@@ -1,0 +1,86 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tb-coap-transport
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tb-coap-transport
+  template:
+    metadata:
+      labels:
+        app: tb-coap-transport
+    spec:
+      serviceAccountName: thingsboard
+      volumes:
+        - name: tb-coap-transport-config
+          configMap:
+            name: tb-coap-transport-config
+            items:
+              - key: conf
+                path:  tb-coap-transport.conf
+              - key: logback
+                path:  logback.xml
+      initContainers:
+        - name: tb-coap-transport-dep-check
+          image: {{ .Values.images.tags.depCheck }}
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: PATH
+              value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
+            - name: COMMAND
+              value: "echo done"
+            - name: DEPENDENCY_POD_JSON
+              value: '[{"labels": {"app": "tb-kafka"}, "requireSameNode": false}]'
+          command:
+            - kubernetes-entrypoint
+          volumeMounts:
+            []
+      containers:
+        - name: server
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          image: {{ .Values.images.tags.coapTransport }}
+          ports:
+            - containerPort: {{ .Values.config.transports.coap.port }}
+              name: coap
+              protocol: UDP
+          env:
+            - name: TB_SERVICE_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: TB_QUEUE_TYPE
+              value: "kafka"
+            - name: COAP_BIND_ADDRESS
+              value: {{ .Values.config.transports.coap.bindAddr | quote }}
+            - name: COAP_BIND_PORT
+              value: {{ .Values.config.transports.coap.port | quote }}
+            - name: COAP_TIMEOUT
+              value: {{ .Values.config.transports.coap.timeout | quote }}
+            - name: TB_KAFKA_SERVERS
+              value: "tb-kafka:{{ .Values.config.kafka.ports.outPort }}"
+          volumeMounts:
+            - mountPath: /config
+              name: tb-coap-transport-config
+      restartPolicy: Always

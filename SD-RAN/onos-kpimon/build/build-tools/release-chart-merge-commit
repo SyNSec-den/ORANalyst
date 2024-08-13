@@ -1,0 +1,109 @@
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2018-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+set -eux -o pipefail
+
+if [ -z ${1+x} ]; then
+    echo Usage: release-chart-merge-commit chart-repo-URL website-user website-password
+    exit 1
+fi
+
+chart_repo_url=$1
+if ! echo ${chart_repo_url} | grep ^http; then
+    echo chart repo URL is invalid
+    exit 1
+fi
+
+WEBSITE_USER=$2
+WEBSITE_PASSWORD=$3
+
+if [ ! -d "../build-tools" ]; then wd=${PWD} && cd .. && git clone https://github.com/onosproject/build-tools.git && cd $wd; fi
+
+# Set up the git environment to allow making commits
+repo="${PWD##*/}".git
+
+git remote add upstream https://github.com/onosproject/${repo}
+git remote set-url origin git@github.com:onosproject/${repo}
+git remote set-url --push upstream git@github.com:onosproject/${repo}
+
+# load up the Helm environment
+helm repo add cord https://charts.opencord.org
+helm repo add atomix https://charts.atomix.io
+helm repo add onos https://charts.onosproject.org
+helm repo add sdran --username ${WEBSITE_USER} --password ${WEBSITE_PASSWORD} https://sdrancharts.onosproject.org
+helm repo update
+
+modified_charts=$(git show HEAD | grep Chart.yaml | grep -v /charts/ | grep +++ | cut -d " " -f2 | sed s^b/^^) || true
+
+staging_area="staging"
+modified_component_charts=""
+for chart in ${modified_charts}; do
+    git --no-pager diff HEAD^ HEAD ${chart}
+    version=$(git diff HEAD^ HEAD ${chart} | grep +version: | cut -d " " -f2) || true
+    if [ ! -z ${version} ]; then
+        # figure out the tag for this chart
+        component=`echo ${chart} | cut -d "/" -f1`
+        nested_component=`echo ${chart} | cut -d "/" -f2`
+
+        if [ "$nested_component" == "Chart.yaml" ]
+        then
+          tag="${component}-${version}"
+          modified_component_charts="${modified_component_charts} ${component}"
+        else
+          tag="${component}-${nested_component}-${version}"
+          modified_component_charts="${modified_component_charts} ${component}/${nested_component}/"
+        fi
+        echo $chart bumped to version $version for component $component new tag is $tag
+
+        # Tag the tree
+        git tag $tag
+
+        # publish the tag
+        git push origin ${tag}
+    fi
+done
+
+if [ "${modified_component_charts}" = "" ]; then
+    echo No charts were modified
+    exit 0
+fi
+
+# create the tgz files for the modified charts
+rm -rf "${staging_area}"
+onos_helm_charts_dir="onos-helm-charts"
+onos_helm_charts="${staging_area}/${onos_helm_charts_dir}"
+mkdir -p ${onos_helm_charts}
+for modified_component in ${modified_component_charts}; do
+    helm dependency update ${modified_component}
+    helm package ${modified_component}
+    component_dir=$(echo ${modified_component} | cut -d "/" -f1)
+    mkdir -p ${onos_helm_charts}/${component_dir}
+    mv *.tgz ${onos_helm_charts}/${component_dir}/
+done
+
+chart_index_url="${chart_repo_url}/index.yaml"
+cd ${staging_area}
+
+# Fetch the existing published chart manifest
+curl -u ${WEBSITE_USER}:${WEBSITE_PASSWORD} -sLo current-index.yaml ${chart_index_url}
+
+# merge the new charts with the existing published ones
+helm repo index ${onos_helm_charts_dir} --url ${chart_repo_url}/onos-helm-charts --merge current-index.yaml
+rm current-index.yaml
+mv ${onos_helm_charts_dir}/index.yaml .
+
+# generate static index files
+pushd ../../build-tools && go build -o build/_output/index2md ./build/cmd/index2md && popd
+../../build-tools/build/_output/index2md -file index >index.html
+../../build-tools/build/_output/index2md -file index -html >README.md
+
+cd ..
+
+# use rsync to update the files on the webserver
+chart_directory=${chart_repo_url#"https://"}
+chmod -R g+r ${staging_area}/
+rsync -rvzh ${staging_area}/ jenkins@static.opennetworking.org:/srv/sites/${chart_directory}
+
+

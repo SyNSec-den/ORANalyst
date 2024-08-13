@@ -1,0 +1,86 @@
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+images:
+  tags:
+    cameraIngestion: registry.aetherproject.org/google/phylo-camera-ingestion-client:latest
+    videoAnalyticsServer: registry.aetherproject.org/google/phylo-video-analytics-server:latest
+    phyloRabbitmq: registry.aetherproject.org/google/phylo-rabbitmq:latest
+    phyloRabbitmqPubsub: registry.aetherproject.org/google/phylo-rmq-pubsub:latest
+    rtspServer: registry.aetherproject.org/google/phylo_rmq-rtsp-server:0.2.0
+    wowza: registry.aetherproject.org/google/wowza:latest
+    depCheck: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
+  pullPolicy: "Always"
+  credentials: {}
+  # If specified, use this credential to access the image
+  #  registry: registry.aetherproject.org
+  #  username:
+  #  password:
+
+nodeSelectors:
+  enabled: false
+  phylo:
+    label: google-phylo
+    value: enabled
+  wowza:
+    label: google-phylo
+    value: enabled
+
+resources:
+  enabled: false
+  rtspServer:
+    requests:
+      cpu: 2
+      memory: 2048Mi
+    limits:
+      cpu: 2
+      memory: 2048Mi
+  phyloRabbitmq:
+    requests:
+      cpu: 2
+      memory: 2048Mi
+    limits:
+      cpu: 2
+      memory: 2048Mi
+  phyloRabbitmqPubsub:
+    requests:
+      cpu: 2
+      memory: 2048Mi
+    limits:
+      cpu: 2
+      memory: 2048Mi
+  videoAnalyticsServer:
+    requests:
+      cpu: 5
+      memory: 2048Mi
+    limits:
+      cpu: 5
+      memory: 2048Mi
+  cameraIngestion:
+    requests:
+      cpu: 2
+      memory: 2048Mi
+    limits:
+      cpu: 2
+      memory: 2048Mi
+  wowza:
+    requests:
+      cpu: 2
+      memory: 2048Mi
+    limits:
+      cpu: 2
+      memory: 2048Mi
+
+config:
+  phylo:
+    sources:
+      - key: mystream
+        uri: rtmp://wowza:1935/live/myStream
+  wowza:
+    # wowza login: mwc / stream
+    replica: 1
+  userPlane:
+    # Set true if a separate user plane network is applicable
+    enabled: true
+    name: core

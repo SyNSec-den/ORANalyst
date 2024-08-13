@@ -1,0 +1,68 @@
+{{- /*
+
+# Copyright 2019-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+{{ tuple "accelleran-cbrs-ricweb" . | include "accelleran-cbrs-common.service_account" }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: accelleran-cbrs-ricweb
+  labels:
+{{ tuple "accelleran-cbrs-ricweb" . | include "accelleran-cbrs-common.metadata_labels" | indent 4 }}
+spec:
+  selector:
+    matchLabels:
+{{ tuple "accelleran-cbrs-ricweb" . | include "accelleran-cbrs-common.metadata_labels" | indent 6 }}
+  serviceName: accelleran-cbrs-ricweb
+  template:
+    metadata:
+      labels:
+{{ tuple "accelleran-cbrs-ricweb" . | include "accelleran-cbrs-common.metadata_labels" | indent 8 }}
+    spec:
+      serviceAccountName: accelleran-cbrs-ricweb
+    {{- if .Values.nodeSelectors.enabled }}
+      nodeSelector:
+        {{ .Values.nodeSelectors.accelleranCBRSCommon.label }}: {{ .Values.nodeSelectors.accelleranCBRSCommon.value }}
+    {{- end }}
+    {{- if hasKey .Values.images "pullSecrets" }}
+      imagePullSecrets:
+{{ toYaml .Values.images.pullSecrets | indent 8 }}
+    {{- end }}
+      initContainers:
+      - name: accelleran-cbrs-ric-dep-check
+        image: {{ .Values.images.tags.depCheck | quote }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: false
+          runAsUser: 0
+        env:
+        - name: POD_NAME
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+        - name: NAMESPACE
+          valueFrom:
+            fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+        - name: PATH
+          value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
+        - name: COMMAND
+          value: "echo done"
+        - name: DEPENDENCY_POD_JSON
+          value: '[{"labels": {"app": "accelleran-cbrs-ric"}, "requireSameNode": false}]'
+
+      containers:
+      - name: ric-web
+        image: {{ .Values.images.tags.ricWeb }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        env:
+        - name: NATS_URL
+          value: {{ .Values.config.nats.url | quote }}

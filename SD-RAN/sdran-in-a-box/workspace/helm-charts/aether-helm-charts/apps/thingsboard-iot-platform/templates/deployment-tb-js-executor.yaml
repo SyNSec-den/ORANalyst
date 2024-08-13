@@ -1,0 +1,70 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tb-js-executor
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tb-js-executor
+  template:
+    metadata:
+      labels:
+        app: tb-js-executor
+    spec:
+      serviceAccountName: thingsboard
+      initContainers:
+        - name: js-executor-dep-check
+          image: {{ .Values.images.tags.depCheck }}
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: PATH
+              value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
+            - name: COMMAND
+              value: "echo done"
+            - name: DEPENDENCY_POD_JSON
+              value: '[{"labels": {"app": "tb-kafka"}, "requireSameNode": false}]'
+          command:
+            - kubernetes-entrypoint
+          volumeMounts:
+            []
+      containers:
+        - name: server
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          image: {{ .Values.images.tags.jsExecutor }}
+          env:
+            - name: REMOTE_JS_EVAL_REQUEST_TOPIC
+              value: "js_eval.requests"
+            - name: TB_KAFKA_SERVERS
+              value: "tb-kafka:{{ .Values.config.kafka.ports.outPort}}"
+            - name: LOGGER_LEVEL
+              value: "info"
+            - name: LOG_FOLDER
+              value: "logs"
+            - name: LOGGER_FILENAME
+              value: "tb-js-executor-%DATE%.log"
+            - name: DOCKER_MODE
+              value: "true"
+            - name: SCRIPT_BODY_TRACE_FREQUENCY
+              value: "1000"
+      restartPolicy: Always

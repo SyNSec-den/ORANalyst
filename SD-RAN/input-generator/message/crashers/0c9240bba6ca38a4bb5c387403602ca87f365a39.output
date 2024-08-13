@@ -1,0 +1,10 @@
+panic: successfully created valid message: indication_message_format2:{ue_id:{} rrc_status:RRCSTATUS_INACTIVE 1:97}
+
+goroutine 1 [running]:
+ran-input/message.Fuzz({0x7fc79ec10000, 0xc, 0xc})
+	/home/tianchang/Desktop/proj/ran-input/message/message.go:36 +0x26c
+go-fuzz-dep.Main({0xc0001c5f68, 0x1, 0x103ab80?})
+	go-fuzz-dep/main.go:36 +0x15a
+main.main()
+	ran-input/message/go.fuzz.main/main.go:15 +0x3b
+exit status 2

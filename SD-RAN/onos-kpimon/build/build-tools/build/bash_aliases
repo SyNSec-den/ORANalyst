@@ -1,0 +1,74 @@
+# SPDX-FileCopyrightText: 2019-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Shell aliases for developer convenience
+
+export GOPATH=$(go env GOPATH)
+export GO111MODULE=on
+
+export CDPATH=".:$GOPATH/src/github.com/onosproject:$CDPATH"
+
+# Changes working directory to the root of the projects
+function ocd {
+    cd $GOPATH/src/github.com/onosproject/
+    p=$(ls -1 | grep $1 | head -n 1)
+    [ -n "$p" ] && cd $GOPATH/src/github.com/onosproject/$p
+}
+
+# Pull master... meaning fetch and rebase master against upstream master
+alias gpm='git fetch upstream && git checkout master && git rebase upstream/master'
+
+# Pull... meaning fetch and rebase against upstream master
+alias gp='git fetch upstream && git rebase upstream/master'
+
+# Review... meaning push the current branch to origin
+alias gr='git push origin $(git symbolic-ref HEAD)'
+
+# Review (force)... meaning push the current branch to origin
+alias grf='git push -f origin $(git symbolic-ref HEAD)'
+
+# Where am I
+alias gs='git status -b'
+
+# Lists go packages in the current project; suitable for https://go-search.org/add
+function goPackages {
+    find . -name '*.go' -exec dirname {} \; | sort -u | sed "s:^\.:github.com/onosproject/$(basename $PWD):g"
+}
+
+# Registers go packages with godoc.
+function godocPackages {
+    find . -name '*.go' -exec dirname {} \; | sort -u \
+        | sed "s:^\.:curl -sS --fail https\://godoc.org/github.com/onosproject/$(basename $PWD):g;s:\$: >/dev/null:g" \
+        | bash
+}
+
+export ONOS_REPOS="onos-lib-go onos-api onos-topo onos-config onos-cli onos-test onos-helm-charts"
+
+# Pull All Repos
+function par {
+    for p in $ONOS_REPOS; do
+        cd $GOPATH/src/github.com/onosproject/$p
+        echo -e "\033[0;32m$p\033[0m:"
+        git checkout go.mod go.sum 1>/dev/null 2>&1
+        if git status | grep -q "nothing to commit"; then
+            gpm && git push
+        else
+            echo "Skipping due to work in progress..."
+        fi
+    done
+}
+
+# eXec in All Repos
+function xar {
+    for p in $ONOS_REPOS; do
+        cd $GOPATH/src/github.com/onosproject/$p
+        echo -e "\033[0;32m$p\033[0m:"
+        $@
+    done
+}
+
+# Make All Repos
+function mar {
+    xar make $1
+}

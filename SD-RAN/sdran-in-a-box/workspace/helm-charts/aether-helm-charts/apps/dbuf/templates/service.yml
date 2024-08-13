@@ -1,0 +1,36 @@
+{{/*
+# Copyright 2021-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "dbuf.fullname" . }}
+  labels:
+    {{- include "dbuf.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "dbuf.selectorLabels" . | nindent 4 }}
+  ports:
+  - name: grpc
+    protocol: {{ .Values.service.grpc.protocol }}
+    port: {{ .Values.service.grpc.port }}
+    targetPort: grpc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "dbuf.fullname" . }}-stats
+  labels:
+    {{- include "dbuf.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "dbuf.selectorLabels" . | nindent 4 }}
+  ports:
+  - name: exporter
+    protocol: {{ .Values.service.stats.protocol }}
+    port: {{ .Values.service.stats.port }}
+    targetPort: exporter

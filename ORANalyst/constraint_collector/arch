@@ -1,0 +1,8 @@
+inter-procedure path identification
+->
+function harnessing (which function to process when encountering function call)
+==>
+intra-procedure path combination
+-> combine the paths to identify paths lead to the exit & path condition
+==>
+taint variable and constraint identification

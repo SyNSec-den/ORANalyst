@@ -1,0 +1,10 @@
+image:
+  repository: localhost:5001/rimedo-ts
+  pullPolicy: Always
+  tag: latest
+
+service:
+  grpc:
+    port: 5150
+  tcp:
+    port: 19999

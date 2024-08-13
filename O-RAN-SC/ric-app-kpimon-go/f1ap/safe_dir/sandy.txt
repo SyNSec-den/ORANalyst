@@ -1,0 +1,164 @@
+InitiatingMessage ::= {
+    procedureCode: 3
+    criticality: 0 (reject)
+    value: GNBDUConfigurationUpdate ::= {
+        protocolIEs: ProtocolIE-Container ::= {
+            GNBDUConfigurationUpdateIEs ::= {
+                id: 78
+                criticality: 0 (reject)
+                value: 1
+            }
+            GNBDUConfigurationUpdateIEs ::= {
+                id: 42
+                criticality: 0 (reject)
+                value: 3
+            }
+            GNBDUConfigurationUpdateIEs ::= {
+                id: 58
+                criticality: 0 (reject)
+                value: Served-Cells-To-Add-List ::= {
+                    ProtocolIE-SingleContainer ::= {
+                        id: 57
+                        criticality: 0 (reject)
+                        value: Served-Cells-To-Add-Item ::= {
+                            served-Cell-Information: Served-Cell-Information ::= {
+                                nRCGI: NRCGI ::= {
+                                    pLMN-Identity: 00 F1 10
+                                    nRCellIdentity: 12 34 56 00 30 (4 bits unused)
+                                }
+                                nRPCI: 3
+                                servedPLMNs: ServedPLMNs-List ::= {
+                                    ServedPLMNs-Item ::= {
+                                        pLMN-Identity: 00 F1 10
+                                    }
+                                }
+                                nR-Mode-Info: TDD-Info ::= {
+                                    nRFreqInfo: NRFreqInfo ::= {
+                                        nRARFCN: 644667
+                                        freqBandListNr: freqBandListNr ::= {
+                                            FreqBandNrItem ::= {
+                                                freqBandIndicatorNr: 257
+                                                supportedSULBandList: supportedSULBandList ::= {
+                                                }
+                                            }
+                                        }
+                                    }
+                                    transmission-Bandwidth: Transmission-Bandwidth ::= {
+                                        nRSCS: 3 (scs120)
+                                        nRNRB: 10 (nrb66)
+                                    }
+                                }
+                                measurementTimingConfiguration: 10 13 F5 FF 71 15 00
+                            }
+                        }
+                    }
+                    ProtocolIE-SingleContainer ::= {
+                        id: 57
+                        criticality: 0 (reject)
+                        value: Served-Cells-To-Add-Item ::= {
+                            served-Cell-Information: Served-Cell-Information ::= {
+                                nRCGI: NRCGI ::= {
+                                    pLMN-Identity: 00 F1 10
+                                    nRCellIdentity: 12 34 56 00 A0 (4 bits unused)
+                                }
+                                nRPCI: 10
+                                servedPLMNs: ServedPLMNs-List ::= {
+                                    ServedPLMNs-Item ::= {
+                                        pLMN-Identity: 00 F1 10
+                                    }
+                                }
+                                nR-Mode-Info: TDD-Info ::= {
+                                    nRFreqInfo: NRFreqInfo ::= {
+                                        nRARFCN: 644667
+                                        freqBandListNr: freqBandListNr ::= {
+                                            FreqBandNrItem ::= {
+                                                freqBandIndicatorNr: 257
+                                                supportedSULBandList: supportedSULBandList ::= {
+                                                }
+                                            }
+                                        }
+                                    }
+                                    transmission-Bandwidth: Transmission-Bandwidth ::= {
+                                        nRSCS: 3 (scs120)
+                                        nRNRB: 10 (nrb66)
+                                    }
+                                }
+                                measurementTimingConfiguration: 10 13 F5 FF 71 15 00
+                            }
+                        }
+                    }
+                    ProtocolIE-SingleContainer ::= {
+                        id: 57
+                        criticality: 0 (reject)
+                        value: Served-Cells-To-Add-Item ::= {
+                            served-Cell-Information: Served-Cell-Information ::= {
+                                nRCGI: NRCGI ::= {
+                                    pLMN-Identity: 00 F1 10
+                                    nRCellIdentity: 12 34 56 00 B0 (4 bits unused)
+                                }
+                                nRPCI: 11
+                                servedPLMNs: ServedPLMNs-List ::= {
+                                    ServedPLMNs-Item ::= {
+                                        pLMN-Identity: 00 F1 10
+                                    }
+                                }
+                                nR-Mode-Info: TDD-Info ::= {
+                                    nRFreqInfo: NRFreqInfo ::= {
+                                        nRARFCN: 644667
+                                        freqBandListNr: freqBandListNr ::= {
+                                            FreqBandNrItem ::= {
+                                                freqBandIndicatorNr: 257
+                                                supportedSULBandList: supportedSULBandList ::= {
+                                                }
+                                            }
+                                        }
+                                    }
+                                    transmission-Bandwidth: Transmission-Bandwidth ::= {
+                                        nRSCS: 3 (scs120)
+                                        nRNRB: 10 (nrb66)
+                                    }
+                                }
+                                measurementTimingConfiguration: 10 13 F5 FF 71 15 00
+                            }
+                        }
+                    }
+                    ProtocolIE-SingleContainer ::= {
+                        id: 57
+                        criticality: 0 (reject)
+                        value: Served-Cells-To-Add-Item ::= {
+                            served-Cell-Information: Served-Cell-Information ::= {
+                                nRCGI: NRCGI ::= {
+                                    pLMN-Identity: 00 F1 10
+                                    nRCellIdentity: 12 34 56 00 C0 (4 bits unused)
+                                }
+                                nRPCI: 12
+                                servedPLMNs: ServedPLMNs-List ::= {
+                                    ServedPLMNs-Item ::= {
+                                        pLMN-Identity: 00 F1 10
+                                    }
+                                }
+                                nR-Mode-Info: TDD-Info ::= {
+                                    nRFreqInfo: NRFreqInfo ::= {
+                                        nRARFCN: 644667
+                                        freqBandListNr: freqBandListNr ::= {
+                                            FreqBandNrItem ::= {
+                                                freqBandIndicatorNr: 257
+                                                supportedSULBandList: supportedSULBandList ::= {
+                                                }
+                                            }
+                                        }
+                                    }
+                                    transmission-Bandwidth: Transmission-Bandwidth ::= {
+                                        nRSCS: 3 (scs120)
+                                        nRNRB: 10 (nrb66)
+                                    }
+                                }
+                                measurementTimingConfiguration: 10 13 F5 FF 71 15 00
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

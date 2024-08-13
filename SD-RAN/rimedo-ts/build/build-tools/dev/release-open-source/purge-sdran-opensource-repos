@@ -1,0 +1,23 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+set -e -u -o pipefail
+
+GIT_TOKEN=$1
+
+declare -a repos=(
+  "ran-simulator"
+  "onos-e2sub"
+  "onos-e2t"
+  "onos-e2-sm"
+  "onos-pci"
+  "onos-kpimon"
+  "sdran-helm-charts"
+)
+
+
+for repo in "${repos[@]}" ; do
+  curl -X DELETE -H "Authorization: token $GIT_TOKEN" https://api.github.com/repos/sdran/$repo
+done

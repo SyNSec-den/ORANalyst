@@ -1,0 +1,655 @@
+long: bin/17d37f8e-cbfc-4352-a2e3-e89739290482.bin
+
+
+bin/b02890a1-57a0-4393-998b-28331b2f26ea.bin
+bin/1e8d6304-a40b-4789-869a-d01a6438c4b3.bin
+
+Mutating message
+Decoding successful
+SEQUENCE_mutate E2SM-KPM-IndicationMessage, st: 0x7f1136ccbd60, *st: 0x7f111bca7880
+Mutating indicationMessage
+CHOICE_mutate
+SEQUENCE_mutate E2SM-KPM-IndicationMessage-Format1, st: 0x7f1136ccbc50, *st: 0x7f111bca7890
+Mutating pm-Containers
+SET_OF_mutate
+Mutation successful
+Test encoding successful
+Encoding successful
+01 00 00 00 01 0e 02 01 fe a3 de 00 71 60 ca 20 
+01 00 01 30 74 de d1 5a 60 40 20 01 00 00 30 fb 
+47 c6 27 60 53 40 02 3b b8 3f 21 30 d8 63 7e 3b 
+60 ad 00 7e 00 80 00 b2 60 ba 00 00 30 d9 cd c3 
+6d 40 2d 40 01 be 92 b7 35 20 7e 00 7f 40 7b 00 
+7f 60 ff 30 c4 60 7c 92 20 01 00 00 60 fe 40 01 
+83 25 42 08 30 df 0a ce 70 60 00 20 01 00 01 10 
+ff fe 20 1b 20 01 00 01 60 6d 00 7f 40 01 80 5b 
+c5 2e 40 01 40 01 74 c6 87 b7 60 e3 30 67 3a 5b 
+12 40 01 c5 8a b4 a2 60 be 10 80 01 00 81 20 01 
+30 b4 ce 42 1d 60 a6 00 fe 30 2b 16 85 3d 60 7e 
+20 01 00 00 00 81 60 07 10 7f ff 10 80 00 60 0e 
+30 24 e5 ea 59 10 40 00 60 30 30 2b f6 21 bc 10 
+01 00 60 26 10 01 01 40 02 39 63 f6 21 40 c5 10 
+40 01 60 75 30 27 27 dc e6 40 02 4a 79 eb 03 60 
+63 30 34 fc df c9 40 01 6c 21 3e 87 60 00 40 02 
+2d 99 0c 24 00 81 60 44 10 3f ff 00 fe 40 d7 00 
+ff 60 04 00 01 30 9b 5f 64 58 20 6e 00 fe 60 fc 
+30 e6 c8 f8 c2 00 81 60 61 10 80 01 40 02 52 23 
+10 d0 60 00 40 02 09 58 c9 69 10 01 00 60 d9 30 
+e7 b3 0d f5 00 01 60 b4 10 80 00 20 01 00 00 60 
+21 30 4d ce d0 c7 20 01 00 01 60 ed 10 3f ff 40 
+01 02 d6 12 da 40 be 10 80 01 60 c4 30 6e 7d 46 
+93 10 01 00 60 12 40 01 14 d0 a5 7c 00 7e 20 80 
+30 f0 67 1b c0 60 b5 40 01 56 fd e3 b2 10 80 00 
+00 ff 60 f6 30 04 3a 4a 27 10 ff ff 20 4d 30 26 
+41 9c 5d 00 80 60 13 30 3f f9 8f 0c 40 01 6e 83 
+00 33 00 b9 60 b5 20 01 00 01 40 01 4b 12 22 4f 
+60 9b 40 01 3a 1e bf bf 00 01 60 2a 00 00 40 02 
+1c 56 61 94 60 00 40 01 85 39 f8 d5 10 ff fe 60 
+ed 30 5d ec 7e 08 40 01 d9 18 9a fb 60 6f 10 01 
+00 10 ff fe 60 cc 30 7b 1a c2 ea 10 3f ff 40 8e 
+10 ff ff 60 05 40 02 36 02 c1 77 30 24 0a e5 8e 
+20 de 20 01 00 01 20 0c 00 80 60 85 20 01 00 01 
+30 0e 21 b8 87 20 01 10 3f ff 40 bc 10 ff ff 20 
+5f 00 7e 20 83 10 80 01 60 d9 10 7f ff 00 80 60 
+21 10 40 00 30 e5 1b 4b 5d 60 80 10 01 00 10 01 
+00 60 80 30 8a 64 28 05 10 01 00 60 7f 10 80 01 
+40 02 53 ba 19 cc 20 ef 30 3b 0a e4 94 40 7f 30 
+65 bb a8 45 60 f3 40 01 4f 66 03 2c 00 7e 60 f6 
+10 7f ff 30 7e 84 7b 8c 60 9d 40 02 2b 08 99 9f 
+40 02 43 7b 6b e3 60 c6 40 01 71 2d 2c 63 40 02 
+1e c1 d3 46 20 ff 00 01 40 58 40 01 6d 5d 23 22 
+20 01 10 3f ff 20 3e 00 ff 20 7b 00 01 60 09 10 
+80 00 40 02 17 df 8f 63 20 80 10 01 00 60 80 00 
+7f 40 02 43 d3 0e 67 60 37 10 40 01 30 ec da 41 
+1c 60 48 10 ff fe 20 01 00 00 20 04 30 ef f8 cb 
+62 60 56 20 01 00 01 40 01 6f 91 86 44 60 21 00 
+7e 10 7f ff 60 61 40 01 d9 86 38 22 10 ff ff 60 
+cb 20 01 00 00 40 01 c0 e0 69 e2 40 3d 10 7f ff 
+20 4c 40 01 f8 3f a6 e4 60 9e 40 02 48 3d 47 6e 
+20 01 00 00 60 b5 00 fe 00 7e 20 74 40 02 4d 1b 
+21 8c 20 00 40 01 1d 4f 0e 22 40 be 20 01 00 01 
+60 e3 00 00 10 3f ff 20 c9 10 80 00 60 7e 40 01 
+46 f5 dc c8 00 ff 60 f5 40 02 29 a6 77 36 30 9b 
+6a 69 1b 40 94 40 01 52 f4 ad cd 60 f8 30 9b f6 
+b9 d3 30 0b 5d 17 09 20 e4 30 12 e3 e2 a2 60 aa 
+30 dd b4 1d f5 30 73 2f af 7f 60 fe 40 01 41 11 
+56 e2 30 b3 45 fa 95 40 3a 10 3f ff 60 00 10 80 
+00 40 01 f7 a5 ed 28 60 93 40 01 14 36 5a 6a 10 
+ff ff 60 3d 00 00 30 d8 73 3f 82 20 50 30 0a 78 
+48 9f 60 ff 40 01 27 6e 6c 26 30 2c d0 3d a2 7f 
+80 ff fb 85 db ff 45 55 d8 20 67 94 2a fe c7 48 
+24 00 f1 75 66 17 2e fe 03 86 94 fe fe 4a b4 26 
+ff f5 87 15 01 fe cf e9 83 01 88 4f d0 32 50 0f 
+ff d1 02 f7 8b d7 ff 2e 00 32 fe 01 4b 64 ec 76 
+f0 0f 12 60 d7 07 38 00 fe 0e ff c0 4d 66 61 a0 
+ff 00 01 80 5b ce 28 ff b0 fe 10 36 fe 6c 72 5d 
+6e 5b ba ed 00 da e9 3c 01 00 00 ff 9c a9 f2 c0 
+00 fb 01 ea 29 ff 80 50 c2 ff ed d2 ff 00 9a 
+Decoding successful
+<E2SM-KPM-IndicationMessage>
+    <ric-Style-Type>0</ric-Style-Type>
+    <indicationMessage>
+        <indicationMessage-Format1>
+            <pm-Containers>
+                <PM-Containers-List>
+                </PM-Containers-List>
+                <PM-Containers-List>
+                    <performanceContainer>
+                        <oCU-UP>
+                            <pf-ContainerList>
+                                <PF-ContainerListItem>
+                                    <interface-type><f1-u/></interface-type>
+                                    <o-CU-UP-PM-Container>
+                                        <plmnList>
+                                            <PlmnID-List>
+                                                <pLMN-Identity>FE A3 DE</pLMN-Identity>
+                                                <cu-UP-PM-EPC>
+                                                    <perQCIReportList>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>202</qci>
+                                                            <pDCPBytesDL>65537</pDCPBytesDL>
+                                                            <pDCPBytesUL>1960759642</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>64</qci>
+                                                            <pDCPBytesDL>65536</pDCPBytesDL>
+                                                            <pDCPBytesUL>4215784999</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>83</qci>
+                                                            <pDCPBytesDL>9591865121</pDCPBytesDL>
+                                                            <pDCPBytesUL>3630399035</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>173</qci>
+                                                            <pDCPBytesDL>126</pDCPBytesDL>
+                                                            <pDCPBytesUL>128</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>178</qci>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>186</qci>
+                                                            <pDCPBytesDL>0</pDCPBytesDL>
+                                                            <pDCPBytesUL>3654140781</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>45</qci>
+                                                            <pDCPBytesDL>7492253493</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>126</qci>
+                                                            <pDCPBytesUL>127</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>123</qci>
+                                                            <pDCPBytesDL>127</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>255</qci>
+                                                            <pDCPBytesDL>3294657682</pDCPBytesDL>
+                                                            <pDCPBytesUL>65536</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>254</qci>
+                                                            <pDCPBytesDL>6495224328</pDCPBytesDL>
+                                                            <pDCPBytesUL>3742027376</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>0</qci>
+                                                            <pDCPBytesDL>65537</pDCPBytesDL>
+                                                            <pDCPBytesUL>65534</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>27</qci>
+                                                            <pDCPBytesUL>65537</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>109</qci>
+                                                            <pDCPBytesDL>127</pDCPBytesDL>
+                                                            <pDCPBytesUL>6448465198</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>1</qci>
+                                                            <pDCPBytesDL>6254135223</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>227</qci>
+                                                            <pDCPBytesDL>1731877650</pDCPBytesDL>
+                                                            <pDCPBytesUL>7609169058</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>190</qci>
+                                                            <pDCPBytesDL>32769</pDCPBytesDL>
+                                                            <pDCPBytesUL>129</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>1</qci>
+                                                            <pDCPBytesUL>3033416221</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>166</qci>
+                                                            <pDCPBytesDL>254</pDCPBytesDL>
+                                                            <pDCPBytesUL>722896189</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>126</qci>
+                                                            <pDCPBytesDL>65536</pDCPBytesDL>
+                                                            <pDCPBytesUL>129</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>7</qci>
+                                                            <pDCPBytesDL>32767</pDCPBytesDL>
+                                                            <pDCPBytesUL>32768</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>14</qci>
+                                                            <pDCPBytesDL>619047513</pDCPBytesDL>
+                                                            <pDCPBytesUL>16384</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>48</qci>
+                                                            <pDCPBytesDL>737550780</pDCPBytesDL>
+                                                            <pDCPBytesUL>256</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>38</qci>
+                                                            <pDCPBytesDL>257</pDCPBytesDL>
+                                                            <pDCPBytesUL>9552786977</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>197</qci>
+                                                            <pDCPBytesDL>16385</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>117</qci>
+                                                            <pDCPBytesDL>656923878</pDCPBytesDL>
+                                                            <pDCPBytesUL>9839438595</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>99</qci>
+                                                            <pDCPBytesDL>888987593</pDCPBytesDL>
+                                                            <pDCPBytesUL>6109085319</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>0</qci>
+                                                            <pDCPBytesDL>9354939428</pDCPBytesDL>
+                                                            <pDCPBytesUL>129</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>68</qci>
+                                                            <pDCPBytesDL>16383</pDCPBytesDL>
+                                                            <pDCPBytesUL>254</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>215</qci>
+                                                            <pDCPBytesDL>255</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>4</qci>
+                                                            <pDCPBytesDL>1</pDCPBytesDL>
+                                                            <pDCPBytesUL>2606720088</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>110</qci>
+                                                            <pDCPBytesUL>254</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>252</qci>
+                                                            <pDCPBytesDL>3871930562</pDCPBytesDL>
+                                                            <pDCPBytesUL>129</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>97</qci>
+                                                            <pDCPBytesDL>32769</pDCPBytesDL>
+                                                            <pDCPBytesUL>9967964368</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>0</qci>
+                                                            <pDCPBytesDL>8746748265</pDCPBytesDL>
+                                                            <pDCPBytesUL>256</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>217</qci>
+                                                            <pDCPBytesDL>3887271413</pDCPBytesDL>
+                                                            <pDCPBytesUL>1</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>180</qci>
+                                                            <pDCPBytesDL>32768</pDCPBytesDL>
+                                                            <pDCPBytesUL>65536</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>33</qci>
+                                                            <pDCPBytesDL>1305399495</pDCPBytesDL>
+                                                            <pDCPBytesUL>65537</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>237</qci>
+                                                            <pDCPBytesDL>16383</pDCPBytesDL>
+                                                            <pDCPBytesUL>4342551258</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>190</qci>
+                                                            <pDCPBytesDL>32769</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>196</qci>
+                                                            <pDCPBytesDL>1853703827</pDCPBytesDL>
+                                                            <pDCPBytesUL>256</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>18</qci>
+                                                            <pDCPBytesDL>4644185468</pDCPBytesDL>
+                                                            <pDCPBytesUL>126</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>128</qci>
+                                                            <pDCPBytesUL>4033289152</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>181</qci>
+                                                            <pDCPBytesDL>5754446770</pDCPBytesDL>
+                                                            <pDCPBytesUL>32768</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>255</qci>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>246</qci>
+                                                            <pDCPBytesDL>70928935</pDCPBytesDL>
+                                                            <pDCPBytesUL>65535</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>77</qci>
+                                                            <pDCPBytesUL>641834077</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>128</qci>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>19</qci>
+                                                            <pDCPBytesDL>1073319692</pDCPBytesDL>
+                                                            <pDCPBytesUL>6149046323</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>185</qci>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>181</qci>
+                                                            <pDCPBytesDL>65537</pDCPBytesDL>
+                                                            <pDCPBytesUL>5554446927</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>155</qci>
+                                                            <pDCPBytesDL>5270060991</pDCPBytesDL>
+                                                            <pDCPBytesUL>1</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>42</qci>
+                                                            <pDCPBytesDL>0</pDCPBytesDL>
+                                                            <pDCPBytesUL>9065357716</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>0</qci>
+                                                            <pDCPBytesDL>6530136277</pDCPBytesDL>
+                                                            <pDCPBytesUL>65534</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>237</qci>
+                                                            <pDCPBytesDL>1575779848</pDCPBytesDL>
+                                                            <pDCPBytesUL>7937235707</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>111</qci>
+                                                            <pDCPBytesDL>256</pDCPBytesDL>
+                                                            <pDCPBytesUL>65534</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>204</qci>
+                                                            <pDCPBytesDL>2065351402</pDCPBytesDL>
+                                                            <pDCPBytesUL>16383</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>142</qci>
+                                                            <pDCPBytesDL>65535</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>5</qci>
+                                                            <pDCPBytesDL>9496084855</pDCPBytesDL>
+                                                            <pDCPBytesUL>604693902</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>222</qci>
+                                                            <pDCPBytesUL>65537</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>12</qci>
+                                                            <pDCPBytesUL>128</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>133</qci>
+                                                            <pDCPBytesDL>65537</pDCPBytesDL>
+                                                            <pDCPBytesUL>237090951</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>1</qci>
+                                                            <pDCPBytesUL>16383</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>188</qci>
+                                                            <pDCPBytesDL>65535</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>95</qci>
+                                                            <pDCPBytesUL>126</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>131</qci>
+                                                            <pDCPBytesUL>32769</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>217</qci>
+                                                            <pDCPBytesDL>32767</pDCPBytesDL>
+                                                            <pDCPBytesUL>128</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>33</qci>
+                                                            <pDCPBytesDL>16384</pDCPBytesDL>
+                                                            <pDCPBytesUL>3843771229</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>128</qci>
+                                                            <pDCPBytesDL>256</pDCPBytesDL>
+                                                            <pDCPBytesUL>256</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>128</qci>
+                                                            <pDCPBytesDL>2321819653</pDCPBytesDL>
+                                                            <pDCPBytesUL>256</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>127</qci>
+                                                            <pDCPBytesDL>32769</pDCPBytesDL>
+                                                            <pDCPBytesUL>9994639820</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>239</qci>
+                                                            <pDCPBytesUL>990569620</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>127</qci>
+                                                            <pDCPBytesDL>1706797125</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>243</qci>
+                                                            <pDCPBytesDL>5627052844</pDCPBytesDL>
+                                                            <pDCPBytesUL>126</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>246</qci>
+                                                            <pDCPBytesDL>32767</pDCPBytesDL>
+                                                            <pDCPBytesUL>2122611596</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>157</qci>
+                                                            <pDCPBytesDL>9311918495</pDCPBytesDL>
+                                                            <pDCPBytesUL>9722096611</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>198</qci>
+                                                            <pDCPBytesDL>6193753187</pDCPBytesDL>
+                                                            <pDCPBytesUL>9105953606</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>255</qci>
+                                                            <pDCPBytesUL>1</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>88</qci>
+                                                            <pDCPBytesDL>6129787682</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>1</qci>
+                                                            <pDCPBytesUL>16383</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>62</qci>
+                                                            <pDCPBytesUL>255</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>123</qci>
+                                                            <pDCPBytesUL>1</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>9</qci>
+                                                            <pDCPBytesDL>32768</pDCPBytesDL>
+                                                            <pDCPBytesUL>8990461795</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>128</qci>
+                                                            <pDCPBytesUL>256</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>128</qci>
+                                                            <pDCPBytesDL>127</pDCPBytesDL>
+                                                            <pDCPBytesUL>9727839847</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>55</qci>
+                                                            <pDCPBytesDL>16385</pDCPBytesDL>
+                                                            <pDCPBytesUL>3973726492</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>72</qci>
+                                                            <pDCPBytesDL>65534</pDCPBytesDL>
+                                                            <pDCPBytesUL>65536</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>4</qci>
+                                                            <pDCPBytesUL>4026059618</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>86</qci>
+                                                            <pDCPBytesDL>65537</pDCPBytesDL>
+                                                            <pDCPBytesUL>6166775364</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>33</qci>
+                                                            <pDCPBytesDL>126</pDCPBytesDL>
+                                                            <pDCPBytesUL>32767</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>97</qci>
+                                                            <pDCPBytesDL>7944419362</pDCPBytesDL>
+                                                            <pDCPBytesUL>65535</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>203</qci>
+                                                            <pDCPBytesDL>65536</pDCPBytesDL>
+                                                            <pDCPBytesUL>7530899938</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>61</qci>
+                                                            <pDCPBytesDL>32767</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>76</qci>
+                                                            <pDCPBytesUL>8459888356</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>158</qci>
+                                                            <pDCPBytesDL>9801910126</pDCPBytesDL>
+                                                            <pDCPBytesUL>65536</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>181</qci>
+                                                            <pDCPBytesDL>254</pDCPBytesDL>
+                                                            <pDCPBytesUL>126</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>116</qci>
+                                                            <pDCPBytesUL>9883558284</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>0</qci>
+                                                            <pDCPBytesUL>4786687522</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>190</qci>
+                                                            <pDCPBytesDL>65537</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>227</qci>
+                                                            <pDCPBytesDL>0</pDCPBytesDL>
+                                                            <pDCPBytesUL>16383</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>201</qci>
+                                                            <pDCPBytesUL>32768</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>126</qci>
+                                                            <pDCPBytesDL>5485485256</pDCPBytesDL>
+                                                            <pDCPBytesUL>255</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>245</qci>
+                                                            <pDCPBytesDL>9288709942</pDCPBytesDL>
+                                                            <pDCPBytesUL>2607442203</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>148</qci>
+                                                            <pDCPBytesDL>5686734285</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>248</qci>
+                                                            <pDCPBytesDL>2616637907</pDCPBytesDL>
+                                                            <pDCPBytesUL>190650121</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>228</qci>
+                                                            <pDCPBytesUL>316924578</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>170</qci>
+                                                            <pDCPBytesDL>3719568885</pDCPBytesDL>
+                                                            <pDCPBytesUL>1932504959</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>254</qci>
+                                                            <pDCPBytesDL>5386622690</pDCPBytesDL>
+                                                            <pDCPBytesUL>3007707797</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>58</qci>
+                                                            <pDCPBytesDL>16383</pDCPBytesDL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>0</qci>
+                                                            <pDCPBytesDL>32768</pDCPBytesDL>
+                                                            <pDCPBytesUL>8449813800</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>147</qci>
+                                                            <pDCPBytesDL>4634073706</pDCPBytesDL>
+                                                            <pDCPBytesUL>65535</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>61</qci>
+                                                            <pDCPBytesDL>0</pDCPBytesDL>
+                                                            <pDCPBytesUL>3631431554</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>80</qci>
+                                                            <pDCPBytesUL>175655071</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                        <PerQCIReportListItemFormat>
+                                                            <qci>255</qci>
+                                                            <pDCPBytesDL>4956515366</pDCPBytesDL>
+                                                            <pDCPBytesUL>751844770</pDCPBytesUL>
+                                                        </PerQCIReportListItemFormat>
+                                                    </perQCIReportList>
+                                                </cu-UP-PM-EPC>
+                                            </PlmnID-List>
+                                        </plmnList>
+                                    </o-CU-UP-PM-Container>
+                                </PF-ContainerListItem>
+                            </pf-ContainerList>
+                        </oCU-UP>
+                    </performanceContainer>
+                    <theRANContainer>
+                        80 FF FB 85 DB FF 45 55 D8 20 67 94 2A FE C7 48 
+                        24 00 F1 75 66 17 2E FE 03 86 94 FE FE 4A B4 26 
+                        FF F5 87 15 01 FE CF E9 83 01 88 4F D0 32 50 0F 
+                        FF D1 02 F7 8B D7 FF 2E 00 32 FE 01 4B 64 EC 76 
+                        F0 0F 12 60 D7 07 38 00 FE 0E FF C0 4D 66 61 A0 
+                        FF 00 01 80 5B CE 28 FF B0 FE 10 36 FE 6C 72 5D 
+                        6E 5B BA ED 00 DA E9 3C 01 00 00 FF 9C A9 F2 C0 
+                        00 FB 01 EA 29 FF 80 50 C2 FF ED D2 FF 00 9A
+                    </theRANContainer>
+                </PM-Containers-List>
+            </pm-Containers>
+        </indicationMessage-Format1>
+    </indicationMessage>
+</E2SM-KPM-IndicationMessage>

@@ -1,0 +1,76 @@
+# Copyright 2020-present Open Networking Foundation
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: "{{ .Release.Name }}"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opendistro-config
+  template:
+    metadata:
+      labels:
+        app: opendistro-config
+    spec:
+      containers:
+        - name: config
+          image: opennetworking/utils:jq-kubectl-curl
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: ES_URL
+              value: "{{ .Values.elasticsearch.host }}:{{ .Values.elasticsearch.port}}"
+            {{ if .Values.configuration.setting }}
+            - name: SETTING_DIR
+              value: "{{ .Values.configuration.base_dir }}/{{ .Values.configuration.setting }}"
+            {{ end }}
+            {{ if .Values.configuration.monitor }}
+            - name: MONITOR_DIR
+              value: "{{ .Values.configuration.base_dir }}/{{ .Values.configuration.monitor }}"
+            {{ end }}
+            {{ if .Values.configuration.destination }}
+            - name: DEST_DIR
+              value: "{{ .Values.configuration.base_dir }}/{{ .Values.configuration.destination }}"
+            {{ end }}
+          volumeMounts:
+            - name: config-script
+              mountPath: /tmp/update.sh
+              subPath: update.sh
+            {{ if .Values.configuration.setting }}
+            - name: setting-configs
+              mountPath: "{{ .Values.configuration.base_dir }}/{{ .Values.configuration.setting }}"
+            {{ end }}
+            {{ if .Values.configuration.monitor }}
+            - name: monitor-configs
+              mountPath: "{{ .Values.configuration.base_dir }}/{{ .Values.configuration.monitor }}"
+            {{ end }}
+            {{ if .Values.configuration.destination }}
+            - name: destination-configs
+              mountPath: "{{ .Values.configuration.base_dir }}/{{ .Values.configuration.destination }}"
+            {{ end }}
+          command: ["sh", "-c", "/tmp/update.sh"]
+      volumes:
+        - name: "config-script"
+          configMap:
+            name: "{{ .Release.Name }}-scripts"
+            defaultMode: 0755
+        {{ if .Values.configuration.setting }}
+        - name: "setting-configs"
+          configMap:
+            name: "{{ .Values.configuration.setting_configmap }}"
+            defaultMode: 0644
+        {{ end }}
+        {{ if .Values.configuration.monitor }}
+        - name: "monitor-configs"
+          configMap:
+            name: "{{ .Values.configuration.monitor_configmap }}"
+            defaultMode: 0644
+        {{ end }}
+        {{ if .Values.configuration.destination }}
+        - name: "destination-configs"
+          secret:
+            secretName: "{{ .Values.configuration.destination_secret }}"
+            defaultMode: 0644
+        {{ end }}

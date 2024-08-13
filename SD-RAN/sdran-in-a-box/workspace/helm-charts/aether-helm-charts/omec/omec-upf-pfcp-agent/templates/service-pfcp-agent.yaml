@@ -1,0 +1,29 @@
+{{/*
+# Copyright 2020-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pfcp-agent
+  labels:
+{{ tuple "pfcp" . | include "omec-upf-pfcp-agent.metadata_labels" | indent 4 }}
+{{- with .Values.service.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+{{- end }}
+spec:
+  type: {{ .Values.service.type }}
+{{- if .Values.service.externalIp }}
+  externalIPs:
+    - {{ .Values.service.externalIp }}
+{{- end }}
+  selector:
+{{ tuple "pfcp" . | include "omec-upf-pfcp-agent.metadata_labels" | indent 4 }}
+  ports:
+  - name: pfcp
+    port: 8805
+    protocol: UDP

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+image=$1
+ip=$2
+
+docker tag ${image} ${ip}/${image}
+docker push ${ip}/${image}

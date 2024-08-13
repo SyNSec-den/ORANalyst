@@ -1,0 +1,38 @@
+//line /home/tianchang/.cache/go-build/b6/b67d6145e2394173b6c64fa2ba8d96ea551c3d32355dfd91b45ab8887c81ad25-d:1
+package net
+
+//line /home/tianchang/.cache/go-build/b6/b67d6145e2394173b6c64fa2ba8d96ea551c3d32355dfd91b45ab8887c81ad25-d:1
+import (
+//line /home/tianchang/.cache/go-build/b6/b67d6145e2394173b6c64fa2ba8d96ea551c3d32355dfd91b45ab8887c81ad25-d:1
+	_go_fuzz_dep_ "go-fuzz-dep"
+//line /home/tianchang/.cache/go-build/b6/b67d6145e2394173b6c64fa2ba8d96ea551c3d32355dfd91b45ab8887c81ad25-d:1
+)
+//line /home/tianchang/.cache/go-build/b6/b67d6145e2394173b6c64fa2ba8d96ea551c3d32355dfd91b45ab8887c81ad25-d:1
+import (
+//line /home/tianchang/.cache/go-build/b6/b67d6145e2394173b6c64fa2ba8d96ea551c3d32355dfd91b45ab8887c81ad25-d:1
+	_atomic_ "sync/atomic"
+//line /home/tianchang/.cache/go-build/b6/b67d6145e2394173b6c64fa2ba8d96ea551c3d32355dfd91b45ab8887c81ad25-d:1
+)
+
+//line /home/tianchang/.cache/go-build/b6/b67d6145e2394173b6c64fa2ba8d96ea551c3d32355dfd91b45ab8887c81ad25-d:1
+var
+//go:cgo_import_dynamic free free#GLIBC_2.2.5 "libc.so.6"
+//go:cgo_import_dynamic __errno_location __errno_location#GLIBC_2.2.5 "libpthread.so.0"
+//go:cgo_import_dynamic _ITM_deregisterTMCloneTable _ITM_deregisterTMCloneTable ""
+//go:cgo_import_dynamic gai_strerror gai_strerror#GLIBC_2.2.5 "libc.so.6"
+//go:cgo_import_dynamic getnameinfo getnameinfo#GLIBC_2.2.5 "libc.so.6"
+//go:cgo_import_dynamic __libc_start_main __libc_start_main#GLIBC_2.2.5 "libc.so.6"
+//go:cgo_import_dynamic __gmon_start__ __gmon_start__ ""
+//go:cgo_import_dynamic malloc malloc#GLIBC_2.2.5 "libc.so.6"
+//go:cgo_import_dynamic __res_search __res_search#GLIBC_2.2.5 "libresolv.so.2"
+//go:cgo_import_dynamic _ITM_registerTMCloneTable _ITM_registerTMCloneTable ""
+//go:cgo_import_dynamic getaddrinfo getaddrinfo#GLIBC_2.2.5 "libc.so.6"
+//go:cgo_import_dynamic __cxa_finalize __cxa_finalize#GLIBC_2.2.5 "libc.so.6"
+//go:cgo_import_dynamic freeaddrinfo freeaddrinfo#GLIBC_2.2.5 "libc.so.6"
+//go:cgo_import_dynamic _ _ "libresolv.so.2"
+//go:cgo_import_dynamic _ _ "libpthread.so.0"
+//go:cgo_import_dynamic _ _ "libc.so.6"
+//line /home/tianchang/.cache/go-build/b6/b67d6145e2394173b6c64fa2ba8d96ea551c3d32355dfd91b45ab8887c81ad25-d:1
+_ = _atomic_.LoadUint32(&_go_fuzz_dep_.NoUse)
+//line /home/tianchang/.cache/go-build/b6/b67d6145e2394173b6c64fa2ba8d96ea551c3d32355dfd91b45ab8887c81ad25-d:1
+var _ = _go_fuzz_dep_.CoverTab

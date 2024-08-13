@@ -1,0 +1,1145 @@
+found valid indMsg input: indication_message_format1:{ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{6:48}}} meas_report:{cgi:{} rsrp:{6:48 6:48 6:48 6:48}} meas_report:{cgi:{} rsrp:{} five_qi:{}} meas_report:{cgi:{} rsrp:{6:48}} meas_report:{cgi:{} rsrp:{} five_qi:{}} meas_report:{cgi:{} rsrp:{} 6:48} meas_report:{cgi:{} rsrp:{value:10}} 6:48}
+2023-07-19T11:21:52.484-0400	DEBUG	github.com/onosproject/onos-e2-sm/servicemodels/e2sm_mho_go/encoder	encoder/E2SM-MHO-IndicationMessage.go:16	Obtained E2SM-MHO-IndicationMessage message is
+indication_message_format1:{ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{6:48}}} meas_report:{cgi:{} rsrp:{6:48 6:48 6:48 6:48}} meas_report:{cgi:{} rsrp:{} five_qi:{}} meas_report:{cgi:{} rsrp:{6:48}} meas_report:{cgi:{} rsrp:{} five_qi:{}} meas_report:{cgi:{} rsrp:{} 6:48} meas_report:{cgi:{} rsrp:{value:10}} 6:48}
+2023-07-19T11:21:52.484-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.E2SmMhoIndicationMessage ptr
+2023-07-19T11:21:52.484-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.E2SmMhoIndicationMessage struct
+2023-07-19T11:21:52.484-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.E2SmMhoIndicationMessage
+2023-07-19T11:21:52.484-0400	DEBUG	asn1/aper	aper/marshal.go:1014	CHOICE can be extended
+2023-07-19T11:21:52.484-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoIndicationMessage ignoring unexported field : state
+2023-07-19T11:21:52.484-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoIndicationMessage ignoring unexported field : sizeCache
+2023-07-19T11:21:52.485-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoIndicationMessage ignoring unexported field : unknownFields
+2023-07-19T11:21:52.485-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling E2SmMhoIndicationMessage
+2023-07-19T11:21:52.485-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.485-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoIndicationMessage ignoring unexported field : state
+2023-07-19T11:21:52.485-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.486-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoIndicationMessage ignoring unexported field : sizeCache
+2023-07-19T11:21:52.486-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoIndicationMessage ignoring unexported field : unknownFields
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is E2SmMhoIndicationMessage
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1153	ValueExt (i.e., if current CHOICE item is extensible) is true
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1154	FromChoiceExt is false
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1155	Amount of values which are not in extension is 2
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1156	Choice map length is 2
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1157	Choice can be extended is true
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:763	Current present is 1
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  1 bits, byteLen(after): 1, bitsOffset(after): 1, value: 0x00]
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:792	The upperbound of choice is 2
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:798	Encoding Present index of CHOICE  1 - 1
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:101	Putting Constraint Value 0 with range 2
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 1, bitsOffset(after): 2, value: 0x00]
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.E2SmMhoIndicationMessage_IndicationMessageFormat1 ptr
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.E2SmMhoIndicationMessage_IndicationMessageFormat1 struct
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.E2SmMhoIndicationMessage_IndicationMessageFormat1
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling IndicationMessageFormat1
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is IndicationMessageFormat1
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.E2SmMhoIndicationMessageFormat1 ptr
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.E2SmMhoIndicationMessageFormat1 struct
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.E2SmMhoIndicationMessageFormat1
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1006	SEQUENCE can be extended
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : state
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : sizeCache
+2023-07-19T11:21:52.487-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : unknownFields
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling UeId
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling MeasReport
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1073	SEQUENCE extension is not present. Encoding Value Extensive Bit: false
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 1, bitsOffset(after): 3, value: 0x00]
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : state
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : sizeCache
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : unknownFields
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is UeId
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.Ueid ptr
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.Ueid struct
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.Ueid
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Ueid ignoring unexported field : state
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Ueid ignoring unexported field : sizeCache
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Ueid ignoring unexported field : unknownFields
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Ueid
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Ueid ignoring unexported field : state
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Ueid ignoring unexported field : sizeCache
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Ueid ignoring unexported field : unknownFields
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Ueid
+2023-07-19T11:21:52.488-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:1153	ValueExt (i.e., if current CHOICE item is extensible) is true
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:1154	FromChoiceExt is false
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:1155	Amount of values which are not in extension is 7
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:1156	Choice map length is 7
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:1157	Choice can be extended is false
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:763	Current present is 2
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:792	The upperbound of choice is 7
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:798	Encoding Present index of CHOICE  2 - 1
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:101	Putting Constraint Value 1 with range 7
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  3 bits, byteLen(after): 1, bitsOffset(after): 6, value: 0x20]
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.Ueid_GNbDuUeid ptr
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.Ueid_GNbDuUeid struct
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.Ueid_GNbDuUeid
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling GNbDuUeid
+2023-07-19T11:21:52.489-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is GNbDuUeid
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.UeidGnbDu ptr
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.UeidGnbDu struct
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.UeidGnbDu
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1006	SEQUENCE can be extended
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct UeidGnbDu ignoring unexported field : state
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct UeidGnbDu ignoring unexported field : sizeCache
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct UeidGnbDu ignoring unexported field : unknownFields
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling GNbCuUeF1ApId
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling RanUeid
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1073	SEQUENCE extension is not present. Encoding Value Extensive Bit: false
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 1, bitsOffset(after): 7, value: 0x00]
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1079	putting optional(1), optionalPresents is 0
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 1, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct UeidGnbDu ignoring unexported field : state
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct UeidGnbDu ignoring unexported field : sizeCache
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.490-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct UeidGnbDu ignoring unexported field : unknownFields
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is GNbCuUeF1ApId
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.GnbCuUeF1ApId ptr
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.GnbCuUeF1ApId struct
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.GnbCuUeF1ApId
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct GnbCuUeF1ApId ignoring unexported field : state
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct GnbCuUeF1ApId ignoring unexported field : sizeCache
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct GnbCuUeF1ApId ignoring unexported field : unknownFields
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Value
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct GnbCuUeF1ApId ignoring unexported field : state
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct GnbCuUeF1ApId ignoring unexported field : sizeCache
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct GnbCuUeF1ApId ignoring unexported field : unknownFields
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Value
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.491-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding int64 int64
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type int64
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:566	Putting value Extension bit
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:574	Encoding INTEGER with Value Range(0..4294967295)
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  1 bits, byteLen(after): 2, bitsOffset(after): 1, value: 0x00]
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:655	Encoding INTEGER Length 1-1 in 2 bits
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  2 bits, byteLen(after): 2, bitsOffset(after): 3, value: 0x00]
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:661	Encoding INTEGER 0 with 1 bytes
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:40	Aligning 5 bits
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:41	  [PER put  5 bits, byteLen(after): 2, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  8 bits, byteLen(after): 3, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 4
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1101	Field "sizeCache" in e2smv2ies.UeidGnbDu is OPTIONAL and not present
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 4
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is MeasReport
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding []*e2smmho.E2SmMhoMeasurementReportItem slice
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type []*e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:740	Encoding Length(6) of "SEQUENCE OF"  with Size Range(1..100)
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:101	Putting Constraint Value 5 with range 100
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  7 bits, byteLen(after): 4, bitsOffset(after): 7, value: 0x0a]
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:750	Encoding  "SEQUENCE OF" struct  with len(6)
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.E2SmMhoMeasurementReportItem ptr
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.E2SmMhoMeasurementReportItem struct
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1006	SEQUENCE can be extended
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Rsrp
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling FiveQi
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1073	SEQUENCE extension is not present. Encoding Value Extensive Bit: false
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 4, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1079	putting optional(1), optionalPresents is 0
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  1 bits, byteLen(after): 5, bitsOffset(after): 1, value: 0x00]
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.492-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Cgi
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.Cgi ptr
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.Cgi struct
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.Cgi
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1014	CHOICE can be extended
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 4
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Rsrp
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.Rsrp ptr
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.Rsrp struct
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.Rsrp
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Value
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.493-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Value
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding int32 int32
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type int32
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:566	Putting value Extension bit
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:574	Encoding INTEGER with Value Range(-65536..65536)
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 5, bitsOffset(after): 2, value: 0x00]
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:655	Encoding INTEGER Length 3-1 in 2 bits
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  2 bits, byteLen(after): 5, bitsOffset(after): 4, value: 0x80]
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:661	Encoding INTEGER 0 with 3 bytes
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:40	Aligning 4 bits
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:41	  [PER put  4 bits, byteLen(after): 5, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put 24 bits, byteLen(after): 8, bitsOffset(after): 0, value: 0x010000]
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 5
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1101	Field "unknownFields" in e2smmho.E2SmMhoMeasurementReportItem is OPTIONAL and not present
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.E2SmMhoMeasurementReportItem ptr
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.E2SmMhoMeasurementReportItem struct
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1006	SEQUENCE can be extended
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Rsrp
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling FiveQi
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1073	SEQUENCE extension is not present. Encoding Value Extensive Bit: false
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  1 bits, byteLen(after): 9, bitsOffset(after): 1, value: 0x00]
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1079	putting optional(1), optionalPresents is 1
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 9, bitsOffset(after): 2, value: 0x80]
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Cgi
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.Cgi ptr
+2023-07-19T11:21:52.494-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.Cgi struct
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.Cgi
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1014	CHOICE can be extended
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 4
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Rsrp
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.Rsrp ptr
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.Rsrp struct
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.Rsrp
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Value
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Value
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding int32 int32
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type int32
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:566	Putting value Extension bit
+2023-07-19T11:21:52.495-0400	DEBUG	asn1/aper	aper/marshal.go:574	Encoding INTEGER with Value Range(-65536..65536)
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 9, bitsOffset(after): 3, value: 0x00]
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:655	Encoding INTEGER Length 3-1 in 2 bits
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  2 bits, byteLen(after): 9, bitsOffset(after): 5, value: 0x80]
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:661	Encoding INTEGER 0 with 3 bytes
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:40	Aligning 3 bits
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:41	  [PER put  3 bits, byteLen(after): 9, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put 24 bits, byteLen(after): 12, bitsOffset(after): 0, value: 0x010000]
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 5
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1104	Field "unknownFields" in e2smmho.E2SmMhoMeasurementReportItem is OPTIONAL and present
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is FiveQi
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.FiveQi ptr
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.FiveQi struct
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.FiveQi
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct FiveQi ignoring unexported field : state
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct FiveQi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct FiveQi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Value
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct FiveQi ignoring unexported field : state
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct FiveQi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct FiveQi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Value
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding int32 int32
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type int32
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:566	Putting value Extension bit
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:574	Encoding INTEGER with Value Range(0..255)
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  1 bits, byteLen(after): 13, bitsOffset(after): 1, value: 0x00]
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:101	Putting Constraint Value 0 with range 256
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:40	Aligning 7 bits
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:41	  [PER put  7 bits, byteLen(after): 13, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  8 bits, byteLen(after): 14, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.E2SmMhoMeasurementReportItem ptr
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.E2SmMhoMeasurementReportItem struct
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1006	SEQUENCE can be extended
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Rsrp
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling FiveQi
+2023-07-19T11:21:52.496-0400	DEBUG	asn1/aper	aper/marshal.go:1073	SEQUENCE extension is not present. Encoding Value Extensive Bit: false
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  1 bits, byteLen(after): 15, bitsOffset(after): 1, value: 0x00]
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1079	putting optional(1), optionalPresents is 0
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 15, bitsOffset(after): 2, value: 0x00]
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Cgi
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.Cgi ptr
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.Cgi struct
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.Cgi
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1014	CHOICE can be extended
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 4
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Rsrp
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.Rsrp ptr
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.Rsrp struct
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.Rsrp
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.497-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Value
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Value
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding int32 int32
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type int32
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:566	Putting value Extension bit
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:574	Encoding INTEGER with Value Range(-65536..65536)
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 15, bitsOffset(after): 3, value: 0x00]
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:655	Encoding INTEGER Length 3-1 in 2 bits
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  2 bits, byteLen(after): 15, bitsOffset(after): 5, value: 0x80]
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:661	Encoding INTEGER 0 with 3 bytes
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:40	Aligning 3 bits
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:41	  [PER put  3 bits, byteLen(after): 15, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put 24 bits, byteLen(after): 18, bitsOffset(after): 0, value: 0x010000]
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 5
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1101	Field "unknownFields" in e2smmho.E2SmMhoMeasurementReportItem is OPTIONAL and not present
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.E2SmMhoMeasurementReportItem ptr
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.E2SmMhoMeasurementReportItem struct
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1006	SEQUENCE can be extended
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Rsrp
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling FiveQi
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1073	SEQUENCE extension is not present. Encoding Value Extensive Bit: false
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  1 bits, byteLen(after): 19, bitsOffset(after): 1, value: 0x00]
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1079	putting optional(1), optionalPresents is 1
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 19, bitsOffset(after): 2, value: 0x80]
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.498-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Cgi
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.Cgi ptr
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.Cgi struct
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.Cgi
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1014	CHOICE can be extended
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 4
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Rsrp
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.Rsrp ptr
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.Rsrp struct
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.Rsrp
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Value
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.499-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Value
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding int32 int32
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type int32
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:566	Putting value Extension bit
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:574	Encoding INTEGER with Value Range(-65536..65536)
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 19, bitsOffset(after): 3, value: 0x00]
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:655	Encoding INTEGER Length 3-1 in 2 bits
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  2 bits, byteLen(after): 19, bitsOffset(after): 5, value: 0x80]
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:661	Encoding INTEGER 0 with 3 bytes
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:40	Aligning 3 bits
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:41	  [PER put  3 bits, byteLen(after): 19, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put 24 bits, byteLen(after): 22, bitsOffset(after): 0, value: 0x010000]
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 5
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1104	Field "unknownFields" in e2smmho.E2SmMhoMeasurementReportItem is OPTIONAL and present
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is FiveQi
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.FiveQi ptr
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.FiveQi struct
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.FiveQi
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct FiveQi ignoring unexported field : state
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct FiveQi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct FiveQi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Value
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct FiveQi ignoring unexported field : state
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct FiveQi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct FiveQi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Value
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding int32 int32
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type int32
+2023-07-19T11:21:52.500-0400	DEBUG	asn1/aper	aper/marshal.go:566	Putting value Extension bit
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:574	Encoding INTEGER with Value Range(0..255)
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  1 bits, byteLen(after): 23, bitsOffset(after): 1, value: 0x00]
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:101	Putting Constraint Value 0 with range 256
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:40	Aligning 7 bits
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:41	  [PER put  7 bits, byteLen(after): 23, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  8 bits, byteLen(after): 24, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.E2SmMhoMeasurementReportItem ptr
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.E2SmMhoMeasurementReportItem struct
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1006	SEQUENCE can be extended
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Rsrp
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling FiveQi
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1073	SEQUENCE extension is not present. Encoding Value Extensive Bit: false
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  1 bits, byteLen(after): 25, bitsOffset(after): 1, value: 0x00]
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1079	putting optional(1), optionalPresents is 0
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 25, bitsOffset(after): 2, value: 0x00]
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Cgi
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.Cgi ptr
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.Cgi struct
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.Cgi
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1014	CHOICE can be extended
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.501-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 4
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Rsrp
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.Rsrp ptr
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.Rsrp struct
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.Rsrp
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Value
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Value
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding int32 int32
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type int32
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:566	Putting value Extension bit
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:574	Encoding INTEGER with Value Range(-65536..65536)
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 25, bitsOffset(after): 3, value: 0x00]
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:655	Encoding INTEGER Length 3-1 in 2 bits
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  2 bits, byteLen(after): 25, bitsOffset(after): 5, value: 0x80]
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:661	Encoding INTEGER 0 with 3 bytes
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:40	Aligning 3 bits
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:41	  [PER put  3 bits, byteLen(after): 25, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put 24 bits, byteLen(after): 28, bitsOffset(after): 0, value: 0x010000]
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 5
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1101	Field "unknownFields" in e2smmho.E2SmMhoMeasurementReportItem is OPTIONAL and not present
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.E2SmMhoMeasurementReportItem ptr
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.E2SmMhoMeasurementReportItem struct
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1006	SEQUENCE can be extended
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.502-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Rsrp
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling FiveQi
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1073	SEQUENCE extension is not present. Encoding Value Extensive Bit: false
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put  1 bits, byteLen(after): 29, bitsOffset(after): 1, value: 0x00]
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1079	putting optional(1), optionalPresents is 0
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 29, bitsOffset(after): 2, value: 0x00]
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Cgi
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smv2ies.Cgi ptr
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smv2ies.Cgi struct
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smv2ies.Cgi
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1014	CHOICE can be extended
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Cgi
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 4
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Rsrp
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.503-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding *e2smmho.Rsrp ptr
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding e2smmho.Rsrp struct
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type e2smmho.Rsrp
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1022	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1025	Handling Value
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 0
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 1
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 2
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1089	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 3
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1106	SEQUENCE Extension presence is false, current field name is Value
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1107	fromValueExt is false
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1108	ExtensionHeader encoded is false
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:928	Encoding int32 int32
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:967	not a built in type int32
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:566	Putting value Extension bit
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:574	Encoding INTEGER with Value Range(-65536..65536)
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  1 bits, byteLen(after): 29, bitsOffset(after): 3, value: 0x00]
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:655	Encoding INTEGER Length 3-1 in 2 bits
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:70	  [PER put  2 bits, byteLen(after): 29, bitsOffset(after): 5, value: 0x80]
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:661	Encoding INTEGER 10 with 3 bytes
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:40	Aligning 3 bits
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:41	  [PER put  3 bits, byteLen(after): 29, bitsOffset(after): 0, value: 0x00]
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:51	  [PER put 24 bits, byteLen(after): 32, bitsOffset(after): 0, value: 0x01000a]
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1087	Iteration 5
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/marshal.go:1101	Field "unknownFields" in e2smmho.E2SmMhoMeasurementReportItem is OPTIONAL and not present
+2023-07-19T11:21:52.504-0400	DEBUG	github.com/onosproject/onos-e2-sm/servicemodels/e2sm_mho_go/encoder	encoder/E2SM-MHO-IndicationMessage.go:25	Encoded E2SM-MHO-IndicationMessage PER bytes are
+00000000  04 00 00 0a 20 01 00 00  50 01 00 00 00 00 10 01  |.... ...P.......|
+00000010  00 00 50 01 00 00 00 00  10 01 00 00 10 01 00 0a  |..P.............|
+
+asn1Ind:  [4 0 0 10 32 1 0 0 80 1 0 0 0 0 16 1 0 0 80 1 0 0 0 0 16 1 0 0 16 1 0 10]
+2023-07-19T11:21:52.504-0400	DEBUG	github.com/onosproject/onos-e2-sm/servicemodels/e2sm_mho_go/encoder	encoder/E2SM-MHO-IndicationMessage.go:32	Obtained E2SM-MHO-IndicationMessage PER bytes are
+00000000  04 00 00 0a 20 01 00 00  50 01 00 00 00 00 10 01  |.... ...P.......|
+00000010  00 00 50 01 00 00 00 00  10 01 00 00 10 01 00 0a  |..P.............|
+
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding E2SmMhoIndicationMessage
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:869	CHOICE can be extended
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smmho.E2SmMhoIndicationMessage
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoIndicationMessage ignoring unexported field : state
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoIndicationMessage ignoring unexported field : sizeCache
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoIndicationMessage ignoring unexported field : unknownFields
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoIndicationMessage ignoring unexported field : state
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoIndicationMessage ignoring unexported field : sizeCache
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoIndicationMessage ignoring unexported field : unknownFields
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding isE2SmMhoIndicationMessage_E2SmMhoIndicationMessage
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smmho.isE2SmMhoIndicationMessage_E2SmMhoIndicationMessage
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:1144	ValueExt is false
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:1145	FromChoiceExt is false
+2023-07-19T11:21:52.504-0400	DEBUG	asn1/aper	aper/aper.go:1146	Amount of values which are not in extension is 2
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:1147	Choice can be extended is true
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 0, bitsOffset(after): 1, value: 0x0]
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:737	Choice is not extended. Parsing main items
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:149	Getting Constraint Value with range 2
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 0, bitsOffset(after): 2, value: 0x0]
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:1154	Handling interface e2smmho.isE2SmMhoIndicationMessage_E2SmMhoIndicationMessage for 'oneof' e2_sm_mho_indication_message 1/2
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:1164	type is e2smmho.E2SmMhoIndicationMessage_IndicationMessageFormat1
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding E2SmMhoIndicationMessage_IndicationMessageFormat1
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smmho.E2SmMhoIndicationMessage_IndicationMessageFormat1
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:949	SEQUENCE *e2smmho.E2SmMhoIndicationMessageFormat1 can be extended
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding E2SmMhoIndicationMessageFormat1
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 0, bitsOffset(after): 3, value: 0x0]
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smmho.E2SmMhoIndicationMessageFormat1
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : state
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : sizeCache
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : unknownFields
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:949	SEQUENCE []*e2smmho.E2SmMhoMeasurementReportItem can be extended
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : state
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : sizeCache
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoIndicationMessageFormat1 ignoring unexported field : unknownFields
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Ueid
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.Ueid
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Ueid ignoring unexported field : state
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Ueid ignoring unexported field : sizeCache
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Ueid ignoring unexported field : unknownFields
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Ueid ignoring unexported field : state
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Ueid ignoring unexported field : sizeCache
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Ueid ignoring unexported field : unknownFields
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding isUeid_Ueid
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.isUeid_Ueid
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:1144	ValueExt is false
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:1145	FromChoiceExt is false
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:1146	Amount of values which are not in extension is 7
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:1147	Choice can be extended is false
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:149	Getting Constraint Value with range 7
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  3 bits, byteOffset(after): 0, bitsOffset(after): 6, value: 0x1]
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:758	Decoded Present index of CHOICE is 1 + 1
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:1154	Handling interface e2smv2ies.isUeid_Ueid for 'oneof' ueid 2/7
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:1164	type is e2smv2ies.Ueid_GNbDuUeid
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Ueid_GNbDuUeid
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.Ueid_GNbDuUeid
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:949	SEQUENCE *e2smv2ies.UeidGnbDu can be extended
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding UeidGnbDu
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 0, bitsOffset(after): 7, value: 0x0]
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.UeidGnbDu
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:941	struct UeidGnbDu ignoring unexported field : state
+2023-07-19T11:21:52.505-0400	DEBUG	asn1/aper	aper/aper.go:941	struct UeidGnbDu ignoring unexported field : sizeCache
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:941	struct UeidGnbDu ignoring unexported field : unknownFields
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 1
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 1, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:966	optionalPresents is 0
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:972	struct UeidGnbDu ignoring unexported field : state
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:972	struct UeidGnbDu ignoring unexported field : sizeCache
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:972	struct UeidGnbDu ignoring unexported field : unknownFields
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding GnbCuUeF1ApId
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.GnbCuUeF1ApId
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:941	struct GnbCuUeF1ApId ignoring unexported field : state
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:941	struct GnbCuUeF1ApId ignoring unexported field : sizeCache
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:941	struct GnbCuUeF1ApId ignoring unexported field : unknownFields
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:949	SEQUENCE int64 can be extended
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:972	struct GnbCuUeF1ApId ignoring unexported field : state
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:972	struct GnbCuUeF1ApId ignoring unexported field : sizeCache
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:972	struct GnbCuUeF1ApId ignoring unexported field : unknownFields
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding int64
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 1, bitsOffset(after): 1, value: 0x0]
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type int64
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:558	Decoding INTEGER with Value Range(0..4294967295)
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  2 bits, byteOffset(after): 1, bitsOffset(after): 3, value: 0x0]
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:136	Aligning 5 bits
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  5 bits, byteOffset(after): 2, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:615	Decoding INTEGER Length with 1 bytes
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  8 bits, byteOffset(after): 3, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:913	Decoded INTEGER Value: 0
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:980	Field "RanUeid" in e2smv2ies.UeidGnbDu is OPTIONAL and not present
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type []*e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:665	Decoding Length of "SEQUENCE OF"  with Size Range(1..100)
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:149	Getting Constraint Value with range 100
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  7 bits, byteOffset(after): 3, bitsOffset(after): 7, value: 0x5]
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:693	Decoding  "SEQUENCE OF" struct  with len(6)
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 4, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 1
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 4, bitsOffset(after): 1, value: 0x0]
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:966	optionalPresents is 0
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Cgi
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:869	CHOICE can be extended
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.Cgi
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.506-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding isCgi_Cgi
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.isCgi_Cgi
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:1144	ValueExt is false
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:1145	FromChoiceExt is false
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:1146	Amount of values which are not in extension is 2
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:1147	Choice can be extended is true
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 4, bitsOffset(after): 2, value: 0x0]
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:737	Choice is not extended. Parsing main items
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:149	Getting Constraint Value with range 2
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 4, bitsOffset(after): 3, value: 0x1]
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:1154	Handling interface e2smv2ies.isCgi_Cgi for 'oneof' cgi 2/2
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:1164	type is e2smv2ies.Cgi_EUtraCgi
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Cgi_EUtraCgi
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.Cgi_EUtraCgi
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:949	SEQUENCE *e2smv2ies.EutraCgi can be extended
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding EutraCgi
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 4, bitsOffset(after): 4, value: 0x0]
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.EutraCgi
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:941	struct EutraCgi ignoring unexported field : state
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:941	struct EutraCgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:941	struct EutraCgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct EutraCgi ignoring unexported field : state
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct EutraCgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct EutraCgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding PlmnIdentity
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.PlmnIdentity
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:941	struct PlmnIdentity ignoring unexported field : state
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:941	struct PlmnIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:941	struct PlmnIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct PlmnIdentity ignoring unexported field : state
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct PlmnIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct PlmnIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:341	Decoding OCTET STRING size 3
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:136	Aligning 4 bits
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  4 bits, byteOffset(after): 5, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:353	  [PER got 24 bits, byteOffset(after): 8, bitsOffset(after): 0, value: 0x010000]
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:361	Decoded OCTET STRING (length = 3): 0x010000
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding EutracellIdentity
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.EutracellIdentity
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:941	struct EutracellIdentity ignoring unexported field : state
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:941	struct EutracellIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:941	struct EutracellIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct EutracellIdentity ignoring unexported field : state
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct EutracellIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.507-0400	DEBUG	asn1/aper	aper/aper.go:972	struct EutracellIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding BitString
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:236	Decoding BIT STRING size 28
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:237	Decoding BIT STRING size 28
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:259	  [PER got 28 bits, byteOffset(after): 11, bitsOffset(after): 4, value: 0x50010000]
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:270	Decoded BIT STRING (length = 28): [01010000 00000001 00000000 00000000]
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Rsrp
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smmho.Rsrp
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:949	SEQUENCE int32 can be extended
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding int32
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 11, bitsOffset(after): 5, value: 0x0]
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type int32
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:558	Decoding INTEGER with Value Range(-65536..65536)
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  2 bits, byteOffset(after): 11, bitsOffset(after): 7, value: 0x0]
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:136	Aligning 1 bits
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 12, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:615	Decoding INTEGER Length with 1 bytes
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  8 bits, byteOffset(after): 13, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:913	Decoded INTEGER Value: -65536
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:980	Field "FiveQi" in e2smmho.E2SmMhoMeasurementReportItem is OPTIONAL and not present
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 13, bitsOffset(after): 1, value: 0x0]
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 1
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 13, bitsOffset(after): 2, value: 0x0]
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:966	optionalPresents is 0
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Cgi
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:869	CHOICE can be extended
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.Cgi
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding isCgi_Cgi
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.isCgi_Cgi
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:1144	ValueExt is false
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:1145	FromChoiceExt is false
+2023-07-19T11:21:52.508-0400	DEBUG	asn1/aper	aper/aper.go:1146	Amount of values which are not in extension is 2
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:1147	Choice can be extended is true
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 13, bitsOffset(after): 3, value: 0x0]
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:737	Choice is not extended. Parsing main items
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:149	Getting Constraint Value with range 2
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 13, bitsOffset(after): 4, value: 0x0]
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:1154	Handling interface e2smv2ies.isCgi_Cgi for 'oneof' cgi 1/2
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:1164	type is e2smv2ies.Cgi_NRCgi
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Cgi_NRCgi
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.Cgi_NRCgi
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:949	SEQUENCE *e2smv2ies.NrCgi can be extended
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding NrCgi
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 13, bitsOffset(after): 5, value: 0x0]
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.NrCgi
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrCgi ignoring unexported field : state
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrCgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrCgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrCgi ignoring unexported field : state
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrCgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrCgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding PlmnIdentity
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.PlmnIdentity
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct PlmnIdentity ignoring unexported field : state
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct PlmnIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct PlmnIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:972	struct PlmnIdentity ignoring unexported field : state
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:972	struct PlmnIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:972	struct PlmnIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:341	Decoding OCTET STRING size 3
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:136	Aligning 3 bits
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  3 bits, byteOffset(after): 14, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:353	  [PER got 24 bits, byteOffset(after): 17, bitsOffset(after): 0, value: 0x100100]
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:361	Decoded OCTET STRING (length = 3): 0x100100
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding NrcellIdentity
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.NrcellIdentity
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrcellIdentity ignoring unexported field : state
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrcellIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrcellIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrcellIdentity ignoring unexported field : state
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrcellIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrcellIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding BitString
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:236	Decoding BIT STRING size 36
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:237	Decoding BIT STRING size 36
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:259	  [PER got 36 bits, byteOffset(after): 21, bitsOffset(after): 4, value: 0x0050010000]
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:270	Decoded BIT STRING (length = 36): [00000000 01010000 00000001 00000000 00000000]
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Rsrp
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smmho.Rsrp
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.509-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:949	SEQUENCE int32 can be extended
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding int32
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 21, bitsOffset(after): 5, value: 0x0]
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type int32
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:558	Decoding INTEGER with Value Range(-65536..65536)
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  2 bits, byteOffset(after): 21, bitsOffset(after): 7, value: 0x0]
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:136	Aligning 1 bits
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 22, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:615	Decoding INTEGER Length with 1 bytes
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  8 bits, byteOffset(after): 23, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:913	Decoded INTEGER Value: -65536
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:980	Field "FiveQi" in e2smmho.E2SmMhoMeasurementReportItem is OPTIONAL and not present
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 23, bitsOffset(after): 1, value: 0x0]
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smmho.E2SmMhoMeasurementReportItem
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:941	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 1
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 23, bitsOffset(after): 2, value: 0x0]
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:966	optionalPresents is 0
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoMeasurementReportItem ignoring unexported field : state
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoMeasurementReportItem ignoring unexported field : sizeCache
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:972	struct E2SmMhoMeasurementReportItem ignoring unexported field : unknownFields
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Cgi
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:869	CHOICE can be extended
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.Cgi
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Cgi ignoring unexported field : state
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Cgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Cgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding isCgi_Cgi
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.isCgi_Cgi
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:1144	ValueExt is false
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:1145	FromChoiceExt is false
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:1146	Amount of values which are not in extension is 2
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:1147	Choice can be extended is true
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 23, bitsOffset(after): 3, value: 0x0]
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:737	Choice is not extended. Parsing main items
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:149	Getting Constraint Value with range 2
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 23, bitsOffset(after): 4, value: 0x0]
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:1154	Handling interface e2smv2ies.isCgi_Cgi for 'oneof' cgi 1/2
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:1164	type is e2smv2ies.Cgi_NRCgi
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Cgi_NRCgi
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.Cgi_NRCgi
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:949	SEQUENCE *e2smv2ies.NrCgi can be extended
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding NrCgi
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 23, bitsOffset(after): 5, value: 0x0]
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: false
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: false
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.NrCgi
+2023-07-19T11:21:52.510-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrCgi ignoring unexported field : state
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrCgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrCgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrCgi ignoring unexported field : state
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrCgi ignoring unexported field : sizeCache
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrCgi ignoring unexported field : unknownFields
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding PlmnIdentity
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.PlmnIdentity
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct PlmnIdentity ignoring unexported field : state
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct PlmnIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct PlmnIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct PlmnIdentity ignoring unexported field : state
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct PlmnIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct PlmnIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:341	Decoding OCTET STRING size 3
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:136	Aligning 3 bits
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  3 bits, byteOffset(after): 24, bitsOffset(after): 0, value: 0x0]
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:353	  [PER got 24 bits, byteOffset(after): 27, bitsOffset(after): 0, value: 0x100100]
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:361	Decoded OCTET STRING (length = 3): 0x100100
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding NrcellIdentity
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smv2ies.NrcellIdentity
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrcellIdentity ignoring unexported field : state
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrcellIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct NrcellIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrcellIdentity ignoring unexported field : state
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrcellIdentity ignoring unexported field : sizeCache
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct NrcellIdentity ignoring unexported field : unknownFields
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding BitString
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:236	Decoding BIT STRING size 36
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:237	Decoding BIT STRING size 36
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:259	  [PER got 36 bits, byteOffset(after): 31, bitsOffset(after): 4, value: 0x0010010000]
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:270	Decoded BIT STRING (length = 36): [00000000 00010000 00000001 00000000 00000000]
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding 
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding Rsrp
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type e2smmho.Rsrp
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:941	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:949	SEQUENCE int32 can be extended
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:959	optionalCount is 0
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Rsrp ignoring unexported field : state
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Rsrp ignoring unexported field : sizeCache
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:972	struct Rsrp ignoring unexported field : unknownFields
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:828	Decoding int32
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  1 bits, byteOffset(after): 31, bitsOffset(after): 5, value: 0x1]
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:859	Decoded Value Extensive Bit: true
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:862	Indicating Value Extensive Bit: true
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:897	not a built in field type int32
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:565	Decoding INTEGER with Extensive Value
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:136	Aligning 3 bits
+2023-07-19T11:21:52.511-0400	DEBUG	asn1/aper	aper/aper.go:128	  [PER got  3 bits, byteOffset(after): 32, bitsOffset(after): 0, value: 0x2]
+panic: runtime error: slice bounds out of range [:33] with capacity 32
+
+goroutine 1 [running]:
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.(*perBitData).parseAlignBits(0xc000139c80)
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:140 +0x179
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.(*perBitData).parseInteger(0xc000139c80, 0xec?, 0x1c?, 0xc000305390?)
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:572 +0x2b5
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xd02b60?, 0xc00027dee8?, 0x400?}, 0xc000139c80, {0x0, 0x0, 0x1, 0x0, 0x0, 0xc0002f3300, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:908 +0x6c5
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xddef60?, 0xc00027dec0?, 0x400?}, 0xc000139c80, {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:1056 +0x2d07
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xdee900?, 0xc0002f60b0?, 0x400?}, 0xc000139c80, {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:838 +0x18e5
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xe044e0?, 0xc0002f6080?, 0x400?}, 0xc000139c80, {0x0, 0x0, 0x1, 0x0, 0x0, 0x0, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:1056 +0x2d07
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xe0ccc0?, 0xc00027dd50?, 0xfa8f78?}, 0xc000139c80, {0x0, 0x0, 0x1, 0x0, 0x0, 0x0, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:838 +0x18e5
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.(*perBitData).parseSequenceOf(0xc000139c80, 0x40?, {0x0, 0x0, 0x1, 0x0, 0x0, 0x0, 0x0, 0x0, ...}, ...)
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:700 +0x605
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xce7ea0?, 0xc000288760?, 0x400?}, 0xc000139c80, {0x0, 0x0, 0x1, 0xc0002c2a38, 0xc0002c2a40, 0x0, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:1065 +0x11de
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xdf5e40?, 0xc000288730?, 0x400?}, 0xc000139c80, {0x0, 0x0, 0x1, 0x0, 0x0, 0x0, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:1056 +0x2d07
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xdfebe0?, 0xc000014f10?, 0x400?}, 0xc000139c80, {0x0, 0x0, 0x1, 0x0, 0x0, 0x0, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:838 +0x18e5
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xd76280?, 0xc000014f10?, 0x400?}, 0xc000139c80, {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:1056 +0x2d07
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xd5ad40?, 0xc000255ce8?, 0xc4503e?}, 0xc000139c80, {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:1200 +0x3305
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.parseField({0xddea20?, 0xc000255cc0?, 0xc0000012c0?}, 0xc000139c80, {0x0, 0x0, 0x0, 0x0, 0x0, 0x0, ...})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:1056 +0x2d07
+github.com/onosproject/onos-lib-go/pkg/asn1/aper.UnmarshalWithParams({0xc0002b2aa0, 0x20, 0x20}, {0xe081e0?, 0xc000255cc0?}, {0xe72a80, 0x9}, 0xc0001d8420, 0x0)
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-lib-go@v0.10.24/pkg/asn1/aper/aper.go:1263 +0x218
+github.com/onosproject/onos-e2-sm/servicemodels/e2sm_mho_go/encoder.PerDecodeE2SmMhoIndicationMessage({0xc0002b2aa0, 0x20, 0x20})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-e2-sm/servicemodels/e2sm_mho_go@v0.8.6/encoder/E2SM-MHO-IndicationMessage.go:35 +0x108
+github.com/onosproject/onos-e2-sm/servicemodels/e2sm_mho_go/servicemodel.MhoServiceModel.IndicationMessageASN1toProto({0xfa4b80?, 0xc000014018?}, {0xc0002b2aa0, 0x20, 0x20})
+	/home/tianchang/go/pkg/mod/github.com/onosproject/onos-e2-sm/servicemodels/e2sm_mho_go@v0.8.6/servicemodel/servicemodel.go:64 +0x3e
+input-generator/msg.mhoMessageToProtoBytes(...)
+	/home/tianchang/Desktop/proj/fuzz-verify/msg/msg.go:94
+input-generator/msg.Fuzz({0xc000176c00, 0x4c, 0x200})
+	/home/tianchang/Desktop/proj/fuzz-verify/msg/msg.go:44 +0x197
+main.main()
+	/home/tianchang/Desktop/proj/fuzz-verify/main.go:71 +0x145

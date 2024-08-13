@@ -1,0 +1,6 @@
+dependencies:
+- name: ric-common
+  repository: http://127.0.0.1:8879/charts
+  version: 3.3.2
+digest: sha256:18864ebdc348d5f8e87a2697157795b16b11ef637a22a94d509ca845a4892caf
+generated: "2023-12-23T10:45:59.142946793-05:00"

@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "boolean.h": "c",
+        "asn_internal.h": "c"
+    }
+}

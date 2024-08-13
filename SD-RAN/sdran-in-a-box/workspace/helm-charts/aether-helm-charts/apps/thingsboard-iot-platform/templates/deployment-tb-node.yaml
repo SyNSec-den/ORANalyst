@@ -1,0 +1,104 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tb-node
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tb-node
+  template:
+    metadata:
+      labels:
+        app: tb-node
+    spec:
+      serviceAccountName: thingsboard
+      volumes:
+        - name: tb-node-config
+          configMap:
+            name: tb-node-config
+            items:
+              - key: conf
+                path:  thingsboard.conf
+              - key: logback
+                path:  logback.xml
+      initContainers:
+        - name: tb-node-dep-check
+          image: {{ .Values.images.tags.depCheck }}
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: PATH
+              value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
+            - name: COMMAND
+              value: "echo done"
+            - name: DEPENDENCY_POD_JSON
+              value: '[{"labels": {"app": "tb-kafka"}, "requireSameNode": false}]'
+          command:
+            - kubernetes-entrypoint
+          volumeMounts:
+            []
+      containers:
+        - name: node-server
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          image: {{ .Values.images.tags.tbNode }}
+          ports:
+            - containerPort: {{ .Values.config.tbNode.ports.http }}
+              name: http
+            - containerPort: {{ .Values.config.tbNode.ports.rpc }}
+              name: rpc
+          env:
+            - name: TB_SERVICE_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: TB_SERVICE_TYPE
+              value: {{ .Values.config.tbNode.serviceType | quote }}
+            - name: TB_QUEUE_TYPE
+              value: "kafka"
+            - name: ZOOKEEPER_ENABLED
+              value: {{ .Values.config.zookeeper.enabled | quote }}
+            - name: ZOOKEEPER_URL
+              value: "zookeeper:{{ .Values.config.zookeeper.port }}"
+            - name: TB_KAFKA_SERVERS
+              value: "tb-kafka:{{ .Values.config.kafka.ports.outPort }}"
+            - name: JS_EVALUATOR
+              value: {{ .Values.config.tbNode.jsEvaluator | quote }}
+            - name: TRANSPORT_TYPE
+              value: {{ .Values.config.tbNode.transportType | quote }}
+            - name: HTTP_LOG_CONTROLLER_ERROR_STACK_TRACE
+              value: {{ .Values.config.tbNode.httpLogCtrlErrStackTrace | quote }}
+          envFrom:
+            - configMapRef:
+                name: tb-node-db-config
+            - configMapRef:
+                name: tb-node-cache-config
+          volumeMounts:
+            - mountPath: /config
+              name: tb-node-config
+          livenessProbe:
+            httpGet:
+              path: /login
+              port: http
+            initialDelaySeconds: 300
+            timeoutSeconds: 10
+      restartPolicy: Always

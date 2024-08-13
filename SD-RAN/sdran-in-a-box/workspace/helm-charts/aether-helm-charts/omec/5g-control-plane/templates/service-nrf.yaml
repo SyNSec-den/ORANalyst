@@ -1,0 +1,43 @@
+{{/*
+# Copyright 2020-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+{{- if .Values.config.nrf.deploy }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nrf
+  labels:
+{{ tuple "nrf" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+{{ tuple "nrf" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+  ports:
+  - name: sbi
+    port: {{ .Values.config.nrf.sbi.port }}
+    protocol: TCP
+{{- if or .Values.config.nrf.sbi.nodePort.enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nrf-external
+  labels:
+{{ tuple "nrf" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+spec:
+  type: NodePort
+  selector:
+{{ tuple "nrf" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+  ports:
+{{- if .Values.config.nrf.sbi.nodePort.enabled }}
+  - name: sbi
+    port: {{ .Values.config.nrf.sbi.port }}
+    protocol: TCP
+    nodePort: {{ .Values.config.nrf.sbi.nodePort.port }}
+{{- end }}
+{{- end }}
+{{- end }}

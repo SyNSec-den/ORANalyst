@@ -1,0 +1,55 @@
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+images:
+  tags:
+    init: docker.io/omecproject/pod-init:1.0.0
+    gnbsim:  ajaythakuronf/5gc-gnbsim:0.0.9-dev
+    depCheck: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
+  pullPolicy: IfNotPresent
+  credentials: {}
+  # If specified, use this credential to access the image
+  #   registry:
+  #   username:
+  #   password:
+
+nodeSelectors:
+  enabled: false
+  gnbsim:
+    label: omec-cp
+    value: enabled
+
+resources:
+  enabled: true
+  gnbsim:
+    requests:
+      cpu: 2
+      memory: 1Gi
+    limits:
+      cpu: 2
+      memory: 1Gi
+
+config:
+  clusterDomain: cluster.local
+  coreDump:
+    enabled: false
+    path: /tmp/coredump
+  gnbsim:
+    deploy: true
+    sriov:
+      enabled: disabled
+    ipam: static
+    cniPlugin: simpleovs #need override value
+    gnb:
+      ip: 192.168.251.5/24
+    ngapp:
+      port: 38412
+      nodePort:
+        enabled: false
+        port: 30071
+    yamlCfgFiles:
+      gnb.conf: |
+        info:
+          version: 1.0.0
+          description: gNodeB sim initial configuration 

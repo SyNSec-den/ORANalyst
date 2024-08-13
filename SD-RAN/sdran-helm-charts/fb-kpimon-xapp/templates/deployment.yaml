@@ -1,0 +1,106 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "fb-kpimon-xapp.fullname" . }}
+  labels:
+  {{- include "fb-kpimon-xapp.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "fb-kpimon-xapp.fullname" . }}
+      app: facebook
+      type: kpimon
+      resource: {{ template "fb-kpimon-xapp.fullname" . }}
+  {{- include "fb-kpimon-xapp.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      annotations:
+        proxy.onosproject.org/inject: "true"
+      labels:
+        name: {{ template "fb-kpimon-xapp.fullname" . }}
+        app: facebook
+        type: kpimon
+        resource: {{ template "fb-kpimon-xapp.fullname" . }}
+    {{- include "fb-kpimon-xapp.selectorLabels" . | nindent 8 }}
+    spec:
+      securityContext:
+      {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - "kpimon/main.py"
+            - "--path={{ .Values.config.servicePath }}/config.json"
+            - "--ric-config={{ .Values.config.configPath }}/onos.json"
+          ports:
+            - name: http
+              containerPort: 8080
+          startupProbe:
+            httpGet:
+              path: /status
+              port: 8080
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            httpGet:
+              path: /status
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /status
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          volumeMounts:
+            - name: secret
+              mountPath: /etc/onos/certs
+              readOnly: true
+            - name: config
+              mountPath: {{ .Values.config.servicePath }}
+              readOnly: false
+            - name: onos
+              mountPath: {{ .Values.config.configPath }}
+              readOnly: false
+            - name: staticfiles
+              mountPath: /tmp
+              readOnly: false
+          resources:
+      {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: secret
+          secret:
+            secretName: {{ template "fb-kpimon-xapp.fullname" . }}-secret
+        - name: config
+          configMap:
+            name: {{ template "fb-kpimon-xapp.fullname" . }}-config
+        - name: onos
+          configMap:
+            name: {{ template "fb-kpimon-xapp.fullname" . }}-config
+        - name: staticfiles
+          hostPath:
+            path: /tmp
+            type: Directory
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+      {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+    {{- toYaml . | nindent 8 }}
+  {{- end }}

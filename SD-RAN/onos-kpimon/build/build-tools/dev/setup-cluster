@@ -1,0 +1,26 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Create Kind Cluster
+kind create cluster
+
+# Local Helm Repos
+cd onos-helm-charts && make deps 
+cd sdran-helm-charts && make deps
+
+# Public Helm Repos
+helm repo add atomix https://charts.atomix.io
+helm repo add onosproject https://charts.onosproject.org
+helm repo add sdran https://sdrancharts.onosproject.org
+helm repo update
+
+# Install Atomix Cluster
+helm install -n kube-system atomix-controller atomix/atomix-controller --wait
+helm install -n kube-system atomix-raft-storage atomix/atomix-raft-storage --wait
+helm install -n kube-system onos-operator onosproject/onos-operator --wait 
+
+#cd ~/src/onosproject/onos-helm-charts
+#helm install -n kube-system onos-operator ./onos-operator --wait 
+

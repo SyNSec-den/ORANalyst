@@ -1,0 +1,39 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2022-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+awk '
+/^(\/\*|\/\/)/ {
+  if (!done) {
+    replacing = 1;
+  }
+}
+
+{
+  if (done) { print $0; next; }
+}
+
+/ Copyright 20..-present Open Networking Foundation/ {
+  if (replacing) {
+    gsub(".*Copyright ", "");
+    gsub("-present.*", "");
+
+    print("// SPDX-FileCopyrightText: " $0 "-present Open Networking Foundation <info@opennetworking.org>");
+    print("//\n// SPDX-License-Identifier: Apache-2.0");
+    replacing = 0;
+  }
+}
+
+/^\/\/ limitations under the License./ {
+ done = 1;
+ next;
+}
+
+/^ \*\// {
+ done = 1;
+ next;
+}
+
+' < $1 > $1.new
+mv $1.new $1

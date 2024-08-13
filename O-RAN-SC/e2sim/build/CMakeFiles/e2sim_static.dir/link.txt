@@ -1,0 +1,2 @@
+/usr/bin/ar qc libe2sim.a src/DEF/CMakeFiles/def_objects.dir/e2sim_defs.cpp.o src/SCTP/CMakeFiles/sctp_objects.dir/e2sim_sctp.cpp.o src/SCTP/CMakeFiles/sctp_objects.dir/e2sim_sctp.c.o src/messagerouting/CMakeFiles/messagerouting_objects.dir/e2ap_message_handler.cpp.o src/messagerouting/CMakeFiles/messagerouting_objects.dir/e2ap_asn1c_codec.c.o src/encoding/CMakeFiles/encoding_objects.dir/encode_e2apv1.cpp.o src/base/CMakeFiles/base_objects.dir/e2sim.cpp.o
+/usr/bin/ranlib libe2sim.a

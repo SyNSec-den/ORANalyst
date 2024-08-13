@@ -1,0 +1,3 @@
+./go_fsmbuilder --print-pdg=true ~/examples/examples/helloworld/greeter_client
+
+./go_fsmbuilder --print-pdg=true /home/mukit/onos-e2t/onos-e2t/pkg/controller/v1beta1/channel

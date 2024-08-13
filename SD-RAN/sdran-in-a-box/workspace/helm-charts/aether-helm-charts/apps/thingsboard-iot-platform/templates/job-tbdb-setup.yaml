@@ -1,0 +1,66 @@
+{{- /*
+
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: job-tb-db-setup
+spec:
+  template:
+    metadata:
+      name: job-tb-db-setup
+    spec:
+      restartPolicy: OnFailure
+      serviceAccountName: thingsboard
+      initContainers:
+        - name: job-tb-db-setup-dep-check
+          image: {{ .Values.images.tags.depCheck }}
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.name
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  apiVersion: v1
+                  fieldPath: metadata.namespace
+            - name: PATH
+              value: /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/
+            - name: COMMAND
+              value: "echo done"
+            - name: DEPENDENCY_POD_JSON
+              value: '[{"labels": {"app": "postgres"}, "requireSameNode": false}]'
+          command:
+            - kubernetes-entrypoint
+          volumeMounts:
+            []
+      containers:
+        - name: job-tb-db-setup
+          image: {{ .Values.images.tags.tbDbSetup }}
+          imagePullPolicy: {{ .Values.images.pullPolicy }}
+          envFrom:
+          - configMapRef:
+              name: tb-node-db-config
+          volumeMounts:
+            - mountPath: /config
+              name: tb-node-config
+          command: ['sh', '-c', 'export INSTALL_TB=true; export LOAD_DEMO=true; start-tb-node.sh;']
+      volumes:
+        - name: tb-node-config
+          configMap:
+            name: tb-node-config
+            items:
+              - key: conf
+                path: thingsboard.conf
+              - key: logback
+                path: logback.xml

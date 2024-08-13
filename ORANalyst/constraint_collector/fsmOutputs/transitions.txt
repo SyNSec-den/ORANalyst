@@ -1,0 +1,167 @@
+<transition label T_1 >
+<start> s_1 </start> 
+<end> s_1 </end> 
+<condition>  true  </condition> 
+<actions> 
+</actions> 
+
+<transition label T_10 >
+<start> s_5 </start> 
+<end> s_5 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int && 2:int == 2:int &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int </condition> 
+<actions> 
+<action label = greeter_client:sendMessage2 ></action>
+</actions> 
+
+<transition label T_11 >
+<start> s_5 </start> 
+<end> s_5 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int && 2:int == 2:int &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int && 2:int == 2:int </condition> 
+<actions> 
+<action label = greeter_client:sendMessage3 ></action>
+</actions> 
+
+<transition label T_12 >
+<start> s_5 </start> 
+<end> s_4 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 0:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int && 2:int == 2:int &&  true  && greeter_client:main:t0.field1 == 1:int && 0:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int &&  !  ( 2:int == 2:int )  </condition> 
+<actions> 
+<action label = greeter_client:main:t13 = 0:int ></action>
+</actions> 
+
+<transition label T_13 >
+<start> s_5 </start> 
+<end> s_4 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 0:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int && 2:int == 2:int &&  true  && greeter_client:main:t0.field1 == 1:int && 0:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int &&  !  ( greeter_client:main:t0.field1 == 3:int )  </condition> 
+<actions> 
+<action label = greeter_client:main:t13 = 0:int ></action>
+</actions> 
+
+<transition label T_14 >
+<start> s_5 </start> 
+<end> s_6 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int && 1:int == 2:int &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int &&  !  (  == 1:int )  </condition> 
+<actions> 
+<action label = greeter_client:main:t21 = 1:int ></action>
+</actions> 
+
+<transition label T_15 >
+<start> s_5 </start> 
+<end> s_6 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int && 1:int == 2:int &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int &&  !  ( greeter_client:main:t0.field2 == 2:int )  </condition> 
+<actions> 
+<action label = greeter_client:main:t21 = 1:int ></action>
+</actions> 
+
+<transition label T_16 >
+<start> s_5 </start> 
+<end> s_7 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 3:int == 1:int && greeter_client:main:t0.field1 == 3:int &&  == 2:int &&  true  && greeter_client:main:t0.field1 == 1:int &&  !  (  == 0:int )  </condition> 
+<actions> 
+<action label = greeter_client:main:t15 = 3:int ></action>
+</actions> 
+
+<transition label T_17 >
+<start> s_7 </start> 
+<end> s_8 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 3:int == 1:int && greeter_client:main:t0.field1 == 3:int &&  == 2:int &&  true  && greeter_client:main:t0.field1 == 1:int &&  !  (  == 0:int )  &&  !  ( greeter_client:main:t0.field2 == 2:int )  </condition> 
+<actions> 
+<action label = greeter_client:main:t21 = 3:int ></action>
+</actions> 
+
+<transition label T_18 >
+<start> s_5 </start> 
+<end> s_7 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 3:int == 1:int && greeter_client:main:t0.field1 == 3:int &&  == 2:int &&  true  &&  !  ( greeter_client:main:t0.field1 == 1:int )  </condition> 
+<actions> 
+<action label = greeter_client:main:t15 = 3:int ></action>
+</actions> 
+
+<transition label T_19 >
+<start> s_3 </start> 
+<end> s_9 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 0:int == 0:int && greeter_client:main:t0.field2 == 2:int &&  !  ( 1:int == 1:int )  </condition> 
+<actions> 
+<action label = greeter_client:main:t21 = 1:int ></action>
+</actions> 
+
+<transition label T_2 >
+<start> s_1 </start> 
+<end> s_2 </end> 
+<condition>  true  </condition> 
+<actions> 
+<action label = greeter_client:main:t13 = 0:int ></action>
+</actions> 
+
+<transition label T_20 >
+<start> s_2 </start> 
+<end> s_10 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int &&  !  ( 0:int == 0:int )  </condition> 
+<actions> 
+<action label = greeter_client:main:t15 = 0:int ></action>
+</actions> 
+
+<transition label T_21 >
+<start> s_2 </start> 
+<end> s_10 </end> 
+<condition>  true  &&  true  &&  !  ( greeter_client:main:t0.field1 == 1:int )  </condition> 
+<actions> 
+<action label = greeter_client:main:t15 = 0:int ></action>
+</actions> 
+
+<transition label T_3 >
+<start> s_2 </start> 
+<end> s_2 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 0:int == 0:int </condition> 
+<actions> 
+<action label = greeter_client:sendMessage1 ></action>
+</actions> 
+
+<transition label T_4 >
+<start> s_2 </start> 
+<end> s_3 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 0:int == 0:int </condition> 
+<actions> 
+<action label = greeter_client:main:t15 = 1:int ></action>
+</actions> 
+
+<transition label T_5 >
+<start> s_3 </start> 
+<end> s_3 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 0:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int </condition> 
+<actions> 
+<action label = greeter_client:sendMessage2 ></action>
+</actions> 
+
+<transition label T_6 >
+<start> s_3 </start> 
+<end> s_4 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 0:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int </condition> 
+<actions> 
+<action label = greeter_client:main:t21 = 2:int ></action>
+</actions> 
+
+<transition label T_7 >
+<start> s_4 </start> 
+<end> s_4 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int && 2:int == 2:int </condition> 
+<actions> 
+<action label = greeter_client:sendMessage3 ></action>
+</actions> 
+
+<transition label T_8 >
+<start> s_4 </start> 
+<end> s_5 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int && 2:int == 2:int </condition> 
+<actions> 
+<action label = greeter_client:main:t13 = 3:int ></action>
+</actions> 
+
+<transition label T_9 >
+<start> s_5 </start> 
+<end> s_5 </end> 
+<condition>  true  &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int && greeter_client:main:t0.field2 == 2:int && 1:int == 1:int && greeter_client:main:t0.field1 == 3:int && 2:int == 2:int &&  true  && greeter_client:main:t0.field1 == 1:int && 3:int == 0:int </condition> 
+<actions> 
+<action label = greeter_client:sendMessage1 ></action>
+</actions> 
+

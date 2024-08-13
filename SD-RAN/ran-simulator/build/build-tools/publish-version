@@ -1,0 +1,63 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Poor-man's tool to tag a release by the following:
+#   1) build the docker image via 'make images'
+#   2) tag the current commit with the specified version tag
+#   3) push the docker image(s) up with the specified version tag
+
+# The tool requires the user to have the authorization to:
+#   1) push tag to the upstream repo
+#   2) publish docker image to dockerhub
+
+# Also, the following conditions must be met:
+#   1) repo must have upstream (or origin) remote push enabled via ssh
+#   2) git tag does not already exist
+#   3) non-empty version number is specified
+#   4) user is logged in to dockerhub
+#   5) following the build all images must exist in the local docker image cache
+
+set -e -u -o pipefail
+
+dry_run=${DRY_RUN:-"0"}
+version="${1}"
+MAKEFILE=${MAKEFILE:-"Makefile"}
+shift 1
+
+# Validate args...
+[ -z "$version" ] && echo "usage: $(dirname $0) <version> [<docker-image>...]" >&2 && exit 1
+
+if [ $# -gt 0 ]; then
+  if [ "${dry_run}" == "0" ]; then
+    # Validate docker logins...
+    ! egrep -q '"auths": {$' ~/.docker/config.json && echo "Not logged in to dockerhub!" >&2 && exit 1
+  fi
+
+  # 1) Make images
+  make -f $MAKEFILE images || exit 1
+
+  # 1a) Validate that each docker image exists
+  for image in "$@"; do
+    id=$(docker images $image:latest -q)
+    [ -z "$id" ] && echo "Docker image $image:latest does not exist!" && exit 1
+  done
+else
+  make -f $MAKEFILE || exit 1
+fi
+
+docker_tag=${version/[a-z-_]*\//}
+if [ $# -gt 0 ]; then
+  # 3) Push each docker image to docker hub; assumed docker login was already run
+  for image in "$@"; do
+    echo "Publishing image $image..."
+    id=$(docker images $image:latest -q)
+    docker tag $id $image:$docker_tag
+    if [ "${dry_run}" == "0" ]; then
+      docker push $image:$docker_tag
+    else
+      echo "Skipping push of image $image"
+    fi
+  done
+fi

@@ -1,0 +1,55 @@
+{{/*
+# Copyright 2020-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+{{- if .Values.config.webui.deploy }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webui
+  labels:
+{{ tuple "webui" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+spec:
+  type: ClusterIP
+  selector:
+{{ tuple "webui" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+  ports:
+  - name: prometheus-exporter
+    port: {{ .Values.config.webui.prometheus.port }}
+    protocol: TCP
+  - name: urlport-http
+    port: {{ .Values.config.webui.urlport.port }}
+    protocol: TCP
+  - name: grpc
+    port: {{ .Values.config.webui.grpc.port }}
+    protocol: TCP
+{{- if or .Values.config.webui.urlport.nodePort.enabled .Values.config.webui.prometheus.nodePort.enabled }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webui-external
+  labels:
+{{ tuple "webui" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+spec:
+  type: NodePort
+  selector:
+{{ tuple "webui" . | include "5g-control-plane.metadata_labels" | indent 4 }}
+  ports:
+{{- if .Values.config.webui.prometheus.nodePort.enabled }}
+  - name: prometheus-exporter
+    port: {{ .Values.config.webui.prometheus.port }}
+    protocol: TCP
+    nodePort: {{ .Values.config.webui.prometheus.nodePort.port }}
+{{- end }}
+{{- if .Values.config.webui.urlport.nodePort.enabled }}
+  - name: urlport-http
+    port: {{ .Values.config.webui.urlport.port }}
+    protocol: TCP
+    nodePort: {{ .Values.config.webui.urlport.nodePort.port }}
+{{- end }}
+{{- end }}
+{{- end }}

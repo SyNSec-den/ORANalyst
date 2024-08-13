@@ -1,0 +1,258 @@
+------------- processing path constraint -------------
+------------- processing onos-e2t -------------
+processing new pkg github.com/onosproject/onos-e2t/api/f1ap/v1/f1ap_constants
+processing new pkg github.com/onosproject/onos-e2t/api/xnap/v1/xnap-constants
+processing new pkg github.com/onosproject/onos-e2t/api/f1ap/v1/f1ap_ies
+processing new pkg github.com/onosproject/onos-e2t/api/f1ap/v1/f1ap_pdu_contents
+processing new pkg github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-pdu-contents
+processing new pkg github.com/onosproject/onos-e2t/api/xnap/v1/xnap-ies
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/f1ap/pdubuilder
+processing new pkg github.com/onosproject/onos-e2t/api/xnap/v1/xnap-pdu-contents
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/xnap/pdubuilder
+processing new pkg github.com/onosproject/onos-e2t/pkg/protocols/e2ap/procedures
+processing new pkg github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-constants
+processing new pkg github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-pdu-descriptions
+processing new pkg github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies
+processing new pkg github.com/onosproject/onos-e2t/api/xnap/v1/xnap-commondatatypes
+processing new pkg github.com/onosproject/onos-e2t/api/xnap/v1/xnap-pdu-descriptions
+processing new pkg github.com/onosproject/onos-e2t/api/xnap/v1/xnap-containers
+processing new pkg github.com/onosproject/onos-e2t/api/f1ap/v1/f1ap_containers
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/e2ap/pdubuilder
+processing new pkg github.com/onosproject/onos-e2t/api/f1ap/v1/f1ap_pdu_descriptions
+processing new pkg github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-containers
+processing new pkg github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-commondatatypes
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/e2ap/server
+processing new pkg github.com/onosproject/onos-e2t/pkg/controller/v1beta1/subscription
+processing new pkg github.com/onosproject/onos-e2t/pkg/controller/controlrelation
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/e2ap/pdudecoder
+processing new pkg github.com/onosproject/onos-e2t/pkg/controller/e2t
+processing new pkg github.com/onosproject/onos-e2t/pkg/protocols/sctp
+processing new pkg github.com/onosproject/onos-e2t/pkg/northbound/e2/stream
+processing new pkg github.com/onosproject/onos-e2t/pkg/controller/mastership
+processing new pkg github.com/onosproject/onos-e2t/api/f1ap/v1/f1ap_commondatatypes
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/xnap/utils
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/f1ap/utils
+processing new pkg github.com/onosproject/onos-e2t/pkg/controller/v1beta1/channel
+processing new pkg github.com/onosproject/onos-e2t/pkg/protocols/e2ap
+processing new pkg github.com/onosproject/onos-e2t/pkg/store/subscription
+processing new pkg github.com/onosproject/onos-e2t/pkg/manager
+processing new pkg github.com/onosproject/onos-e2t/pkg/northbound/e2/v1beta1
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream
+processing new pkg github.com/onosproject/onos-e2t/pkg/store/channel
+processing new pkg github.com/onosproject/onos-e2t/pkg/controller/configuration
+processing new pkg github.com/onosproject/onos-e2t/pkg/store/rnib
+processing new pkg github.com/onosproject/onos-e2t/pkg/oid
+processing new pkg github.com/onosproject/onos-e2t/pkg/utils/decode
+processing new pkg github.com/onosproject/onos-e2t/cmd/onos-e2t
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/f1ap/encoder
+processing new pkg github.com/onosproject/onos-e2t/pkg/utils/async
+processing new pkg github.com/onosproject/onos-e2t/pkg/controller/utils
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/e2ap/encoder
+processing new pkg github.com/onosproject/onos-e2t/pkg/modelregistry
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/xnap/encoder
+processing new pkg github.com/onosproject/onos-e2t/pkg/southbound/e2ap/types
+Parsing functions of /home/tianchang/Desktop/proj/onos-e2t
+input type: *github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-pdu-contents.Ricindication
+current: RICIndication, exit: In
+current: ricIndication, exit: In
+current: In, exit: In
+current: GetProtocolIes, exit: In
+current: Get, exit: In
+current: GetValue, exit: In
+current: GetRicrequestId, exit: In
+current: GetRicindicationIe, exit: In
+current: GetRicRequestorId, exit: In
+-------------------- func path 0 --------------------
+RICIndication -> ricIndication -> In
+
+-------------------- path 0 --------------------
+cur: RICIndication, target: ricIndication
+cur block: 1
+cur block: 0
+curInstr: t0 = &e.e2apConn [#4]
+curInstr: t1 = *t0
+curInstr: t2 = (*E2APConn).ricIndication(t1, ctx, request)
+curInstr is call: t2 = (*E2APConn).ricIndication(t1, ctx, request)
+call name: ricIndication, target name: ricIndication
+Processing ricIndication in block 0 for condition
+finding conditions to block: RICIndication 0
+target block: 0
+
+curInstr: return t2
+cur block: -1
+	conditions for func call RICIndication -> ricIndication: 
+-------------------- conds --------------------
+cur: ricIndication, target: In
+cur block: 1
+curInstr: t8 = phi [0: -1:int, 2: t9]
+curInstr: t9 = t8 + 1:int
+curInstr: t10 = t9 < t7
+curInstr: if t10 goto 2 else 3
+cur block: 4
+curInstr: t23 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-pdu-contents.RicindicationIes).GetValue(t12)
+curInstr is call: t23 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-pdu-contents.RicindicationIes).GetValue(t12)
+call name: GetValue, target name: In
+curInstr: t24 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-pdu-contents.RicindicationIe).GetRicrequestId(t23)
+curInstr is call: t24 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-pdu-contents.RicindicationIe).GetRicrequestId(t23)
+call name: GetRicrequestId, target name: In
+curInstr: t25 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId).GetRicRequestorId(t24)
+curInstr is call: t25 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId).GetRicRequestorId(t24)
+call name: GetRicRequestorId, target name: In
+curInstr: jump 3
+cur block: 0
+curInstr: t0 = *log
+curInstr: t1 = new [1]interface{} (varargs)
+curInstr: t2 = &t1[0:int]
+curInstr: t3 = make interface{} <- *github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-pdu-contents.Ricindication (request)
+curInstr: *t2 = t3
+curInstr: t4 = slice t1[:]
+curInstr: t5 = invoke t0.Debugf("Received RICIndic...":string, t4...)
+curInstr is call: t5 = invoke t0.Debugf("Received RICIndic...":string, t4...)
+curInstr: t6 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-pdu-contents.Ricindication).GetProtocolIes(request)
+curInstr is call: t6 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-pdu-contents.Ricindication).GetProtocolIes(request)
+call name: GetProtocolIes, target name: In
+curInstr: t7 = len(t6)
+curInstr is call: t7 = len(t6)
+curInstr: jump 1
+cur block: 7
+cur block: 3
+curInstr: t16 = phi [1: 0:int32, 4: t25] #requestID
+curInstr: t17 = convert github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.ID <- int32 (t16)
+curInstr: t18 = &c.streams [#3]
+curInstr: t19 = *t18
+curInstr: t20 = invoke t19.Get(t17)
+curInstr is call: t20 = invoke t19.Get(t17)
+call name: Get, target name: In
+curInstr: t21 = extract t20 #0
+curInstr: t22 = extract t20 #1
+curInstr: if t22 goto 6 else 5
+cur block: 5
+curInstr: t26 = new [1]interface{} (varargs)
+curInstr: t27 = &t26[0:int]
+curInstr: t28 = make interface{} <- github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.ID (t17)
+curInstr: *t27 = t28
+curInstr: t29 = slice t26[:]
+curInstr: t30 = github.com/onosproject/onos-lib-go/pkg/errors.NewNotFound("stream %s not found":string, t29...)
+curInstr is call: t30 = github.com/onosproject/onos-lib-go/pkg/errors.NewNotFound("stream %s not found":string, t29...)
+curInstr: return t30
+cur block: -1
+cur block: 2
+curInstr: t11 = &t6[t9]
+curInstr: t12 = *t11
+curInstr: t13 = &t12.Id [#3]
+curInstr: t14 = *t13
+curInstr: t15 = t14 == 29:int32
+curInstr: if t15 goto 4 else 1
+cur block: 6
+curInstr: t31 = invoke t21.In()
+curInstr is call: t31 = invoke t21.In()
+call name: In, target name: In
+Processing In in block 6 for condition
+finding conditions to block: ricIndication 6
+target block: 6
+controller: 3 
+findTarget func: ricIndication, source: 3, target: 6
+findTarget TrueSuccessor: 6, FalseSuccessor: 5
+The CFG path from 6 to 6 is:
+6 -> 
+found condition: if t22 goto 6 else 5 true
+target block: 3
+
+condition: if t22 goto 6 else 5 true
+curInstr: send t31 <- request
+curInstr: return nil:error
+	conditions for func call ricIndication -> In: 
+-------------------- conds --------------------
+		if t22 goto 6 else 5 true
+-------------------- path 0 --------------------
+ if t22 goto 6 else 5 true
+-------------------- path 0 --------------------
+solving condition: if t22 goto 6 else 5 - true
+solving condition: if t22 goto 6 else 5
+tainted because of assignTo: t22
+tainted: t22 = extract t20 #1, type: Extract
+tainted because of assignFrom: t20
+tainted because of assignTo: t20
+tainted: t20 = invoke t19.Get(t17), type: Call
+isTrackedType type: interface{Get(streamID github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.ID) (github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.Subscription, bool); Open(id github.com/onosproject/onos-api/go/onos/e2t/e2/v1beta1.SubscriptionID) github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.Subscription; Watch(ctx context.Context, ch chan<- github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.Subscription) error} - Interface type, is tracked: false
+isTrackedType type: github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.Manager - Named type: Manager, is tracked: false
+isTrackedType type: int - Basic type: int, is tracked: false
+isTrackedType type: github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.ID - Named type: ID, is tracked: false
+tainted because of assignTo: t19
+tainted: t19 = *t18, type: UnOp
+tainted because of assignTo: t18
+tainted: t18 = &c.streams [#3], type: FieldAddr
+isTrackedType type: struct{github.com/onosproject/onos-e2t/pkg/protocols/e2ap.ServerConn; ID github.com/onosproject/onos-e2t/pkg/southbound/e2ap/server.ConnID; E2NodeID github.com/onosproject/onos-api/go/onos/topo.ID; streams github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.Manager; rnib github.com/onosproject/onos-e2t/pkg/store/rnib.Store} - Struct type, is tracked: false
+isTrackedType type: github.com/onosproject/onos-e2t/pkg/southbound/e2ap/server.E2APConn - Named type: E2APConn, is tracked: false
+isTrackedType type: *github.com/onosproject/onos-e2t/pkg/southbound/e2ap/server.E2APConn - Pointer type, points to: Named type: E2APConn, is tracked: false
+tainted because of assignTo: t17
+tainted: t17 = convert github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.ID <- int32 (t16), type: Convert
+tainted because of assignTo: t16
+tainted: t16 = phi [1: 0:int32, 4: t25] #requestID, type: Phi
+phi node edge is const: 0:int32, skipping
+added phi block: 4
+previous blocks: 1
+previous blocks: 4
+phi pb lastInstr: jump 3, pb Id: 4
+tainted because of assignTo: t25
+tainted: t25 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId).GetRicRequestorId(t24), type: Call
+isTrackedType type: github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId - Named type: RicrequestId, is tracked: true
+isTrackedType type: *github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId - Pointer type, points to: Named type: RicrequestId, is tracked: true
+isTrackedType type: func() int32 - Function type, is tracked: true
+generating constraint for tracked variable
+isTrackedType type: github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId - Named type: RicrequestId, is tracked: true
+isTrackedType type: *github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId - Pointer type, points to: Named type: RicrequestId, is tracked: true
+isTrackedType type: func() int32 - Function type, is tracked: true
+the condition is: if t22 goto 6 else 5
+tainted because of assignTo: t22
+tainted: t22 = extract t20 #1, type: Extract
+tainted because of assignTo: t21
+tainted: t21 = extract t20 #0, type: Extract
+tainted because of assignTo: t20
+tainted: t20 = invoke t19.Get(t17), type: Call
+isTrackedType type: interface{Get(streamID github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.ID) (github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.Subscription, bool); Open(id github.com/onosproject/onos-api/go/onos/e2t/e2/v1beta1.SubscriptionID) github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.Subscription; Watch(ctx context.Context, ch chan<- github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.Subscription) error} - Interface type, is tracked: false
+isTrackedType type: github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.Manager - Named type: Manager, is tracked: false
+isTrackedType type: int - Basic type: int, is tracked: false
+isTrackedType type: github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.ID - Named type: ID, is tracked: false
+tainted because of assignTo: t19
+tainted: t19 = *t18, type: UnOp
+tainted because of assignTo: t18
+tainted: t18 = &c.streams [#3], type: FieldAddr
+isTrackedType type: struct{github.com/onosproject/onos-e2t/pkg/protocols/e2ap.ServerConn; ID github.com/onosproject/onos-e2t/pkg/southbound/e2ap/server.ConnID; E2NodeID github.com/onosproject/onos-api/go/onos/topo.ID; streams github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.Manager; rnib github.com/onosproject/onos-e2t/pkg/store/rnib.Store} - Struct type, is tracked: false
+isTrackedType type: github.com/onosproject/onos-e2t/pkg/southbound/e2ap/server.E2APConn - Named type: E2APConn, is tracked: false
+isTrackedType type: *github.com/onosproject/onos-e2t/pkg/southbound/e2ap/server.E2APConn - Pointer type, points to: Named type: E2APConn, is tracked: false
+tainted because of assignTo: t17
+tainted: t17 = convert github.com/onosproject/onos-e2t/pkg/southbound/e2ap/stream.ID <- int32 (t16), type: Convert
+tainted because of assignTo: t16
+tainted: t16 = phi [1: 0:int32, 4: t25] #requestID, type: Phi
+phi node edge is const: 0:int32, skipping
+added phi block: 4
+previous blocks: 1
+previous blocks: 4
+phi pb lastInstr: jump 3, pb Id: 4
+tainted because of assignTo: t25
+tainted: t25 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId).GetRicRequestorId(t24), type: Call
+isTrackedType type: github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId - Named type: RicrequestId, is tracked: true
+isTrackedType type: *github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId - Pointer type, points to: Named type: RicrequestId, is tracked: true
+isTrackedType type: func() int32 - Function type, is tracked: true
+generating constraint for tracked variable
+isTrackedType type: github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId - Named type: RicrequestId, is tracked: true
+isTrackedType type: *github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId - Pointer type, points to: Named type: RicrequestId, is tracked: true
+isTrackedType type: func() int32 - Function type, is tracked: true
+the condition is: if t22 goto 6 else 5
+t25 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId).GetRicRequestorId(t24)
+*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId.GetRicRequestorId
+t20 = invoke t19.Get(t17)
+if t22 goto 6 else 5 - true
+
+-------------------- end path 0 --------------------
+-------------------- path 0 --------------------
+RICIndication -> ricIndication -> In
+solving condition: if t22 goto 6 else 5 - true
+t25 = (*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId).GetRicRequestorId(t24)
+*github.com/onosproject/onos-e2t/api/e2ap/v2/e2ap-ies.RicrequestId.GetRicRequestorId
+t20 = invoke t19.Get(t17)
+if t22 goto 6 else 5 - true
+
+-------------------- end path 0 --------------------
+

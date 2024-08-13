@@ -1,0 +1,4 @@
+panic: successfully created valid message: indication_message_format2:{ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{}}} 1:97}
+ran-input/message.Fuzz
+go-fuzz-dep.Main
+main.main

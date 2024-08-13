@@ -1,0 +1,44 @@
+{{- /*
+
+# Copyright 2019-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+{{ tuple "accelleran-cbrs-nats" . | include "accelleran-cbrs-common.service_account" }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: accelleran-cbrs-nats
+  labels:
+{{ tuple "accelleran-cbrs-nats" . | include "accelleran-cbrs-common.metadata_labels" | indent 4 }}
+spec:
+  selector:
+    matchLabels:
+{{ tuple "accelleran-cbrs-nats" . | include "accelleran-cbrs-common.metadata_labels" | indent 6 }}
+  serviceName: accelleran-cbrs-nats
+  template:
+    metadata:
+      labels:
+{{ tuple "accelleran-cbrs-nats" . | include "accelleran-cbrs-common.metadata_labels" | indent 8 }}
+    spec:
+    {{- if .Values.nodeSelectors.enabled }}
+      nodeSelector:
+        {{ .Values.nodeSelectors.accelleranCBRSCommon.label }}: {{ .Values.nodeSelectors.accelleranCBRSCommon.value }}
+    {{- end }}
+      serviceAccountName: accelleran-cbrs-nats
+    {{- if hasKey .Values.images "pullSecrets" }}
+      imagePullSecrets:
+{{ toYaml .Values.images.pullSecrets | indent 8 }}
+    {{- end }}
+      containers:
+      - name: nats
+        image: {{ .Values.images.tags.nats }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        command: ["/entrypoint.sh"]
+        args: ["/usr/bin/gnatsd",  "-c",  "/etc/gnatsd.conf" ]
+        {{- if .Values.resources.enabled }}
+        resources:
+{{ toYaml .Values.resources.accelleranCBRSCommon | indent 10 }}
+        {{- end }}

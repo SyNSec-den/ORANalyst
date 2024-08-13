@@ -1,0 +1,164 @@
+# Copyright 2021-present Open Networking Foundation
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+#
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: "{{ .Release.Name }}-scripts"
+  labels:
+    app: onos
+    chart: "{{ .Chart.Name }}-{{ .Chart.Version }}"
+    release: "{{ .Release.Name }}"
+    heritage: "{{ .Release.Service }}"
+data:
+  update.sh: |
+    #!/bin/bash
+    host=${ES_URL:-localhost:9201}
+    dest_dir=${DEST_DIR}
+    monitor_dir=${MONITOR_DIR}
+    setting_dir=${SETTING_DIR}
+    temp_dir=${OUTPUT_DIR:-/opendistro_temp}
+
+    cleanup() {
+      echo "Cleaning up..."
+      exit
+    }
+
+    #return destination id if exist
+    check_destination() { name=$1
+        curl -s -H "content-type: application/json" "$host/_opendistro/_alerting/destinations" | jq -r ".destinations[] | select(.name == \"$name\").id"
+    }
+
+    update_destination() {
+        echo "update"
+        file=$1
+        id=$2
+        #compress the json file to reduce the http size
+        new_file="$temp_dir/$file"
+        jq -c '' < "$file" > "$new_file"
+        curl -s -X PUT -H "content-type: application/json" -d "@$new_file" "$host/_opendistro/_alerting/destinations/$id"
+        rm "$new_file"
+        echo "  "
+    }
+
+    create_destination() {
+        echo "create"
+        file=$1
+        new_file="$temp_dir/$file"
+        jq -c '' < "$file" > "$new_file"
+        curl -s -X POST -H "content-type: application/json" -d "@$new_file" "$host/_opendistro/_alerting/destinations"
+        rm "$new_file"
+        echo "  "
+    }
+
+    #return cluster_id if exist
+    check_monitor() {
+        name=$1
+        curl -s -H "content-type: application/json" \
+            --data "{\"query\":{\"match\":{ \"monitor.name\": \"$name\"}}}" \
+            "$host/_opendistro/_alerting/monitors/_search" | jq -r '.hits.hits[0]._id'
+    }
+
+    create_monitor() {
+        file=$1
+        dest_id=$2
+        new_file="$temp_dir/$file"
+        echo "create monitor"
+        jq -c ".triggers[0].actions[0].destination_id=\"$dest_id\""  "$file" > "$new_file"
+        curl -s -X POST -H "content-type: application/json" -d "@$new_file" "$host/_opendistro/_alerting/monitors/"
+        rm "$new_file"
+        echo " "
+    }
+
+    update_monitor() {
+        file=$1
+        dest_id=$2
+        monitor_id=$3
+        new_file="$temp_dir/$file"
+        echo "update monitor"
+        jq -c ".triggers[0].actions[0].destination_id=\"$dest_id\""  "$file" > "$new_file"
+        curl -s -X PUT -H "content-type: application/json" -d "@$new_file" "$host/_opendistro/_alerting/monitors/$monitor_id"
+        rm "$new_file"
+        echo " "
+    }
+
+    # handle the destination
+    handle_destination() {
+        dir=$dest_dir
+        mkdir -p "$temp_dir/$dir"
+        config_file=$dir/config.json
+        for k in $(jq ' keys | .[]' "$config_file"); do
+            file=$dir/$(jq -r ".[$k].file" "$config_file");
+
+            name=$(jq -r '.name' "$file")
+            id=$(check_destination "$name")
+            if [ -z "$id" ]; then
+                create_destination "$file"
+            else
+                update_destination "$file" "$id"
+            fi
+        done
+    }
+
+    # handle the monitors
+    handle_monitor() {
+        dir=$monitor_dir
+        mkdir -p "$temp_dir/$dir"
+        config_file=$dir/config.json
+        for k in $(jq ' keys | .[]' "$config_file"); do
+            file=$dir/$(jq -r ".[$k].file" "$config_file");
+            dest_name=$(jq -r ".[$k].destination" "$config_file");
+            format=$(jq -r ".[$k].format" "$config_file");
+
+            dest_id=$(check_destination "$dest_name")
+            if [ -z "$dest_id" ]; then
+                echo "destination doesn't exist, skip this monitor"
+                continue
+            fi
+
+            name=$(jq -r '.name' "$file")
+
+            ## Replace the slack output format
+            FILENAME=$(mktemp)
+            jq --arg slack "${format}" '.triggers[0].actions[0].message_template.source=$slack' "$file" > "$FILENAME"
+            monitor_id=$(check_monitor "$name")
+            if [ "$monitor_id" = "null" ]; then
+                create_monitor "$FILENAME" "$dest_id"
+            else
+                update_monitor "$FILENAME" "$dest_id" "$monitor_id"
+            fi
+        done
+
+    }
+
+    handle_settings() {
+        dir=$setting_dir
+        mkdir -p "$temp_dir/$dir"
+        config_file=$dir/config.json
+        for k in $(jq ' keys | .[]' "$config_file"); do
+            file=$dir/$(jq -r ".[$k].file" "$config_file");
+            url=$(jq -r ".[$k].url" "$config_file");
+
+            new_file="$temp_dir/$file"
+            jq -c '' < "$file" > "$new_file"
+            curl -s -X POST -H "content-type: application/json" -d "@$new_file" "$host/$url"
+            rm "$new_file"
+            echo "  "
+        done
+    }
+
+    if [ ! -z $setting_dir ]; then
+      echo "handle setting"
+      handle_settings
+    fi
+    if [ ! -z $dest_dir ]; then
+      echo "handle destination"
+      handle_destination
+    fi
+    if [ ! -z $monitor_dir ]; then
+      echo "handle monitor"
+      handle_monitor
+    fi
+
+    trap cleanup INT TERM
+    sleep infinity

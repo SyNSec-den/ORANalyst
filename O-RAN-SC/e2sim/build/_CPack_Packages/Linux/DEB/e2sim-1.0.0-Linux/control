@@ -1,0 +1,10 @@
+Architecture: amd64
+Description: RIC xAPP C++ framework library
+ C++ framework for RIC xAPPs based on RMR.
+Maintainer: None
+Package: e2sim-dev
+Priority: optional
+Section: ric
+Version: 1.0.0
+Installed-Size: 2472
+

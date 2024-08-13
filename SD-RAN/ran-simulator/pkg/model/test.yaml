@@ -1,0 +1,151 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+layout:
+  center:
+    lat: 45.00
+    lng: -30.00
+  zoom: 0.8
+  locationsScale: 1.0
+  fade: true
+  showRoutes: true
+  showPower: true
+
+nodes:
+  node1:
+    gnbid: 144470
+    controllers:
+      - controller1
+    servicemodels:
+      - kpm
+      - rc
+    cells:
+      - 84325717505
+      - 84325717506
+
+  node2:
+    gnbid: 144471
+    controllers:
+      - controller2
+    servicemodels:
+      - kpm
+    cells:
+      - 84325717761
+      - 84325717762
+
+cells:
+  cell1:
+    ncgi: 84325717505
+    sector:
+      center:
+        lat: 46.00
+        lng: 29.00
+      arc: 180.0
+      azimuth: 0.0
+    color: red
+    txpowerdb: 30
+    measurementParams:
+      timeToTrigger: 0
+      frequencyOffset: 0
+      pcellIndividualOffset: 0
+      ncellIndividualOffsets:
+        84325717506: 0
+        84325717761: 0
+        84325717762: 0
+      hysteresis: 0
+      eventA3Params:
+        a3Offset: 0
+        reportOnLeave: false
+  cell2:
+    ncgi: 84325717506
+    sector:
+      center:
+        lat: 46.00
+        lng: 29.00
+      arc: 180.0
+      azimuth: 180.0
+    color: blue
+    txpowerdb: 30
+    measurementParams:
+      timeToTrigger: 0
+      frequencyOffset: 0
+      pcellIndividualOffset: 0
+      ncellIndividualOffsets:
+        84325717505: 0
+        84325717761: 0
+        84325717762: 0
+      hysteresis: 0
+      eventA3Params:
+        a3Offset: 0
+        reportOnLeave: false
+  cell3:
+    ncgi: 84325717761
+    sector:
+      center:
+        lat: 44.00
+        lng: 31.00
+      arc: 180.0
+      azimuth: 0.0
+    color: red
+    txpowerdb: 30
+    measurementParams:
+      timeToTrigger: 0
+      frequencyOffset: 0
+      pcellIndividualOffset: 0
+      ncellIndividualOffsets:
+        84325717505: 0
+        84325717506: 0
+        84325717762: 0
+      hysteresis: 0
+      eventA3Params:
+        a3Offset: 0
+        reportOnLeave: false
+  cell4:
+    ncgi: 84325717762
+    sector:
+      center:
+        lat: 44.00
+        lng: 31.00
+      arc: 180.0
+      azimuth: 180.0
+    color: blue
+    txpowerdb: 30
+    measurementParams:
+      timeToTrigger: 0
+      frequencyOffset: 0
+      pcellIndividualOffset: 0
+      ncellIndividualOffsets:
+        84325717505: 0
+        84325717506: 0
+        84325717761: 0
+      hysteresis: 0
+      eventA3Params:
+        a3Offset: 0
+        reportOnLeave: false
+controllers:
+  controller1:
+    id: E2T
+    address: onos-e2t
+    port: 36421
+  controller2:
+    id: E2T
+    address: onos-e2t
+    port: 36421
+servicemodels:
+  kpm:
+    id: 1
+    version: 1.0.0
+    description: kpm service model
+  ni:
+    id: 2
+    version: 1.0.0
+    description: NI service model
+  rc:
+    id: 3
+    version: 1.0.0
+    description: RC service model
+ueCount: 12
+plmnID: 314628
+
+

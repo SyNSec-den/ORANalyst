@@ -1,0 +1,56 @@
+# Copyright 2020-present Open Networking Foundation
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+# Default values for grafana-aether.
+# This is a YAML-formatted file.
+# This chart loads Grafana and creates configmaps for the datasources and dashboards.
+
+nameOverride: ""
+fullnameOverride: ""
+
+# Names of dashbaords in the dashboards/ directory to deploy
+dashboards: []
+  # - global-edge-status-production.json
+  # - sdcore-metrics.json
+
+# Prometheus datasources used by the dashboards
+# Names in datasources must match names referenced in dashboards
+prometheusDatasources: []
+  # - name: RANCHER_MONITORING_GLOBAL
+  #   endpoint: http://rancher-monitoring-prometheus:9090
+  # - name: RANCHER_MONITORING_SDCORE
+  #   endpoint: http://rancher-monitoring-prometheus.cattle-monitoring-system.svc.prd.acc.gcp.aetherproject.net:9090
+
+# Elasticsearch datasources used by the logging dashboard
+elasticsearchDatasources: []
+  # - name: acc-gcp1-es
+  #   endpoint: http://opendistro-es-client-service.logging.svc.prd.acc.gcp.aetherproject.net:9200
+  # - name: ace-menlo-es
+  #   endpoint: http://opendistro-es-client-service.logging.svc.prd.menlo.aetherproject.net:9200
+
+# Configure Google Cloud Monitoring datasource
+googleCloudMonitoring: {}
+# clientEmail: grafana@onf-vpn.iam.gserviceaccount.com
+# defaultProject: onf-vpn
+# key: |
+#   -----BEGIN PRIVATE KEY-----
+#   ...
+#   -----END PRIVATE KEY-----
+
+# For customizing the enterprise dashboard
+enterpriseDashboard:
+  enabled: false
+  # name: Intel
+  # datasource: ace-intel
+  # tunnelName: production-ace-intel
+
+grafana:
+  enabled: true
+  grafana.ini:
+    auth.anonymous:
+      enabled: true
+  sidecar:
+    dashboards:
+      enabled: true
+    datasources:
+      enabled: true

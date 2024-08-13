@@ -1,0 +1,591 @@
+2023-06-28T20:42:17.003Z	INFO	rimedo-ts	rimedo-ts/rimedo-ts.go:26	Starting RIMEDO Labs Traffic Steering xAPP
+2023-06-28T20:42:17.004Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:18	A1EI service created
+2023-06-28T20:42:17.004Z	INFO	northbound	northbound/server.go:138	Loading default CA onfca
+2023-06-28T20:42:17.004Z	INFO	northbound	northbound/server.go:165	Starting RPC server on address: [::]:5150
+2023-06-28T20:42:17.004Z	INFO	a1/manager	connection/manager.go:46	Start (or restart) A1 connection manager
+2023-06-28T20:42:17.012Z	WARN	onos/grpc/retry	retry/retry.go:70	SendMsg id:"a1:rimedo-ts-64b9dfbc77-rk6jp" : error%!(EXTRA *status.Error=rpc error: code = NotFound desc = key a1:rimedo-ts-64b9dfbc77-rk6jp not found)
+2023-06-28T20:42:17.027Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:62	EIJobStatusQuery stream established
+2023-06-28T20:42:17.027Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:34	EIQuery stream established
+2023-06-28T20:42:17.027Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:48	EIJobUpdate stream established
+2023-06-28T20:42:17.027Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:41	EIJobSetup stream established
+2023-06-28T20:42:17.027Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:55	EIJobDelete stream established
+2023-06-28T20:42:22.005Z	INFO	rimedo-ts/ts-manager	manager/manager.go:123	
+
+
+
+
+
+
+
+
+
+
+2023-06-28T20:42:23.005Z	INFO	rimedo-ts/ts-manager	manager/manager.go:321	POLICY MESSAGE: Default policy applied
+
+2023-06-28T20:42:46.583Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 1 for subscription channel 'rimedo-ts:rimedo-ts-64b9dfbc77-rk6jp:e2:1/5154:rimedo-ts-subscription-MHO_TRIGGER_TYPE_PERIODIC'
+2023-06-28T20:42:46.802Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 2 for subscription channel 'rimedo-ts:rimedo-ts-64b9dfbc77-rk6jp:e2:1/5154:rimedo-ts-subscription-MHO_TRIGGER_TYPE_UPON_RCV_MEAS_REPORT'
+2023-06-28T20:42:46.827Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 3 for subscription channel 'rimedo-ts:rimedo-ts-64b9dfbc77-rk6jp:e2:1/5154:rimedo-ts-subscription-MHO_TRIGGER_TYPE_UPON_CHANGE_RRC_STATUS'
+2023-06-28T20:44:42.123Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc0005504f8}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c030}, e2NodeID: e2:1/5154
+2023-06-28T20:44:42.123Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c0c8}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c0d8}, e2NodeID: e2:1/5154
+2023-06-28T20:44:42.123Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc0004a6008}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00061a000}, e2NodeID: e2:1/5154
+2023-06-28T20:44:42.123Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:44:42.124Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:44:42.124Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:44:43.562Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:44:43.562Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:44:43.562Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:44:43.562Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:44:43.562Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:44:43.562Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:44:43.562Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:44:43.562Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:44:43.562Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:44:46.574Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:44:46.574Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:44:46.574Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:44:46.574Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:44:46.574Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:44:46.574Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:44:46.574Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:44:46.574Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:44:46.574Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:44:49.587Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:44:49.587Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:44:49.587Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:44:49.587Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:44:49.587Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:44:49.587Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:44:49.587Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:44:49.587Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:44:49.587Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:44:52.121Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000011600}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000011610}, e2NodeID: e2:1/5154
+2023-06-28T20:44:52.121Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00061a040}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00061a050}, e2NodeID: e2:1/5154
+2023-06-28T20:44:52.121Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:44:52.121Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:44:52.121Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00061a068}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00061a078}, e2NodeID: e2:1/5154
+2023-06-28T20:44:52.121Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:44:52.602Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:44:52.602Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:44:52.602Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:44:52.602Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:44:52.602Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:44:52.602Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:44:52.602Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:44:52.602Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:44:52.602Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:44:55.616Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:44:55.616Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:44:55.616Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:44:55.616Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:44:55.616Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:44:55.616Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:44:55.616Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:44:55.616Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:44:55.616Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:44:58.630Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:44:58.630Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:44:58.631Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:44:58.631Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:44:58.631Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:44:58.631Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:44:58.631Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:44:58.631Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:44:58.631Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:01.648Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:01.648Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:01.648Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:01.648Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:01.648Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:01.648Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:01.648Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:01.648Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:01.648Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:01.919Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000550338}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000550348}, e2NodeID: e2:1/5154
+2023-06-28T20:45:01.919Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:02.121Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc0000114c8}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc0000114d8}, e2NodeID: e2:1/5154
+2023-06-28T20:45:02.122Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:02.122Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000550360}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000550370}, e2NodeID: e2:1/5154
+2023-06-28T20:45:02.122Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:04.663Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:04.663Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:04.663Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:04.663Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:04.663Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:04.664Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:04.664Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:04.664Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:04.664Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:07.679Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:07.679Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:07.679Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:07.679Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:07.679Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:07.679Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:07.679Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:07.679Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:07.679Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:10.694Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:10.694Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:10.694Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:10.694Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:10.694Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:10.694Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:10.694Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:10.694Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:10.694Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:12.127Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000550158}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000550168}, e2NodeID: e2:1/5154
+2023-06-28T20:45:12.127Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000550178}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000550188}, e2NodeID: e2:1/5154
+2023-06-28T20:45:12.127Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000550198}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc0005501a8}, e2NodeID: e2:1/5154
+2023-06-28T20:45:12.127Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:12.127Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:12.127Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:13.710Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:13.710Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:13.710Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:13.710Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:13.710Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:13.710Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:13.710Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:13.710Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:13.710Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:16.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:16.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:16.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:16.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:16.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:16.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:16.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:16.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:16.727Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:19.742Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:19.742Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:19.742Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:19.742Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:19.742Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:19.742Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:19.742Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:19.742Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:19.742Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:21.929Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c068}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c088}, e2NodeID: e2:1/5154
+2023-06-28T20:45:21.929Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:22.129Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c0d8}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c0e8}, e2NodeID: e2:1/5154
+2023-06-28T20:45:22.129Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:22.130Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000532090}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc0005320c0}, e2NodeID: e2:1/5154
+2023-06-28T20:45:22.130Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:22.759Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:22.759Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:22.759Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:22.759Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:22.759Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:22.760Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:22.760Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:22.760Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:22.760Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:25.775Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:25.775Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:25.775Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:25.775Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:25.775Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:25.775Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:25.775Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:25.775Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:25.775Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:28.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:28.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:28.790Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:28.791Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:28.791Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:28.791Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:28.791Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:28.791Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:28.791Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:31.805Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:31.805Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:31.805Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:31.805Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:31.805Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:31.805Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:31.805Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:31.805Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:31.805Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:31.930Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000011670}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000011680}, e2NodeID: e2:1/5154
+2023-06-28T20:45:31.930Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:32.133Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000550038}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000550048}, e2NodeID: e2:1/5154
+2023-06-28T20:45:32.133Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000550058}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000550068}, e2NodeID: e2:1/5154
+2023-06-28T20:45:32.133Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:32.133Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:34.821Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:34.821Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:34.821Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:34.821Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:34.821Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:34.821Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:34.821Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:34.821Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:34.821Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:37.836Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:37.836Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:37.836Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:37.836Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:37.836Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:37.836Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:37.836Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:37.836Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:37.836Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:40.851Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:40.851Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:40.851Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:40.851Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:40.851Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:40.851Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:40.851Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:40.851Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:40.851Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:41.931Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c4e0}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c4f0}, e2NodeID: e2:1/5154
+2023-06-28T20:45:41.931Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:42.133Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000532138}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000532148}, e2NodeID: e2:1/5154
+2023-06-28T20:45:42.134Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:42.134Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c508}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c518}, e2NodeID: e2:1/5154
+2023-06-28T20:45:42.134Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:43.866Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:43.866Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:43.866Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:43.866Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:43.866Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:43.866Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:43.866Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:43.866Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:43.866Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:46.882Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:46.882Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:46.882Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:46.882Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:46.882Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:46.882Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:46.882Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:46.882Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:46.882Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:49.900Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:49.900Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:49.900Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:49.900Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:49.900Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:49.900Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:49.900Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:49.900Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:49.900Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:51.932Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000011038}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc0000110f8}, e2NodeID: e2:1/5154
+2023-06-28T20:45:51.932Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:52.133Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000532120}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000532130}, e2NodeID: e2:1/5154
+2023-06-28T20:45:52.133Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:52.133Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000550108}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000550118}, e2NodeID: e2:1/5154
+2023-06-28T20:45:52.134Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:45:52.917Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:52.917Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:52.917Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:52.917Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:52.917Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:52.917Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:52.917Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:52.917Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:52.917Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:55.933Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:55.933Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:55.933Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:55.933Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:55.933Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:55.933Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:55.933Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:55.933Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:55.933Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:45:58.949Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:45:58.949Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:45:58.950Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:45:58.950Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:45:58.950Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:45:58.950Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:45:58.950Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:45:58.950Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:45:58.950Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:01.965Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:01.965Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:01.965Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:01.965Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:01.965Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:01.965Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:01.965Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:01.965Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:01.965Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:02.159Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000532728}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000532738}, e2NodeID: e2:1/5154
+2023-06-28T20:46:02.159Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:02.159Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc0005505d8}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc0005505e8}, e2NodeID: e2:1/5154
+2023-06-28T20:46:02.159Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:02.159Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00061a030}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00061a040}, e2NodeID: e2:1/5154
+2023-06-28T20:46:02.159Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:04.982Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:04.982Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:04.982Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:04.982Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:04.982Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:04.982Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:04.982Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:04.982Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:04.982Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:07.999Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:07.999Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:07.999Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:07.999Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:07.999Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:07.999Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:07.999Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:07.999Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:07.999Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:11.015Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:11.015Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:11.015Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:11.015Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:11.015Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:11.015Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:11.015Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:11.015Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:11.015Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:12.221Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c4d8}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c4e8}, e2NodeID: e2:1/5154
+2023-06-28T20:46:12.221Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c4f8}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c508}, e2NodeID: e2:1/5154
+2023-06-28T20:46:12.221Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:12.221Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:12.221Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c518}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c528}, e2NodeID: e2:1/5154
+2023-06-28T20:46:12.221Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:14.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:14.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:14.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:14.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:14.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:14.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:14.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:14.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:14.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:17.048Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:17.048Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:17.048Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:17.048Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:17.048Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:17.048Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:17.048Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:17.048Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:17.048Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:20.067Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:20.067Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:20.067Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:20.067Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:20.067Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:20.067Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:20.067Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:20.067Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:20.067Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:22.221Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc0000112c8}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc0000112d8}, e2NodeID: e2:1/5154
+2023-06-28T20:46:22.221Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:22.221Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000532090}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc0005320c0}, e2NodeID: e2:1/5154
+2023-06-28T20:46:22.221Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:22.221Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc000532120}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000532130}, e2NodeID: e2:1/5154
+2023-06-28T20:46:22.221Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:23.084Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:23.084Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:23.084Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:23.084Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:23.084Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:23.084Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:23.084Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:23.084Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:23.084Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:26.100Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:26.100Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:26.100Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:26.100Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:26.101Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:26.101Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:26.101Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:26.101Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:26.101Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:29.117Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:29.117Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:29.117Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:29.117Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:29.117Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:29.117Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:29.117Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:29.117Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:29.117Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:32.132Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:32.132Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:32.132Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:32.132Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:32.132Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:32.132Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:32.132Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:32.132Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:32.132Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:32.217Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00061a198}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00061a1a8}, e2NodeID: e2:1/5154
+2023-06-28T20:46:32.217Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:32.218Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c0e0}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c0f0}, e2NodeID: e2:1/5154
+2023-06-28T20:46:32.218Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:32.218Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00061a1c0}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00061a1d0}, e2NodeID: e2:1/5154
+2023-06-28T20:46:32.218Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:35.150Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:35.150Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:35.150Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:35.150Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:35.150Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:35.150Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:35.150Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:35.150Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:35.150Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:38.164Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:38.164Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:38.164Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:38.164Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:38.164Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:38.164Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:38.164Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:38.164Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:38.164Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:41.180Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:41.180Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:41.181Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:41.181Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:41.181Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:41.181Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:41.181Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:41.181Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:41.181Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:42.145Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c328}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c338}, e2NodeID: e2:1/5154
+2023-06-28T20:46:42.145Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c348}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c358}, e2NodeID: e2:1/5154
+2023-06-28T20:46:42.145Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:42.145Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:42.146Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00061a690}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00061a6a0}, e2NodeID: e2:1/5154
+2023-06-28T20:46:42.146Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:44.196Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:44.196Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:44.196Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:44.196Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:44.196Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:44.196Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:44.196Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:44.196Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:44.196Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:47.211Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:47.211Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:47.211Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:47.211Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:47.211Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:47.211Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:47.211Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:47.211Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:47.211Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:50.226Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:50.226Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:50.226Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:50.226Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:50.226Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:50.226Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:50.226Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:50.226Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:50.226Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-06-28T20:46:52.024Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc0005321f0}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc000532200}, e2NodeID: e2:1/5154
+2023-06-28T20:46:52.024Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:52.225Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c2f0}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c300}, e2NodeID: e2:1/5154
+2023-06-28T20:46:52.225Z	DEBUG	rimedo-ts/mho	mho/mho.go:73	Received MHO indication message header: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eab88} sizeCache:0 unknownFields:[] E2SmMhoIndicationHeader:0xc00042c310}, message: {state:{NoUnkeyedLiterals:{} DoNotCompare:[] DoNotCopy:[] atomicMessageInfo:0xc0002eae18} sizeCache:0 unknownFields:[] E2SmMhoIndicationMessage:0xc00042c320}, e2NodeID: e2:1/5154
+2023-06-28T20:46:52.225Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:52.225Z	ERROR	rimedo-ts/mho	mho/mho.go:185	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:185
+2023-06-28T20:46:53.242Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-06-28T20:46:53.242Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------- CELLS ----------------------------
+2023-06-28T20:46:53.242Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[-1]
+2023-06-28T20:46:53.242Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-06-28T20:46:53.242Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-06-28T20:46:53.242Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-06-28T20:46:53.242Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------- UES -----------------------------
+2023-06-28T20:46:53.242Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:138426010055140 CGIs(RSRP): []
+2023-06-28T20:46:53.242Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	

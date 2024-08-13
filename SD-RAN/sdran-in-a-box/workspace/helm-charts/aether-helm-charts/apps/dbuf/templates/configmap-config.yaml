@@ -1,0 +1,52 @@
+{{/*
+# Copyright 2021-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ include "dbuf.fullname" . }}
+  labels:
+    {{- include "dbuf.labels" . | nindent 4 }}
+data:
+  config: |
+    #!/bin/sh
+    set -x
+    env
+    export IFS=','
+    for r in $STATIC_ROUTES; do
+      ip route add $r dev $DP_INTERFACE
+    done
+    unset IFS
+    ifconfig
+    while true
+    do
+        echo "Up SR-IOV intercae"
+        ip link set $DP_INTERFACE up
+        echo "Get the IP Address from interface $DP_INTERFACE"
+        ifconfig $DP_INTERFACE
+        #IP Address from ifconfig is addr:10.71.126.127, have to cut it off
+        DP_IP=$(ifconfig $DP_INTERFACE | awk '/inet addr:/ {print $2}' | cut -d':' -f2)
+        echo "IP Address is $DP_IP"
+
+        echo "Generate the netcfg json"
+    cat <<EOF > /tmp/netcfg.json
+        {
+          "apps": {
+            "org.omecproject.up4": {
+              "dbuf": {
+                "serviceAddr": "$GRPC_SERVICE_NAME.$NAMESPACE:$GRPC_PORT",
+                "dataplaneAddr": "$DP_IP:$DP_PORT"
+              }
+            }
+          }
+        }
+    EOF
+
+        cat /tmp/netcfg.json
+        curl --fail -sSL --user $ONOS_USERNAME:$ONOS_PASSWORD --noproxy $ONOS_SERVER -X POST -H 'Content-Type:application/json' \
+        http://$ONOS_SERVER:$ONOS_PORT/onos/v1/network/configuration -d@/tmp/netcfg.json
+        sleep 1m
+    done

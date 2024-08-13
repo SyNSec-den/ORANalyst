@@ -1,0 +1,142 @@
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-dep/bin# kubectl get po -n ricplt -o wide
+NAME                                                         READY   STATUS    RESTARTS   AGE     IP            NODE               NOMINATED NODE   READINESS GATES
+deployment-ricplt-a1mediator-7d5b85ff7d-2fd4m                0/1     Pending   0          81s     <none>        <none>             <none>           <none>
+deployment-ricplt-a1mediator-7d5b85ff7d-cmkps                0/1     Evicted   0          79m     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-alarmmanager-6bd5fccfc8-727vq              0/1     Pending   0          86s     <none>        <none>             <none>           <none>
+deployment-ricplt-alarmmanager-6bd5fccfc8-ns598              0/1     Evicted   0          78m     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-appmgr-77986c9cbb-7xcfh                    1/1     Running   0          80m     10.244.0.37   tianchang-ubuntu   <none>           <none>
+deployment-ricplt-e2mgr-78c987559f-mkshv                     1/1     Running   3          75m     10.244.0.50   tianchang-ubuntu   <none>           <none>
+deployment-ricplt-e2mgr-78c987559f-vnfrv                     0/1     Evicted   0          79m     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-e2term-alpha-5dc768bcb7-244ms              0/1     Evicted   0          79m     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-e2term-alpha-5dc768bcb7-d7lp4              0/1     Pending   0          93s     <none>        <none>             <none>           <none>
+deployment-ricplt-o1mediator-97fb6759b-79lfv                 0/1     Evicted   0          75m     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-o1mediator-97fb6759b-9hlwx                 0/1     Evicted   0          78m     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-o1mediator-97fb6759b-bznwp                 1/1     Running   0          7m38s   10.244.0.54   tianchang-ubuntu   <none>           <none>
+deployment-ricplt-rtmgr-78f768474-8qksh                      0/1     Evicted   0          75m     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-rtmgr-78f768474-drcft                      1/1     Running   0          7m44s   10.244.0.55   tianchang-ubuntu   <none>           <none>
+deployment-ricplt-rtmgr-78f768474-kcrzs                      0/1     Evicted   0          79m     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-submgr-56bb776b68-dkbt7                    1/1     Running   0          79m     10.244.0.42   tianchang-ubuntu   <none>           <none>
+deployment-ricplt-vespamgr-84f7d87dfb-64k8r                  0/1     Evicted   0          97s     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-vespamgr-84f7d87dfb-bjssn                  0/1     Evicted   0          97s     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-vespamgr-84f7d87dfb-dqfkc                  0/1     Evicted   0          97s     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-vespamgr-84f7d87dfb-t2m27                  0/1     Pending   0          97s     <none>        <none>             <none>           <none>
+deployment-ricplt-vespamgr-84f7d87dfb-vnmkc                  0/1     Evicted   0          79m     <none>        tianchang-ubuntu   <none>           <none>
+deployment-ricplt-vespamgr-84f7d87dfb-x262h                  0/1     Evicted   0          75m     <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-kong-7995f4679b-cfnnd                      0/2     Evicted   0          75m     <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-kong-7995f4679b-jlrvd                      0/2     Evicted   0          80m     <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-kong-7995f4679b-vwxtt                      0/2     Pending   0          75s     <none>        <none>             <none>           <none>
+r4-infrastructure-prometheus-alertmanager-5798b78f48-wpzp8   2/2     Running   0          80m     10.244.0.33   tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-2gnkw          0/1     Evicted   0          7m50s   <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-4mrj4          0/1     Evicted   0          75m     <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-4sdwz          0/1     Evicted   0          75m     <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-7qdqf          0/1     Evicted   0          7m50s   <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-gmsnb          0/1     Evicted   0          75m     <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-gxvh5          1/1     Running   0          7m48s   10.244.0.56   tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-phckr          0/1     Evicted   0          75m     <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-ps7cw          0/1     Evicted   0          7m50s   <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-q8f8g          0/1     Evicted   0          7m50s   <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-t8znl          0/1     Evicted   0          80m     <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-vsbml          0/1     Evicted   0          75m     <none>        tianchang-ubuntu   <none>           <none>
+r4-infrastructure-prometheus-server-c8ddcfdf5-x5q4m          0/1     Evicted   0          7m49s   <none>        tianchang-ubuntu   <none>           <none>
+statefulset-ricplt-dbaas-server-0                            1/1     Running   0          80m     10.244.0.36   tianchang-ubuntu   <none>           <none>
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-dep/bin# kubectl describe pod -n ricplt deployment-ricplt-e2mgr-78c987559f-vnfrv
+Name:           deployment-ricplt-e2mgr-78c987559f-vnfrv
+Namespace:      ricplt
+Priority:       0
+Node:           tianchang-ubuntu/
+Start Time:     Tue, 02 Jan 2024 13:28:53 -0500
+Labels:         app=ricplt-e2mgr
+                pod-template-hash=78c987559f
+                release=r4-e2mgr
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container container-ricplt-e2mgr was using 156Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/deployment-ricplt-e2mgr-78c987559f
+Containers:
+  container-ricplt-e2mgr:
+    Image:       nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-e2mgr:6.0.4
+    Ports:       3800/TCP, 4561/TCP, 3801/TCP
+    Host Ports:  0/TCP, 0/TCP, 0/TCP
+    Liveness:    http-get http://:3800/v1/health delay=3s timeout=1s period=10s #success=1 #failure=3
+    Readiness:   http-get http://:3800/v1/health delay=3s timeout=1s period=10s #success=1 #failure=3
+    Environment Variables from:
+      configmap-ricplt-e2mgr-env        ConfigMap  Optional: false
+      configmap-ricplt-dbaas-appconfig  ConfigMap  Optional: false
+    Environment:                        <none>
+    Mounts:
+      /etc/config from e2mgr-loglevel-volume (rw)
+      /opt/E2Manager/resources/configuration.yaml from local-configuration-file (rw,path="configuration.yaml")
+      /opt/E2Manager/router.txt from local-router-file (rw,path="router.txt")
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ggf5x (ro)
+Volumes:
+  local-router-file:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      configmap-ricplt-e2mgr-router-configmap
+    Optional:  false
+  local-configuration-file:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      configmap-ricplt-e2mgr-configuration-configmap
+    Optional:  false
+  e2mgr-loglevel-volume:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      configmap-ricplt-e2mgr-loglevel-configmap
+    Optional:  false
+  default-token-ggf5x:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ggf5x
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+root@tianchang-Ubuntu:/home/tianchang/Desktop/proj/oran-sc/ric-dep/bin# kubectl describe pod -n ricplt deployment-ricplt-rtmgr-78f768474-kcrzs
+Name:           deployment-ricplt-rtmgr-78f768474-kcrzs
+Namespace:      ricplt
+Priority:       0
+Node:           tianchang-ubuntu/
+Start Time:     Tue, 02 Jan 2024 13:28:43 -0500
+Labels:         app=ricplt-rtmgr
+                pod-template-hash=78f768474
+                release=r4-rtmgr
+Annotations:    <none>
+Status:         Failed
+Reason:         Evicted
+Message:        The node was low on resource: ephemeral-storage. Container container-ricplt-rtmgr was using 384Ki, which exceeds its request of 0. 
+IP:             
+IPs:            <none>
+Controlled By:  ReplicaSet/deployment-ricplt-rtmgr-78f768474
+Containers:
+  container-ricplt-rtmgr:
+    Image:       nexus3.o-ran-sc.org:10002/o-ran-sc/ric-plt-rtmgr:0.9.6
+    Ports:       3800/TCP, 4561/TCP, 4560/TCP
+    Host Ports:  0/TCP, 0/TCP, 0/TCP
+    Command:
+      /run_rtmgr.sh
+    Liveness:   http-get http://:8080/ric/v1/health/alive delay=5s timeout=1s period=15s #success=1 #failure=3
+    Readiness:  http-get http://:8080/ric/v1/health/ready delay=5s timeout=1s period=15s #success=1 #failure=3
+    Environment Variables from:
+      configmap-ricplt-rtmgr-env        ConfigMap  Optional: false
+      configmap-ricplt-dbaas-appconfig  ConfigMap  Optional: false
+    Environment:                        <none>
+    Mounts:
+      /cfg from rtmgrcfg (ro)
+      /var/run/secrets/kubernetes.io/serviceaccount from default-token-ggf5x (ro)
+Volumes:
+  rtmgrcfg:
+    Type:      ConfigMap (a volume populated by a ConfigMap)
+    Name:      configmap-ricplt-rtmgr-rtmgrcfg
+    Optional:  false
+  default-token-ggf5x:
+    Type:        Secret (a volume populated by a Secret)
+    SecretName:  default-token-ggf5x
+    Optional:    false
+QoS Class:       BestEffort
+Node-Selectors:  <none>
+Tolerations:     node.kubernetes.io/not-ready:NoExecute for 300s
+                 node.kubernetes.io/unreachable:NoExecute for 300s
+Events:          <none>
+

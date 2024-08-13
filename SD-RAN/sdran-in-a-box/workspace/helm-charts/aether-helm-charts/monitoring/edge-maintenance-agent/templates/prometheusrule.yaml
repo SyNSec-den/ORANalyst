@@ -1,0 +1,22 @@
+# Copyright 2020-present Open Networking Foundation
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+{{- if .Values.prometheus.enabled }}
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: {{ include "edge-maintenance-agent.fullname" . }}
+  labels:
+    {{- include "edge-maintenance-agent.labels" . | nindent 4 }}
+spec:
+  groups:
+    - name: ace-maintenance.rules
+      rules:
+      - alert: ScheduledDowntime
+        annotations:
+          message: The cluster is undergoing scheduled maintenance.
+        expr: aetheredge_in_maintenance_window > 0
+        for: 1m
+        labels:
+          severity: info
+{{- end }}

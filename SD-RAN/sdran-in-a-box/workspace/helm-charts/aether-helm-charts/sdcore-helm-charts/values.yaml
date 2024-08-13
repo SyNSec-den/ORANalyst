@@ -1,0 +1,62 @@
+# SPDX-FileCopyrightText: 2021-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+# Default values for all SD-CORE Helm charts.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+#Images tagged for the release
+omec-control-plane:
+  enable4G: false
+  images:
+    tags:
+      #4G control Plane images
+      init: docker.io/omecproject/pod-init:1.0.0
+      hssdb: registry.aetherproject.org/proxy/omecproject/c3po-hssdb:master-22ccd06
+      hss: registry.aetherproject.org/proxy/omecproject/c3po-hss:master-22ccd06
+      mme: registry.aetherproject.org/proxy/omecproject/nucleus:master-9f86f87
+      spgwc: registry.aetherproject.org/omecproject/spgw:master-d8b0987
+      pcrf: registry.aetherproject.org/proxy/omecproject/c3po-pcrf:pcrf-7824e6e
+      pcrfdb: registry.aetherproject.org/proxy/omecproject/c3po-pcrfdb:pcrf-7824e6e
+      config4g: registry.aetherproject.org/omecproject/5gc-webui:onf-release3.0.5-c22caf8
+      depCheck: quay.io/stackanetes/kubernetes-entrypoint:v0.3.1
+  config:
+    config4g:
+      deploy: true
+
+omec-user-plane:
+  enable: true
+  images:
+    tags:
+      #4G/5G user plane images
+      bess: registry.aetherproject.org/proxy/omecproject/upf-epc-bess:master-de36ff8
+      pfcpiface: registry.aetherproject.org/proxy/omecproject/upf-epc-pfcpiface:master-de36ff8
+  config:
+    upf:
+      cfgFiles:
+        upf.json:
+          cpiface:
+            dnn: "8internet"
+            hostname: "upf"
+
+omec-sub-provision:
+  enable: true
+  images:
+    tags:
+      simapp: registry.aetherproject.org/omecproject/simapp:main-aa6dae9
+
+5g-control-plane:
+  enable5G: true
+  images:
+    tags:
+      #5G NF images
+      webui: registry.aetherproject.org/omecproject/5gc-webui:onf-release3.0.5-bf7e6f6
+      amf: registry.aetherproject.org/omecproject/5gc-amf:onf-release3.0.5-c43b11d
+      smf: registry.aetherproject.org/omecproject/5gc-smf:onf-release3.0.5-b62c8e5
+      pcf: registry.aetherproject.org/omecproject/5gc-pcf:onf-release3.0.5-417ce9f
+      ausf: registry.aetherproject.org/omecproject/5gc-ausf:onf-release3.0.5-acbcb29
+      nrf: registry.aetherproject.org/omecproject/5gc-nrf:onf-release3.0.5-c40a6c5
+      nssf: registry.aetherproject.org/omecproject/5gc-nssf:onf-release3.0.5-ad7235e
+      udr: registry.aetherproject.org/omecproject/5gc-udr:onf-release3.0.5-e295a76
+      udm: registry.aetherproject.org/omecproject/5gc-udm:onf-release3.0.5-ea3ef93

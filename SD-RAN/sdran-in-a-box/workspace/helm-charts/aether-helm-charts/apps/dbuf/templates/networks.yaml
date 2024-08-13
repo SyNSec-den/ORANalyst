@@ -1,0 +1,33 @@
+{{/*
+# Copyright 2020-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+apiVersion: "k8s.cni.cncf.io/v1"
+kind: NetworkAttachmentDefinition
+metadata:
+  name: {{ .Values.multusNetworkName }}
+  annotations:
+    k8s.v1.cni.cncf.io/resourceName: intel.com/{{ .Values.sriovResourceName }}
+spec:
+  config: '{
+  "type": "sriov",
+  "name": "sriov-network",
+{{- if hasKey .Values.network "vlan" }}
+  "vlan": {{ .Values.network.vlan }},
+{{- end }}
+  "ipam": {
+    {{- if eq .Values.network.ipam "host-local" }}
+    "type": "host-local",
+    "subnet": "{{ .Values.network.static.subnets }}",
+    "routes": [{
+      "dst": "0.0.0.0/0"
+    }],
+    "gateway": "{{ .Values.network.static.gateway }}"
+    {{- else if eq .Values.network.ipam "dhcp" }}
+    "type": "dhcp"
+
+    {{- end }}
+  }
+}'

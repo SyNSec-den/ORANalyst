@@ -1,0 +1,2 @@
+/usr/bin/ar qc libMutatorLib.a  CMakeFiles/MutatorLib.dir/home/tianchang/Desktop/asn1c-v771/kpm/cpp/mutator.c.o
+/usr/bin/ranlib libMutatorLib.a

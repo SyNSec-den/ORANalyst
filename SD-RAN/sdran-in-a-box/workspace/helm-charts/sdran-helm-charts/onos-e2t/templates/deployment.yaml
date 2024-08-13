@@ -1,0 +1,161 @@
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "onos-e2t.fullname" . }}
+  labels:
+    {{- include "onos-e2t.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      name: {{ template "onos-e2t.fullname" . }}
+      app: onos
+      type: e2t
+      resource: {{ template "onos-e2t.fullname" . }}
+      {{- include "onos-e2t.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        name: {{ template "onos-e2t.fullname" . }}
+        app: onos
+        type: e2t
+        resource: {{ template "onos-e2t.fullname" . }}
+        {{- include "onos-e2t.selectorLabels" . | nindent 8 }}
+        sidecar.atomix.io/inject: "true"
+        runtime.atomix.io/profile: {{ template "onos-e2t.fullname" . }}
+        {{- include "onos-e2t.selectorLabels" . | nindent 8 }}
+      annotations:
+        {{- if .Values.atomix.sidecar.image.tag }}
+        sidecar.atomix.io/image: "{{ .Values.atomix.sidecar.image.repository }}:{{ .Values.atomix.sidecar.image.tag }}"
+        {{- end }}
+        {{- if .Values.atomix.sidecar.image.pullPolicy }}
+        sidecar.atomix.io/imagePullPolicy: "{{ .Values.atomix.sidecar.image.pullPolicy }}"
+        {{- end }}
+        sidecar.atomix.io/logLevel: {{ .Values.atomix.sidecar.config.logging.level }}
+        {{- with .Values.annotations }}
+        {{ toYaml . | nindent 8 }}
+        {{- end }}
+    spec:
+      serviceAccountName: {{ template "onos-e2t.fullname" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      initContainers:
+        # Run service model plugins as init containers to load plugins onto the shared volume
+        {{ $registry := include "onos-e2t.registryname" . }}
+        {{- range $key, $servicemodel := .Values.servicemodels }}
+        - name: {{ printf "service-model-%s-%s" $servicemodel.name $servicemodel.version | replace "." "-" | replace "_" "-" }}
+          image: {{ printf "%s%s:%s" $registry $servicemodel.image.repository $servicemodel.image.tag }}
+
+          imagePullPolicy: {{ $servicemodel.image.pullPolicy }}
+          command:
+            - "/bin/cp"
+          args:
+            - {{ printf "%s.so.%s" $servicemodel.name $servicemodel.version }}
+            - {{ printf "/usr/local/lib/%s.so.%s" $servicemodel.name $servicemodel.version }}
+          volumeMounts:
+            - name: shared-data
+              mountPath: /usr/local/lib
+      {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          image: {{ include "onos-e2t.imagename" . | quote }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - "-caPath=/etc/onos/certs/tls.cacrt"
+            - "-keyPath=/etc/onos/certs/tls.key"
+            - "-certPath=/etc/onos/certs/tls.crt"
+            - "-sctpport={{ .Values.service.e2.port | default 36421 }}"
+            {{- range $key, $smplugin := .Values.servicemodels }}
+            - {{ printf "-serviceModel=/usr/local/lib/shared/%s.so.%s" $smplugin.name $smplugin.version }}
+              {{- end }}
+          ports:
+            - name: sctp
+              containerPort: {{ .Values.service.e2.port | default 36421 }}
+            - name: grpc
+              containerPort: {{ .Values.service.grpc.port }}
+          env:
+            # *_NAMESPACE and *_NAME environment variables are recognized by onos-lib-go utilities.
+            # These variables should always be defined.
+            - name: POD_ID
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: POD_IP
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+            - name: SERVICE_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: SERVICE_NAME
+              value: {{ template "onos-e2t.fullname" . }}
+            - name: NODE_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: spec.nodeName
+            - name: GODEBUG
+              value: cgocheck=0
+          startupProbe:
+            tcpSocket:
+              port: 5150
+            periodSeconds: 5
+            failureThreshold: 60
+          readinessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          livenessProbe:
+            tcpSocket:
+              port: 5150
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          volumeMounts:
+            - name: secret
+              mountPath: /etc/onos/certs
+              readOnly: true
+            - name: config
+              mountPath: /etc/onos/config
+              readOnly: true
+            - name: shared-data
+              mountPath: /usr/local/lib/shared
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      volumes:
+        - name: secret
+          secret:
+            secretName: {{ template "onos-e2t.fullname" . }}-secret
+        - name: config
+          configMap:
+            name: {{ template "onos-e2t.fullname" . }}-config
+        - name: shared-data
+          emptyDir: {}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

@@ -1,0 +1,2351 @@
+start cover server
+start sonar
+InstrumentMain
+2023-07-20T03:15:24.080Z	INFO	rimedo-ts	rimedo-ts/rimedo-ts.go:26	Starting RIMEDO Labs Traffic Steering xAPP
+2023-07-20T03:15:24.092Z	DEBUG	rimedo-ts/a1	a1/a1ei-service.go:18	A1EI service created
+2023-07-20T03:15:24.096Z	INFO	northbound	northbound/server.go:138	Loading default CA onfca
+2023-07-20T03:15:24.098Z	INFO	northbound	northbound/server.go:165	Starting RPC server on address: [::]:5150
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:15:24.098Z	INFO	a1/manager	connection/manager.go:46	Start (or restart) A1 connection manager
+2023-07-20T03:15:24.140Z	WARN	a1/manager	connection/manager.go:94	Update topo A1 XApp entity to have the latest aspects since there is already exist
+2023-07-20T03:15:24.204Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 1 for subscription channel 'rimedo-ts:rimedo-ts-7bf45bc9b7-vlchm:e2:1/5153:rimedo-ts-subscription-MHO_TRIGGER_TYPE_PERIODIC'
+2023-07-20T03:15:24.204Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 2 for subscription channel 'rimedo-ts:rimedo-ts-7bf45bc9b7-vlchm:e2:1/5153:rimedo-ts-subscription-MHO_TRIGGER_TYPE_UPON_RCV_MEAS_REPORT'
+2023-07-20T03:15:24.204Z	INFO	github.com/onosproject/onos-mho/pkg/broker	broker/broker.go:86	Opened new stream 3 for subscription channel 'rimedo-ts:rimedo-ts-7bf45bc9b7-vlchm:e2:1/5153:rimedo-ts-subscription-MHO_TRIGGER_TYPE_UPON_CHANGE_RRC_STATUS'
+2023-07-20T03:15:29.098Z	INFO	rimedo-ts/ts-manager	manager/manager.go:123	
+
+
+
+
+
+
+
+
+
+
+2023-07-20T03:15:30.099Z	INFO	rimedo-ts/ts-manager	manager/manager.go:321	POLICY MESSAGE: Default policy applied
+
+accept cover server
+2023-07-20T03:15:44.576Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:15:44.576Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------ CELLS -------------------------
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------- UES --------------------------
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:15:47.458Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 25478232943, sonar: 1048572
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:15:49.589Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+res: 0, ns: 12951579, sonar: 12436
+2023-07-20T03:15:49.589Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:15:49.793Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 202260707, sonar: 12348
+resetting finished
+LoopPos
+2023-07-20T03:15:49.793Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:49.996Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{value:10}}} rrc_status:RRCSTATUS_IDLE}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203621913, sonar: 14413
+resetting finished
+LoopPos
+2023-07-20T03:15:49.997Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{value:10}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:50.201Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{value:10}}} rrc_status:RRCSTATUS_IDLE}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204185978, sonar: 14061
+2023-07-20T03:15:50.201Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{value:10}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:50.404Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{value:10}}} rrc_status:RRCSTATUS_IDLE}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203874012, sonar: 14095
+resetting finished
+LoopPos
+2023-07-20T03:15:50.405Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{value:10}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:50.514Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:15:50.514Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------ CELLS -------------------------
+2023-07-20T03:15:50.514Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:15:50.514Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:15:50.514Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:15:50.514Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:15:50.514Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:15:50.514Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:15:50.514Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:15:50.515Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------- UES --------------------------
+2023-07-20T03:15:50.515Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:IDLE      5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:15:50.515Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:15:50.609Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204369916, sonar: 1048576
+resetting finished
+LoopPos
+2023-07-20T03:15:50.609Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:50.812Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+res: 0, ns: 203474760, sonar: 13542
+LoopPos
+2023-07-20T03:15:50.812Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:51.016Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204056111, sonar: 16721
+2023-07-20T03:15:51.017Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:51.221Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204140299, sonar: 13591
+resetting finished
+LoopPos
+2023-07-20T03:15:51.221Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:51.425Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204325286, sonar: 13503
+2023-07-20T03:15:51.425Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:51.629Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+res: 0, ns: 204249797, sonar: 1048574
+write to cover
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:15:51.631Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+2023-07-20T03:15:51.834Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203210157, sonar: 12013
+2023-07-20T03:15:51.834Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:52.037Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203168773, sonar: 15021
+2023-07-20T03:15:52.037Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:52.241Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204413925, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:15:52.242Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:52.449Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+res: 0, ns: 207798466, sonar: 13503
+LoopPos
+2023-07-20T03:15:52.449Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:52.653Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203545352, sonar: 1048573
+2023-07-20T03:15:52.653Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:52.857Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+res: 0, ns: 204185689, sonar: 13503
+LoopPos
+2023-07-20T03:15:52.857Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:53.061Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203609021, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:15:53.061Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:53.265Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204591646, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:15:53.265Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:53.469Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203847784, sonar: 13503
+2023-07-20T03:15:53.469Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------ CELLS -------------------------
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	------------------------- UES --------------------------
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:15:53.583Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:15:53.673Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203882546, sonar: 1048576
+resetting finished
+LoopPos
+2023-07-20T03:15:53.673Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:15:53.882Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:15:53.882Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 208822738, sonar: 12073
+write to cover
+2023-07-20T03:15:54.090Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+2023-07-20T03:15:54.090Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+resetting finished
+LoopPos
+res: 0, ns: 207800751, sonar: 14933
+write to cover
+2023-07-20T03:15:54.299Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"\x10" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} g_nb_cu_ue_f1_ap_id_list:{value:{g_nb_cu_ue_f1_ap_id:{value:80}}} ran_ueid:{value:"\x01\x00\x00\x00\x00\x10\x01\x00"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x01\x00\x00"} n_rcell_identity:{value:{value:"\x10\x01\x00\x00\x10" len:36}}}} rsrp:{value:-65535}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:15:54.584Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:15:54.584Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:15:55.608Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:15:55.608Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:15:56.627Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:15:56.627Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:15:56.654Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:15:57.654Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:15:57.654Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:15:58.681Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:15:58.681Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+res: 0, ns: 5209473368, sonar: 1048572
+LoopPos
+write to cover
+2023-07-20T03:15:59.309Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"\x10" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} g_nb_cu_ue_f1_ap_id_list:{value:{g_nb_cu_ue_f1_ap_id:{value:80}}} ran_ueid:{value:"\x01\x00\x00\x00\x00\x10\x01\x00"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x01\x00\x00"} n_rcell_identity:{value:{value:"\x10\x01\x00\x00\x10" len:36}}}} rsrp:{value:-65535}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:15:59.698Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:15:59.698Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:15:59.726Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:00.726Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:00.727Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:01.745Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:01.745Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:02.761Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:02.761Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:02.797Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:03.798Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:03.798Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 5009429519, sonar: 1048576
+write to cover
+2023-07-20T03:16:04.318Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"\x10" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} g_nb_cu_ue_f1_ap_id_list:{value:{g_nb_cu_ue_f1_ap_id:{value:80}}} ran_ueid:{value:"\x01\x00\x00\x00\x00\x10\x01\x00"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x01\x00\x00"} n_rcell_identity:{value:{value:"\x10\x01\x00\x00\x10" len:36}}}} rsrp:{value:-65535}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:16:04.814Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:04.814Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:05.834Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:05.834Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:05.856Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:05.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:05.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:06.858Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:06.858Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:07.892Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:07.893Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:08.913Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:08.913Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:08.934Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:08.934Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:08.934Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:08.934Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:08.935Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:08.935Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:08.935Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:08.935Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:08.935Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:08.935Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:08.935Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:08.935Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:08.935Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 5009023013, sonar: 1048574
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:16:09.327Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 8886303, sonar: 12348
+resetting finished
+LoopPos
+2023-07-20T03:16:09.327Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:09.529Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 202548212, sonar: 13591
+resetting finished
+LoopPos
+2023-07-20T03:16:09.529Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:09.737Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207697811, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:16:09.737Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:09.935Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:09.935Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:09.946Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 208807885, sonar: 729045
+resetting finished
+LoopPos
+2023-07-20T03:16:09.946Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:10.148Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 202627975, sonar: 1048576
+resetting finished
+LoopPos
+2023-07-20T03:16:10.149Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:10.353Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204929222, sonar: 13503
+2023-07-20T03:16:10.354Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:10.557Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\x08\x08\xc0\x89~\x0c\x08\x08"}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203246591, sonar: 12899
+2023-07-20T03:16:10.557Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\x08\x08\xc0\x89~\x0c\x08\x08"}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:10.761Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\x08\x08\xc0\x89~\x0c\x08\x08"}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203866102, sonar: 18813
+resetting finished
+LoopPos
+2023-07-20T03:16:10.761Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\x08\x08\xc0\x89~\x0c\x08\x08"}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:10.955Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:10.955Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:10.965Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\x08\x08\xc0\x89~\x0c\x08\x08"}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203944508, sonar: 963580
+resetting finished
+LoopPos
+2023-07-20T03:16:10.965Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\x08\x08\xc0\x89~\x0c\x08\x08"}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:11.169Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203973317, sonar: 1048572
+2023-07-20T03:16:11.169Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:11.374Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 205481975, sonar: 11170
+resetting finished
+LoopPos
+2023-07-20T03:16:11.374Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:11.578Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203735925, sonar: 13503
+2023-07-20T03:16:11.578Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:11.789Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:11.794Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 216042423, sonar: 14406
+write to cover
+2023-07-20T03:16:11.972Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:11.972Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:11.990Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:11.990Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 195744609, sonar: 903516
+write to cover
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:11.998Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:12.193Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:12.193Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203381199, sonar: 1048572
+write to cover
+2023-07-20T03:16:12.399Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:12.399Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 206034495, sonar: 11170
+write to cover
+2023-07-20T03:16:12.602Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:12.602Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 202420422, sonar: 13503
+write to cover
+2023-07-20T03:16:12.805Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:12.805Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203495778, sonar: 14406
+write to cover
+2023-07-20T03:16:12.998Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:12.998Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:13.012Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:13.012Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 207155178, sonar: 21528
+write to cover
+2023-07-20T03:16:13.213Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 200727303, sonar: 1048573
+resetting finished
+LoopPos
+2023-07-20T03:16:13.213Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:13.417Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:13.417Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204180739, sonar: 11170
+write to cover
+2023-07-20T03:16:13.621Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"P" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} g_nb_cu_ue_f1_ap_id_list:{value:{g_nb_cu_ue_f1_ap_id:{}}} ran_ueid:{value:"\x00P\x01\x00\x00\x00\x00P"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x00\x00\x00"} n_rcell_identity:{value:{value:"P\x01\x00\x00\x00" len:36}}}} rsrp:{value:-65536}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:16:14.036Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:14.036Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:15.071Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:15.071Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:15.089Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [500100000 (-65536)]
+2023-07-20T03:16:15.090Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:16.090Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:16.090Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:17.111Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:17.111Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:18.147Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:18.147Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [500100000 (-65536)]
+2023-07-20T03:16:18.168Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 5204311811, sonar: 1048576
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:16:18.633Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"P" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} g_nb_cu_ue_f1_ap_id_list:{value:{g_nb_cu_ue_f1_ap_id:{}}} ran_ueid:{value:"\x00P\x01\x00\x00\x00\x00P"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x00\x00\x00"} n_rcell_identity:{value:{value:"P\x01\x00\x00\x00" len:36}}}} rsrp:{value:-65536}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:16:19.170Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:19.170Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:20.233Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:20.233Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:21.259Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:21.259Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:21.275Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [500100000 (-65536)]
+2023-07-20T03:16:21.276Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:22.276Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:22.276Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:23.301Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:23.301Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 5011904480, sonar: 1048576
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:16:23.646Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"P" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} g_nb_cu_ue_f1_ap_id_list:{value:{g_nb_cu_ue_f1_ap_id:{}}} ran_ueid:{value:"\x00P\x01\x00\x00\x00\x00P"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x00\x00\x00"} n_rcell_identity:{value:{value:"P\x01\x00\x00\x00" len:36}}}} rsrp:{value:-65536}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:16:24.326Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:24.326Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:24.346Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:24.346Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:24.346Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:24.346Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:24.347Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:24.347Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:24.347Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:24.347Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:24.347Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:24.347Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:24.347Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:24.347Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [500100000 (-65536)]
+2023-07-20T03:16:24.347Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:25.347Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:25.347Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:26.367Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:26.367Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:27.388Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:27.388Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [500100000 (-65536)]
+2023-07-20T03:16:27.409Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:28.410Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:28.410Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 5012707452, sonar: 1048575
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:16:28.656Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:28.656Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 9902654, sonar: 16870
+write to cover
+2023-07-20T03:16:28.858Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 202011808, sonar: 13591
+resetting finished
+LoopPos
+2023-07-20T03:16:28.858Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:29.062Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203297949, sonar: 12073
+2023-07-20T03:16:29.062Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:29.272Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+2023-07-20T03:16:29.274Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+LoopFunc
+res: 0, ns: 212795683, sonar: 16176
+write to cover
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:29.437Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:29.437Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:29.476Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+res: 0, ns: 198426426, sonar: 1048575
+2023-07-20T03:16:29.476Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:29.681Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+res: 0, ns: 204132598, sonar: 11445
+write to cover
+2023-07-20T03:16:29.682Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:29.885Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 202661521, sonar: 12348
+resetting finished
+LoopPos
+2023-07-20T03:16:29.885Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:30.089Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204541950, sonar: 13503
+2023-07-20T03:16:30.089Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:30.293Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203816880, sonar: 13503
+2023-07-20T03:16:30.293Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:30.463Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:30.463Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:30.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:30.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:30.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:30.484Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:30.485Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:30.485Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:30.485Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:30.485Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:30.485Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:30.485Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:30.485Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:30.485Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [500100000 (-65536)]
+2023-07-20T03:16:30.485Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:30.497Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"\x10" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} g_nb_cu_ue_f1_ap_id_list:{value:{g_nb_cu_ue_f1_ap_id:{value:80}}} ran_ueid:{value:"\x01\x00\x00\x00\x00\x10\x01\x00"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x01\x00\x00"} n_rcell_identity:{value:{value:"\x10\x01\x00\x00\x10" len:36}}}} rsrp:{value:-65535}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:16:31.487Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:31.487Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:32.505Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:32.505Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:33.517Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:33.517Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:33.531Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:34.532Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:34.532Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+resetting coverage
+res: 0, ns: 5204305962, sonar: 1048575
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:16:35.546Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:35.546Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:35.573Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"\x10" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} g_nb_cu_ue_f1_ap_id_list:{value:{g_nb_cu_ue_f1_ap_id:{value:80}}} ran_ueid:{value:"\x01\x00\x00\x00\x00\x10\x01\x00"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x01\x00\x00"} n_rcell_identity:{value:{value:"\x10\x01\x00\x00\x10" len:36}}}} rsrp:{value:-65535}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:16:36.566Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:36.566Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:36.580Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:37.580Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:37.580Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:38.593Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:38.593Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:39.606Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:39.606Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:39.618Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+resetting coverage
+res: 0, ns: 5075557451, sonar: 1048574
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:16:40.580Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"\x10" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}} g_nb_cu_ue_f1_ap_id_list:{value:{g_nb_cu_ue_f1_ap_id:{value:80}}} ran_ueid:{value:"\x01\x00\x00\x00\x00\x10\x01\x00"}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x01\x00\x00"} n_rcell_identity:{value:{value:"\x10\x01\x00\x00\x10" len:36}}}} rsrp:{value:-65535}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:16:40.619Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:40.619Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:41.643Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:41.643Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:42.664Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:42.664Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:42.676Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:43.676Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:43.676Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:44.690Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:44.690Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 5007354704, sonar: 1048573
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:16:45.586Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+res: 0, ns: 5892714, sonar: 12348
+LoopPos
+2023-07-20T03:16:45.587Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:45.705Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:45.705Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:45.725Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:45.789Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+res: 0, ns: 202822277, sonar: 1048571
+write to cover
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:45.790Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+2023-07-20T03:16:45.996Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+res: 0, ns: 206399422, sonar: 15968
+2023-07-20T03:16:45.996Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:46.200Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 202761569, sonar: 12348
+resetting finished
+LoopPos
+2023-07-20T03:16:46.200Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:46.408Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207994237, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:16:46.409Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:46.616Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 208013233, sonar: 13591
+2023-07-20T03:16:46.617Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+resetting finished
+LoopPos
+2023-07-20T03:16:46.726Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:46.726Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:46.821Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204337376, sonar: 1048574
+2023-07-20T03:16:46.821Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:47.026Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 205346767, sonar: 12073
+resetting finished
+LoopPos
+2023-07-20T03:16:47.026Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:47.229Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 202892748, sonar: 12600
+resetting finished
+LoopPos
+2023-07-20T03:16:47.229Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:47.434Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204890493, sonar: 13503
+2023-07-20T03:16:47.434Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:47.637Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:47.637Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203353351, sonar: 13605
+write to cover
+2023-07-20T03:16:47.747Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:47.747Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:47.841Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:47.842Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204146556, sonar: 1048573
+write to cover
+2023-07-20T03:16:48.045Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203222191, sonar: 15924
+resetting finished
+LoopPos
+2023-07-20T03:16:48.045Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:48.248Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203680972, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:16:48.249Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:48.453Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204432390, sonar: 13503
+2023-07-20T03:16:48.453Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:16:48.661Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 208359529, sonar: 13503
+2023-07-20T03:16:48.661Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:48.768Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:48.768Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:48.789Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:48.866Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204529384, sonar: 1048576
+resetting finished
+LoopPos
+2023-07-20T03:16:48.866Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:49.073Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207636475, sonar: 15836
+resetting finished
+LoopPos
+2023-07-20T03:16:49.074Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:49.285Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+res: 0, ns: 211667009, sonar: 13503
+LoopPos
+2023-07-20T03:16:49.286Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:49.487Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:49.487Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 201865573, sonar: 12073
+write to cover
+2023-07-20T03:16:49.693Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 205988194, sonar: 14933
+2023-07-20T03:16:49.693Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:49.790Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:49.790Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:49.897Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203638019, sonar: 1048574
+resetting finished
+LoopPos
+2023-07-20T03:16:49.897Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:50.101Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203874347, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:16:50.101Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:50.305Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203971275, sonar: 13503
+2023-07-20T03:16:50.305Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:50.509Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:50.509Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204271101, sonar: 11170
+write to cover
+2023-07-20T03:16:50.713Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203648855, sonar: 15836
+resetting finished
+LoopPos
+2023-07-20T03:16:50.713Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:50.811Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:50.811Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:50.917Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204035118, sonar: 1048573
+resetting finished
+LoopPos
+2023-07-20T03:16:50.917Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:51.125Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 208762593, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:16:51.126Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:51.335Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:51.336Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 210034847, sonar: 11170
+write to cover
+2023-07-20T03:16:51.533Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 197681810, sonar: 15836
+2023-07-20T03:16:51.533Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:51.737Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:51.738Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204203493, sonar: 13503
+write to cover
+2023-07-20T03:16:51.833Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:51.833Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:51.857Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:51.941Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203987733, sonar: 1048575
+resetting finished
+LoopPos
+2023-07-20T03:16:51.942Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:52.145Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203346196, sonar: 13877
+resetting finished
+LoopPos
+2023-07-20T03:16:52.145Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:52.353Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207917953, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:16:52.353Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:52.557Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:52.557Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204190951, sonar: 11170
+write to cover
+2023-07-20T03:16:52.761Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 203764121, sonar: 15836
+resetting finished
+LoopPos
+2023-07-20T03:16:52.761Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:52.858Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:52.858Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:52.970Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:52.970Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 208949411, sonar: 1048575
+write to cover
+2023-07-20T03:16:53.177Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207344203, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:16:53.177Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:53.365Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:53.366Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 188243145, sonar: 13503
+write to cover
+2023-07-20T03:16:53.578Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:53.578Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 212424442, sonar: 14406
+write to cover
+2023-07-20T03:16:53.781Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 202746240, sonar: 14933
+resetting finished
+LoopPos
+2023-07-20T03:16:53.781Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:53.894Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:53.894Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:53.985Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:16:53.985Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204908674, sonar: 1048574
+write to cover
+2023-07-20T03:16:54.189Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:54.190Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203988055, sonar: 10015
+write to cover
+2023-07-20T03:16:54.393Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:54.394Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203870871, sonar: 13503
+write to cover
+2023-07-20T03:16:54.601Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:54.601Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 207500009, sonar: 13503
+write to cover
+2023-07-20T03:16:54.809Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207871425, sonar: 15836
+resetting finished
+LoopPos
+2023-07-20T03:16:54.809Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:54.929Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:54.929Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:54.949Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:54.949Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:54.950Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:54.950Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:54.951Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:54.951Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:54.951Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:54.951Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:54.951Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:54.951Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:54.951Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:54.951Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:54.951Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:55.014Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:55.014Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204853083, sonar: 1048572
+write to cover
+2023-07-20T03:16:55.226Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:55.226Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 212566617, sonar: 15836
+write to cover
+2023-07-20T03:16:55.425Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 198568724, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:16:55.425Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:55.633Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207790580, sonar: 13503
+resetting finished
+LoopPos
+2023-07-20T03:16:55.633Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:55.841Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 207964922, sonar: 11170
+resetting finished
+LoopPos
+2023-07-20T03:16:55.841Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:55.952Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:55.952Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:56.049Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 208199115, sonar: 1048572
+2023-07-20T03:16:56.049Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:56.253Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:56.254Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204425769, sonar: 11170
+write to cover
+2023-07-20T03:16:56.457Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204142008, sonar: 15836
+resetting finished
+LoopPos
+2023-07-20T03:16:56.458Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:56.662Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:56.663Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204793008, sonar: 13503
+write to cover
+2023-07-20T03:16:56.865Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:56.865Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 202671430, sonar: 13503
+write to cover
+2023-07-20T03:16:56.980Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:56.980Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:57.073Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:57.073Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 207632709, sonar: 1048574
+write to cover
+2023-07-20T03:16:57.273Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{value:10}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 200644744, sonar: 16112
+resetting finished
+LoopPos
+2023-07-20T03:16:57.274Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{value:10}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:57.478Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{value:10}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:57.478Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{value:10}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204233200, sonar: 11420
+write to cover
+2023-07-20T03:16:57.681Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{ng_e_nb_du_ueid:{ng_e_nb_cu_ue_w1_ap_id:{value:10}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:57.681Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{ng_e_nb_cu_ue_w1_ap_id:{value:10}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203564843, sonar: 16086
+write to cover
+2023-07-20T03:16:57.886Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204434018, sonar: 13547
+resetting finished
+LoopPos
+2023-07-20T03:16:57.886Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:58.006Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:58.006Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	-------------------------------------- CELLS --------------------------------------
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	--------------------------------------- UES ---------------------------------------
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:16:58.031Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [100100001 (-65535)]
+2023-07-20T03:16:58.032Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:16:58.089Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:16:58.090Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 203680332, sonar: 1048572
+write to cover
+2023-07-20T03:16:58.293Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 204064653, sonar: 14421
+2023-07-20T03:16:58.294Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:16:58.499Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"P" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x00P\x01"} n_rcell_identity:{value:{value:"\x00\x00\x00\x00P" len:36}}}} rsrp:{value:-65535}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:16:59.032Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:16:59.032Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:00.065Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:00.065Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:01.084Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:01.084Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:01.107Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:17:01.107Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------------- CELLS ----------------------------------
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------------- UES -----------------------------------
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [5 (-65535)]
+2023-07-20T03:17:01.108Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:17:02.108Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:02.108Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:03.127Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:03.127Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+res: 0, ns: 5205245257, sonar: 1048575
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:17:03.575Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"P" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x00P\x01"} n_rcell_identity:{value:{value:"\x00\x00\x00\x00P" len:36}}}} rsrp:{value:-65535}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:17:04.172Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:04.172Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------------- CELLS ----------------------------------
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------------- UES -----------------------------------
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [5 (-65535)]
+2023-07-20T03:17:04.190Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:17:05.190Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:05.190Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:06.214Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:06.214Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:07.232Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:07.232Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:07.248Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------------- CELLS ----------------------------------
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------------- UES -----------------------------------
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [5 (-65535)]
+2023-07-20T03:17:07.249Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:17:08.249Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:08.249Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 5075571511, sonar: 1048573
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:17:08.588Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat1:ue_id:{g_nb_ueid:{amf_ue_ngap_id:{value:4294987777} guami:{p_lmnidentity:{value:"\x00\x00\x00"} a_mfregion_id:{value:{value:"P" len:8}} a_mfset_id:{value:{value:"\x01\x00" len:10}} a_mfpointer:{value:{value:"\x00" len:6}}}}} meas_report:{cgi:{n_r_cgi:{p_lmnidentity:{value:"\x00P\x01"} n_rcell_identity:{value:{value:"\x00\x00\x00\x00P" len:36}}}} rsrp:{value:-65535}}}, e2NodeID: e2:1/5153
+LoopFunc
+2023-07-20T03:17:09.276Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:09.276Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:10.297Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:10.297Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------------- CELLS ----------------------------------
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------------- UES -----------------------------------
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [5 (-65535)]
+2023-07-20T03:17:10.314Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+2023-07-20T03:17:11.315Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:11.315Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:12.333Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:12.333Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:13.359Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:13.359Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:423	
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	---------------------------------- CELLS ----------------------------------
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c001 CGI:13842601c054140 UEs:[]
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c002 CGI:13842602c054140 UEs:[]
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5153/1454c003 CGI:13842603c054140 UEs:[]
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550001 CGI:138426010055140 UEs:[]
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550002 CGI:138426020055140 UEs:[]
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:453	ID:e2:1/5154/14550003 CGI:138426030055140 UEs:[]
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:466	
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:575	----------------------------------- UES -----------------------------------
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:0 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): []
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:506	ID:4294987777 STATUS:CONNECTED 5QI: 0 CGI:1c054140 CGIs(RSRP): [5 (-65535)]
+2023-07-20T03:17:13.375Z	DEBUG	rimedo-ts/ts-manager	manager/manager.go:510	
+res: 0, ns: 5012371869, sonar: 1048576
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:17:13.596Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 7545227, sonar: 11006
+resetting finished
+LoopPos
+2023-07-20T03:17:13.596Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:17:13.797Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+res: 0, ns: 201504090, sonar: 14933
+2023-07-20T03:17:13.797Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+write to cover
+2023-07-20T03:17:14.002Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204299230, sonar: 12348
+resetting finished
+LoopPos
+2023-07-20T03:17:14.002Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:17:14.205Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\n\x00\n\n\n\x00\xef\xbf"}}} rrc_status:4}, e2NodeID: e2:1/5153
+LoopFunc
+res: 0, ns: 203039453, sonar: 15365
+2023-07-20T03:17:14.205Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\n\x00\n\n\n\x00\xef\xbf"}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:17:14.376Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:14.376Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:14.410Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\n\x00\n\n\n\x00\xef\xbf"}}} rrc_status:4}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:17:14.411Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\n\x00\n\n\n\x00\xef\xbf"}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 204168332, sonar: 1048575
+write to cover
+2023-07-20T03:17:14.613Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\n\x00\n\n\n\x00\xef\xbf"}}} rrc_status:4}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 202555901, sonar: 17757
+2023-07-20T03:17:14.613Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{} ran_ueid:{value:"\n\x00\n\n\n\x00\xef\xbf"}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:17:14.817Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204279640, sonar: 14377
+resetting finished
+LoopPos
+2023-07-20T03:17:14.817Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:17:15.021Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+res: 0, ns: 204035803, sonar: 13428
+resetting finished
+LoopPos
+2023-07-20T03:17:15.022Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:17:15.225Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+res: 0, ns: 203785139, sonar: 13503
+2023-07-20T03:17:15.225Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+write to cover
+2023-07-20T03:17:15.397Z	WARN	rimedo-ts/mho	mho/reader.go:49	Cannot convert PLMN ID string into uint64 type!
+2023-07-20T03:17:15.397Z	WARN	rimedo-ts/ts-manager	manager/manager.go:295	Cannot get PLMN ID from these MCC and MNC parameters:,.
+2023-07-20T03:17:15.433Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:17:15.434Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 207531415, sonar: 1048572
+write to cover
+2023-07-20T03:17:15.633Z	DEBUG	rimedo-ts/mho	mho/mho.go:76	Received MHO indication message header: &{IndicationHeaderFormat1:cgi:{n_r_cgi:{p_lmnidentity:{value:"&\x84\x13"} n_rcell_identity:{value:{value:"\x01\xc0T\x14\x00" len:36}}}}}, message: &{IndicationMessageFormat2:ue_id:{g_nb_du_ueid:{g_nb_cu_ue_f1_ap_id:{}}}}, e2NodeID: e2:1/5153
+LoopFunc
+resetting coverage
+resetting sonar
+resetting time
+resetting routines
+resetting finished
+LoopPos
+2023-07-20T03:17:15.633Z	ERROR	rimedo-ts/mho	mho/mho.go:188	handleRrcState() couldn't extract UeID: GetUeID() couldn't extract UeID - obtained unexpected type &{g_nb_cu_ue_f1_ap_id:{}}
+github.com/onosproject/rimedo-ts/pkg/mho.(*Controller).handleRrcState
+	/go/src/github.com/rimedo-labs/rimedo-ts/pkg/mho/mho.go:188
+res: 0, ns: 200408345, sonar: 15836
+write to cover

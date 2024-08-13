@@ -1,0 +1,53 @@
+{{- /*
+
+# Copyright 2019-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: accelleran-cbrs-nats
+  labels:
+{{ tuple "accelleran-cbrs-nats" . | include "accelleran-cbrs-common.metadata_labels" | indent 4 }}
+spec:
+  selector:
+{{ tuple "accelleran-cbrs-nats" . | include "accelleran-cbrs-common.metadata_labels" | indent 4 }}
+  ports:
+  - name: nats-port
+    port: {{ .Values.config.nats.ports.natsPort.port }}
+    protocol: {{ .Values.config.nats.ports.natsPort.protocol }}
+  - name: cluster-port
+    port: {{ .Values.config.nats.ports.clusterPort.port }}
+    protocol: {{ .Values.config.nats.ports.clusterPort.protocol }}
+  - name: console-port
+    port: {{ .Values.config.nats.ports.consolePort.port }}
+    protocol: {{ .Values.config.nats.ports.consolePort.protocol }}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: accelleran-cbrs-nats-exernal
+  labels:
+{{ tuple "accelleran-cbrs-nats" . | include "accelleran-cbrs-common.metadata_labels" | indent 4 }}
+spec:
+  selector:
+{{ tuple "accelleran-cbrs-nats" . | include "accelleran-cbrs-common.metadata_labels" | indent 4 }}
+  type: NodePort
+  ports:
+  - name: nats-port
+    port: {{ .Values.config.nats.ports.natsPort.port }}
+    nodePort: {{ .Values.config.nats.ports.natsPort.nodePort }}
+    protocol: {{ .Values.config.nats.ports.natsPort.protocol }}
+  - name: cluster-port
+    port: {{ .Values.config.nats.ports.clusterPort.port }}
+    nodePort: {{ .Values.config.nats.ports.clusterPort.nodePort }}
+    protocol: {{ .Values.config.nats.ports.clusterPort.protocol }}
+  - name: console-port
+    port: {{ .Values.config.nats.ports.consolePort.port }}
+    nodePort: {{ .Values.config.nats.ports.consolePort.nodePort }}
+    protocol: {{ .Values.config.nats.ports.consolePort.protocol }}

@@ -1,0 +1,71 @@
+{{- /*
+
+# Copyright 2019-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+{{ tuple "accelleran-cbrs-redis" . | include "accelleran-cbrs-common.service_account" }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: accelleran-cbrs-redis
+  labels:
+{{ tuple "accelleran-cbrs-redis" . | include "accelleran-cbrs-common.metadata_labels" | indent 4 }}
+spec:
+  selector:
+    matchLabels:
+{{ tuple "accelleran-cbrs-redis" . | include "accelleran-cbrs-common.metadata_labels" | indent 6 }}
+  serviceName: accelleran-cbrs-redis
+  template:
+    metadata:
+      labels:
+{{ tuple "accelleran-cbrs-redis" . | include "accelleran-cbrs-common.metadata_labels" | indent 8 }}
+    spec:
+    {{- if .Values.nodeSelectors.enabled }}
+      nodeSelector:
+        {{ .Values.nodeSelectors.accelleranCBRSCommon.label }}: {{ .Values.nodeSelectors.accelleranCBRSCommon.value }}
+    {{- end }}
+      serviceAccountName: accelleran-cbrs-redis
+    {{- if hasKey .Values.images "pullSecrets" }}
+      imagePullSecrets:
+{{ toYaml .Values.images.pullSecrets | indent 8 }}
+    {{- end }}
+      containers:
+      - name: redis
+        image: {{ .Values.images.tags.redis }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        command: ["sh", "-c"]
+        args:
+        - /usr/local/bin/redis-server /etc/redis.conf
+        {{- if .Values.resources.enabled }}
+        resources:
+{{ toYaml .Values.resources.accelleranCBRSCommon | indent 10 }}
+        {{- end }}
+        volumeMounts:
+        - mountPath: /data
+          name: redis-data-volume
+      volumes:
+{{- if not .Values.config.redis.persistence.enabled }}
+      - name: redis-data-volume
+        hostPath:
+          path: /etc/redis-storage
+          type: DirectoryOrCreate
+{{- else }}
+  volumeClaimTemplates:
+  - metadata:
+      name: redis-data-volume
+      labels:
+{{ tuple "accelleran-cbrs-redis" . | include "accelleran-cbrs-common.metadata_labels" | indent 8 }}
+    spec:
+      accessModes:
+      - {{ .Values.config.redis.persistence.accessMode | quote }}
+      resources:
+        requests:
+          storage: {{ .Values.config.redis.persistence.size | quote }}
+    {{- if .Values.config.redis.persistence.storageClass }}
+      storageClassName: "{{ .Values.config.redis.persistence.storageClass }}"
+    {{- end }}
+{{- end }}

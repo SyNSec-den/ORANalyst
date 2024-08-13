@@ -1,0 +1,10 @@
+panic: successfully created valid message: indication_message_format2:{ue_id:{g_nb_cu_up_ueid:{g_nb_cu_cp_ue_e1_ap_id:{}} 2:0}} 13:16
+
+goroutine 1 [running]:
+ran-input/message.Fuzz({0x7f9361c10000, 0xe, 0xe})
+	/home/tianchang/Desktop/proj/ran-input/message/message.go:36 +0x26c
+go-fuzz-dep.Main({0xc0000f7f68, 0x1, 0x103ab80?})
+	go-fuzz-dep/main.go:36 +0x15a
+main.main()
+	ran-input/message/go.fuzz.main/main.go:15 +0x3b
+exit status 2

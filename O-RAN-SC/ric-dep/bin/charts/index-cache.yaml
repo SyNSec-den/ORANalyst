@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  kpimon-go:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2024-05-22T15:07:52.905343129Z"
+    description: Standard xApp Helm Chart
+    digest: 9488abd7d97f04ba62193fe580583cdfb9d7b835602dabb82da948e3c88fe4a7
+    name: kpimon-go
+    urls:
+    - charts/kpimon-go-2.0.1.tgz
+    version: 2.0.1
+generated: "2024-05-22T15:07:53Z"
+serverInfo: {}

@@ -1,0 +1,58 @@
+#!/bin/bash
+################################################################################
+#   Copyright (c) 2019 AT&T Intellectual Property.                             #
+#   Copyright (c) 2019 Nokia.                                                  #
+#   Copyright (c) 2021 HCL Technologies Limited.                               #
+#                                                                              #
+#   Licensed under the Apache License, Version 2.0 (the "License");            #
+#   you may not use this file except in compliance with the License.           #
+#   You may obtain a copy of the License at                                    #
+#                                                                              #
+#       http://www.apache.org/licenses/LICENSE-2.0                             #
+#                                                                              #
+#   Unless required by applicable law or agreed to in writing, software        #
+#   distributed under the License is distributed on an "AS IS" BASIS,          #
+#   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.   #
+#   See the License for the specific language governing permissions and        #
+#   limitations under the License.                                             #
+################################################################################
+
+COMPONENTS="xapp-onboarder appmgr rtmgr e2mgr e2term a1mediator submgr vespamgr jaegeradapter dbaas infrastructure o1mediator alarmmanager influxdb"
+RECIPE_NAMESPACE=$(kubectl get cm --all-namespaces | grep ricplt-recipe | awk '{print $1}')
+kubectl get configmap  -n $RECIPE_NAMESPACE ricplt-recipe  -o jsonpath='{.data.recipe}' > /tmp/recipe.yaml
+
+if [ ! -s /tmp/recipe.yaml ]; then
+    echo "RICPLT recipe is not found. Are you sure the ric platform is deployed successfully?"
+    exit 0
+fi
+
+COMMON_BLOCK=$(cat /tmp/recipe.yaml | awk '/^common:/{getline; while ($0 ~ /^ +.*|^ *$/) {print $0; if (getline == 0) {break}}}')
+NAMESPACE_BLOCK=$(cat /tmp/recipe.yaml | awk '/^  namespace:/{getline; while ($0 ~ /^    .*|^ *$/) {print $0; if (getline == 0) {break}}}')
+PLTNAMESPACE=$(echo "$NAMESPACE_BLOCK" | awk '/^ *platform:/{print $2}')
+INFRANAMESPACE=$(echo "$NAMESPACE_BLOCK" | awk '/^ *infra:/{print $2}')
+XAPPNAMESPACE=$(echo "$NAMESPACE_BLOCK" | awk '/^ *xapp:/{print $2}')
+RELEASE_PREFIX=$(echo "$COMMON_BLOCK" | awk '/^ *releasePrefix:/{print $2}')
+
+IS_HELM3=$(helm version --short|grep -e "^v3")
+
+echo "Undeploying RIC platform components [$COMPONENTS]"
+
+
+HELM_FLAG=''
+if [ $IS_HELM3 ]
+then 
+  HELM_FLAG=' -n '${PLTNAMESPACE:-ricplt}
+else
+  HELM_FLAG='--purge'
+fi
+
+
+for component in $COMPONENTS; do
+    helm delete $HELM_FLAG ${RELEASE_PREFIX}-$component
+done
+
+kubectl delete cm -n ${PLTNAMESPACE:-ricplt} ricplt-recipe
+
+kubectl delete ns ${XAPPNAMESPACE:-ricxapp}
+kubectl delete ns ${INFRANAMESPACE:-ricinfra}
+kubectl delete ns ${PLTNAMESPACE:-ricplt}

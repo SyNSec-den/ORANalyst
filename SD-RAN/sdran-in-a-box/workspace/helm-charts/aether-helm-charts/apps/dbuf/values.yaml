@@ -1,0 +1,67 @@
+# Copyright 2021-present Open Networking Foundation
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+image:
+  repository: registry.aetherproject.org/tost/dbuf
+  pullPolicy: Always
+  tag: "latest"
+  pullSecrets:
+  #  - name: aether.registry
+
+extraParams:
+  - '"-max_queues=1024"'
+
+replicaCount: 1
+sriovNICSize: 1
+sriovResourceName: intel_sriov_netdevice
+
+# Change both in the same time
+multusNetworkName: dbuf-sriov
+podAnnotations:
+  k8s.v1.cni.cncf.io/networks: dbuf-sriov@net0
+
+podSecurityContext: {}
+resources:
+  requests:
+    intel.com/intel_sriov_netdevice: "1"
+  limits:
+    intel.com/intel_sriov_netdevice: "1"
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+# onos inforamtion
+onos:
+  server: onos-tost-onos-classic-hs.tost
+  port: 8181
+  username: onos
+  password: rocks
+
+dataplane:
+  port: 2152
+  interface: "net0"
+
+prometheus_enable: true
+service:
+  stats:
+    port: 8080
+    protocol: TCP
+  grpc:
+    port: 10000
+    protocol: TCP
+
+# two options for ipam, dhcp or host-local
+# static is for host-local ipam
+network:
+  #  ipam: dhcp
+  ipam: host-local
+  static:
+    subnets: "10.56.217.0/24"
+    gateway: "10.56.217.1"
+  # route the following subnets via sr-iov interface
+  # route: 10.56.215.0/24,10.56.214.0/24
+  route: ""
+  #vlan:

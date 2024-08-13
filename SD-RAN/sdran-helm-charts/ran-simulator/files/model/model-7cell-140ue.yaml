@@ -1,0 +1,344 @@
+# SPDX-FileCopyrightText: 2019-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+layout:
+  center:
+    lat: 12.941780865166495
+    lng: 77.69969004859385
+  zoom: 0
+  locationsscale: 1.25
+  fademap: false
+  showroutes: false
+  showpower: false
+  routeEndPoints:
+  -
+    start:
+      lat: 12.940449314272378
+      lng: 77.695235081974
+    end:
+      lat: 12.940408815346082
+      lng: 77.69914895122588
+    start:
+      lat: 12.941854041639285
+      lng: 77.69916450806619
+    end:
+      lat: 12.941892164297785
+      lng: 77.69548084561717
+    start:
+      lat: 12.939072979088799
+      lng: 77.697292559156
+    end:
+      lat: 12.942776377175774
+      lng: 77.69733239568247
+
+wayPointRoute: true
+directRoute: true
+nodes:
+  node1:
+    gnbid: 20821
+    controllers:
+    - e2t-1
+    servicemodels:
+    - mho
+    - rcpre2
+    - kpm2
+    cells:
+    - 87893173159116801
+
+    status: stopped
+  node2:
+    gnbid: 20822
+    controllers:
+    - e2t-1
+    servicemodels:
+    - mho
+    - rcpre2
+    - kpm2
+    cells:
+    - 87893173159116802
+    - 87893173159116803
+    - 87893173159116804
+    status: stopped
+  node3:
+    gnbid: 20823
+    controllers:
+    - e2t-1
+    servicemodels:
+    - mho
+    - rcpre2
+    - kpm2
+    cells:
+    - 87893173159116805
+    - 87893173159116806
+    status: stopped
+  node4:
+    gnbid: 20824
+    controllers:
+    - e2t-1
+    servicemodels:
+    - mho
+    - rcpre2
+    - kpm2
+    cells:
+    - 87893173159116807
+    status: stopped
+
+cells:
+  cell1:
+    ncgi: 87893173159116801
+    sector:
+      center:
+        lat: 12.94
+        lng: 77.695
+      azimuth: 0
+      arc: 120
+      tilt: 1
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116803
+    - 87893173159116804
+    - 87893173159116806
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 101
+    earfcn: 41
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+    
+  cell2:
+    ncgi: 87893173159116802
+    sector:
+      center:
+        lat: 12.939971482006824
+        lng: 77.69776272848158
+      azimuth: 0
+      arc: 120
+      tilt: 1
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116803
+    - 87893173159116804
+    - 87893173159116807
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 102
+    earfcn: 44
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+  
+  cell3:
+    ncgi: 87893173159116803
+    sector:
+      center:
+        lat: 12.939971482006824
+        lng: 77.69776272848158
+      azimuth: 120
+      arc: 120
+      tilt: 1
+      height: 40
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116801
+    - 87893173159116802
+    - 87893173159116804
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 103
+    earfcn: 45
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+    
+  cell4:
+    ncgi: 87893173159116804
+    sector:
+      center:
+        lat: 12.939971482006824
+        lng: 77.69776272848158
+      azimuth: 240
+      arc: 120
+      tilt: 1
+      height: 46
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116801
+    - 87893173159116802
+    - 87893173159116803
+    - 87893173159116805
+    - 87893173159116806
+    - 87893173159116807
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 104
+    earfcn: 46
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0
+
+  cell5:
+    ncgi: 87893173159116805
+    sector:
+      center:
+        lat: 12.942332535013936
+        lng: 77.69640660058423
+      azimuth: 0
+      arc: 120
+      tilt: 1
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116804
+    - 87893173159116806
+    - 87893173159116807
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 105
+    earfcn: 49
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0 
+    
+
+  cell6:
+    ncgi: 87893173159116806
+    sector:
+      center:
+        lat: 12.942332535013936
+        lng: 77.69640660058423
+      azimuth: 120
+      arc: 120
+      tilt: 1
+      height: 40
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116801
+    - 87893173159116804
+    - 87893173159116805
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 106
+    earfcn: 50
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0 
+    
+  cell7:
+    ncgi: 87893173159116807
+    sector:
+      center:
+        lat: 12.94230393712583
+        lng: 77.69916935125887
+      azimuth: 120
+      arc: 120
+      tilt: 1
+      height: 43
+    color: green
+    maxues: 99999
+    neighbors:
+    - 87893173159116802
+    - 87893173159116804
+    - 87893173159116805
+    txpowerdb: 40
+    measurementparams:
+      timetotrigger: 0
+      frequencyoffset: 0
+      pcellindividualoffset: 0
+      ncellindividualoffsets: {}
+      hysteresis: 0
+      eventa3params:
+        a3offset: 0
+        reportonleave: false
+    pci: 107
+    earfcn: 53
+    celltype: 2
+    rrcidlecount: 0
+    rrcconnectedcount: 0 
+    
+controllers:
+  e2t-1:
+    id: e2t-1
+    address: onos-e2t
+    port: 36421
+servicemodels:
+  kpm2:
+    id: 4
+    description: kpm2 service model
+    version: 1.0.0
+  mho:
+    id: 5
+    description: mho service model
+    version: 1.0.0
+  rcpre2:
+    id: 3
+    description: rcpre2 service model
+    version: 1.0.0
+rrcStateChangesDisabled: false
+initialRrcState: "idle"
+ueCount: 140
+ueCountPerCell: 20
+plmnID: "138426"
+plmnNumber: 1279014
+apiKey: ""
+guami:
+  amfregionid: 221
+  amfsetid: 819
+  amfpointer: 63

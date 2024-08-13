@@ -1,0 +1,4 @@
+panic: successfully created valid message: indication_message_format2:{ue_id:{} rrc_status:RRCSTATUS_INACTIVE 1:97}
+ran-input/message.Fuzz
+go-fuzz-dep.Main
+main.main

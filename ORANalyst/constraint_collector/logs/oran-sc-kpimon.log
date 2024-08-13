@@ -1,0 +1,9 @@
+------------- processing path constraint -------------
+------------- processing control -------------
+Found ill-typed package github.com/dvyukov/go-fuzz/go-fuzz-dep
+Error: control_loop.go:5:2: github.com/dvyukov/go-fuzz@v0.0.0-20231214143802-7955ebc9f2de: replacement directory /opt/go-fuzz does not exist
+Found ill-typed package example.com/kpimon/control
+Error: /home/tianchang/Desktop/proj/oran-sc/ric-app-kpimon-go/control/control_loop.go:5:12: could not import github.com/dvyukov/go-fuzz/go-fuzz-dep (invalid package name: "")
+Error: /home/tianchang/Desktop/proj/oran-sc/ric-app-kpimon-go/control/control.go:8:8: could not import C (no metadata for C)
+Parsing functions of /home/tianchang/Desktop/proj/oran-sc/ric-app-kpimon-go/control
+input type: <nil>

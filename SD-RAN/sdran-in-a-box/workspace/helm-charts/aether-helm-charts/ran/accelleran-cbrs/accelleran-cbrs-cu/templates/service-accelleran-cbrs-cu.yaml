@@ -1,0 +1,39 @@
+{{- /*
+
+# Copyright 2019-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+*/ -}}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: accelleran-cbrs-cu-{{ .Values.config.vranL3.instanceId }}
+  labels:
+{{ tuple "accelleran-cbrs-cu" . | include "accelleran-cbrs-cu.metadata_labels" | indent 4 }}
+spec:
+  selector:
+{{ tuple "accelleran-cbrs-cu" . | include "accelleran-cbrs-cu.metadata_labels" | indent 4 }}
+  ports:
+  - name: s1ap-port
+    port: {{ .Values.config.vranL3.ports.s1ap.port }}
+    protocol: {{ .Values.config.vranL3.ports.s1ap.protocol }}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: accelleran-cbrs-cu-{{ .Values.config.vranL3.instanceId }}-exernal
+  labels:
+{{ tuple "accelleran-cbrs-cu" . | include "accelleran-cbrs-cu.metadata_labels" | indent 4 }}
+spec:
+  selector:
+{{ tuple "accelleran-cbrs-cu" . | include "accelleran-cbrs-cu.metadata_labels" | indent 4 }}
+  type: NodePort
+  ports:
+  - name: s1ap-port
+    port: {{ .Values.config.vranL3.ports.s1ap.port }}
+    nodePort: {{ .Values.config.vranL3.ports.s1ap.nodePort }}
+    protocol: {{ .Values.config.vranL3.ports.s1ap.protocol }}

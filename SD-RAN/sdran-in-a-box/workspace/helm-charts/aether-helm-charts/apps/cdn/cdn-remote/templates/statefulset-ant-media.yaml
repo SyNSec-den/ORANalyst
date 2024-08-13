@@ -1,0 +1,47 @@
+{{/*
+# Copyright 2019-present Open Networking Foundation
+
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+*/}}
+
+{{ tuple "ant-media" . | include "cdn-remote.service_account" }}
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: ant-media
+  labels:
+{{ tuple "ant-media" . | include "cdn-remote.metadata_labels" | indent 4 }}
+spec:
+  replicas: {{ .Values.config.antMedia.replicas }}
+  selector:
+    matchLabels:
+{{ tuple "ant-media" . | include "cdn-remote.metadata_labels" | indent 6 }}
+  serviceName: "ant-media"
+  template:
+    metadata:
+      labels:
+{{ tuple "ant-media" . | include "cdn-remote.metadata_labels" | indent 8 }}
+    spec:
+    {{- if .Values.nodeSelectors.enabled }}
+      nodeSelector:
+        {{ .Values.nodeSelectors.antMedia.label }}: {{ .Values.nodeSelectors.antMedia.value }}
+    {{- end }}
+      serviceAccountName: ant-media
+      containers:
+      - name: ant-media
+        image: {{ .Values.images.tags.antMedia | quote }}
+        imagePullPolicy: {{ .Values.images.pullPolicy }}
+        securityContext:
+          allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: false
+          runAsUser: 0
+        stdin: true
+        tty: true
+        command: [ "bash",  "-xc"]
+        args:
+          - cd /usr/local/antmedia && ./start.sh | tee /opt/start.log
+      {{- if .Values.resources.enabled }}
+        resources:
+{{ toYaml .Values.resources.antMedia | indent 10 }}
+      {{- end }}

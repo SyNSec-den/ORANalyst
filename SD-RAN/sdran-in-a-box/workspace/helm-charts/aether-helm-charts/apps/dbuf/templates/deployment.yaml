@@ -1,0 +1,103 @@
+
+# Copyright 2020-present Open Networking Foundation
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "dbuf.fullname" . }}
+  labels:
+    {{- include "dbuf.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "dbuf.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+    {{- with .Values.podAnnotations }}
+      annotations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      labels:
+        {{- include "dbuf.selectorLabels" . | nindent 8 }}
+    spec:
+    {{- if hasKey .Values.image "pullSecrets" }}
+      imagePullSecrets:
+{{ toYaml .Values.image.pullSecrets | indent 8 }}
+    {{- end }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          command: [ "dbuf", {{ template "extraParams" .Values.extraParams }} ]
+          resources:
+            requests:
+              intel.com/{{ .Values.sriovResourceName }}: '{{ .Values.sriovNICSize }}'
+            limits:
+              intel.com/{{ .Values.sriovResourceName }}: '{{ .Values.sriovNICSize }}'
+          ports:
+          - name: grpc
+            containerPort: 10000
+            protocol:  {{ .Values.service.grpc.protocol }}
+          - name: exporter
+            containerPort: 8080
+            protocol: {{ .Values.service.stats.protocol }}
+        # Push data plane address to ONOS via netcfgc
+        # Add the static route for sr-iov interface
+        - name: config
+          image: curlimages/curl:7.75.0
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: ONOS_SERVER
+              value: "{{ .Values.onos.server }}"
+            - name: ONOS_PORT
+              value: "{{ .Values.onos.port }}"
+            - name: ONOS_USERNAME
+              value: "{{ .Values.onos.username }}"
+            - name: ONOS_PASSWORD
+              value: "{{ .Values.onos.password }}"
+            - name: GRPC_SERVICE_NAME
+              value: {{ include "dbuf.fullname" . }}
+            - name: GRPC_PORT
+              value: "{{ .Values.service.grpc.port }}"
+            - name: DP_INTERFACE
+              value: "{{ .Values.dataplane.interface }}"
+            - name: DP_PORT
+              value: "{{ .Values.dataplane.port }}"
+            - name: STATIC_ROUTES
+              value: "{{ .Values.network.route }}"
+          volumeMounts:
+            - name: config-script
+              mountPath: /tmp/config
+              subPath: config
+          command: ["sh", "-c", "/tmp/config"]
+          securityContext:
+            runAsUser: 0
+            capabilities:
+              add: ["NET_ADMIN"]
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+      volumes:
+        - name: config-script
+          configMap:
+            name: {{ include "dbuf.fullname" . }}
+            defaultMode: 0755

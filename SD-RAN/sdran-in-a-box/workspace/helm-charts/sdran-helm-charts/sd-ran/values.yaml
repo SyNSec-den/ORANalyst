@@ -1,0 +1,170 @@
+# SPDX-FileCopyrightText: 2022-present Intel Corporation
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+# Default values for all SD-RAN Helm charts.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+global:
+  fullnameOverride: "onos"
+  nameOverride: ""
+  image:
+    registry: ""
+    tag: ""
+  atomix:
+    store:
+      consensus:
+        enabled: true
+        name: ""
+
+import:
+  onos-topo:
+    enabled: true
+  onos-uenib:
+    enabled: true
+  onos-e2t:
+    enabled: true
+  onos-a1t:
+    enabled: true
+  onos-o1t:
+    enabled: false
+  onos-config:
+    enabled: true
+  onos-cli:
+    enabled: true
+  ran-simulator:
+    enabled: false
+  onos-gui:
+    enabled: false
+  onos-kpimon:
+    enabled: false
+  onos-pci:
+    enabled: false
+  onos-mho:
+    enabled: false
+  onos-mlb:
+    enabled: false
+  onos-rsm:
+    enabled: false
+  rimedo-ts:
+    enabled: false
+  onos-exporter:
+    enabled: false
+
+# Atomix store configurations
+atomix:
+  store:
+    consensus:
+      enabled: true
+      name: ""
+      image:
+        registry: ""
+        repository: atomix/raft-node
+        tag: ""
+        pullPolicy: ""
+        pullSecrets: []
+      replicas: 3
+      server: {}
+      logging:
+        # The encoding is the format of the logging output:
+        # console: standard formatted text logging
+        # json: JSON encoded structured logging
+        encoding: console
+        # The default log level for all loggers. Only messages logged at this level or higher severity will be
+        # output to the logger sinks. Log levels in order of severity (least to greatest):
+        # - debug
+        # - info
+        # - warn
+        # - error
+        # - fatal
+        level: info
+        loggers:
+          github.com/atomix/atomix/runtime/pkg/utils/grpc/interceptors: error
+      persistence:
+        # enabled: false
+        # storageClass: ""
+        accessModes:
+          - ReadWriteOnce
+        size: 8Gi
+      securityContext:
+        runAsUser: 0
+
+onos-topo:
+  atomix:
+    store:
+      consensus:
+        enabled: false
+
+onos-uenib:
+  atomix:
+    store:
+      consensus:
+        enabled: false
+
+onos-config:
+  atomix:
+    store:
+      consensus:
+        enabled: false
+  modelPlugins:
+  - name: ric
+    image: onosproject/ric:0.0.6-ric-1.0.0
+    endpoint: localhost
+    port: 5152
+
+onos-e2t:
+  atomix:
+    store:
+      consensus:
+        enabled: false
+  servicemodels:
+    - name: e2sm_rc_pre_go
+      version: 1.0.0
+      image:
+        repository: onosproject/service-model-docker-e2sm_rc_pre_go-1.0.0
+        tag: v0.8.43
+        pullPolicy: IfNotPresent
+    - name: e2sm_kpm_v2_go
+      version: 1.0.0
+      image:
+        repository: onosproject/service-model-docker-e2sm_kpm_v2_go-1.0.0
+        tag: v0.8.43
+        pullPolicy: IfNotPresent
+    - name: e2sm_mho_go
+      version: 1.0.0
+      image:
+        repository: onosproject/service-model-docker-e2sm_mho_go-1.0.0
+        tag: v0.8.43
+        pullPolicy: IfNotPresent
+    - name: e2sm_rsm
+      version: 1.0.0
+      image:
+        repository: onosproject/service-model-docker-e2sm_rsm-1.0.0
+        tag: v0.8.43
+        pullPolicy: IfNotPresent
+    - name: e2sm_rc
+      version: 1.0.0
+      image:
+        repository: onosproject/service-model-docker-e2sm_rc-1.0.0
+        tag: v0.8.43
+        pullPolicy: IfNotPresent
+
+onos-cli:
+  postInstall:
+    placeholder: true
+    topo: berlin-honeycomb-4-3-topo.yaml
+    toponew: berlin-honeycomb-4-3-toponew.yaml
+    config: [ berlin-honeycomb-4-3-gnmi.yaml ]
+
+
+onos-exporter:
+  config:
+    onos-exporter:
+      mode: "prometheus"
+      e2tEndpoint: "onos-e2t:5150"
+      xappPciEndpoint: "onos-pci:5150"
+      xappKpimonEndpoint: "onos-kpimon:5150"
+      topoEndpoint: "onos-topo:5150"
+      uenibEndpoint: "onos-uenib:5150"

@@ -1,0 +1,19 @@
+# Copyright 2021-present Open Networking Foundation
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+
+elasticsearch:
+  host: opendistro-es-client-service.logging-system
+  port: 9200
+
+configuration:
+  base_dir: /tmp/opendistro
+  # Have to prepare the configmap first
+  # setting_configmap: opendistro-kibana-setting
+  # setting: settings/
+  # Have to prepare the configmap first
+  # monitor_configmap: opendistro-kibana-monitor
+  # monitor: monitor/
+  # Have to prepare the secret first
+  # destination_secret: opendistro-kibana-destination
+  # destination: destination/

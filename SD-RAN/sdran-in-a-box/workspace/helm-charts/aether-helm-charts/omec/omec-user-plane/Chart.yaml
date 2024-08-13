@@ -1,0 +1,10 @@
+# Copyright 2020-present Open Networking Foundation
+#
+# SPDX-License-Identifier: LicenseRef-ONF-Member-Only-1.0
+
+apiVersion: v1
+description: OMEC user plane based on BESS
+name: omec-user-plane
+icon: https://guide.opencord.org/logos/cord.svg
+
+version: 0.3.31

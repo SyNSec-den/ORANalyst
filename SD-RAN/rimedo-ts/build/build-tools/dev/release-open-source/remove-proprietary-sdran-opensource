@@ -1,0 +1,32 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+set -e -u -o pipefail
+
+declare -a asn1_files=(
+  "servicemodels/e2sm_kpm/v1beta1/e2sm-kpm-v01.00.asn1"
+  "servicemodels/e2sm_kpm_v2/v2/e2sm_kpm_v2.0.3-changed.asn"
+  "servicemodels/e2sm_kpm_v2/v2/e2sm_kpm_v2.0.3-rm.asn.original"
+  "servicemodels/e2sm_kpm_v2_go/v2/e2sm_kpm_v2.0.3-radisys.asn"
+  "api/e2ap/v1beta2/e2ap-v01.01.00.asn1"
+  "api/e2ap/v2beta1/e2ap_v2.0.1_Feb3_21.asn"
+)
+
+current_repo=${PWD##*/}
+
+cd ..
+git clone --mirror git@github.com:sdran/$current_repo.git
+
+for file in "${asn1_files[@]}"
+do
+    #see https://rtyley.github.io/bfg-repo-cleaner/
+    java -jar ~/Downloads/bfg-1.14.0.jar --delete-files `basename $file` $current_repo.git || true
+
+    cd $current_repo.git
+    git reflog expire --expire=now --all && git gc --prune=now --aggressive
+    git push
+    cd ..
+done
+

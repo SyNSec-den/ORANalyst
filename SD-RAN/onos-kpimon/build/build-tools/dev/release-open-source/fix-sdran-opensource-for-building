@@ -1,0 +1,89 @@
+#!/bin/bash
+# SPDX-FileCopyrightText: 2020-present Open Networking Foundation <info@opennetworking.org>
+#
+# SPDX-License-Identifier: Apache-2.0
+
+set -e -u -o pipefail
+
+declare -a moving_components=(
+  "ran-simulator" "onos-e2sub" "onos-e2t"
+  "onos-e2-sm" "onos-pci" "onos-kpimon"
+)
+
+rm -rf vendor
+go_sources=( $(find . -name *.go ) )
+
+length=${#go_sources[@]}
+length=$((length - 1))
+
+#go clean --modcache
+
+for component in "${moving_components[@]}"
+do
+  sed -i"*.VERBACK" -e s#/onosproject/$component/#/sdran/$component/#g Makefile || true
+  for go_file in "${go_sources[@]}"
+  do
+    sed -i"*.VERBACK" -e s#/onosproject/$component/#/sdran/$component/#g "$go_file" || true
+    sed -i"*.VERBACK" -e s/LicenseRef-ONF-Member-1.0/Apache-2.0/ "$go_file" || true
+    gofmt -w -s "$go_file" || true
+  done
+
+  sed -i"*.VERBACK" -e s@onosproject/$component@sdran/$component@g go.mod || true
+  if [ -d servicemodels ]
+  then
+    cd servicemodels
+    for i in e2sm*
+    do
+      cd $i
+      sed -i"*.VERBACK" -e s@onosproject/$component@sdran/$component@g go.mod || true
+      cd ..
+    done
+    sed -i"*.VERBACK" -e s@onosproject/$component@sdran/onos-e2-sm@g ../mod.dummy || true
+    sed -i"*.VERBACK" -e s@onosproject/$component@sdran/onos-e2-sm@g ../mod.ran-sim-dummy || true
+    sed -i"*.VERBACK" -e s@onosproject/$component@sdran/onos-e2-sm@g ../build/plugins/Dockerfile || true
+    sed -i"*.VERBACK" -e s@onosproject/$component@sdran/onos-e2-sm@g ../build/plugins/ransim.Dockerfile || true
+    cd ..
+  fi
+done
+
+modifying=$( basename `pwd` )
+if [ $modifying == "ran-simulator" ] ; then
+  sed -i"*.VERBACK" -e s@v0.7.32@v0.7.34@g go.mod || true
+  sed -i"*.VERBACK" -e 's@onos-e2t v0.7.10@onos-e2t v0.7.19@g' go.mod || true
+  sed -i"*.VERBACK" -e s@onosproject/onos-ran-simulator@sdran/ran-simulator@g build/ran-simulator/Dockerfile || true
+  go mod vendor
+fi
+if [ $modifying == "onos-kpimon" ] ; then
+  sed -i"*.VERBACK" -e s@v0.7.26@v0.7.34@g go.mod || true
+  sed -i"*.VERBACK" -e 's@onos-e2t v0.7.13@onos-e2t v0.7.19@g' go.mod || true
+  sed -i"*.VERBACK" -e s@onosproject/onos-kpimon@sdran/onos-kpimon@g build/onos-kpimon/Dockerfile || true
+  go mod vendor
+fi
+if [ $modifying == "onos-pci" ] ; then
+  sed -i"*.VERBACK" -e s@v0.7.21@v0.7.34@g go.mod || true
+  sed -i"*.VERBACK" -e 's@onos-e2t v0.7.13@onos-e2t v0.7.19@g' go.mod || true
+  sed -i"*.VERBACK" -e s@onosproject/onos-pci@sdran/onos-pci@g build/onos-pci/Dockerfile || true
+  git checkout pkg/southbound/ricapie2/ricapie2.go
+  git apply /Users/ray/go/src/github.com/onosproject/build-tools/dev/ricapie2.go.patch
+  go mod vendor
+fi
+if [ $modifying == "onos-e2sub" ] ; then
+  sed -i"*.VERBACK" -e s@onosproject/onos-e2sub@sdran/onos-e2sub@g Makefile || true
+  sed -i"*.VERBACK" -e s@onosproject/onos-e2sub@sdran/onos-e2sub@g build/onos-e2sub/Dockerfile || true
+  go mod vendor
+fi
+if [ $modifying == "onos-e2t" ] ; then
+  sed -i"*.VERBACK" -e s@onosproject/onos-e2t@sdran/onos-e2t@g Makefile || true
+  sed -i"*.VERBACK" -e s@v0.7.32@v0.7.34@g go.mod || true
+  sed -i"*.VERBACK" -e s@onosproject/onos-e2t@sdran/onos-e2t@g build/onos-e2t/Dockerfile || true
+  go mod vendor
+fi
+
+sed -i"*.VERBACK" -e s/LicenseRef-ONF-Member-1.0/SPDX-Apache-2.0/ Makefile || true
+
+if [ -f go.mod ]
+then
+  go mod tidy
+fi
+
+find . -name "*.VERBACK" | xargs rm -f
